@@ -1,0 +1,33 @@
+name: lint-fields
+on: [push]
+jobs:
+  lint-fields:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Configure plow CLI
+        run: |
+          curl https://sh.rustup.rs -sSf -y | sh
+          cargo install plow_cli --version 0.3.6
+
+      - name: Setup SSH
+        uses: MrSquaare/ssh-setup-action@v1
+        with:
+          host: github.com
+          private-key: ${{ secrets.SSH_PRIVATE_KEY_ECDSA }}
+          
+      - name: Public User Authentication
+        run: |
+          plow login ${{ secrets.PUBLIC_ONLY_TOKEN_REGISTRY }}
+
+      - name: Find Fields
+        env: 
+          FILES: |
+            find fields -type f -name "*.ttl"
+        run: |
+          eval $FILES | wc -l
+
+      - name: Lint
+        run: |
+          find fields -type f -name "*.ttl" | xargs -I % plow lint %

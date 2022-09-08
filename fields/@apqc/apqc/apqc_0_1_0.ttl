@@ -1,0 +1,131 @@
+@prefix : <http://field33.com/ontologies/@apqc/apqc/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix registry: <http://field33.com/ontologies/REGISTRY/> .
+@base <http://field33.com/ontologies/@apqc/apqc/> .
+
+<http://field33.com/ontologies/@apqc/apqc/> rdf:type owl:Ontology ;
+                                                     owl:imports <http://field33.com/ontologies/@fld33/process/> ,
+                                                                 <http://field33.com/ontologies/@fld33/relations_0_1_0/> ;
+                                                     registry:canonicalPrefix "apqc" ;
+                                                     registry:author "Field 33 <contribution@field33.com>" ;
+                                                     registry:category "Process" ;
+                                                     registry:dependency "@fld33/process ^0.1.2" ,
+                                                                         "@fld33/relations_0_1_0 ^0.1.10" ;
+                                                     registry:keyword "APQC" ,
+                                                                      "Field 33 Package" ,
+                                                                      "Process" ;
+                                                     registry:ontologyFormatVersion "v1" ;
+                                                     registry:packageName "@apqc/apqc" ;
+                                                     registry:packageVersion "0.1.3" ;
+                                                     registry:shortDescription "APQC ontology"@en ;
+                                                     registry:repository "https://github.com/field33/ontologies/tree/main/%40apqc/apqc" ;
+                                                     rdfs:comment "APQC Ontology<br>This package is an domain specific ontology describing the higher level concepts of APQC"@en ;
+                                                     registry:license "2022 APQC. ALL RIGHTS RESERVED. This Process Classification Framework (PCF) is the copyrighted intellectual property of APQC. APQC encourages the wide distribution, discussion, and use of the PCF for classifying and defining organizational processes. Accordingly, APQC hereby grants you a perpetual, worldwide, royalty-free license to use, copy, publish, modify, and create derivative works of the PCF, provided that all copies of the PCF and any derivative works contain this notice."@en ;
+                                                     rdfs:label "APQC"@en .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity
+:APQCActivityFollowedByAPQCActivity rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf :FollowedBy ;
+                                    rdfs:domain :APQCActivity ;
+                                    rdfs:range :APQCActivity ;
+                                    rdfs:label "Followed By"@en .
+
+
+###  http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess
+:APQCActivityPartOfAPQCProcess rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations_0_1_0/partOf> ;
+                               rdfs:domain :APQCActivity ;
+                               rdfs:range :APQCProcess ;
+                               rdfs:label "Part Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory
+:APQCProcessGroupPartOfAPQCCategory rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations_0_1_0/partOf> ;
+                                    rdfs:domain :APQCProcessGroup ;
+                                    rdfs:range :APQCCategory ;
+                                    rdfs:label "Part Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup
+:APQCProcessPartOfAPQCProcessGroup rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations_0_1_0/partOf> ;
+                                   rdfs:domain :APQCProcess ;
+                                   rdfs:range :APQCProcessGroup ;
+                                   rdfs:label "Part Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask
+:APQCTaskFollowedByAPQCTask rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :FollowedBy ;
+                            rdfs:domain :APQCTask ;
+                            rdfs:range :APQCTask ;
+                            rdfs:label "Followed By"@en .
+
+
+###  http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity
+:APQCTaskPartOfAPQCActivity rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations_0_1_0/partOf> ;
+                            rdfs:domain :APQCTask ;
+                            rdfs:range :APQCActivity ;
+                            rdfs:label "Part Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc/apqc/FollowedBy
+:FollowedBy rdf:type owl:ObjectProperty ;
+            rdfs:label "Followed By"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://field33.com/ontologies/@apqc/apqc/pcfid
+:pcfid rdf:type owl:DatatypeProperty ;
+       rdfs:range xsd:string ;
+       rdfs:label "Process Classification Framework ID"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://field33.com/ontologies/@apqc/apqc/APQCActivity
+:APQCActivity rdf:type owl:Class ;
+              rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Activity> ;
+              rdfs:label "Activity"@en .
+
+
+###  http://field33.com/ontologies/@apqc/apqc/APQCCategory
+:APQCCategory rdf:type owl:Class ;
+              rdfs:label "Category"@en .
+
+
+###  http://field33.com/ontologies/@apqc/apqc/APQCProcess
+:APQCProcess rdf:type owl:Class ;
+             rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Process> ;
+             rdfs:label "Process"@en .
+
+
+###  http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup
+:APQCProcessGroup rdf:type owl:Class ;
+                  rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/ProcessGroup> ;
+                  rdfs:label "Process Group"@en .
+
+
+###  http://field33.com/ontologies/@apqc/apqc/APQCTask
+:APQCTask rdf:type owl:Class ;
+          rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+          rdfs:label "Task"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
