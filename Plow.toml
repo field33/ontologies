@@ -1,0 +1,13 @@
+[workspace]
+members = [
+    '@apqc/apqc/apqc_0_1_0.ttl',
+    '@apqc_cross_industry/acquire_construct_and_manage_assets/apqc_cross_industry_10_0_1_0.ttl',
+    '@apqc_cross_industry/deliver_services/apqc_cross_industry_5_0_1_0.ttl',
+    '@contrib/generic_innovation_interoperability/generic_innovation_interoperability.ttl',
+    '@fld33/communication/communication_0_1_0.ttl',
+    '@fld33/methodology/methodology_0_1_0.ttl',
+    '@fld33/organization/organization_0_1_0.ttl',
+    '@fld33/people/people_0_1_0.ttl',
+    '@fld33/process/process.ttl',
+    '@fld33/relations_0_1_0/relations_0_1_0.ttl',
+]
