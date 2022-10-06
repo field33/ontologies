@@ -13,17 +13,17 @@
 <http://field33.com/ontologies/@apqc_cross_industry/deliver_services/> rdf:type owl:Ontology ;
   registry:author "Field 33 <contribution@field33.com>" ;
   registry:canonicalPrefix "deliver_services" ;
-  registry:dependency "@fld33/relations_0_1_0 ^0.1.9", "@apqc/apqc ^0.1.1",
-    "@fld33_domain/business_objects ^0.1.4" ;
+  registry:dependency "@fld33/relations_0_1_0 ^0.1.10", "@apqc/apqc ^0.1.3",
+    "@fld33_domain/business_objects ^0.1.7" ;
   registry:license "2022 APQC. ALL RIGHTS RESERVED. This Process Classification Framework (PCF) is the copyrighted intellectual property of APQC. APQC encourages the wide distribution, discussion, and use of the PCF for classifying and defining organizational processes. Accordingly, APQC hereby grants you a perpetual, worldwide, royalty-free license to use, copy, publish, modify, and create derivative works of the PCF, provided that all copies of the PCF and any derivative works contain this notice."@en ;
   registry:ontologyFormatVersion "v1" ;
   registry:packageName "@apqc_cross_industry/deliver_services" ;
-  registry:packageVersion "0.1.5" ;
+  registry:packageVersion "0.1.8" ;
   registry:category "Process" ;
   registry:keyword "APQC" ,
                    "Cross Industry" ,
                    "Process" ;
-  registry:repository "https://github.com/field33/ontology-workspace/tree/main/%40apqc_cross_industry/deliver_services/deliver_services" ;
+  registry:repository "https://github.com/field33/ontologies/tree/main/%40apqc_cross_industry/deliver_services" ;
   registry:shortDescription "APQC cross industry category: Deliver Services Ontology"@en ;
   rdfs:comment "# Deliver Services<br>This package is a domain ontology describing the category \"Deliver Services\" as part of APQC for cross industry."@en ;
   rdfs:label "Deliver Services"@en ;

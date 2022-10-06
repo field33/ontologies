@@ -1,0 +1,551 @@
+@base <http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry> .
+@prefix : <http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix registry: <http://field33.com/ontologies/REGISTRY/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry> rdf:type owl:Ontology ;
+  registry:author "Field 33 <contribution@field33.com>" ;
+  registry:canonicalPrefix "apqc_cross_industry" ;
+  registry:ontologyFormatVersion "v1" ;
+  registry:packageName "@apqc_cross_industry/apqc_cross_industry" ;
+  registry:packageVersion "0.1.9" ;
+  registry:category "Process" ;
+  registry:keyword "APQC" ,
+                   "Cross Industry" ,
+                   "Process" ;
+  registry:repository "https://github.com/field33/ontologies/tree/main/%40apqc_cross_industry/apqc_cross_industry" ;
+  registry:shortDescription "APQC cross industry"@en ;
+  rdfs:comment "# APQC cross industry<br>This package is a domain ontology describing concepts of APQC Cross Industry."@en ;
+  rdfs:label "APQC cross industry"@en ;
+  registry:license "2022 APQC. ALL RIGHTS RESERVED. This Process Classification Framework (PCF) is the copyrighted intellectual property of APQC. APQC encourages the wide distribution, discussion, and use of the PCF for classifying and defining organizational processes. Accordingly, APQC hereby grants you a perpetual, worldwide, royalty-free license to use, copy, publish, modify, and create derivative works of the PCF, provided that all copies of the PCF and any derivative works contain this notice."@en ;
+  registry:dependency "@fld33_domain/business_objects ^0.1.7" ,
+    "@apqc_cross_industry/develop_vision_and_strategy ^0.1.7" ,
+    "@apqc_cross_industry/develop_and_manage_products_and_services ^0.1.7" ,
+    "@apqc_cross_industry/market_and_sell_products_and_services ^0.1.7" ,
+    "@apqc_cross_industry/manage_supply_chain_for_physical_products ^0.1.7" ,
+    "@apqc_cross_industry/deliver_services ^0.1.8" ,
+    "@apqc_cross_industry/manage_customer_service ^0.1.7" ,
+    "@apqc_cross_industry/develop_and_manage_human_capital ^0.1.7" ,
+    "@apqc_cross_industry/manage_information_technology_it ^0.1.7" ,
+    "@apqc_cross_industry/manage_financial_resources ^0.1.7" ,
+    "@apqc_cross_industry/acquire_construct_and_manage_assets ^0.1.7" ,
+    "@apqc_cross_industry/manage_enterprise_risk_compliance_remediation_and_resiliency ^0.1.7" ,
+    "@apqc_cross_industry/manage_external_relationships ^0.1.7" ,
+    "@apqc_cross_industry/develop_and_manage_business_capabilities ^0.1.7"  ;
+  owl:imports <http://field33.com/ontologies/@fld33_domain/business_objects/> ,
+    <http://field33.com/ontologies/@apqc_cross_industry/develop_vision_and_strategy/> ,
+    <http://field33.com/ontologies/@apqc_cross_industry/develop_and_manage_products_and_services/> ,
+    <http://field33.com/ontologies/@apqc_cross_industry/market_and_sell_products_and_services/> ,
+    <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/> ,
+    <http://field33.com/ontologies/@apqc_cross_industry/deliver_services/> ,
+    <http://field33.com/ontologies/@apqc_cross_industry/manage_customer_service/> ,
+    <http://field33.com/ontologies/@apqc_cross_industry/develop_and_manage_human_capital/> ,
+    <http://field33.com/ontologies/@apqc_cross_industry/manage_information_technology_it/> ,
+    <http://field33.com/ontologies/@apqc_cross_industry/manage_financial_resources/> ,
+    <http://field33.com/ontologies/@apqc_cross_industry/acquire_construct_and_manage_assets/> ,
+    <http://field33.com/ontologies/@apqc_cross_industry/manage_enterprise_risk_compliance_remediation_and_resiliency/> ,
+    <http://field33.com/ontologies/@apqc_cross_industry/manage_external_relationships/> ,
+    <http://field33.com/ontologies/@apqc_cross_industry/develop_and_manage_business_capabilities/> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industryMaterialProcessedBy10363
+:MaterialProcessedBy10363 rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/ProcessedBy> ;
+                          rdfs:domain <http://field33.com/ontologies/@fld33_domain/business_objects/Material> ;
+                          rdfs:range <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10363> ;
+                          rdfs:label "Processed By"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industryMaterialProcuredBy10216
+:MaterialProcuredBy10216 rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/ProcuredBy> ;
+                         rdfs:domain <http://field33.com/ontologies/@fld33_domain/business_objects/Material> ;
+                         rdfs:range <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10216> ;
+                         rdfs:label "Procured By"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industryPaymentConformationProcessedBy10862
+:PaymentConformationProcessedBy10862 rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/ProcessedBy> ;
+                                     rdfs:domain <http://field33.com/ontologies/@fld33_domain/business_objects/PaymentConformation> ;
+                                     rdfs:range <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10216> ;
+                                     rdfs:label "Processed By"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industryPaymentReceiptProcessedBy10862
+:PaymentReceiptProcessedBy10862 rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/ProcessedBy> ;
+                                rdfs:domain <http://field33.com/ontologies/@fld33_domain/business_objects/PaymentReceipt> ;
+                                rdfs:range <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10216> ;
+                                rdfs:label "Processed By"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industryPaymentReceiptProcessedBy10876
+:PaymentReceiptProcessedBy10876 rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/ProcessedBy> ;
+                                rdfs:domain <http://field33.com/ontologies/@fld33_domain/business_objects/PaymentReceipt> ;
+                                rdfs:range <http://field33.com/ontologies/@apqc_cross_industry/manage_financial_resources/10876> ;
+                                rdfs:label "Processed By"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industryPaymentReceiptUsedBy10800
+:PaymentReceiptUsedBy10800 rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/UsedBy> ;
+                           rdfs:domain <http://field33.com/ontologies/@fld33_domain/business_objects/PaymentReceipt> ;
+                           rdfs:range <http://field33.com/ontologies/@apqc_cross_industry/manage_financial_resources/10800> ;
+                           rdfs:label "Used By"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industryProductionOrderReleasedBy10309
+:ProductionOrderReleasedBy10309 rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/ReleasedBy> ;
+                                rdfs:domain <http://field33.com/ontologies/@fld33_domain/business_objects/ProductionOrder> ;
+                                rdfs:range <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10309> ;
+                                rdfs:label "Released By"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industryProductionOrderUsedBy10869
+:ProductionOrderUsedBy10869 rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/UsedBy> ;
+                            rdfs:domain <http://field33.com/ontologies/@fld33_domain/business_objects/ProductionOrder> ;
+                            rdfs:range <http://field33.com/ontologies/@apqc_cross_industry/manage_financial_resources/10869> ;
+                            rdfs:label "Used By"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industryPurchaseOrderReconciledBy10297
+:PurchaseOrderReconciledBy10297 rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/ReconciledBy> ;
+                                rdfs:domain <http://field33.com/ontologies/@fld33_domain/business_objects/PurchaseOrder> ;
+                                rdfs:range <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10297> ;
+                                rdfs:label "Reconciled By"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industryPurchaseOrderUsedBy10201
+:PurchaseOrderUsedBy10201 rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/UsedBy> ;
+                          rdfs:domain <http://field33.com/ontologies/@fld33_domain/business_objects/PurchaseOrder> ;
+                          rdfs:range <http://field33.com/ontologies/@apqc_cross_industry/market_and_sell_products_and_services/10201> ;
+                          rdfs:label "Used By"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industryPurchaseOrderUsedBy10202
+:PurchaseOrderUsedBy10202 rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/UsedBy> ;
+                          rdfs:domain <http://field33.com/ontologies/@fld33_domain/business_objects/PurchaseOrder> ;
+                          rdfs:range <http://field33.com/ontologies/@apqc_cross_industry/market_and_sell_products_and_services/10202> ;
+                          rdfs:label "Used By"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industryPurchaseOrderUsedBy10203
+:PurchaseOrderUsedBy10203 rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/UsedBy> ;
+                          rdfs:domain <http://field33.com/ontologies/@fld33_domain/business_objects/PurchaseOrder> ;
+                          rdfs:range <http://field33.com/ontologies/@apqc_cross_industry/market_and_sell_products_and_services/10203> ;
+                          rdfs:label "Used By"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industryPurchaseOrderUsedBy10204
+:PurchaseOrderUsedBy10204 rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/UsedBy> ;
+                          rdfs:domain <http://field33.com/ontologies/@fld33_domain/business_objects/PurchaseOrder> ;
+                          rdfs:range <http://field33.com/ontologies/@apqc_cross_industry/market_and_sell_products_and_services/10204> ;
+                          rdfs:label "Used By"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industryPurchaseOrderUsedBy10205
+:PurchaseOrderUsedBy10205 rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/UsedBy> ;
+                          rdfs:domain <http://field33.com/ontologies/@fld33_domain/business_objects/PurchaseOrder> ;
+                          rdfs:range <http://field33.com/ontologies/@apqc_cross_industry/market_and_sell_products_and_services/10205> ;
+                          rdfs:label "Used By"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industryPurchaseOrderUsedBy10206
+:PurchaseOrderUsedBy10206 rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/UsedBy> ;
+                          rdfs:domain <http://field33.com/ontologies/@fld33_domain/business_objects/PurchaseOrder> ;
+                          rdfs:range <http://field33.com/ontologies/@apqc_cross_industry/market_and_sell_products_and_services/10206> ;
+                          rdfs:label "Used By"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industryServiceProcuredBy10216
+:ServiceProcuredBy10216 rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/ProcuredBy> ;
+                        rdfs:domain <http://field33.com/ontologies/@fld33_domain/business_objects/Service> ;
+                        rdfs:range <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10216> ;
+                        rdfs:label "Procured By"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10003DevelopingOfService
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10003DevelopingOfService> rdf:type owl:ObjectProperty ;
+                                                                                           rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/DevelopingOf> ;
+                                                                                           rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/develop_and_manage_products_and_services/10003> ;
+                                                                                           rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Service> ;
+                                                                                           rdfs:label "Developing Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10003ManagingOfService
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10003ManagingOfService> rdf:type owl:ObjectProperty ;
+                                                                                         rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/ManagingOf> ;
+                                                                                         rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/develop_and_manage_products_and_services/10003> ;
+                                                                                         rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Service> ;
+                                                                                         rdfs:label "Managing Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10092CollaboratingWithSupplier
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10092CollaboratingWithSupplier> rdf:type owl:ObjectProperty ;
+                                                                                                 rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/CollaboratingWith> ;
+                                                                                                 rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/develop_and_manage_products_and_services/10092> ;
+                                                                                                 rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Supplier> ;
+                                                                                                 rdfs:label "Collaborating With"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10112EvaluatingOfService
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10112EvaluatingOfService> rdf:type owl:ObjectProperty ;
+                                                                                           rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/EvaluatingOf> ;
+                                                                                           rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/market_and_sell_products_and_services/10112> ;
+                                                                                           rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Service> ;
+                                                                                           rdfs:label "Evaluating Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10243CollaboratingWithSupplier
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10243CollaboratingWithSupplier> rdf:type owl:ObjectProperty ;
+                                                                                                 rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/CollaboratingWith> ;
+                                                                                                 rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10243> ;
+                                                                                                 rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Supplier> ;
+                                                                                                 rdfs:label "Collaborating With"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10244IdentifyingCapacityOfSupplier
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10244IdentifyingCapacityOfSupplier> rdf:type owl:ObjectProperty ;
+                                                                                                     rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/IdentifyingCapacityOf> ;
+                                                                                                     rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10244> ;
+                                                                                                     rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Supplier> ;
+                                                                                                     rdfs:label "Identifying Capacity Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10245MonitoringSpecificationOfMaterial
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10245MonitoringSpecificationOfMaterial> rdf:type owl:ObjectProperty ;
+                                                                                                         rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/MonitoringSpecificationOf> ;
+                                                                                                         rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10245> ;
+                                                                                                         rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Material> ;
+                                                                                                         rdfs:label "Monitoring Specification Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10278SelectingOfSupplier
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10278SelectingOfSupplier> rdf:type owl:ObjectProperty ;
+                                                                                           rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/SelectingOf> ;
+                                                                                           rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10278> ;
+                                                                                           rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Supplier> ;
+                                                                                           rdfs:label "Selecting Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10279OrderingOfMaterial
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10279OrderingOfMaterial> rdf:type owl:ObjectProperty ;
+                                                                                          rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/OrderingOf> ;
+                                                                                          rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10279> ;
+                                                                                          rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Material> ;
+                                                                                          rdfs:label "Ordering Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10279OrderingOfService
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10279OrderingOfService> rdf:type owl:ObjectProperty ;
+                                                                                         rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/OrderingOf> ;
+                                                                                         rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10279> ;
+                                                                                         rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Service> ;
+                                                                                         rdfs:label "Ordering Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10280ManagingOfSupplier
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10280ManagingOfSupplier> rdf:type owl:ObjectProperty ;
+                                                                                          rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/ManagingOf> ;
+                                                                                          rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10280> ;
+                                                                                          rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Supplier> ;
+                                                                                          rdfs:label "Managing Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10282ClarifyingRequirementsOfPurchasingContract
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10282ClarifyingRequirementsOfPurchasingContract> rdf:type owl:ObjectProperty ;
+                                                                                                                  rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/ClarifyingRequirementsOf> ;
+                                                                                                                  rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10282> ;
+                                                                                                                  rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/PurchasingContract> ;
+                                                                                                                  rdfs:label "Clarifying Requirements Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10287CollaboratingWithSupplier
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10287CollaboratingWithSupplier> rdf:type owl:ObjectProperty ;
+                                                                                                 rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/CollaboratingWith> ;
+                                                                                                 rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10287> ;
+                                                                                                 rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Supplier> ;
+                                                                                                 rdfs:label "Collaborating With"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10288SelectingOfSupplier
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10288SelectingOfSupplier> rdf:type owl:ObjectProperty ;
+                                                                                           rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/SelectingOf> ;
+                                                                                           rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10288> ;
+                                                                                           rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Supplier> ;
+                                                                                           rdfs:label "Selecting Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10289CertifyingOfSupplier
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10289CertifyingOfSupplier> rdf:type owl:ObjectProperty ;
+                                                                                            rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/CertifyingOf> ;
+                                                                                            rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10289> ;
+                                                                                            rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Supplier> ;
+                                                                                            rdfs:label "Certifying Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10289ValidatingOfSupplier
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10289ValidatingOfSupplier> rdf:type owl:ObjectProperty ;
+                                                                                            rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/ValidatingOf> ;
+                                                                                            rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10289> ;
+                                                                                            rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Supplier> ;
+                                                                                            rdfs:label "Validating Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10294SolicitingQuotesOfVendor
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10294SolicitingQuotesOfVendor> rdf:type owl:ObjectProperty ;
+                                                                                                rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/SolicitingQuotesOf> ;
+                                                                                                rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10294> ;
+                                                                                                rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Vendor> ;
+                                                                                                rdfs:label "Soliciting Quotes Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10294TrackingQuotesOfVendor
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10294TrackingQuotesOfVendor> rdf:type owl:ObjectProperty ;
+                                                                                              rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/TrackingQuotesOf> ;
+                                                                                              rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10294> ;
+                                                                                              rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Vendor> ;
+                                                                                              rdfs:label "Tracking Quotes Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10295CreatingOfPurchaseOrder
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10295CreatingOfPurchaseOrder> rdf:type owl:ObjectProperty ;
+                                                                                               rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/CreatingOf> ;
+                                                                                               rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10295> ;
+                                                                                               rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/PurchaseOrder> ;
+                                                                                               rdfs:label "Creating Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10295DistributingOfPurchaseOrder
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10295DistributingOfPurchaseOrder> rdf:type owl:ObjectProperty ;
+                                                                                                   rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/DistributingOf> ;
+                                                                                                   rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10295> ;
+                                                                                                   rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/PurchaseOrder> ;
+                                                                                                   rdfs:label "Distributing Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10296ExpeditingOfPurchaseOrder
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10296ExpeditingOfPurchaseOrder> rdf:type owl:ObjectProperty ;
+                                                                                                 rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/ExpeditingOf> ;
+                                                                                                 rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10296> ;
+                                                                                                 rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/PurchaseOrder> ;
+                                                                                                 rdfs:label "Expediting Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10298ResearchExceptionsOfPurchaseOrder
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10298ResearchExceptionsOfPurchaseOrder> rdf:type owl:ObjectProperty ;
+                                                                                                         rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/ResearchingExceptionsOf> ;
+                                                                                                         rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10298> ;
+                                                                                                         rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/PurchaseOrder> ;
+                                                                                                         rdfs:label "Research Exceptions Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10298ResolveExceptionsOfPurchaseOrder
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10298ResolveExceptionsOfPurchaseOrder> rdf:type owl:ObjectProperty ;
+                                                                                                        rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/ResolvingExceptionsOf> ;
+                                                                                                        rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10298> ;
+                                                                                                        rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/PurchaseOrder> ;
+                                                                                                        rdfs:label "Resolve Exceptions Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10299ManagingInformationOfSupplier
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10299ManagingInformationOfSupplier> rdf:type owl:ObjectProperty ;
+                                                                                                     rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/ManagingInformationOf> ;
+                                                                                                     rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10299> ;
+                                                                                                     rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Supplier> ;
+                                                                                                     rdfs:label "Managing Information Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10299MonitoringInformationOfSupplier
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10299MonitoringInformationOfSupplier> rdf:type owl:ObjectProperty ;
+                                                                                                       rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/MonitoringInformationOf> ;
+                                                                                                       rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10299> ;
+                                                                                                       rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Supplier> ;
+                                                                                                       rdfs:label "Monitoring Information Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10300AnalyzingOfPerformanceVendor
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10300AnalyzingOfPerformanceVendor> rdf:type owl:ObjectProperty ;
+                                                                                                    rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/AnalyzingOfPerformance> ;
+                                                                                                    rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10300> ;
+                                                                                                    rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/VendorPerformance> ;
+                                                                                                    rdfs:label "Analyzing Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10300PreparingPerformanceOfVendor
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10300PreparingPerformanceOfVendor> rdf:type owl:ObjectProperty ;
+                                                                                                    rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/PreparingPerformanceOf> ;
+                                                                                                    rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10300> ;
+                                                                                                    rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Vendor> ;
+                                                                                                    rdfs:label "Preparing Performance Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10308SchedulingOfProductionOrder
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10308SchedulingOfProductionOrder> rdf:type owl:ObjectProperty ;
+                                                                                                   rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/SchedulingOf> ;
+                                                                                                   rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10308> ;
+                                                                                                   rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/ProductionOrder> ;
+                                                                                                   rdfs:label "Scheduling Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10346DevelopingServicePolicyOfDelivery
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10346DevelopingServicePolicyOfDelivery> rdf:type owl:ObjectProperty ;
+                                                                                                         rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/DevelopingServicePolicyOf> ;
+                                                                                                         rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10346> ;
+                                                                                                         rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Delivery> ;
+                                                                                                         rdfs:label "Developing Service Policy Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10354MonitoringPerformanceOfDelivery
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10354MonitoringPerformanceOfDelivery> rdf:type owl:ObjectProperty ;
+                                                                                                       rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/MonitoringPerformanceOf> ;
+                                                                                                       rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10354> ;
+                                                                                                       rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Delivery> ;
+                                                                                                       rdfs:label "Monitoring Performance Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10356PackingProductForDelivery
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10356PackingProductForDelivery> rdf:type owl:ObjectProperty ;
+                                                                                                 rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/PackingProductFor> ;
+                                                                                                 rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10356> ;
+                                                                                                 rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Delivery> ;
+                                                                                                 rdfs:label "Packing Product For"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10356PickingProductForDelivery
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10356PickingProductForDelivery> rdf:type owl:ObjectProperty ;
+                                                                                                 rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/PickingProductFor> ;
+                                                                                                 rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10356> ;
+                                                                                                 rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Delivery> ;
+                                                                                                 rdfs:label "Picking Product For"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10356ShippingProductForDelivery
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10356ShippingProductForDelivery> rdf:type owl:ObjectProperty ;
+                                                                                                  rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/ShippingProductFor> ;
+                                                                                                  rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10356> ;
+                                                                                                  rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Delivery> ;
+                                                                                                  rdfs:label "Shipping Product For"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10363AuditingOfMaterial
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10363AuditingOfMaterial> rdf:type owl:ObjectProperty ;
+                                                                                          rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/AuditingOf> ;
+                                                                                          rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10363> ;
+                                                                                          rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Material> ;
+                                                                                          rdfs:label "Auditing Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10800CreatingOfPaymentConformation
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10800CreatingOfPaymentConformation> rdf:type owl:ObjectProperty ;
+                                                                                                     rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/CreatingOf> ;
+                                                                                                     rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_financial_resources/10800> ;
+                                                                                                     rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/PaymentConformation> ;
+                                                                                                     rdfs:label "Creating Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10862DistributingOfPaymentConformation
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10862DistributingOfPaymentConformation> rdf:type owl:ObjectProperty ;
+                                                                                                         rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/DistributingOf> ;
+                                                                                                         rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10216> ;
+                                                                                                         rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/PaymentConformation> ;
+                                                                                                         rdfs:label "Distributing Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10862DistributingOfPaymentReceipt
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10862DistributingOfPaymentReceipt> rdf:type owl:ObjectProperty ;
+                                                                                                    rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/DistributingOf> ;
+                                                                                                    rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/10216> ;
+                                                                                                    rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/PaymentReceipt> ;
+                                                                                                    rdfs:label "Distributing Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10871AuditingPurchaseInvoice
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10871AuditingPurchaseInvoice> rdf:type owl:ObjectProperty ;
+                                                                                               rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/AuditingOf> ;
+                                                                                               rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_financial_resources/10871> ;
+                                                                                               rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/PurchaseInvoice> ;
+                                                                                               rdfs:label "Auditing Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10872ApprovingOfPaymentReceipt
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry10872ApprovingOfPaymentReceipt> rdf:type owl:ObjectProperty ;
+                                                                                                 rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/ApprovingOf> ;
+                                                                                                 rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_financial_resources/10872> ;
+                                                                                                 rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/PaymentReceipt> ;
+                                                                                                 rdfs:label "Approving Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry20025DeliveringOfService
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry20025DeliveringOfService> rdf:type owl:ObjectProperty ;
+                                                                                           rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/DeliveringOf> ;
+                                                                                           rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/deliver_services/20025> ;
+                                                                                           rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Service> ;
+                                                                                           rdfs:label "Delivering Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry20054CollaboratingWithSupplier
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry20054CollaboratingWithSupplier> rdf:type owl:ObjectProperty ;
+                                                                                                 rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/CollaboratingWith> ;
+                                                                                                 rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/deliver_services/20054> ;
+                                                                                                 rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Supplier> ;
+                                                                                                 rdfs:label "Collaborating With"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry20055IdentifyingCapacityOfSupplier
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry20055IdentifyingCapacityOfSupplier> rdf:type owl:ObjectProperty ;
+                                                                                                     rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/IdentifyingCapacityOf> ;
+                                                                                                     rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/deliver_services/20055> ;
+                                                                                                     rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Supplier> ;
+                                                                                                     rdfs:label "Identifying Capacity Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry20784DevelopingOfService
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry20784DevelopingOfService> rdf:type owl:ObjectProperty ;
+                                                                                           rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/DevelopingOf> ;
+                                                                                           rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_information_technology_it/20784> ;
+                                                                                           rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Service> ;
+                                                                                           rdfs:label "Developing Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry20784ManagingOfService
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry20784ManagingOfService> rdf:type owl:ObjectProperty ;
+                                                                                         rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/ManagingOf> ;
+                                                                                         rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_information_technology_it/20784> ;
+                                                                                         rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Service> ;
+                                                                                         rdfs:label "Managing Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry20785DevelopingOfService
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry20785DevelopingOfService> rdf:type owl:ObjectProperty ;
+                                                                                           rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/DevelopingOf> ;
+                                                                                           rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_information_technology_it/20785> ;
+                                                                                           rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Service> ;
+                                                                                           rdfs:label "Developing Of"@en .
+
+
+###  http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry20832PlanningOfService
+<http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry20832PlanningOfService> rdf:type owl:ObjectProperty ;
+                                                                                         rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/business_objects/PlanningOf> ;
+                                                                                         rdfs:domain <http://field33.com/ontologies/@apqc_cross_industry/manage_information_technology_it/20832> ;
+                                                                                         rdfs:range <http://field33.com/ontologies/@fld33_domain/business_objects/Service> ;
+                                                                                         rdfs:label "Planning Of"@en .

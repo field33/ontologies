@@ -1,0 +1,141 @@
+@prefix : <http://field33.com/ontologies/@fld33_domain/software_development_metric/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix registry: <http://field33.com/ontologies/REGISTRY/> .
+@base <http://field33.com/ontologies/@fld33_domain/software_development_metric/> .
+
+<http://field33.com/ontologies/@fld33_domain/software_development_metric/> rdf:type owl:Ontology ;
+                                                                            owl:imports <http://field33.com/ontologies/@fld33/methodology/> ;
+                                                                            registry:author "Field 33 <contribution@field33.com>" ;
+                                                                            registry:canonicalPrefix "software_development_metric" ;
+                                                                            registry:category "Metric" ,
+                                                                                              "Software Development" ;
+                                                                            registry:dependency "@fld33/methodology ^0.1.7" ;
+                                                                            registry:keyword "Field 33 Package" ,
+                                                                                             "Metric" ,
+                                                                                             "Software Development" ,
+                                                                                             "Software Development Metric" ;
+                                                                            registry:ontologyFormatVersion "v1" ;
+                                                                            registry:packageName "@fld33_domain/software_development_metric" ;
+                                                                            registry:packageVersion "0.1.6" ;
+                                                                            registry:licenseSPDX "Apache-2.0" ;
+                                                                            registry:repository "https://github.com/field33/ontologies/tree/main/%40fld33_domain/software_development_metric" ;
+                                                                            registry:shortDescription "Software development metric ontology"@en ;
+                                                                            rdfs:comment "#Software Development Metric Ontology<br>This package is an internal ontology describing concepts for software development metrics."@en ;
+                                                                            rdfs:label "Software Development Metric"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_metric/metricFunction
+:metricFunction rdf:type owl:AnnotationProperty ;
+                rdfs:label "Metric Function"@en ;
+                rdfs:range xsd:string ;
+                rdfs:domain <http://field33.com/ontologies/@fld33/methodology/Metric> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_metric/AverageBuildFixTime
+:AverageBuildFixTime rdf:type owl:Class ;
+                     rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                     rdfs:label "Average Build Fix Time"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_metric/AverageCodeChurn
+:AverageCodeChurn rdf:type owl:Class ;
+                  rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                  rdfs:label "Average Code Churn"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_metric/AverageCodeChurnVsBugs
+:AverageCodeChurnVsBugs rdf:type owl:Class ;
+                        rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                        rdfs:label "Average Code Churn vs. Bugs"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_metric/AverageResponseTime
+:AverageResponseTime rdf:type owl:Class ;
+                     rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                     rdfs:label "Average Response Time"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_metric/AverageTeamWorkload
+:AverageTeamWorkload rdf:type owl:Class ;
+                     rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                     rdfs:label "Average Team Workload"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_metric/AverageTestCoverage
+:AverageTestCoverage rdf:type owl:Class ;
+                     rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                     rdfs:label "Average Test Coverage"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_metric/AverageTestCoverageVsAverageTestFailureRate
+:AverageTestCoverageVsAverageTestFailureRate rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                                             rdfs:label "Average Test Coverage vs. Average Test Failure Rate"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_metric/BugFeatureRatio
+:BugFeatureRatio rdf:type owl:Class ;
+                 rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                 rdfs:label "Bug vs. Feature Ratio (%)"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_metric/BuildFailureRate
+:BuildFailureRate rdf:type owl:Class ;
+                  rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                  rdfs:label "Build Failure Rate"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_metric/BuildFrequency
+:BuildFrequency rdf:type owl:Class ;
+                rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                rdfs:label "Build Frequency"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_metric/CodeSmellsFeatureRatio
+:CodeSmellsFeatureRatio rdf:type owl:Class ;
+                        rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                        rdfs:label "Code Smells to Feature Ratio"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_metric/CommitFrequency
+:CommitFrequency rdf:type owl:Class ;
+                 rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                 rdfs:label "Commit Frequency"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_metric/ComplexityPerComponentModule
+:ComplexityPerComponentModule rdf:type owl:Class ;
+                              rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                              rdfs:label "Complexity Per Component or Module"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_metric/SecurityHotspotFeatureRatio
+:SecurityHotspotFeatureRatio rdf:type owl:Class ;
+                             rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                             rdfs:label "Security Hotspot to Feature Ratio"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_metric/SoftwareDevelopmentMetric
+:SoftwareDevelopmentMetric rdf:type owl:Class ;
+                           rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                           rdfs:label "Software Development Metric"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_metric/TestFailureRateVsBugs
+:TestFailureRateVsBugs rdf:type owl:Class ;
+                       rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                       rdfs:label "Test Failure Rate vs. Bugs"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
