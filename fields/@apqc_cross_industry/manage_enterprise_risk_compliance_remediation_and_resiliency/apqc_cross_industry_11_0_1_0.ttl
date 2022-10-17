@@ -15,10 +15,10 @@
   registry:canonicalPrefix "manage_enterprise_risk_compliance_remediation_and_resiliency" ;
   registry:dependency "@fld33/relations_0_1_0 ^0.1.10", "@apqc/apqc ^0.1.3",
     "@fld33_domain/business_objects ^0.1.7" ;
-  registry:license "2022 APQC. ALL RIGHTS RESERVED. This Process Classification Framework (PCF) is the copyrighted intellectual property of APQC. APQC encourages the wide distribution, discussion, and use of the PCF for classifying and defining organizational processes. Accordingly, APQC hereby grants you a perpetual, worldwide, royalty-free license to use, copy, publish, modify, and create derivative works of the PCF, provided that all copies of the PCF and any derivative works contain this notice."@en ;
+  registry:license "2022 APQC. ALL RIGHTS RESERVED. This Process Classification Framework (PCF) is the copyrighted intellectual property of APQC."@en ;
   registry:ontologyFormatVersion "v1" ;
   registry:packageName "@apqc_cross_industry/manage_enterprise_risk_compliance_remediation_and_resiliency" ;
-  registry:packageVersion "0.1.7" ;
+  registry:packageVersion "0.1.9" ;
   registry:category "Process" ;
   registry:keyword "APQC" ,
                    "Cross Industry" ,
