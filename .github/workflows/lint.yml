@@ -24,10 +24,10 @@ jobs:
       - name: Find Fields
         env: 
           FILES: |
-            find fields -type f -name "*.ttl"
+            find fields -type f -name "*.ttl" -not -path "*/original/*"
         run: |
           eval $FILES | wc -l
 
       - name: Lint
         run: |
-          find fields -type f -name "*.ttl" | xargs -I % plow lint %
+          find fields -type f -name "*.ttl" -not -path "*/original/*" | xargs -I % plow lint %
