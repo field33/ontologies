@@ -9,49 +9,35 @@
 @prefix registry: <http://field33.com/ontologies/REGISTRY/> .
 
 <http://www.w3.org/ns/prov#> rdf:type owl:Ontology ;
-registry:fieldFormatVersion "v1" ;
-
-# Specifies the field author in a format as in the example.
-registry:author "John Doe <john@example.com>" ;
-
-# Name of your field in the form of @namespace/name.
-registry:packageName "@w3c_mirror/prov-o" ;
-
-# A bare semantic version for your field.
-registry:packageVersion "0.1.0" ;
-
-# You may specify a maximum of 5 categories to categorize your field as in the example. Available categories could be viewed in <https://registry.field33.com>
-registry:category "Communication", "Core", "Design" ;
-
-# You may specify a maximum of 5 keywords to describe your field as in the example.
-registry:keyword "some", "key", "words" ;
-
-# Specify a short description for your field to be viewed in registry.field33.com. The value requires a language tag "My short description."@en
-registry:shortDescription "A short description for the field" ;
-
-# Specify a description for your field to be viewed in registry.field33.com. The value requires a language tag "My Description"@en
-rdfs:comment "A description for the field" ;
-
-# Specify a title for your field to be viewed in registry.field33.com. The value requires a language tag "My title"@en
-rdfs:label "A title for the field" ;
-
-# If the field has dependencies you may comment the following section out and specify them as in the example.
-# registry:dependency "@namespace/name <version requirement>", "@namespace/name <version requirement>" and so on.." ;
-
-# Specifying a repository url could be helpful to lead the user to your workspace in github, gitlab etc.
-# registry:repository "<a valid domain name>" ;
-
-# Specifying a homepage url could be helpful to give more info about your project to the user.
-# registry:homepage "<a valid domain name>" ;
-
-# Specifying a documentation url could be helpful to for the user to learn more about your field.
-# registry:documentation "<a valid domain name>" ;
-
-# You may specify an additional license description here. 
-# registry:license "<a license description>" ;
-
-# Specify a valid SPDX license for your field, valid licenses could be viewed in <https://spdx.org/licenses>.
-registry:licenseSPDX "MIT"  .
+    registry:ontologyFormatVersion "v1" ;
+    registry:author "Field 33 <fields@field33.com>", "Deborah L. McGuinness <dlm@cs.rpi.edu>", "Satya Sahoo <satya.sahoo@case.edu>" ;
+    registry:packageName "@w3c_mirror/prov_o" ;
+    registry:packageVersion "0.1.0" ;
+    registry:category "Upper Ontology", "Change Tracking" ;
+    registry:keyword "Provenance", "w3c", "prov-o" ;
+    registry:shortDescription "Provenance is information about entities, activities, and people involved in producing a piece of data or thing, which can be used to form assessments about its quality, reliability or trustworthiness."@en ;
+    rdfs:comment """
+    # PROV Ontology (PROV-O)<br>
+    The PROV Ontology (PROV-O) expresses the PROV Data Model [PROV-DM] using the OWL2 Web Ontology Language (OWL2) [OWL2-OVERVIEW]. It provides a set of classes, properties, and restrictions that can be used to represent and interchange provenance information generated in different systems and under different contexts. It can also be specialized to create new classes and properties to model provenance information for different applications and domains. The PROV Document Overview describes the overall state of PROV, and should be read before other PROV documents.<br><br>
+    https://www.w3.org/2011/prov/wiki/Main_Page<br><br>
+    Editors:<br>
+    Timothy Lebo, Rensselaer Polytechnic Institute, USA<br>
+    Satya Sahoo, Case Western Reserve University, USA<br>
+    Deborah McGuinness, Rensselaer Polytechnic Institute, USA<br><br>
+    Contributors:<br>
+    (In alphabetical order)<br>
+    Khalid Belhajjame, University of Manchester, UK<br>
+    James Cheney, University of Edinburgh, UK<br>
+    David Corsar, University of Aberdeen, UK<br>
+    Daniel Garijo, Ontology Engineering Group, Universidad Politécnica de Madrid, Spain<br>
+    Stian Soiland-Reyes, University of Manchester, UK<br>
+    Stephan Zednik, Rensselaer Polytechnic Institute, USA<br>
+    Jun Zhao, University of Oxford, UK<br>
+    """@en ;
+    rdfs:label "PROV-O: The PROV Ontology"@en ;
+    registry:repository "https://github.com/field33/ontologies/tree/main/%40w3c_mirror/prov-o" ;
+    registry:homepage "https://www.w3.org/TR/prov-o/" ;
+    registry:license "Copyright © 2011-2013 W3C® (MIT, ERCIM, Keio, Beihang), All Rights Reserved." .
 
 rdfs:comment
     a owl:AnnotationProperty ;
