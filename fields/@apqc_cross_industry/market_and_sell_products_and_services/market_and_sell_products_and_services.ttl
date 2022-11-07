@@ -1,0 +1,3147 @@
+@base <http://field33.com/ontologies/@apqc_cross_industry/market_and_sell_products_and_services/> .
+@prefix : <http://field33.com/ontologies/@apqc_cross_industry/market_and_sell_products_and_services/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix registry: <http://field33.com/ontologies/REGISTRY/> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://field33.com/ontologies/@apqc_cross_industry/market_and_sell_products_and_services/> rdf:type owl:Ontology ;
+  registry:author "Field 33 <contribution@field33.com>" ;
+  registry:canonicalPrefix "market_and_sell_products_and_services" ;
+  registry:dependency "@fld33/relations ^0.2.0", "@apqc/apqc ^0.1.6",
+    "@fld33_domain/business_objects ^0.1.9" ;
+  registry:license "2022 APQC. ALL RIGHTS RESERVED. This Process Classification Framework (PCF) is the copyrighted intellectual property of APQC."@en ;
+  registry:ontologyFormatVersion "v1" ;
+  registry:packageName "@apqc_cross_industry/market_and_sell_products_and_services" ;
+  registry:packageVersion "0.1.10" ;
+  registry:category "Process" ;
+  registry:keyword "APQC" ,
+                   "Cross Industry" ,
+                   "Process" ;
+  registry:repository "https://github.com/field33/ontologies/tree/main/%40apqc_cross_industry/market_and_sell_products_and_services" ;
+  registry:shortDescription "APQC cross industry category: Market and Sell Products and Services Ontology"@en ;
+  rdfs:comment "# Market and Sell Products and Services<br>This package is a domain ontology describing the category \"Market and Sell Products and Services\" as part of APQC for cross industry."@en ;
+  rdfs:label "Market and Sell Products and Services"@en ;
+  owl:imports <http://field33.com/ontologies/@fld33/relations/>, <http://field33.com/ontologies/@apqc/apqc/>,
+    <http://field33.com/ontologies/@fld33_domain/business_objects/> .
+
+:10004 rdf:type owl:Class ;
+  rdfs:comment "Outlining process groups related to understanding markets, customers, and capabilities ; developing marketing strategies ; executing marketing plans ; developing sales strategies ; developing and managing marketing plans ; and managing sales partners and alliances."@en ;
+  rdfs:label "Market and Sell Products and Services"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCCategory> .
+
+:10101 rdf:type owl:Class ;
+  rdfs:comment "Making sense of the market and customers to identify the right opportunities to be capitalized, given the organization's competencies. Discern trends and shift in the market and customers. Identify the right market opportunities that fit closely with the organization's capabilities and strategy by gathering intelligence on various attributes of different market/customer segments."@en ;
+  rdfs:label "Understand markets, customers, and capabilities"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+
+:10101PartOf10004 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10101 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10004 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:10102 rdf:type owl:Class ;
+  rdfs:comment "Charting a strategic course for marketing products/services. This will include defining the value proposition, creating a mechanism for pricing, and determining the right mix of marketing channels. Create a specific positioning and branding for the organization's offerings. Enlist marketing head to lead, with inputs from the business development and sales functions."@en ;
+  rdfs:label "Develop marketing strategy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+
+:10102PartOf10004 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10102 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10004 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:10103 rdf:type owl:Class ;
+  rdfs:comment "Developing concrete plans for guiding and providing support to the sales function. Chart a road map for the sales function, including an analysis of historical sales data to create forecasts for anticipated sales, forming sales targets, forging partnerships with other economic agents to boost sales, devising a budget for this function, and determining metrics to measure customer management activities as well as progress in achieving sales targets."@en ;
+  rdfs:label "Develop sales strategy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+
+:10103PartOf10004 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10103 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10004 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:10105 rdf:type owl:Class ;
+  rdfs:comment "Selling products/services. Set appropriate customer expectations. Work with customers using the same schedule that product/service development, production, and customer service functions follow. Manage sales personnel and sales partnerships/alliances."@en ;
+  rdfs:label "Develop and manage sales plans"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+
+:10105PartOf10004 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10105 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10004 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:10106 rdf:type owl:Class ;
+  rdfs:comment "Gathering intelligence on the market and customers. Closely examine the inherent attributes and collective behavior of the various market and customer segments. Track trends in the market. Determine what drives the customers to make purchasing decisions in order to identify opportunities in the market."@en ;
+  rdfs:label "Perform customer and market intelligence analysis"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10106PartOf10101 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10106 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10101 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10107 rdf:type owl:Class ;
+  rdfs:comment "Appraising market opportunities by quantifying and subjecting them to prioritization, as well as validation tests. Closely examine the market opportunities that have been identified by Perform customer and market intelligence analysis [10106]. Triangulate those opportunities to capitalize by finding a fit between identified opportunities and the composite of organizational capabilities and business strategy."@en ;
+  rdfs:label "Evaluate and prioritize market opportunities"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10107PartOf10101 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10107 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10101 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10108 rdf:type owl:Class ;
+  rdfs:comment "Carrying out research studies to understand the behavior of customers and the realities of the market. Undertake research to understand the market conditions as well as the characteristics, drives, and desires of prospective customers. Gather highly contextualized intelligence through primary and secondary research methods, with the objective of gaining insights over how to best seize a market opportunity. Consider assistance from professional research services."@en ;
+  rdfs:label "Conduct customer and market research"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10108FollowedBy10109 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10108 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10109 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10108PartOf10106 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10108 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10106 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10109 rdf:type owl:Class ;
+  rdfs:comment "Identifying a section of the customer population to target for marketing products/services. Create segments within the customer population for targeted marketing campaigns, which increase the efficacy of marketing outlay. Determine the right customer segments, craft effective marketing messages, and efficiently communicate them. Determine the optimal pricing mix. Consider assistance from professional services for market segmentation studies, with coordination and oversight from the marketing/sales functions."@en ;
+  rdfs:label "Identify market segments"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10109FollowedBy10110 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10109 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10110 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10109PartOf10106 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10109 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10106 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10110 rdf:type owl:Class ;
+  rdfs:comment "Examining large-scale shifts and trends, with relevance to the organization's products/services. Vet the industrial and larger market landscape to identify broad-based movements that could have a direct or tangential impact on the uptake of the organization's products/services. Examine, among other things, the market capitalization of similar products, the profitability of organizations offering competing products/services, the stock price of key vendors/suppliers in the organizational value-chain, the rate and scale of innovation activity in the organization's product/service category, the price and availability of raw materials, and the shelf-life of similar products/services. Conduct primary and secondary research, and consider enlisting professional services."@en ;
+  rdfs:label "Analyze market and industry trends"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10110FollowedBy10111 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10110 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10111 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10110PartOf10106 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10110 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10106 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10111 rdf:type owl:Class ;
+  rdfs:comment "Examining the strengths and weaknesses of competing organizations. Assess competing organizations for offerings, product strategy, marketing and delivery channels, etc. Analyze the usability experience, durability, USP, and other key attributes of competing and substitute products. Gather competitive intelligence, and consider enlisting professional services."@en ;
+  rdfs:label "Analyze competing organizations, competitive/substitute products/services"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10111FollowedBy10112 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10111 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10112 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10111PartOf10106 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10111 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10106 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10112 rdf:type owl:Class ;
+  rdfs:comment "Examining the brands owned and products offered in the market. Determine the relative position of the existing products/brands in the marketplace."@en ;
+  rdfs:label "Evaluate existing products/services"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10112FollowedBy10113 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10112 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10113 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10112PartOf10106 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10112 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10106 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10113 rdf:type owl:Class ;
+  rdfs:comment "Understanding the culture and environment in which you're operating. Analyze how internal decision-making, thought processes, financial circumstances, and more affect the ability to bring new products to market. Survey or analyze the market into which the products would be introduced."@en ;
+  rdfs:label "Assess internal and external business environment"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10113PartOf10106 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10113 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10106 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10114 rdf:type owl:Class ;
+  rdfs:comment "Identifying the factors that drive the targeted market segment. Model customer purchasing patterns, and forecast their future purchasing behavior. "@en ;
+  rdfs:label "Understand consumer needs and historical behaviors"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:10114FollowedBy21424 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10114 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :21424 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:10114PartOf10108 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10114 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10108 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10115 rdf:type owl:Class ;
+  rdfs:comment "Determining the increase or decrease of the company's sales volume in the targeted markets. Conduct an analysis to determine the factors and underlying causes that affect the changes in the demand for products or services offered. Consider changes in offerings or in the business strategy to regain or increase the market share."@en ;
+  rdfs:label "Determine market share gain/loss"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:10115PartOf10109 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10115 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10109 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10116 rdf:type owl:Class ;
+  rdfs:comment "Attaching quantifiable indicators to opportunities that have been identified in the market. Compute estimated figures of the approximate value that can be captured with the provision of existing products/services (i.e., the extent of financial benefits that can be reaped in the market)."@en ;
+  rdfs:label "Quantify market opportunities"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10116FollowedBy10117 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10116 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10117 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10116PartOf10107 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10116 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10107 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10117 rdf:type owl:Class ;
+  rdfs:comment "Identifying the targeted segment of customers. Deduce those particular customer segments that are to be targeted from among the market segments. "@en ;
+  rdfs:label "Determine target segments"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10117FollowedBy10118 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10117 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10118 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10117PartOf10107 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10117 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10107 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10118 rdf:type owl:Class ;
+  rdfs:comment "Creating an index of market opportunities, and arrange them in order of preference. Prioritize based on the opportunities' adherence to the overall business strategy. Correlate with the competencies and capacities that the organization, as a whole, processes."@en ;
+  rdfs:label "Prioritize opportunities consistent with capabilities and overall business strategy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10118FollowedBy10119 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10118 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10119 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10118PartOf10107 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10118 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10107 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10119 rdf:type owl:Class ;
+  rdfs:comment "Confirming the practicability and reasonableness of the market opportunities that have been identified. Give substance to the real-time feasibility of the market opportunities."@en ;
+  rdfs:label "Validate opportunities"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10119PartOf10107 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10119 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10107 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10120 rdf:type owl:Class ;
+  rdfs:comment "Validating identified market opportunities by testing company's offerings on limited-size samples of the consumer population that are hypothesized to be representative of the target market at large and to have similar purchasing behavior. The feedback gained through consumer testing can be used to modify or reject product offerings before their full scale launch, saving the company valuable resources, should the initial offering not be successful."@en ;
+  rdfs:label "Test with customers/consumers"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:10120FollowedBy10121 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10120 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10121 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:10120PartOf10119 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10120 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10119 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10121 rdf:type owl:Class ;
+  rdfs:comment "Verifying that the company has sufficient infrastructure and resources to deliver their offerings in a timely and cost-effective manner, and that it is able to scale up from the small-scale market samples, used for consumer testing, to the entire identified market segment."@en ;
+  rdfs:label "Confirm internal capabilities"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:10121PartOf10119 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10121 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10119 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10123 rdf:type owl:Class ;
+  rdfs:comment "Creating a pricing strategy and mechanism that aligns with the benefits of the products/services, as perceived by customers. Chart a strategic course and a methodology that can guide the pricing of products/services. Draw heavily from the customer value proposition, and balance the expectations of different divisions inside the organization, while delivering the maximum ROI."@en ;
+  rdfs:label "Define pricing strategy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10123PartOf10102 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10123 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10102 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10124 rdf:type owl:Class ;
+  rdfs:comment "Creating a framework that allows for a uniform methodology while determining the price of individual offerings. Devise a blueprint for establishing the pricing of specific products/services. Create guidelines that factor in the cost of production/servicing, price sensitivity, product lifecycle, and the price of competing/substitute products."@en ;
+  rdfs:label "Establish guidelines for applying pricing and discounting of products/services"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10124FollowedBy19999 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10124 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :19999 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10124PartOf10123 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10124 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10123 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10125 rdf:type owl:Class ;
+  rdfs:comment "Confirming the strategy and specifications developed for pricing the organization's products/services. Approve pricing guidelines by vetting the soundness of the methodology and the guidelines' alignment with the value proposition."@en ;
+  rdfs:label "Approve pricing strategies/policies and targets"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10125PartOf10123 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10125 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10123 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10126 rdf:type owl:Class ;
+  rdfs:comment "Assessing the attributes of all marketing channels, and evaluating the key partners in those channels. Closely examine the various characteristics of all available marketing channels such as the cost of using them, durability of impact, applicability to the organization's products/services, turn-around time, involvement of middlemen, and conversion rate. Analyze key partners in the marketing channels including those who have been associated with the organization ; evaluate their capabilities, the scale and scope of their operations, quality of support provided, etc."@en ;
+  rdfs:label "Evaluate channel attributes and potential partners"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10126FollowedBy20004 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10126 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :20004 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10126PartOf20000 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10126 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20000 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10127 rdf:type owl:Class ;
+  rdfs:comment "Analyze the various channels for their relevance to the targeted segments. Identify the channel that can effectively market to the targeted customers in regard to the drives, desires, and characteristics of these populations, their uptake, extent of engagement, frequency of use, and effectiveness in communicating."@en ;
+  rdfs:label "Determine channel role and fit with target segments"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10127FollowedBy10128 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10127 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10128 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10127PartOf20000 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10127 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20000 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10128 rdf:type owl:Class ;
+  rdfs:comment "Choose the most pertinent marketing channel for the targeted segments (based on Determine channel fit with target segments [10127])."@en ;
+  rdfs:label "Select channels for target segments"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10128FollowedBy20003 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10128 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :20003 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10128PartOf20000 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10128 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20000 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10129 rdf:type owl:Class ;
+  rdfs:comment "Developing a sales forecast for the organization's portfolio of offerings, bearing in mind the effect of promotional events, and fine-tuning these in the context of the new forecast. Estimate the future demand for the organization's products/services by analyzing historical information and any promotional activity."@en ;
+  rdfs:label "Develop sales forecast"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10129PartOf10103 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10129 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10103 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10130 rdf:type owl:Class ;
+  rdfs:comment "Cultivating an alliance of partners by identifying, analyzing, negotiating, and managing partnerships with other economic agents."@en ;
+  rdfs:label "Develop sales partner/alliance relationships"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10130PartOf10103 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10130 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10103 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10131 rdf:type owl:Class ;
+  rdfs:comment "Setting up a financial plan for the sales function. Calculate the estimated sales revenue and costs, which helps in calculating the overall net profit. Create a sound plan for resource outlay by comparing the forecast with historical data."@en ;
+  rdfs:label "Establish overall sales budgets"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10131PartOf10103 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10131 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10103 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10132 rdf:type owl:Class ;
+  rdfs:comment "Establishing specific quantitative and qualitative measures of realizing sales targets. Create sales targets by analyzing historical sales data and comparing the forecasts to results, in light of customer and market intelligence. Examine the performance of sales personnel in light of market opportunities. Based on this review, establish sales targets along with metrics to quantify these goals, corresponding with the overall business strategy."@en ;
+  rdfs:label "Establish sales goals and measures"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10132PartOf10103 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10132 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10103 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10133 rdf:type owl:Class ;
+  rdfs:comment "Identifying the appropriate measures that can represent key attributes of the customer management function. Select measures to track customer activity, feedback, satisfaction, organizational responsiveness to customer needs, and general data on how the organization is managing customer accounts, leads, and contacts. Build on customer and market intelligence to identify metrics gauging aspects related to customer management. Select measures based on the nature of the business, the type and size of customer base, strategic goals, and the model used to structure sales and customer relationships."@en ;
+  rdfs:label "Establish customer management measures"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10133PartOf10103 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10133 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10103 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10134 rdf:type owl:Class ;
+  rdfs:comment "Gathering all information about sales orders into an index. Create a directory of all sales orders, whether open or those which have been fulfilled. Track what product/service was ordered, the quantity ordered, who ordered it, the delivery date, the shipping method, the unit price and line total, payment terms, and any discount applied."@en ;
+  rdfs:label "Gather current and historic order information"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10134FollowedBy10135 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10134 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10135 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10134PartOf10129 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10134 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10129 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10135 rdf:type owl:Class ;
+  rdfs:comment "Analyzing sales order data to identify patterns in order to capitalize on emerging trends in the industry or the economy. Closely examine the directory of sales orders. Discern any patterns from this index, which is representative of the demand for the organization's offerings. Identify trends among the various segments of the organization's customer base to create forecasts. Glean patterns from this analysis, including the triangulation of segments that are showing the most growth in demand or those that represent the highest decline revenue, industry-wide trends such as decline/boost in overall demand, and any unusual trends that lie outside of the organization's expectations."@en ;
+  rdfs:label "Analyze sales trends and patterns"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10135FollowedBy10136 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10135 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10136 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10135PartOf10129 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10135 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10129 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10136 rdf:type owl:Class ;
+  rdfs:comment "Calculating the future demand for the organization's products/services. Use the trends and patterns identified in the sales data to estimate future demand. Use forecast to prepare for future customer demand and to recalibrate the strategic course of functions and business units."@en ;
+  rdfs:label "Generate sales forecast"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10136FollowedBy10137 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10136 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10137 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10136PartOf10129 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10136 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10129 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10137 rdf:type owl:Class ;
+  rdfs:comment "Reviewing promotional activities' effect on the sales orders. Analyze all promotional events and campaigns that the organization has already employed or is planning to deploy. "@en ;
+  rdfs:label "Analyze historical and planned promotions and events"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10137PartOf10129 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10137 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10129 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10138 rdf:type owl:Class ;
+  rdfs:comment "Identifying collaboration opportunities for selling, marketing, and distributing the organization's products/services. Determine any scope for partnering with other economic agents, with synergies for the marketing, sales, and/or distribution of the organization's products/services. Identify alliance opportunities that target customer segments who would be interested."@en ;
+  rdfs:label "Identify alliance opportunities"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10138FollowedBy10139 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10138 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10139 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10138PartOf10130 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10138 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10130 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10139 rdf:type owl:Class ;
+  rdfs:comment "Creating the frameworks needed to select alliance partners, and maintaining relationships with them. Create a framework for structured programs that can receive and support multiple alliances. Clearly outline the responsibilities and benefits of the alliance partners. Create frameworks for selecting the right alliance partners, and maintain a relationship with them. Create or repurpose teams of relationship managers and outline a methodology for selecting alliance partners."@en ;
+  rdfs:label "Design alliance programs and methods for selecting and managing relationships"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10139FollowedBy10140 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10139 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10140 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10139PartOf10130 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10139 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10130 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10140 rdf:type owl:Class ;
+  rdfs:comment "Choosing alliance partners using the selected programs and methodology. Select the most feasible and profitable alliance partners, based on Design alliance programs and methods for selecting and managing relationships [10139] and through a careful scrutiny of the potential alliance."@en ;
+  rdfs:label "Select alliances"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10140FollowedBy11465 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10140 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11465 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10140PartOf10130 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10140 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10130 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10141 rdf:type owl:Class ;
+  rdfs:comment "Designing strategies for effectively managing, identifying, and countering any possible issues from the alliance partnerships formed. Create a strategic road map for managing the partnerships forged through Design alliance programs and methods for selecting and managing relationships [10139]. Determine where the alliance partnerships are headed, possible problems or pushback from the partners, how these issues might be countered, how these alliance partnerships would evolve in the future, any other business cases where these partnerships might be deployed, etc."@en ;
+  rdfs:label "Develop partner and alliance management strategies"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10141FollowedBy10142 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10141 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10142 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10141PartOf10130 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10141 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10130 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10142 rdf:type owl:Class ;
+  rdfs:comment "Setting targets for organizational achievement. This includes what the organization aims to achieve from and how it wishes to manage both the individual partners and the alliance as a whole. Set immediate through long-term goals including revenue targets, market penetration, footfall numbers, and geographical coverage."@en ;
+  rdfs:label "Establish partner and alliance management goals"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10142FollowedBy18629 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10142 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :18629 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10142PartOf10130 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10142 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10130 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10143 rdf:type owl:Class ;
+  rdfs:comment "Estimating revenue from the sale of products/services. Approximate the anticipated sale of products/services and multiply it by the selling price of the respective offering. (This represents the total amount of money that the organization receives from the sale of its portfolio of offerings.)"@en ;
+  rdfs:label "Calculate product revenue"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10143FollowedBy10144 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10143 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10144 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10143PartOf10131 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10143 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10131 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10144 rdf:type owl:Class ;
+  rdfs:comment "Calculating the variable costs of production. Approximate those costs that depend on the volume of products/services produced by the organization."@en ;
+  rdfs:label "Determine variable costs"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10144FollowedBy10145 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10144 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10145 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10144PartOf10131 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10144 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10131 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10145 rdf:type owl:Class ;
+  rdfs:comment "Calculating the overhead costs associated with selling the organization's products/services. Determine fixed costs that are not directly related to the volume of products/services processed or the sale of these offerings (e.g., expense over machinery and equipment)."@en ;
+  rdfs:label "Determine overhead and fixed costs"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10145FollowedBy10146 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10145 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10146 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10145PartOf10131 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10145 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10131 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10146 rdf:type owl:Class ;
+  rdfs:comment "Calculating the net income. Calculate the organization's profitability by accounting for Determine overhead and fixed costs [10145] and Determine variable costs [10144]."@en ;
+  rdfs:label "Calculate net profit"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10146FollowedBy10147 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10146 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10147 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10146PartOf10131 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10146 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10131 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10147 rdf:type owl:Class ;
+  rdfs:comment "Creating a plan in measurable terms for the financial outlay that best captures resource allocation for the sales forecast. Consider the outlay of capital, HR, raw materials, and provisions needed to reach sales targets."@en ;
+  rdfs:label "Create budget"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10147PartOf10131 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10147 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10131 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10148 rdf:type owl:Class ;
+  rdfs:comment "Determining what to achieve by marketing. Create qualitative and quantitative targets. Establish metrics to track performance (for individual Market segments [10109] and Channels for target segments [10129]). Enlist the head of marketing to determine marketing priorities and the related measures. (The decision in establishing these goals, objectives, and metrics is founded in Develop marketing strategy [10102] and takes cues from current priorities and organizational strategy.)"@en ;
+  rdfs:label "Establish goals, objectives, and measures for products/services by channel/segment"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10148PartOf20008 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10148 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20008 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10149 rdf:type owl:Class ;
+  rdfs:comment "Creating a budget for the organization's marketing efforts, in line with the business-wide strategic outlook. Create a plan to distribute resources for achieving the marketing strategy in light of the overall business strategy. Make cost assumptions ; calculate the estimated total revenue from the marketing activities against the costs/expenses of these activities. Forecast the return on investment. Attribute costs to the appropriate marketing activities such as promotional campaigns, advertising, marketing communications, PR campaigns, personnel, and office space. Enlist the financial and marketing functions."@en ;
+  rdfs:label "Establish marketing budgets"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10149PartOf20008 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10149 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20008 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10153 rdf:type owl:Class ;
+  rdfs:comment "Collating all customer-centered metrics. The objective is to create a big-picture view of the customers' mindset and their behavior pertaining to the organization's offerings."@en ;
+  rdfs:label "Track customer management measures"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10153PartOf20008 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10153 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20008 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10154 rdf:type owl:Class ;
+  rdfs:comment "Creating, executing, and administering a strategic road map for packaging products/services. Determine how to package products/services into finished offerings that can be directly marketed to prospective customers. Consider physicality, perishability, and shelf-life. Develop a strategy for packaging products/services. Test alternatives. Collect feedback. Refine the option chosen for execution. Have marketing, product development, and supply chain functions work together to develop sound packaging."@en ;
+  rdfs:label "Develop and manage packaging strategy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10154PartOf20008 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10154 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20008 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10155 rdf:type owl:Class ;
+  rdfs:comment "Ensuring corroboration of the marketing strategy and the organizational strategy. Ensure the organization's marketing strategy/plan aligns with the overall business strategy. Fine-tune the marketing plan according to the organizational strategy."@en ;
+  rdfs:label "Confirm marketing alignment to business strategy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10155FollowedBy10156 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10155 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10156 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10155PartOf10149 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10155 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10149 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10156 rdf:type owl:Class ;
+  rdfs:comment "Calculating the total cost of marketing the organization's portfolio of products/services. Calculate the total outlay needed for promoting, selling, and delivering the organization's products/services to customers. Account for all costs to acquire customers and sustain a relationship with them. Include the expenses needed for promotional actives, warehousing, transactional costs, and distribution of the organization's offering."@en ;
+  rdfs:label "Determine costs of marketing"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10156FollowedBy10157 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10156 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10157 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10156PartOf10149 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10156 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10149 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10157 rdf:type owl:Class ;
+  rdfs:comment "Estimating the outlay required for promoting, selling, and distributing the products/services of the organization. Add up the expenses of all activities necessitated in marketing, such as promotional campaigns, advertising, marketing communications, PR campaigns, employing skilled personnel, and office space."@en ;
+  rdfs:label "Create marketing budget"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10157FollowedBy17683 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10157 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :17683 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10157PartOf10149 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10157 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10149 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10159 rdf:type owl:Class ;
+  rdfs:comment "Developing the central messages for a segment of its customers. Craft concise statements that position the value proposition of individual products/services around the pressing concerns in the market, thereby showing how the organization's offerings are the right fit for the customers."@en ;
+  rdfs:label "Develop marketing messages"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10159FollowedBy10160 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10159 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10160 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10159PartOf20010 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10159 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20010 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10160 rdf:type owl:Class ;
+  rdfs:comment "Determining the appropriate audience to direct marketing efforts at. Identify the particular group of customers to target. Discover the appropriate customer groups at a micro-level. Use techniques such as segmentation analysis, whereby the entire population is sliced according to certain demographic or behavioral attributes."@en ;
+  rdfs:label "Define target audience"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10160FollowedBy10168 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10160 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10168 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10160PartOf20010 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10160 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20010 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10163 rdf:type owl:Class ;
+  rdfs:comment "Establishing a dynamic pricing mechanism for the organization's offerings that is supported by the number of units in production. Outline a system for determining the optimum price point for each product/service. Based this model on an estimation of the volume of anticipated sales for each offering and variable costs."@en ;
+  rdfs:label "Determine pricing based on volume/unit forecast"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10163FollowedBy10164 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10163 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10164 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10163PartOf20593 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10163 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20593 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10164 rdf:type owl:Class ;
+  rdfs:comment "Implementing the pricing mechanism to determine prices for all individual offerings in the organizational portfolio. Calculate the prices of all offerings based on the established methodology and/or formulaic structure."@en ;
+  rdfs:label "Execute pricing plan"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10164FollowedBy10165 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10164 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10165 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10164PartOf20593 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10164 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20593 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10165 rdf:type owl:Class ;
+  rdfs:comment "Examining the efficiency of pricing with the objective of identifying any divergence from the equilibrium prices and avoiding any deadweight loss. Gauge the performance of the pricing plan by tracking growth in the revenue and/or customer uptake, secured as a result of new prices. Measure the performance of pricing by periodically checking the profits generated from the sale of each of the organization's offerings against the backdrop of any events that may have influenced the uptake of a certain good/service by the customer base."@en ;
+  rdfs:label "Evaluate pricing performance"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10165FollowedBy10166 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10165 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10166 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10165PartOf20593 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10165 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20593 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10166 rdf:type owl:Class ;
+  rdfs:comment "Refining the pricing mechanism to create equitable prices for all products/services with the objective of maximizing the profits and/or customer uptake of these offerings. Reconcile the pricing mechanism in order to achieve equilibrium pricing. Adjust the prices for all of the organization's offerings, using the insights gleaned from examining how much profit or customer uptake is generated by the present pricing strategy."@en ;
+  rdfs:label "Refine pricing as needed"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10166FollowedBy11495 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10166 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11495 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10166PartOf20593 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10166 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20593 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10167 rdf:type owl:Class ;
+  rdfs:comment "Outlining a conceptual framework for all promotional activity in order to create an overarching aspiration and ensure consistency. Create a plan for running promotional programs and designing the associated activities in order to increase visibility or sales. Determine how the organization quantifies what it wishes to achieve from these activities, what sort of messages the organization comfortable publicizing, what channels the organization wishes to employ, etc."@en ;
+  rdfs:label "Define promotional concepts and objectives"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10167FollowedBy10159 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10167 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10159 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10167PartOf20010 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10167 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20010 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10168 rdf:type owl:Class ;
+  rdfs:comment "Developing a scheme for executing the promotional programs and campaigns, and testing these on sample audiences. Create a program plan, and carry out trials for promotional activities. Develop a scheme for how, when, where, and by whom the promotional schemes and campaigns will be deployed. Design incentives that convince or tempt the consumer to take up the organization's offerings. Conduct focus groups and pilot programs that reach out to a smaller number of people from among the target audiences to validate effectiveness."@en ;
+  rdfs:label "Plan and test promotional activities"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10168FollowedBy10169 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10168 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10169 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10168PartOf20010 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10168 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20010 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10169 rdf:type owl:Class ;
+  rdfs:comment "Executing promotional programs in the market for reaching out to the desired customer segments. Implement the promotional schemes and campaigns. Create collaterals for the dissemination of information about the product, product line, brand, or company to the target audiences in an effective manner. Leverage relationships with distributors, vendors, and retailers. Consider enlisting professional services such as design, PR, and advertising firms."@en ;
+  rdfs:label "Execute promotional activities"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10169FollowedBy10170 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10169 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10170 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10169PartOf20010 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10169 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20010 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10170 rdf:type owl:Class ;
+  rdfs:comment "Evaluating the success of promotional programs through metrics that track the impact of these activities. Examine the performance of promotional activities. Measure the success of these programs through metrics representative of customer uptake, market penetration, sustenance of impact created, revenue growth through offerings marketed, etc. Measure through primary data collection. Analyze through various statistical techniques to generate insights."@en ;
+  rdfs:label "Evaluate promotional performance metrics"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10170FollowedBy10171 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10170 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10171 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10170PartOf20010 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10170 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20010 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10171 rdf:type owl:Class ;
+  rdfs:comment "Fine-tuning promotional activities by employing the insights gleaned from the quantitative, as well as any qualitative, performance evaluations. Change certain attributes of the schemes, campaigns, and programs deployed in order to increase the impact generated, in terms of measures already agreed upon such as customer uptake, market penetration, sustenance of impact created, and revenue growth through offerings marketed."@en ;
+  rdfs:label "Refine promotional performance metrics"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10171FollowedBy10172 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10171 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10172 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10171PartOf20010 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10171 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20010 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10172 rdf:type owl:Class ;
+  rdfs:comment "Incorporating the understanding developed by studying promotional activities as well as refining them. Include the best practices and value-enhancing attributes identified in Refine promotional activities [10171] into similarly planned schemes, programs, and campaigns. Adjust promotional activities to further increase the effectiveness of the overall promotional efforts."@en ;
+  rdfs:label "Incorporate learning into future/planned consumer promotions"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10172PartOf20010 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10172 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20010 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10173 rdf:type owl:Class ;
+  rdfs:comment "Estimating customer loyalty and the average contribution made by them to revenues, over their lifespan. Use metrics to quantify the commitment of customers to the offerings of the organization, such as measures of tendency to switch brands/providers, number/proportion of return customers, and the number of customers using multiple substitutable offerings."@en ;
+  rdfs:label "Determine customer lifetime value"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10173FollowedBy10174 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10173 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10174 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10173PartOf10153 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10173 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10153 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10174 rdf:type owl:Class ;
+  rdfs:comment "Analyzing the revenue stream generated by the sale of the organization's products/services in order to identify trends therein. Examine data relating to the inflow of revenue from individual/groups of customers in order to identify patterns in the generation and sustenance of receivables. Conduct statistical analysis over the stream of revenue collected and the point of origin associated with each unit of sale through metrics such as the accounting rate of return, the GAAP revenue over a given period, and customer lifetime revenue."@en ;
+  rdfs:label "Analyze customer revenue trend"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10174FollowedBy10175 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10174 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10175 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10174PartOf10153 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10174 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10153 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10175 rdf:type owl:Class ;
+  rdfs:comment "Calculating measures that capture the proportion of customers the organization is able to retain to those it is losing. Compute metrics such as the tendency to switch brands/providers and the proportion of return customers to comprehend the trends within the customer attrition and retention rates."@en ;
+  rdfs:label "Analyze customer attrition and retention rates"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10175FollowedBy10176 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10175 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10176 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10175PartOf10153 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10175 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10153 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10176 rdf:type owl:Class ;
+  rdfs:comment "Studying all measures of the customer's behavior and conduct toward the organization's offerings in order to glean insight and identify patterns into their decision making. Closely examine all categories of data sets over a customer base. Analyze data points related to customer loyalty, retention, value, conversion, level of satisfaction, attrition, etc. Flesh out measures for an all-encompassing analysis that provides a macro-level picture of the customer's behavior and mindset related to the organization's products/services."@en ;
+  rdfs:label "Analyze customer metrics"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10176FollowedBy10177 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10176 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10177 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10176PartOf10153 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10176 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10153 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10177 rdf:type owl:Class ;
+  rdfs:comment "Reviewing and reappraising the strategies, objectives, and plans for all customer-centered processes. Revisit all customer-focused processes and activities--which relate to their acquisition, conversion, and retention--with the objective of revising them in light of customer analysis. Revise accordingly."@en ;
+  rdfs:label "Revise customer strategies, objectives, and plans based on metrics"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10177PartOf10153 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10177 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10153 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10178 rdf:type owl:Class ;
+  rdfs:comment "Creating a strategic road map for how to package products/services into desirable solutions while increasing profitability. Create a scheme for how the organization will bundle and wrap its products/services into a presentable and sellable offering. Consider what aspects or components of an offering the organization can extract the maximum revenue from, and reduce the less profitable constituents while maintaining a high perceptible value for the customers. Balance maximizing profit with benefits to the customer."@en ;
+  rdfs:label "Plan packaging strategy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10178FollowedBy10179 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10178 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10179 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10178PartOf10154 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10178 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10154 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10179 rdf:type owl:Class ;
+  rdfs:comment "Piloting the packaged products/services in the market with a test audience. Create trial runs using techniques such as focus groups of the final product, wrapped and bundled."@en ;
+  rdfs:label "Test packaging options"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10179FollowedBy10180 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10179 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10180 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10179PartOf10154 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10179 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10154 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10180 rdf:type owl:Class ;
+  rdfs:comment "Implementing the final packaging. Put into action the packaging strategy in light of the insights accumulated from testing various options."@en ;
+  rdfs:label "Execute packaging strategy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10180FollowedBy10181 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10180 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10181 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10180PartOf10154 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10180 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10154 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10181 rdf:type owl:Class ;
+  rdfs:comment "Fine-tuning the packaging that has been developed and tested using insights gleaned from feedback. "@en ;
+  rdfs:label "Refine packaging"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10181PartOf10154 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10181 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10154 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10182 rdf:type owl:Class ;
+  rdfs:comment "Generating leads of prospective customers to grow the organization's business. Identify viable customers based on customer and market research. Discover leads through IT applications, cold calling, reference/network development, or other sales and business development techniques. Employ a scoring model qualify the prospective customers into leads, and prioritize them."@en ;
+  rdfs:label "Manage leads/opportunities"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10182PartOf10105 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10182 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10105 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10183 rdf:type owl:Class ;
+  rdfs:comment "Managing the customer's expectations, with the intent of responsibly increasing the sale of the organization's products/services. Create a systematic method for governing sales, using sales forecasts and customer management measures. Develop a blueprint to manage relationships with customers and the data it holds on them, as well as the sale of its products/services to these customers. Devise a recipe for handling the organization's key customers in order to manage their expectations with tact and responsibility while maximizing revenue."@en ;
+  rdfs:label "Manage customers and accounts"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10183PartOf10105 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10183 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10105 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10184 rdf:type owl:Class ;
+  rdfs:comment "Managing the entire sales process, from using leads to open sales to closing sales and creating records. Govern all sales activities. Make sales calls based on leads and preparatory work (drafting terms of the sale, creating proposals, suggesting prices, etc.). Close the sale, along with any administrative activities related to data entry and the processing of the sale."@en ;
+  rdfs:label "Manage customer sales calls"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10184PartOf10182 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10184 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10182 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10185 rdf:type owl:Class ;
+  rdfs:comment "Taking, receiving, processing, and acknowledging new customer orders or amendments to outstanding customer orders. Monitoring status from order receipt to customer delivery/customer invoicing."@en ;
+  rdfs:label "Manage sales orders"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10185PartOf10105 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10185 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10105 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10187 rdf:type owl:Class ;
+  rdfs:comment "Managing the organization's partners and alliances, with the objective of maximizing revenue. Train partners regarding the organization's portfolio of products/services. Craft sales forecasts. Examine their performance. Manage all data held by the organization on these partners."@en ;
+  rdfs:label "Manage sales partners and alliances"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10187PartOf10105 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10187 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10105 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10188 rdf:type owl:Class ;
+  rdfs:comment "Identifying people who can be converted into customers. Leverage personal and professional networks, business research over databases and directories, and secondary research."@en ;
+  rdfs:label "Identify potential customers"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10188FollowedBy10189 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10188 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10189 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10188PartOf10182 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10188 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10182 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10189 rdf:type owl:Class ;
+  rdfs:comment "Qualifying the prospective customers into credible leads by gauging their behavior against the organization's offering. Triangulate leads to increase the efficiency of sales and marketing efforts. Build a detailed profile of the prospects. Determine what products/services they already use, if they have decision-making authority, their views on the products/services they already use, how prone they are to switch, if the organization's solution better in some attributes than those prospects currently use, etc."@en ;
+  rdfs:label "Identify/receive leads/opportunities"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10189FollowedBy18115 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10189 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :18115 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10189PartOf10182 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10189 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10182 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10190 rdf:type owl:Class ;
+  rdfs:comment "Communicating with customers and prospects with the intent of creating sales opportunities. Reach out to existing and prospective customers through alternate media and networking channels, apart from cold calling/emailing."@en ;
+  rdfs:label "Perform sales calls"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:10190FollowedBy10191 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10190 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10191 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:10190PartOf10184 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10190 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10184 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10191 rdf:type owl:Class ;
+  rdfs:comment "Capitalizing on sales calls by pitching on bids and closing deals. Outline the nature and scope of the work, draft agreement terms, prepare proposals and agreements, and propose timelines and prices."@en ;
+  rdfs:label "Perform pre-sales activities"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:10191FollowedBy20012 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10191 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :20012 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:10191PartOf10184 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10191 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10184 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10192 rdf:type owl:Class ;
+  rdfs:comment "Formalizing a sale by reaching an agreement on terms of the deal. Negotiate on the price, and reach a consensus on the terms and conditions."@en ;
+  rdfs:label "Close the sale"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:10192FollowedBy10193 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10192 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10193 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:10192PartOf10184 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10192 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10184 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10193 rdf:type owl:Class ;
+  rdfs:comment "Completing all the paper-work associated with the sale of its products/services. Exchange any pertinent legal/financial information required for completing the sale, signing of a contract/work-order, and issuing copies of bills/invoices."@en ;
+  rdfs:label "Record outcome of sales process"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:10193PartOf10184 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10193 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10184 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10194 rdf:type owl:Class ;
+  rdfs:comment "Receiving and confirming orders from customers. Verify that no extra expenses have to be disbursed on part of the organization for labor or inventory when processing the order. "@en ;
+  rdfs:label "Accept and validate sales orders"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10194FollowedBy10195 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10194 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10195 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10194PartOf10185 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10194 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10185 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10195 rdf:type owl:Class ;
+  rdfs:comment "Collecting and maintaining all account information. Collect information about the purchase, servicing, return, and/or commitment of any products/services on part of the organization to its customers. Bring together information from various organizational divisions, and update periodically."@en ;
+  rdfs:label "Collect and maintain account information"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10195FollowedBy10196 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10195 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10196 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10195PartOf10185 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10195 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10185 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10196 rdf:type owl:Class ;
+  rdfs:comment "Ascertaining the volume or scale of products/services to provide to customers to fulfill sales orders. Check the finished products stored in warehouses, the production capacity, and (in the case of services) the processing speed, as well as work force availability."@en ;
+  rdfs:label "Determine availability"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10196FollowedBy10197 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10196 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10197 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10196PartOf10185 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10196 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10185 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10197 rdf:type owl:Class ;
+  rdfs:comment "Devising a blueprint for order fulfillment. Create a schematic flow encompassing all activities to deliver orders to the customers. Outline a procedure for satisfying these orders by answering questions about what needs to happen in sequence to realize an order."@en ;
+  rdfs:label "Determine fulfillment process"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10197FollowedBy10198 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10197 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10198 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10197PartOf10185 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10197 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10185 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10198 rdf:type owl:Class ;
+  rdfs:comment "Analyzing all data relating to sales orders by entering it into a centralized repository, and using the insights generated to create opportunities for cross-/up-selling. Maintain up-to-date records of sales, along with current status. Include all sales activity with relevant information about the associated customers, and identify patterns in the data. Glean insights from these patterns to persuade customers to purchase additional offerings or upgrade purchased products/services."@en ;
+  rdfs:label "Enter orders into system"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10198FollowedBy17404 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10198 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :17404 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10198PartOf10185 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10198 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10185 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10199 rdf:type owl:Class ;
+  rdfs:comment "Processing any unfulfilled orders, and updating the status of any orders that have been accepted and are being attended to. Deliver on any purchase orders that remain unserviced due to temporary unavailability of the product/service. Manage any updates to the sales orders. Revise their status in the order system."@en ;
+  rdfs:label "Process back orders and updates"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10199FollowedBy10200 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10199 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10200 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10199PartOf10185 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10199 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10185 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10200 rdf:type owl:Class ;
+  rdfs:comment "Attending to any queries received from the customers, even after a sales order has been serviced. Deploy ad hoc personnel for managing these enquiries."@en ;
+  rdfs:label "Handle sales order inquiries including post-order fulfillment transactions"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10200PartOf10185 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10200 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10185 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10201 rdf:type owl:Class ;
+  rdfs:comment "Managing essential information of customer accounts."@en ;
+  rdfs:label "Administer key account details"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:10201FollowedBy10202 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10201 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10202 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:10201PartOf10195 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10201 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10195 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10202 rdf:type owl:Class ;
+  rdfs:comment "Obtaining detailed information about customers."@en ;
+  rdfs:label "Retrieve full customer details"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:10202FollowedBy10203 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10202 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10203 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:10202PartOf10195 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10202 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10195 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10203 rdf:type owl:Class ;
+  rdfs:comment "Altering information about involved parties."@en ;
+  rdfs:label "Modify involved party details"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:10203FollowedBy10204 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10203 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10204 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:10203PartOf10195 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10203 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10195 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10204 rdf:type owl:Class ;
+  rdfs:comment "Documenting address information."@en ;
+  rdfs:label "Record address details"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:10204FollowedBy10205 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10204 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10205 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:10204PartOf10195 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10204 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10195 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10205 rdf:type owl:Class ;
+  rdfs:comment "Documenting contact information."@en ;
+  rdfs:label "Record contact details"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:10205FollowedBy10206 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10205 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10206 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:10205PartOf10195 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10205 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10195 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10206 rdf:type owl:Class ;
+  rdfs:comment "Providing information about important business rules regarding communicating with customers."@en ;
+  rdfs:label "Record key customer communication profile details"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:10206FollowedBy10207 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10206 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10207 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:10206PartOf10195 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10206 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10195 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10207 rdf:type owl:Class ;
+  rdfs:comment "Revising information about involved parties."@en ;
+  rdfs:label "Review involved party information"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:10207FollowedBy10208 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10207 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10208 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:10207PartOf10195 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10207 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10195 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10208 rdf:type owl:Class ;
+  rdfs:comment "Dismissing information about involved parties."@en ;
+  rdfs:label "Terminate involved party information"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:10208PartOf10195 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10208 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10195 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10209 rdf:type owl:Class ;
+  rdfs:comment "Planning the distribution of personnel across various sales functions. Match the capabilities of individual employees with the skill sets needed for specific roles. Seek assistance from HR."@en ;
+  rdfs:label "Determine sales resource allocation"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10209FollowedBy10184 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10209 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10184 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10209PartOf10182 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10209 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10182 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10211 rdf:type owl:Class ;
+  rdfs:comment "Imparting guidance and instruction to sales partners/alliances concerning products/services. Distribute literature about the organization's products/services. Conduct workshops. Disseminate useful media content to engage and enlighten partners. Create communities through group engagements."@en ;
+  rdfs:label "Provide sales and product/service training to sales partners/alliances"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10211FollowedBy18641 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10211 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :18641 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10211PartOf10187 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10211 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10187 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10214 rdf:type owl:Class ;
+  rdfs:comment "Examining the performance of its partners/alliances in selling its products/services. Use metrics such as growth in revenue generated, conversion rate, and total outreach to customers for assessing the performance results."@en ;
+  rdfs:label "Evaluate partner/alliance results"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10214FollowedBy14209 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10214 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :14209 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10214PartOf10187 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10214 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10187 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11168 rdf:type owl:Class ;
+  rdfs:comment "Refining the attributes of organizational offerings to define their value proposition for the customer. Clearly define the suite of offerings in terms of the value delivered, from the perspective of what the customer desires. Validate the benefits delivered to the customers against target market segments, using techniques such as minimum viable product. Position brands for the respective products/services, in line with their unique value proposition and aligned with customers needs."@en ;
+  rdfs:label "Define offering and customer value proposition"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:11168PartOf10102 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11168 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10102 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:11169 rdf:type owl:Class ;
+  rdfs:comment "Defining problem(s) that the organization's products/services solve for the customers, thereby determining how they are positioned in the market. Refine the product/service concepts from the perspective of customers. Succinctly outline the problem the organization's offerings solves for the customers, making a case for why the customer should buy a product or use a service. Define the offering's unique value."@en ;
+  rdfs:label "Define offering and positioning"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11169FollowedBy11170 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11169 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11170 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11169PartOf11168 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11169 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :11168 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11170 rdf:type owl:Class ;
+  rdfs:comment "Boosting the attractiveness of products/services to the targeted customers, and creating a unique brand projection around these features. Identify and enhance those product/service features that reinforce the attractiveness of these offerings, for these segment of customers. Underscore the perceived value delivered to the customers by clearly specifying the relevance and desirability of these products/services. Once it has been clarified how the organization's offerings meet the customer's expectations or deliver specific benefits, position the brands around these benefits."@en ;
+  rdfs:label "Develop value proposition including brand positioning for target segments"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11170FollowedBy11171 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11170 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11171 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11170PartOf11168 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11170 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :11168 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11171 rdf:type owl:Class ;
+  rdfs:comment "Validating the desirability of the perceived value delivered by the organization's offerings, to the targeted customer segment. Substantiate the value of the benefits accrued to the customers through the organization's offerings. Justify the value proposition in light of the targeted segments by gathering feedback (using teaser demonstrations, surveys, interviews, primary research studies, and customer case studies). Corroborate the benefits of the organization's offerings."@en ;
+  rdfs:label "Validate value proposition with target segments"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11171FollowedBy11172 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11171 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11172 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11171PartOf11168 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11171 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :11168 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11172 rdf:type owl:Class ;
+  rdfs:comment "Creating branding collaterals and campaigns that carve a significant and differentiated presence for the organization's offerings. Create new collaterals, which include names, designs, and symbols, for their products/services. Ensure collaterals reflect the unique value proposition of the respective offerings through a consistent theme. Create advertising and promotion campaigns."@en ;
+  rdfs:label "Develop new branding"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11172PartOf11168 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11172 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :11168 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11173 rdf:type owl:Class ;
+  rdfs:comment "Creating a plan for managing the accounts of key customers in order to better maintain relationships with them. Chart a scheme for managing sales. Create a plan for administering accounts of the significant and most important customers of the organization. Coordinate the accounts of principal clients. "@en ;
+  rdfs:label "Develop sales/key account plan"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11173FollowedBy20014 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11173 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :20014 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11173PartOf10183 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11173 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10183 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11174 rdf:type owl:Class ;
+  rdfs:comment "Managing the organization's relationship with its customers, by systematically coordinating interactions over multiple touch points, on a regular basis. Coordinate the organization's efforts to reach out to its customers. Create and manage effective touch points for interactions from the customers, which could include emails, social-media interactions, newsletters, and direct conversations."@en ;
+  rdfs:label "Manage customer relationships"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11174FollowedBy14208 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11174 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :14208 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11174PartOf10183 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11174 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10183 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11465 rdf:type owl:Class ;
+  rdfs:comment "Implementing category management strategies for customers through the use of consumer insights and understanding of customer specifics. Develop consumer and channel insights. Establish long term strategies, objectives and targets across the brand."@en ;
+  rdfs:label "Develop customer trade strategy and customer objectives/targets"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11465FollowedBy11521 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11465 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11521 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11465PartOf10130 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11465 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10130 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11466 rdf:type owl:Class ;
+  rdfs:comment "Arranging meetings with trade partners to coordinate logistics, manage critical resources, resolve bottlenecks, and schedule urgent or time-sensitive matters."@en ;
+  rdfs:label "Conduct planning activities for major trade customers"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11466FollowedBy10141 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11466 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10141 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11466PartOf10130 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11466 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10130 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11468 rdf:type owl:Class ;
+  rdfs:comment "Sending invitations and distributing information about upcoming events to customer teams and other involved entities."@en ;
+  rdfs:label "Communicate planning information to customer teams"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11468PartOf10130 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11468 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10130 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11495 rdf:type owl:Class ;
+  rdfs:comment "Managing schemes that offer lower pricing for a limited time as a promotional and sales incentive when launching a new product or a service. "@en ;
+  rdfs:label "Implement promotional pricing programs"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11495FollowedBy11496 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11495 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11496 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11495PartOf20593 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11495 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20593 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11496 rdf:type owl:Class ;
+  rdfs:comment "Determining the optimum consumer pricing for each product or service at the point of sale, based on production and distribution costs and estimated sales volume."@en ;
+  rdfs:label "Implement other retail pricing programs"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11496FollowedBy11497 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11496 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11497 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11496PartOf20593 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11496 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20593 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11497 rdf:type owl:Class ;
+  rdfs:comment "Assigning new prices or pricing adjustments to products or services to replace the original base prices. Update the prices in product catalogs and databases, and disseminate the information through all involved distribution and marketing channels."@en ;
+  rdfs:label "Communicate and implement price changes"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11497FollowedBy17684 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11497 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :17684 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11497PartOf20593 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11497 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20593 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11521 rdf:type owl:Class ;
+  rdfs:comment "Establishing business-to-business marketing campaigns and financial incentives for wholesalers, dealers, distributors and other intermediaries that the company uses to distribute its products or services."@en ;
+  rdfs:label "Define trade programs and funding options"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11521FollowedBy11466 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11521 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11466 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11521PartOf10130 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11521 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10130 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11522 rdf:type owl:Class ;
+  rdfs:comment "Combining scheduled promotional, category management and trade marketing events into unified timetables. Update the calendars. Register new events."@en ;
+  rdfs:label "Develop promotional and category management calendars (trade marketing calendars)"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11522FollowedBy11523 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11522 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11523 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11522PartOf10130 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11522 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10130 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11523 rdf:type owl:Class ;
+  rdfs:comment "Establishing long term customer sales plans to assess current sales and to determine future sales objectives, strategies for achieving the goals, and available resources."@en ;
+  rdfs:label "Create strategic and tactical sales plans by customer"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11523FollowedBy11468 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11523 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11468 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11523PartOf10130 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11523 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10130 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11773 rdf:type owl:Class ;
+  rdfs:comment "Aligning sales leads with business objectives."@en ;
+  rdfs:label "Match opportunities to business strategy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11773FollowedBy18116 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11773 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :18116 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11773PartOf10182 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11773 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10182 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11779 rdf:type owl:Class ;
+  rdfs:comment "Understanding and refining the customer requirements as provided in a RFP (Request for Proposal) or RFI (Request for Information).  When compiling the response, they must take into consideration whether the requirements are a match with the strategic or tactical plans of the organization and whether they are able to submit a bid/proposal that is competitive based on an understanding of the offerings of other competing organizations. The next step will be to define the pricing and scheduling of the proposed solution and determine whether the proposal will be profitable for the company if accepted. The bid is then submitted and a notification of whether or not it was successful is received."@en ;
+  rdfs:label "Develop and manage sales proposals, bids, and quotes"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:11779PartOf10105 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11779 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10105 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:11780 rdf:type owl:Class ;
+  rdfs:comment "Clarifying the details about procurement requests, such as the scope, timeline, data sources, type and characteristics and evaluation criteria for the goods or services to be delivered, and any additional terms, conditions or special requirements."@en ;
+  rdfs:label "Refine customer requirements"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11780FollowedBy11782 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11780 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11782 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11780PartOf11779 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11780 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :11779 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11781 rdf:type owl:Class ;
+  rdfs:comment "Accepting procurement proposals. "@en ;
+  rdfs:label "Receive Request For Proposal (RFP)/Request For Quote (RFQ)"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11781FollowedBy11780 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11781 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11780 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11781PartOf11779 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11781 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :11779 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11782 rdf:type owl:Class ;
+  rdfs:comment "Evaluating individual price and delivery solicitations for their strengths and weaknesses. Analyze how closely the submitted bids respond to the requirements outlined in the RFPs."@en ;
+  rdfs:label "Review RFP/RFQ request"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11782FollowedBy11783 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11782 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11783 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11782PartOf11779 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11782 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :11779 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11783 rdf:type owl:Class ;
+  rdfs:comment "Comparing the proposals submitted by different bidders in terms of cost, efficiency and value. "@en ;
+  rdfs:label "Perform competitive analysis"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11783FollowedBy11784 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11783 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11784 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11783PartOf11779 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11783 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :11779 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11784 rdf:type owl:Class ;
+  rdfs:comment "Assessing the business strategy, forecasted performance, financing and cash flow of the proposals."@en ;
+  rdfs:label "Validate with strategy/business plans"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11784FollowedBy11785 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11784 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11785 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11784PartOf11779 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11784 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :11779 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11785 rdf:type owl:Class ;
+  rdfs:comment "Deepening knowledge about the customer's field of operation and business needs."@en ;
+  rdfs:label "Understand customer business and requirements"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11785FollowedBy20015 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11785 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :20015 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11785PartOf11779 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11785 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :11779 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11787 rdf:type owl:Class ;
+  rdfs:comment "Determining the needs for internal resources and vacancies."@en ;
+  rdfs:label "Identify staffing requirements"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11787FollowedBy11788 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11787 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11788 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11787PartOf11779 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11787 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :11779 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11788 rdf:type owl:Class ;
+  rdfs:comment "Establishing predicted delivery costs, fees and timelines."@en ;
+  rdfs:label "Develop pricing and scheduling estimates"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11788FollowedBy11789 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11788 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11789 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11788PartOf11779 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11788 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :11779 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11789 rdf:type owl:Class ;
+  rdfs:comment "Reviewing profitability data. Analyze systematically all relevant metrics and parameters. Report findings and make recommendations for changes to operational strategies."@en ;
+  rdfs:label "Conduct profitability analysis"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11789FollowedBy20016 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11789 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :20016 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11789PartOf11779 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11789 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :11779 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11790 rdf:type owl:Class ;
+  rdfs:comment "Delivering the proposal to the potential client."@en ;
+  rdfs:label "Submit/present bid/proposal/quote to customer"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11790FollowedBy20018 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11790 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :20018 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11790PartOf11779 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11790 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :11779 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11793 rdf:type owl:Class ;
+  rdfs:comment "Handling proposals depending on whether they were accepted or rejected."@en ;
+  rdfs:label "Manage notification outcome"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11793PartOf11779 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11793 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :11779 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:13169 rdf:type owl:Class ;
+  rdfs:comment "Analyzing marketing objectives, consumer demand, product attributes, competitors' pricing, and economic trends to determine optimum prices for the set of products and services that the company offers or intends to offer by delivering maximum ROI."@en ;
+  rdfs:label "Conduct pricing analysis"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:13169FollowedBy10124 rdf:type owl:ObjectProperty ;
+  rdfs:domain :13169 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10124 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:13169PartOf10123 rdf:type owl:ObjectProperty ;
+  rdfs:domain :13169 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10123 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:14208 rdf:type owl:Class ;
+  rdfs:comment "Managing the corpus of data relating all customers acquired over time. Manage the storage, maintenance, access, revision, and usage of all data on customers. Ensure its security, and determine legitimate use cases that are beneficial to the organization."@en ;
+  rdfs:label "Manage customer master data"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:14208PartOf10183 rdf:type owl:ObjectProperty ;
+  rdfs:domain :14208 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10183 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:14209 rdf:type owl:Class ;
+  rdfs:comment "Managing the repository of data relating to the organization's partners/alliances over time. Store, maintain, access, revise, and use all data on partners/alliances. Manage data. Ensure its security. Determine legitimate use cases that are beneficial to the organization."@en ;
+  rdfs:label "Manage sales partner/alliance master data"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:14209PartOf10187 rdf:type owl:ObjectProperty ;
+  rdfs:domain :14209 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10187 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16500 rdf:type owl:Class ;
+  rdfs:comment "Conducting an analysis to review channel performance with respect to chosen metrics, benchmarks and performance targets [16573]. Compare to past performance and forecasts for the channel."@en ;
+  rdfs:label "Analyze channel performance"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:16500FollowedBy16501 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16500 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :16501 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16500PartOf20006 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16500 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20006 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16501 rdf:type owl:Class ;
+  rdfs:comment "Devising a course of action to be taken to improve under-performing channels and to promote or expand channels that surpass expectations."@en ;
+  rdfs:label "Develop plan for channel improvements"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:16501PartOf20006 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16501 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20006 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16573 rdf:type owl:Class ;
+  rdfs:comment "Determining measurable parameters to be used for comparing the performance of different marketing channels. Decide on benchmarks and values for optimum or desired performance. "@en ;
+  rdfs:label "Establish channel-specific measures and targets"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:16573FollowedBy16574 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16573 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :16574 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16573PartOf20006 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16573 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20006 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16574 rdf:type owl:Class ;
+  rdfs:comment "Tracking trends and changes in performance inside individual marketing channels and in channels collectively. Summarize and document results. Alert relevant parties about significant or unexpected deviations from expected behaviors."@en ;
+  rdfs:label "Monitor and report performance"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:16574FollowedBy16575 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16574 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :16575 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16574PartOf20006 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16574 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20006 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16575 rdf:type owl:Class ;
+  rdfs:comment "Analyzing the factors and circumstances that influence desired outcomes. Communicate core findings to relevant parties."@en ;
+  rdfs:label "Monitor and report events influencing factors"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:16575FollowedBy16500 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16575 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :16500 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16575PartOf20006 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16575 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20006 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16590 rdf:type owl:Class ;
+  rdfs:comment "Devising a strategy to market company's products or services seamlessly through all or most channels that are in widespread use among the target market. This may mean cross-channel access to customer preferences and purchasing history to accept returned merchandise, provide refunds, resolve payment issues or to provide technical support. "@en ;
+  rdfs:label "Define omni-channel strategy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:16590FollowedBy16591 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16590 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :16591 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:16590PartOf20004 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16590 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20004 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:16591 rdf:type owl:Class ;
+  rdfs:comment "Identifying necessary preconditions that a channel should fulfill in order to be included as one of the adopted channels, such as required throughput capacities, service capabilities, competitive pricing, and alignment with organizational marketing strategies. "@en ;
+  rdfs:label "Define omni-channel requirements"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:16591FollowedBy16592 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16591 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :16592 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:16591PartOf20004 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16591 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20004 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:16592 rdf:type owl:Class ;
+  rdfs:comment "Determining the detailed policies and procedures that each of the channels needs to follow in order to conform to the organizational marketing strategy and to provide seamless customer service experience."@en ;
+  rdfs:label "Develop omni-channel policies and procedures"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:16592PartOf20004 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16592 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20004 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:16598 rdf:type owl:Class ;
+  rdfs:comment "Gathering the data about customers. Combine the information available locally with the data obtained from external sources. "@en ;
+  rdfs:label "Collect and merge internal and third-party customer information"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:16598FollowedBy16599 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16598 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :16599 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:16598PartOf14208 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16598 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :14208 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:16599 rdf:type owl:Class ;
+  rdfs:comment "Eliminating redundant information in customer data. "@en ;
+  rdfs:label "De-duplicate customer data"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:16599PartOf14208 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16599 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :14208 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:16613 rdf:type owl:Class ;
+  rdfs:comment "Reviewing and responding to customer feedback. Create tickets to initiate bug fixes or to propose feature updates. Monitor and track progress."@en ;
+  rdfs:label "Analyze and respond to customer insight"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:16613PartOf20008 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16613 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20008 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:16614 rdf:type owl:Class ;
+  rdfs:comment "Examining user activity on company, vendor or reseller websites to improve traffic on and to the website, improve user experience on the website to simplify purchasing process and encourage repeat purchases, and to increase the site's visibility in search engine results. Various metrics can be used to measure user activity, such as number of users who are new, returning or unique, time spent on page, session duration, bounce rate, click through rate, conversion rate, and others."@en ;
+  rdfs:label "Analyze customer website activity"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:16614FollowedBy16615 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16614 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :16615 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16614PartOf16613 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16614 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :16613 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16615 rdf:type owl:Class ;
+  rdfs:comment "Conducting analyses to uncover customer purchasing habits. Detect patterns and categorize users based on similar characteristics and behaviors, demographic information, geographic location, search history, etc."@en ;
+  rdfs:label "Analyze customer purchase patterns"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:16615FollowedBy16616 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16615 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :16616 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16615PartOf16613 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16615 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :16613 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16616 rdf:type owl:Class ;
+  rdfs:comment "Creating formulas for personalized offers, purchasing recommendations and targeted advertisements for customers on the basis of previously detected purchase patterns [16615]."@en ;
+  rdfs:label "Develop business rules to provide personalized offers"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:16616FollowedBy16617 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16616 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :16617 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16616PartOf16613 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16616 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :16613 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16617 rdf:type owl:Class ;
+  rdfs:comment "Analyzing how well the targeted offers perform to see whether they result in an increased conversion rate. Reanalyze the purchase patterns or modify those business rules that are produce effective recommendations."@en ;
+  rdfs:label "Monitor effectiveness of personalized offers and adjust offers accordingly"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:16617PartOf16613 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16617 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :16613 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16627 rdf:type owl:Class ;
+  rdfs:comment "Following postings on social media to promote offerings, raise brand awareness, interact with customers, increase customer engagement and brand loyalty, respond to queries, gauge sentiment regarding company's products or services, and to derive customer insight."@en ;
+  rdfs:label "Monitor and respond to social media activity"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:16627FollowedBy16614 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16627 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :16614 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16627PartOf16613 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16627 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :16613 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16629 rdf:type owl:Class ;
+  rdfs:comment "Creating descriptions of products that are promotional and informative in content in order to initiate and increase sales. Marketing content consists of text, and optionally, images."@en ;
+  rdfs:label "Manage product marketing content"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:16629PartOf20008 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16629 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20008 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:16630 rdf:type owl:Class ;
+  rdfs:comment "Producing or overseeing the creation or acquisition of photos, images and graphics for a product description, advertisement or a website. Like the copy [18131], product images are chosen and edited to enhance the product description and to convince consumers to purchase the product."@en ;
+  rdfs:label "Manage product images"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:16630FollowedBy18130 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16630 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :18130 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16630PartOf16629 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16630 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :16629 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16633 rdf:type owl:Class ;
+  rdfs:comment "Surveying and tracking the benefits of customer loyalty programs both for the company and for customers. Compare with comparable loyalty programs instituted in competitor companies. Propose changes as needed to keep up with market trends. "@en ;
+  rdfs:label "Monitor customer loyalty program benefits to the enterprise and the customer"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:16633FollowedBy18927 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16633 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :18927 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16633PartOf18924 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16633 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :18924 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16848 rdf:type owl:Class ;
+  rdfs:comment "Establishing marketing communications that deliver promotional messages, in a coordinated way, through multiple marketing channels, such as print, radio, television, direct mail, online or mobile advertising, email, social media or personal selling."@en ;
+  rdfs:label "Develop marketing communication strategy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:16848PartOf10102 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16848 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10102 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:16849 rdf:type owl:Class ;
+  rdfs:comment "Timing and scheduling the delivery of marketing messages to maximize their impact on customer purchasing behavior. Integrate individual messages to larger marketing campaigns and to seasonal purchasing patterns."@en ;
+  rdfs:label "Develop customer communication calendar"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:16849FollowedBy16850 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16849 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :16850 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16849PartOf16848 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16849 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :16848 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16850 rdf:type owl:Class ;
+  rdfs:comment "Deciding how to promote and maintain a favorable public image of the company in the eyes of its employees, customers, investors, suppliers, politicians or the general public. This may involve various means but is frequently conducted through publicity, education, corporate social responsibility, charitable causes or civic engagements."@en ;
+  rdfs:label "Define public relations (PR) strategy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:16850FollowedBy16851 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16850 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :16851 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16850PartOf16848 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16850 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :16848 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16851 rdf:type owl:Class ;
+  rdfs:comment "Devising a master plan how to select potential customers or qualified clients for customized offers, and contact them on one-to-one basis through chat, phone, email or regular mail. The strategy would need to take into account that personalizing offers and contacting customers individually is an effective but resource-intensive marketing technique, and that ill-targeted offers risk at angering and alienating the contactees."@en ;
+  rdfs:label "Define direct marketing strategy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:16851FollowedBy16852 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16851 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :16852 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16851PartOf16848 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16851 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :16848 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16852 rdf:type owl:Class ;
+  rdfs:comment "Developing a program to promote the objectives, values, products and services of the company to its employees by treating them as potential customers, in order to extend company client base, increase employee engagement or to foster brand advocacy."@en ;
+  rdfs:label "Define internal marketing communication strategy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:16852FollowedBy16853 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16852 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :16853 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16852PartOf16848 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16852 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :16848 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16853 rdf:type owl:Class ;
+  rdfs:comment "Finding emerging media based on digital or other technologies that would enable the company to increase the speed and volume of marketing communications, to make communications more interactive and to customize promotional messages more easily to the target audience, thus rendering them more effective."@en ;
+  rdfs:label "Identify new media for marketing communication"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:16853FollowedBy16854 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16853 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :16854 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16853PartOf16848 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16853 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :16848 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16854 rdf:type owl:Class ;
+  rdfs:comment "Developing a marketing strategy that is maximally effective in a new or emerging media channel by capitalizing on its novel attributes and capabilities."@en ;
+  rdfs:label "Define new media communication strategy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:16854FollowedBy16855 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16854 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :16855 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16854PartOf16848 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16854 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :16848 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16855 rdf:type owl:Class ;
+  rdfs:comment "Establishing a framework for coordinated marketing to increase the profitability and increase brand awareness at the point of sale. This may include promotional posters on product shelves or island displays, advertisements in shopping carts, stickers on the floor that lead consumers to the promoted product, multi-buy promotions, coupons on sales receipts, etc. "@en ;
+  rdfs:label "Define point of sale (POS) communication strategy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:16855FollowedBy18627 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16855 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :18627 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16855PartOf16848 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16855 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :16848 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:17404 rdf:type owl:Class ;
+  rdfs:comment "Utilizing customer inquiries as opportunities to either provide a comparable service to the one in question, offer additional complimentary service, or suggest a service that is better than what was initially offered."@en ;
+  rdfs:label "Identify/perform cross-sell/up-sell activity"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:17404FollowedBy10199 rdf:type owl:ObjectProperty ;
+  rdfs:domain :17404 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10199 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:17404PartOf10185 rdf:type owl:ObjectProperty ;
+  rdfs:domain :17404 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10185 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:17682 rdf:type owl:Class ;
+  rdfs:comment "Determining the percentage of total sales volume in the market for a particular product."@en ;
+  rdfs:label "Calculate product market share"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:17682FollowedBy10143 rdf:type owl:ObjectProperty ;
+  rdfs:domain :17682 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10143 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:17682PartOf10131 rdf:type owl:ObjectProperty ;
+  rdfs:domain :17682 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10131 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:17683 rdf:type owl:Class ;
+  rdfs:comment "Estimating how much profit the company would generate for its expenses on marketing . Forecasted return on investment, used as a metric to gauge the efficiency of marketing, is beneficial in revising marketing budgets and adjusting costs to improve the overall yield. "@en ;
+  rdfs:label "Determine projected ROI for marketing investment"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:17683PartOf10149 rdf:type owl:ObjectProperty ;
+  rdfs:domain :17683 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10149 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:17684 rdf:type owl:Class ;
+  rdfs:comment "Obtaining internal price approvals and governmental approvals that are required for licensed products and for products that can be reimbursed by the government."@en ;
+  rdfs:label "Achieve regulatory approval for pricing"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:17684PartOf20593 rdf:type owl:ObjectProperty ;
+  rdfs:domain :17684 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20593 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:18115 rdf:type owl:Class ;
+  rdfs:comment "Reviewing the set of potential customers and sales opportunities. Approve the leads that meet company requirements on new businesses."@en ;
+  rdfs:label "Validate and qualify leads/opportunities"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:18115FollowedBy11773 rdf:type owl:ObjectProperty ;
+  rdfs:domain :18115 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11773 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:18115PartOf10182 rdf:type owl:ObjectProperty ;
+  rdfs:domain :18115 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10182 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:18116 rdf:type owl:Class ;
+  rdfs:comment "Creating plans about how to close leads and win sales opportunities. "@en ;
+  rdfs:label "Develop opportunity win plans"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:18116FollowedBy20011 rdf:type owl:ObjectProperty ;
+  rdfs:domain :18116 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :20011 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:18116PartOf10182 rdf:type owl:ObjectProperty ;
+  rdfs:domain :18116 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10182 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:18130 rdf:type owl:Class ;
+  rdfs:comment "Authoring or overseeing the creation of the textual portion of a product description, advertisement, or web page, including the headline, body, product attributes, and brand or advertiser information. A copy is designed to provide information about the product and to catch and hold the interest of prospective buyers long enough to persuade them to make a purchase. The copy of a website is called its content. "@en ;
+  rdfs:label "Manage product copy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:18130PartOf16629 rdf:type owl:ObjectProperty ;
+  rdfs:domain :18130 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :16629 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:18627 rdf:type owl:Class ;
+  rdfs:comment "Establishing standardized procedures for effective communication that maximizes ROI, promotes brand awareness and respects customers. In its simplest form, it includes a message (what is to be said), a target (to whom the message is reaching) and a medium or a channel (where the message is to be said)."@en ;
+  rdfs:label "Define communication guidelines and mechanisms"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:18627PartOf16848 rdf:type owl:ObjectProperty ;
+  rdfs:domain :18627 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :16848 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:18629 rdf:type owl:Class ;
+  rdfs:comment "Setting up strategic alliances with key trade partners and ratifying partnership agreements."@en ;
+  rdfs:label "Establish partner and alliance agreements"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:18629FollowedBy11522 rdf:type owl:ObjectProperty ;
+  rdfs:domain :18629 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11522 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:18629PartOf10130 rdf:type owl:ObjectProperty ;
+  rdfs:domain :18629 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10130 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:18641 rdf:type owl:Class ;
+  rdfs:comment "Distributing marketing materials and sales brochures to entities that the company partners with."@en ;
+  rdfs:label "Provide marketing materials to sales partners/alliances"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:18641FollowedBy10214 rdf:type owl:ObjectProperty ;
+  rdfs:domain :18641 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10214 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:18641PartOf10187 rdf:type owl:ObjectProperty ;
+  rdfs:domain :18641 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10187 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:18924 rdf:type owl:Class ;
+  rdfs:comment "Creating and managing a customer loyalty program. The loyalty program is a key part of marketing, with an elaborate strategy and process for acquiring, retaining, and engaging with members. Members are engaged and acquainted to the loyalty program, thus growing relationship and adding value through the program. "@en ;
+  rdfs:label "Design and manage customer loyalty program"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:18924PartOf10102 rdf:type owl:ObjectProperty ;
+  rdfs:domain :18924 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10102 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:18925 rdf:type owl:Class ;
+  rdfs:comment "Convincing customers to register their personal information with the company and be assigned a unique identifier that they use when making purchases. The identifier makes it easier for the company to track customer purchases. Customers are rewarded by various incentives that encourage repeat business [20007]. "@en ;
+  rdfs:label "Acquire members to customer loyalty program"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:18925FollowedBy18926 rdf:type owl:ObjectProperty ;
+  rdfs:domain :18925 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :18926 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:18925PartOf18924 rdf:type owl:ObjectProperty ;
+  rdfs:domain :18925 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :18924 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:18926 rdf:type owl:Class ;
+  rdfs:comment "Building deeper relationships between a customer and a brand in order to promote customer loyalty and derive repeat business. Besides making frequent purchases, highly engaged customers refer family, friends and colleagues to make purchases as well, consume and re-broadcast promotional materials, provide feedback to the purchases they make and do not support competing brands."@en ;
+  rdfs:label "Build engagement and relationship with members"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:18926FollowedBy16633 rdf:type owl:ObjectProperty ;
+  rdfs:domain :18926 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :16633 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:18926PartOf18924 rdf:type owl:ObjectProperty ;
+  rdfs:domain :18926 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :18924 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:18927 rdf:type owl:Class ;
+  rdfs:comment "Enhancing the customer loyalty program so that it will yield maximum value both for the company and for the patrons enrolled in the program, increasing customer retention and continued engagement."@en ;
+  rdfs:label "Optimize loyalty program value to both the enterprise and the customer"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:18927PartOf18924 rdf:type owl:ObjectProperty ;
+  rdfs:domain :18927 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :18924 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:18941 rdf:type owl:Class ;
+  rdfs:comment "Determining which groups of potential customers do not yet, or already do have access to the product or a service that the company produces or markets. Use those findings to create specialized product offerings and differentiated marketing campaigns."@en ;
+  rdfs:label "Identify under-served and saturated market segments"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:18941PartOf10117 rdf:type owl:ObjectProperty ;
+  rdfs:domain :18941 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10117 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:18948 rdf:type owl:Class ;
+  rdfs:comment "Introducing financial inducements, such as discounts, to distributors, resellers or vendors as a motivation to prioritize selling company's products or services over those of its competitors."@en ;
+  rdfs:label "Determine corporate incentives"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:18948FollowedBy10163 rdf:type owl:ObjectProperty ;
+  rdfs:domain :18948 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10163 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:18948PartOf20593 rdf:type owl:ObjectProperty ;
+  rdfs:domain :18948 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20593 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:19999 rdf:type owl:Class ;
+  rdfs:comment "Determining optimum prices for individual products or services on the basis of the cost of producing, distributing and marketing the offerings, pricing analysis and general pricing strategy."@en ;
+  rdfs:label "Establish pricing targets"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:19999FollowedBy10125 rdf:type owl:ObjectProperty ;
+  rdfs:domain :19999 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10125 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:19999PartOf10123 rdf:type owl:ObjectProperty ;
+  rdfs:domain :19999 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10123 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20000 rdf:type owl:Class ;
+  rdfs:comment "Establishing all the activities needed to identify the appropriate channels to market to different customer segments as defined in Determine target segments [10117]. This involves finding channel partners, ensuring that the channels align with organizational strategy for each segment, and the final channel selection process."@en ;
+  rdfs:label "Define and manage channel strategy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:20000PartOf10102 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20000 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10102 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:20001 rdf:type owl:Class ;
+  rdfs:comment "Deciding which distributors, wholesalers and retailers the company will use to promote its offerings and to distribute its products and services to the target market. Narrowing down which intermediaries the company will use will affect retail prices of individual products, and should therefore be included in the pricing analysis."@en ;
+  rdfs:label "Determine channels to be supported"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:20001FollowedBy20002 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20001 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :20002 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20001PartOf20000 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20001 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20000 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20002 rdf:type owl:Class ;
+  rdfs:comment "Identifying the role that each chosen marketing channels plays in the larger distribution network with respect to the organizational marketing strategy. Determine intermediary costs for shipping, handling, transporting, warehousing, insurance and marketing that incur and accumulate in the distribution channel."@en ;
+  rdfs:label "Establish channel objectives"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:20002FollowedBy10127 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20002 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10127 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20002PartOf20000 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20002 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20000 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20003 rdf:type owl:Class ;
+  rdfs:comment "Determining the maximum output rate required from a distribution channel to optimally market and deliver the products and services the company offers or would like to offer. Ideally, a channel should be able to adapt to a certain degree of variability in the demand for the offerings, and able scale up if needed."@en ;
+  rdfs:label "Identify required channel capabilities"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:20003FollowedBy10126 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20003 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10126 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20003PartOf20000 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20003 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20000 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20004 rdf:type owl:Class ;
+  rdfs:comment "Coordinating marketing and distribution efforts across different channels that integrate well with each other, are in conformance with company values, visual identity and branding, and offer uniform customer service experience that drives customer loyalty and repeat business."@en ;
+  rdfs:label "Orchestrate seamless customer experience across supported channels"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:20004FollowedBy20005 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20004 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :20005 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20004PartOf20000 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20004 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20000 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20005 rdf:type owl:Class ;
+  rdfs:comment "Determining the actions that need to be taken for successful multichannel marketing, the ordering, timing and dependencies of the steps, and the governance mechanism for reviewing and changing the protocol, if needed."@en ;
+  rdfs:label "Develop and manage execution roadmap"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:20005PartOf20000 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20005 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20000 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20006 rdf:type owl:Class ;
+  rdfs:comment "Monitoring marketing and distribution efforts of all channels individually and as a network. Re-distribute or add resources to channels that perform better than expected. Purge or consolidate under-performing channels, and find more promising replacements."@en ;
+  rdfs:label "Analyze and manage channel performance"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:20006PartOf10102 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20006 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10102 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:20007 rdf:type owl:Class ;
+  rdfs:comment "Devising procedures and mechanisms to retain existing customers, promote repeat business and increase the likelihood that previous customers to continue to buy products or services from the company. This may be achieved by rewarding customers for repeat business by means of gifts, discounts, redeemable \"points\", or prioritized access to new products, events or services. "@en ;
+  rdfs:label "Define customer loyalty program"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:20007FollowedBy18925 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20007 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :18925 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20007PartOf18924 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20007 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :18924 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20008 rdf:type owl:Class ;
+  rdfs:comment "Creating specific plans to market offerings to customers. This process group includes processes for making budgets, identifying and developing media, pricing products and services, managing packaging, managing marketing content and promotional activities, tracking and responding to customer insight and monitoring measures established within \"develop marketing strategy\". Additionally, in this process group, organizations take action on plans made in earlier processes. Here, marketing and customers are managed and measured along with any supporting materials."@en ;
+  rdfs:label "Develop and manage marketing plans"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+
+:20008PartOf10004 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20008 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10004 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:20009 rdf:type owl:Class ;
+  rdfs:comment "Determining the production and distribution costs for each product or service, and each channel or method as factors in determining overall pricing."@en ;
+  rdfs:label "Understand resource requirements for each product/service and delivery channel/method"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:20009FollowedBy18948 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20009 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :18948 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20009PartOf20593 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20009 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20593 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20010 rdf:type owl:Class ;
+  rdfs:comment "Conceptualizing, testing, and executing product/service/brand promotions. Once a promotion has launched, this process continues as the organization tweaks parts of the promotion or chooses to use ideas or lessons learned during the promotion in future activities. The promotion's performance according to organizational measures is also evaluated in this process. Determine early on whether you need third party help with promotion. Purchase lists, consult with social media experts, hire seasonal staff, or pay for additional research."@en ;
+  rdfs:label "Develop and manage promotional activities"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:20010PartOf20008 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20010 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20008 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:20011 rdf:type owl:Class ;
+  rdfs:comment "Overseeing and planning the acquisition of new customers."@en ;
+  rdfs:label "Manage opportunity pipeline"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:20011FollowedBy10209 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20011 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10209 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20011PartOf10182 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20011 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10182 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20012 rdf:type owl:Class ;
+  rdfs:comment "Arranging and leading meetings, seminars, workshops and training events with customers to educate them about current offerings, best practices and technological advances to provide more value to customers and to increase their attrition and loyalty."@en ;
+  rdfs:label "Manage customer meetings/workshops"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:20012FollowedBy10192 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20012 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10192 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:20012PartOf10184 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20012 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10184 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:20013 rdf:type owl:Class ;
+  rdfs:comment "Choosing principal clients that are vital for the company."@en ;
+  rdfs:label "Select key customers/accounts"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:20013FollowedBy11173 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20013 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11173 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20013PartOf10183 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20013 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10183 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20014 rdf:type owl:Class ;
+  rdfs:comment "Handling the accounts of important clients."@en ;
+  rdfs:label "Manage sales/key account plan"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:20014FollowedBy11174 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20014 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11174 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20014PartOf10183 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20014 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10183 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20015 rdf:type owl:Class ;
+  rdfs:comment "Creating a plan with detailed steps about how produce and deliver the goods or services."@en ;
+  rdfs:label "Develop solution and delivery approach"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:20015FollowedBy11787 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20015 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11787 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20015PartOf11779 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20015 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :11779 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20016 rdf:type owl:Class ;
+  rdfs:comment "Overseeing the internal review process."@en ;
+  rdfs:label "Manage internal reviews"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:20016FollowedBy20017 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20016 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :20017 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20016PartOf11779 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20016 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :11779 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20017 rdf:type owl:Class ;
+  rdfs:comment "Obtaining required company-internal authorizations."@en ;
+  rdfs:label "Manage internal approvals"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:20017FollowedBy11790 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20017 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11790 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20017PartOf11779 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20017 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :11779 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20018 rdf:type owl:Class ;
+  rdfs:comment "Amending bids, proposals or quotes with more accurate time, cost or delivery estimates. "@en ;
+  rdfs:label "Revise bid/proposal/quote"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:20018FollowedBy11793 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20018 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11793 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20018PartOf11779 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20018 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :11779 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20019 rdf:type owl:Class ;
+  rdfs:comment "Provide training and certification to develop strategies for marketing-driven sales."@en ;
+  rdfs:label "Provide certification enablement training"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:20019FollowedBy20020 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20019 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :20020 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:20019PartOf10211 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20019 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10211 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:20020 rdf:type owl:Class ;
+  rdfs:comment "Reviewing, processing and issuing certifications and accrediting skills and competencies."@en ;
+  rdfs:label "Manage certifications and skills"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:20020FollowedBy20021 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20020 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :20021 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:20020PartOf10211 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20020 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10211 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:20021 rdf:type owl:Class ;
+  rdfs:comment "Backing sales partners and strategic alliances."@en ;
+  rdfs:label "Provide support to partners/alliances"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:20021PartOf10211 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20021 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10211 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:20593 rdf:type owl:Class ;
+  rdfs:comment "Determining and maintaining a pricing mechanism based on forecasted sales and that enables a pricing equilibrium for the lifecycles of products/services. Create a pricing mechanism, factoring in attributes relating to the market, customers, sales, and the cost of production. Implement this pricing mechanism over all products/services. Analyze its performance, and adjust accordingly."@en ;
+  rdfs:label "Develop and manage pricing"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:20593PartOf20008 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20593 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20008 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:21424 rdf:type owl:Class ;
+  rdfs:comment "Using customer segmentation tools to examine past customer behavior to predict future purchasing patterns.  "@en ;
+  rdfs:label "Predict customer purchasing behavior"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:21424PartOf10108 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21424 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10108 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:21425 rdf:type owl:Class ;
+  rdfs:comment "Creation of a plan detailing how a company plans to execute a successful product release and promotion, and ultimately its sale to customers."@en ;
+  rdfs:label "Develop go-to-market strategy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:21425PartOf20008 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21425 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20008 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:21426 rdf:type owl:Class ;
+  rdfs:comment "Managing of a sales team ; not only from a personnel management point of view, but also through the sales cycle with sales professionals."@en ;
+  rdfs:label "Manage sales workforce"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:21426PartOf10105 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21426 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10105 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:21427 rdf:type owl:Class ;
+  rdfs:comment "Execution of sales at physical / brick and mortar locations.  "@en ;
+  rdfs:label "Perform sales at physical outlets"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:21427PartOf10105 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21427 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10105 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:21428 rdf:type owl:Class ;
+  rdfs:comment "Execution of sales within field/remote locations.  This could be any location that is not part of a headquarters location. "@en ;
+  rdfs:label "Perform field sales"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:21428PartOf10105 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21428 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10105 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:21429 rdf:type owl:Class ;
+  rdfs:comment "Execution of sales in an online environment."@en ;
+  rdfs:label "Perform digital sales"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:21429PartOf10105 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21429 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10105 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .

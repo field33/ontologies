@@ -1,0 +1,186 @@
+@prefix : <http://field33.com/ontologies/@fld33_domain/software_implementation_metric/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix registry: <http://field33.com/ontologies/REGISTRY/> .
+@base <http://field33.com/ontologies/@fld33_domain/software_implementation_metric/> .
+
+<http://field33.com/ontologies/@fld33_domain/software_implementation_metric/> rdf:type owl:Ontology ;
+                                                                               owl:imports <http://field33.com/ontologies/@fld33/methodology/> ;
+                                                                               registry:author "Field 33 <contribution@field33.com>" ;
+                                                                               registry:canonicalPrefix "software_implementation_metric" ;
+                                                                               registry:category "Metric" ,
+                                                                                                 "Software Development" ,
+                                                                                                 "Software Implementation" ;
+                                                                               registry:dependency "@fld33/methodology ^0.1.7" ;
+                                                                               registry:keyword "Field 33 Package" ,
+                                                                                                "Metric" ,
+                                                                                                "Software Development" ,
+                                                                                                "Software Implementation" ,
+                                                                                                "Software Implementation Metric" ;
+                                                                               registry:ontologyFormatVersion "v1" ;
+                                                                               registry:packageName "@fld33_domain/software_implementation_metric" ;
+                                                                               registry:packageVersion "0.1.3" ;
+                                                                               registry:licenseSPDX "Apache-2.0" ;
+                                                                               registry:repository "https://github.com/field33/ontologies/tree/main/%40fld33_domain/software_implementation_metric" ;
+                                                                               registry:shortDescription "Software implementation metric ontology"@en ;
+                                                                               rdfs:comment "# Software Implementation Metric Ontology<br>This package is an internal ontology describing concepts for software implementation metrics."@en ;
+                                                                               rdfs:label "Software Implementation Metric"@en .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/BlockerViolation
+:BlockerViolation rdf:type owl:Class ;
+                  rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                  rdfs:label "Blocker Violation"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/BugCount
+:BugCount rdf:type owl:Class ;
+          rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+          rdfs:label "Bug Count"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/BuildCount
+:BuildCount rdf:type owl:Class ;
+            rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+            rdfs:label "Build Count"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/BuildFailureCount
+:BuildFailureCount rdf:type owl:Class ;
+                   rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                   rdfs:label "Build Failure Count"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/ChangeFailureCount
+:ChangeFailureCount rdf:type owl:Class ;
+                    rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                    rdfs:label "Change Failure Count"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/CodeChurnPerFile
+:CodeChurnPerFile rdf:type owl:Class ;
+                  rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                  rdfs:label "Code Churn Per File"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/CodeSmellPerFile
+:CodeSmellPerFile rdf:type owl:Class ;
+                  rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                  rdfs:label "Code Smell Per File"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/CommitCount
+:CommitCount rdf:type owl:Class ;
+             rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+             rdfs:label "Commit Count"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/ComplexityPerFile
+:ComplexityPerFile rdf:type owl:Class ;
+                   rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                   rdfs:label "Complexity Per File"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/CriticalViolation
+:CriticalViolation rdf:type owl:Class ;
+                   rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                   rdfs:label "Critical Violation"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/DeploymentCount
+:DeploymentCount rdf:type owl:Class ;
+                 rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                 rdfs:label "Deployment Count"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/DeploymentFailureCount
+:DeploymentFailureCount rdf:type owl:Class ;
+                        rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                        rdfs:label "Deployment Failure Count"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/FileCoupling
+:FileCoupling rdf:type owl:Class ;
+              rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+              rdfs:label "File Coupling"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/GradeOfAutomation
+:GradeOfAutomation rdf:type owl:Class ;
+                   rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                   rdfs:label "Grade Of Automation"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/LineDuplicationCount
+:LineDuplicationCount rdf:type owl:Class ;
+                      rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                      rdfs:label "Line Duplication Count"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/MajorViolation
+:MajorViolation rdf:type owl:Class ;
+                rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                rdfs:label "Major Violation"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/MinorViolation
+:MinorViolation rdf:type owl:Class ;
+                rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                rdfs:label "Minor Violation"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/MonitoringCoverage
+:MonitoringCoverage rdf:type owl:Class ;
+                    rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                    rdfs:label "Monitoring Coverage"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/NumberOfCodeLines
+:NumberOfCodeLines rdf:type owl:Class ;
+                   rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                   rdfs:label "Number Of Code Lines"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/ResponseTime
+:ResponseTime rdf:type owl:Class ;
+              rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+              rdfs:label "Response Time"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/SecurityHotspot
+:SecurityHotspot rdf:type owl:Class ;
+                 rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                 rdfs:label "Security Hotspot"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/SecurityHotspotCountPerFile
+:SecurityHotspotCountPerFile rdf:type owl:Class ;
+                             rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                             rdfs:label "Security Hotspot Count Per File"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/TestCoveragePerFile
+:TestCoveragePerFile rdf:type owl:Class ;
+                     rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                     rdfs:label "Test Coverage Per File"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/TestFailureCount
+:TestFailureCount rdf:type owl:Class ;
+                  rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                  rdfs:label "Test Failure Count"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_implementation_metric/Vulnerability
+:Vulnerability rdf:type owl:Class ;
+               rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+               rdfs:label "Vulnerability"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

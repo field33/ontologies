@@ -1,0 +1,553 @@
+@prefix : <http://field33.com/ontologies/@fld33_domain/business_objects/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix registry: <http://field33.com/ontologies/REGISTRY/> .
+@base <http://field33.com/ontologies/@fld33_domain/business_objects/> .
+
+<http://field33.com/ontologies/@fld33_domain/business_objects/> rdf:type owl:Ontology ;
+                                                                 owl:imports <http://field33.com/ontologies/@fld33/methodology/> ,
+                                                                             <http://field33.com/ontologies/@fld33/organization/> ,
+                                                                             <http://field33.com/ontologies/@fld33/relations/> ;
+                                                                 registry:author "Field 33 <contribution@field33.com>" ;
+                                                                 registry:canonicalPrefix "business_objects" ;
+                                                                 registry:category "Business" ;
+                                                                 registry:dependency "@fld33/methodology ^0.1.7" ,
+                                                                                     "@fld33/organization ^0.1.4" ,
+                                                                                     "@fld33/relations ^0.2.0" ;
+                                                                 registry:keyword "Business" ,
+                                                                                  "Field 33 Package" ,
+                                                                                  "Business Object" ,
+                                                                                  "Purchase" ;
+                                                                 registry:ontologyFormatVersion "v1" ;
+                                                                 registry:packageName "@fld33_domain/business_objects" ;
+                                                                 registry:packageVersion "0.1.9" ;
+                                                                 registry:licenseSPDX "Apache-2.0" ;
+                                                                 registry:repository "https://github.com/field33/ontologies/tree/main/%40fld33_domain/business_objects" ;
+                                                                 registry:shortDescription "Business Objects ontology"@en ;
+                                                                 rdfs:comment "# Business Objects Ontology<br>This package is part of the domain specific ontologies describing concepts for business objects and purchase processes."@en ;
+                                                                 rdfs:label "Business Objects"@en .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/AnalyzingOf
+:AnalyzingOf rdf:type owl:ObjectProperty ;
+             rdfs:label "Analyzing Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/AnalyzingOfPerformance
+:AnalyzingOfPerformance rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :AnalyzingOf ;
+                        rdfs:range [ rdf:type owl:Class ;
+                                     owl:unionOf ( :ProcurementPerformance
+                                                   :VendorPerformance
+                                                 )
+                                   ] ;
+                        rdfs:label "Analyzing Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/ApprovingOf
+:ApprovingOf rdf:type owl:ObjectProperty ;
+             rdfs:label "Approving Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/AuditingOf
+:AuditingOf rdf:type owl:ObjectProperty ;
+            rdfs:label "Auditing Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/CertifyingOf
+:CertifyingOf rdf:type owl:ObjectProperty ;
+              rdfs:label "Certifying Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/ClarifyingOf
+:ClarifyingOf rdf:type owl:ObjectProperty ;
+              rdfs:label "Clarifying Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/ClarifyingRequirementsOf
+:ClarifyingRequirementsOf rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :ClarifyingOf ;
+                          rdfs:label "Clarifying Requirements Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/CollaboratingWith
+:CollaboratingWith rdf:type owl:ObjectProperty ;
+                   rdfs:label "Collaborating With"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/CreatingOf
+:CreatingOf rdf:type owl:ObjectProperty ;
+            rdfs:label "Creating Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/DeliveringOf
+:DeliveringOf rdf:type owl:ObjectProperty ;
+              rdfs:label "Delivering Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/DevelopingOf
+:DevelopingOf rdf:type owl:ObjectProperty ;
+              rdfs:label "Developing Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/DevelopingServicePolicyOf
+:DevelopingServicePolicyOf rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :DevelopingOf ;
+                           rdfs:label "Developing Service Policy Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/DistributingOf
+:DistributingOf rdf:type owl:ObjectProperty ;
+                rdfs:label "Distributing Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/EvaluatingOf
+:EvaluatingOf rdf:type owl:ObjectProperty ;
+              rdfs:label "Evaluating Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/ExpeditingOf
+:ExpeditingOf rdf:type owl:ObjectProperty ;
+              rdfs:label "Expediting Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/IdentifyingCapacityOf
+:IdentifyingCapacityOf rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :IdentifyingOf ;
+                       rdfs:label "Identifying Capacity Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/IdentifyingOf
+:IdentifyingOf rdf:type owl:ObjectProperty ;
+               rdfs:label "Identifying Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/ManagingInformationOf
+:ManagingInformationOf rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :ManagingOf ;
+                       rdfs:label "Managing Information Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/ManagingOf
+:ManagingOf rdf:type owl:ObjectProperty ;
+            rdfs:label "Managing Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/MonitoringInformationOf
+:MonitoringInformationOf rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :MonitoringOf ;
+                         rdfs:label "Monitoring Information Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/MonitoringOf
+:MonitoringOf rdf:type owl:ObjectProperty ;
+              rdfs:label "Monitoring Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/MonitoringPerformanceOf
+:MonitoringPerformanceOf rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :MonitoringOf ;
+                         rdfs:label "Monitoring Performance Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/MonitoringSpecificationOf
+:MonitoringSpecificationOf rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :MonitoringOf ;
+                           rdfs:label "Monitoring Specification Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/OrderingFrom
+:OrderingFrom rdf:type owl:ObjectProperty ;
+              rdfs:label "Ordering From"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/OrderingFromVendor
+:OrderingFromVendor rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :OrderingFrom ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( :Item
+                                                :Order
+                                              )
+                                ] ;
+                    rdfs:range :Vendor ;
+                    rdfs:label "Ordering From"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/OrderingOf
+:OrderingOf rdf:type owl:ObjectProperty ;
+            rdfs:label "Ordering Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/PackingFor
+:PackingFor rdf:type owl:ObjectProperty ;
+            rdfs:label "Packing For"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/PackingProductFor
+:PackingProductFor rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :PackingFor ;
+                   rdfs:label "Packing Product For"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/PickingFor
+:PickingFor rdf:type owl:ObjectProperty ;
+            rdfs:label "Picking For"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/PickingProductFor
+:PickingProductFor rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :PickingFor ;
+                   rdfs:label "Picking Product For"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/PlanningOf
+:PlanningOf rdf:type owl:ObjectProperty ;
+            rdfs:label "Planning Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/PreparingOf
+:PreparingOf rdf:type owl:ObjectProperty ;
+             rdfs:label "Preparing Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/PreparingPerformanceOf
+:PreparingPerformanceOf rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :PreparingOf ;
+                        rdfs:label "Preparing Performance Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/ProcessedBy
+:ProcessedBy rdf:type owl:ObjectProperty ;
+             rdfs:label "Processed By"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/ProcuredBy
+:ProcuredBy rdf:type owl:ObjectProperty ;
+            rdfs:label "Procured By"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/ReconciledBy
+:ReconciledBy rdf:type owl:ObjectProperty ;
+              rdfs:label "Reconciled By"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/RelatesTo
+:RelatesTo rdf:type owl:ObjectProperty ;
+           rdfs:label "Relates To"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/ReleasedBy
+:ReleasedBy rdf:type owl:ObjectProperty ;
+            rdfs:label "Released By"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/ResearchingExceptionsOf
+:ResearchingExceptionsOf rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :ResearchingOf ;
+                         rdfs:label "Researching Exceptions Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/ResearchingOf
+:ResearchingOf rdf:type owl:ObjectProperty ;
+               rdfs:label "Researching Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/ResolvingExceptionsOf
+:ResolvingExceptionsOf rdf:type owl:ObjectProperty ;
+                       rdfs:label "Resolving Exceptions Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/ReviewedBy
+:ReviewedBy rdf:type owl:ObjectProperty ;
+            rdfs:label "Reviewed By"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/SchedulingOf
+:SchedulingOf rdf:type owl:ObjectProperty ;
+              rdfs:label "Scheduling Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/SelectingOf
+:SelectingOf rdf:type owl:ObjectProperty ;
+             rdfs:label "Selecting Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/ShippingFor
+:ShippingFor rdf:type owl:ObjectProperty ;
+             rdfs:label "Shipping For"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/ShippingProductFor
+:ShippingProductFor rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :ShippingFor ;
+                    rdfs:label "Shipping Product For"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/SolicitingOf
+:SolicitingOf rdf:type owl:ObjectProperty ;
+              rdfs:label "Soliciting Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/SolicitingQuotesOf
+:SolicitingQuotesOf rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :SolicitingOf ;
+                    rdfs:label "Soliciting Quotes Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/TrackingOf
+:TrackingOf rdf:type owl:ObjectProperty ;
+            rdfs:label "TrackingOf"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/TrackingQuotesOf
+:TrackingQuotesOf rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :TrackingOf ;
+                  rdfs:label "Tracking Quotes Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/UsedBy
+:UsedBy rdf:type owl:ObjectProperty ;
+        rdfs:label "Used By"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/ValidatingOf
+:ValidatingOf rdf:type owl:ObjectProperty ;
+              rdfs:label "Validating Of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/VendorHasVendorPerformance
+:VendorHasVendorPerformance rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/Has> ;
+                            rdfs:domain :Vendor ;
+                            rdfs:range :VendorPerformance ;
+                            rdfs:label "Has"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/VendorHasLedger
+:VendorHasLedger rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/has> ;
+                          rdfs:domain :Vendor ;
+                          rdfs:range :Ledger ;
+                          rdfs:label "Has"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/LedgerHasLedgerEntry
+:LedgerHasLedgerEntry rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/has> ;
+                          rdfs:domain :Ledger ;
+                          rdfs:range :LedgerEntry ;
+                          rdfs:label "Has"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/LedgerEntryPartOfLedger
+:LedgerEntryPartOfLedger rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/partOf> ;
+                          rdfs:domain :LedgerEntry ;
+                          rdfs:range :Ledger ;
+                          rdfs:label "Part Of"@en .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/BusinessObject
+:BusinessObject rdf:type owl:Class ;
+                rdfs:label "Business Object"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/CarrierInvoice
+:CarrierInvoice rdf:type owl:Class ;
+                rdfs:subClassOf :Invoice ;
+                rdfs:label "Carrier Invoice"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/Delivery
+:Delivery rdf:type owl:Class ;
+          rdfs:subClassOf :BusinessObject ;
+          rdfs:label "Delivery"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/Invoice
+:Invoice rdf:type owl:Class ;
+         rdfs:subClassOf :BusinessObject ;
+         rdfs:label "Invoice"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/Item
+:Item rdf:type owl:Class ;
+      rdfs:subClassOf :BusinessObject ;
+      rdfs:label "Item"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/Material
+:Material rdf:type owl:Class ;
+          rdfs:subClassOf :BusinessObject ;
+          rdfs:label "Material"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/Order
+:Order rdf:type owl:Class ;
+       rdfs:subClassOf :BusinessObject ;
+       rdfs:label "Order"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/Payment
+:Payment rdf:type owl:Class ;
+         rdfs:subClassOf :BusinessObject ;
+         rdfs:label "Payment"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/PaymentConformation
+:PaymentConformation rdf:type owl:Class ;
+                     rdfs:subClassOf :BusinessObject ;
+                     rdfs:label "Payment Conformation"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/PaymentReceipt
+:PaymentReceipt rdf:type owl:Class ;
+                rdfs:subClassOf :BusinessObject ;
+                rdfs:label "Payment Receipt"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/Performance
+:Performance rdf:type owl:Class ;
+             rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ,
+                             :BusinessObject ;
+             rdfs:label "Performance"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/ProcurementArrangement
+:ProcurementArrangement rdf:type owl:Class ;
+                        rdfs:subClassOf :BusinessObject ;
+                        rdfs:label "Procurement Arrangement"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/ProcurementPerformance
+:ProcurementPerformance rdf:type owl:Class ;
+                        rdfs:subClassOf :Performance ;
+                        rdfs:label "Procurement Performance"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/Product
+:Product rdf:type owl:Class ;
+         rdfs:subClassOf :BusinessObject ;
+         rdfs:label "Product"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/ProductionOrder
+:ProductionOrder rdf:type owl:Class ;
+                 rdfs:subClassOf :Order ;
+                 rdfs:label "Production Order"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/PurchaseInvoice
+:PurchaseInvoice rdf:type owl:Class ;
+                 rdfs:subClassOf :Invoice ;
+                 rdfs:label "Purchase Invoice"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/PurchaseOrder
+:PurchaseOrder rdf:type owl:Class ;
+               rdfs:subClassOf :Order ;
+               rdfs:label "Purchase Order"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/PurchaseRequest
+:PurchaseRequest rdf:type owl:Class ;
+                 rdfs:subClassOf :BusinessObject ;
+                 rdfs:label "Purchase Request"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/PurchasingContract
+:PurchasingContract rdf:type owl:Class ;
+                    rdfs:subClassOf :BusinessObject ;
+                    rdfs:label "Purchasing Contract"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/Receipt
+:Receipt rdf:type owl:Class ;
+         rdfs:subClassOf :BusinessObject ;
+         rdfs:label "Receipt"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/SCM
+:SCM rdf:type owl:Class ;
+     rdfs:subClassOf :BusinessObject ;
+     rdfs:label "Supply Chain Analytical View of Purchase Order"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/Service
+:Service rdf:type owl:Class ;
+         rdfs:subClassOf :BusinessObject ;
+         rdfs:label "Service"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/ServiceAcknowledgement
+:ServiceAcknowledgement rdf:type owl:Class ;
+                        rdfs:subClassOf :BusinessObject ;
+                        rdfs:label "Service Acknowledgement"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/ShipmentDetails
+:ShipmentDetails rdf:type owl:Class ;
+                 rdfs:subClassOf :BusinessObject ;
+                 rdfs:label "Shipment Details"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/Supplier
+:Supplier rdf:type owl:Class ;
+          rdfs:subClassOf :BusinessObject ;
+          rdfs:label "Supplier"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/SupplierInvoice
+:SupplierInvoice rdf:type owl:Class ;
+                 rdfs:subClassOf :Invoice ;
+                 rdfs:label "Supplier Invoice"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/Vendor
+:Vendor rdf:type owl:Class ;
+        rdfs:subClassOf <http://field33.com/ontologies/@fld33/organization/Company> ,
+                        :BusinessObject ;
+        rdfs:label "Vendor"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/VendorPerformance
+:VendorPerformance rdf:type owl:Class ;
+                   rdfs:subClassOf :Performance ;
+                   rdfs:label "Vendor Performance"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/WarehouseInvoice
+:WarehouseInvoice rdf:type owl:Class ;
+                  rdfs:subClassOf :Invoice ;
+                  rdfs:label "Warehouse Invoice"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/WarehouseReceipt
+:WarehouseReceipt rdf:type owl:Class ;
+                  rdfs:subClassOf :BusinessObject ;
+                  rdfs:label "Warehouse Receipt"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/Ledger
+:Ledger rdf:type owl:Class ;
+        rdfs:subClassOf :BusinessObject ;
+        rdfs:label "Ledger"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/business_objects/LedgerEntry
+:LedgerEntry rdf:type owl:Class ;
+             rdfs:subClassOf :BusinessObject ;
+             rdfs:label "Ledger Entry"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
