@@ -5,10 +5,874 @@ version = '1'
 
 [[package]]
 root = true
-name = '@fld33/organization_communication_0_1_0'
+name = '@apqc_cross_industry/deliver_services'
+version = '0.1.11'
+ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/deliver_services/'
+cksum = 'bc3598403cb3aacc5058712dc6e80a65f8f8517f2d7f7f1e663d4d29bae0fa15'
+dependencies = [
+    '@fld33/relations',
+    '@apqc/apqc',
+    '@fld33_domain/business_objects',
+]
+
+[[package]]
+root = false
+name = '@apqc/apqc'
+version = '0.1.6'
+ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
+cksum = '02f30e63eb4a47a57d514e9bab547203de80b374f6570a32bdd4cc4ca76ebb0e'
+dependencies = [
+    '@fld33/process',
+    '@fld33/relations',
+]
+
+[[package]]
+root = false
+name = '@fld33/methodology'
+version = '0.1.7'
+ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
+cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/organization'
+version = '0.1.4'
+ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
+cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/process'
 version = '0.1.2'
-ontology_iri = 'http://field33.com/ontologies/@fld33/organization_communication_0_1_0/'
-cksum = 'bbf67c08e9ff116e27364821ef599b917b6ea1e11473b2889d98bbe5a308c202'
+ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
+cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/relations'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@fld33/relations/'
+cksum = '70727b40e2f6ca297a87376772733e92710a79e35e57675f67bbc299f80a2dcd'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33_domain/business_objects'
+version = '0.1.9'
+ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
+cksum = '1e872dfad97f2442e6546e429dac2ec363c6c33928185c099d4032d5d2a474e1'
+dependencies = [
+    '@fld33/methodology',
+    '@fld33/organization',
+    '@fld33/relations',
+]
+
+[[package]]
+root = true
+name = '@apqc/apqc_airline'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@apqc/apqc_airline/'
+cksum = 'c63fecdbe00934cd386482e1855d0f3148e12d6ac65ef572747ade184e17ba57'
+dependencies = [
+    '@fld33/relations',
+    '@apqc/apqc',
+    '@fld33_domain/business_objects',
+]
+
+[[package]]
+root = false
+name = '@apqc/apqc'
+version = '0.1.6'
+ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
+cksum = '02f30e63eb4a47a57d514e9bab547203de80b374f6570a32bdd4cc4ca76ebb0e'
+dependencies = [
+    '@fld33/process',
+    '@fld33/relations',
+]
+
+[[package]]
+root = false
+name = '@fld33/methodology'
+version = '0.1.7'
+ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
+cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/organization'
+version = '0.1.4'
+ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
+cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/process'
+version = '0.1.2'
+ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
+cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/relations'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@fld33/relations/'
+cksum = '70727b40e2f6ca297a87376772733e92710a79e35e57675f67bbc299f80a2dcd'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33_domain/business_objects'
+version = '0.1.9'
+ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
+cksum = '1e872dfad97f2442e6546e429dac2ec363c6c33928185c099d4032d5d2a474e1'
+dependencies = [
+    '@fld33/methodology',
+    '@fld33/organization',
+    '@fld33/relations',
+]
+
+[[package]]
+root = true
+name = '@apqc_cross_industry/manage_information_technology_it'
+version = '0.1.10'
+ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/manage_information_technology_it/'
+cksum = '5921bdd980ec8fec778959658ed2fc2dc051009885f02ef597bbbc9f3418c5bf'
+dependencies = [
+    '@fld33/relations',
+    '@apqc/apqc',
+    '@fld33_domain/business_objects',
+]
+
+[[package]]
+root = false
+name = '@apqc/apqc'
+version = '0.1.6'
+ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
+cksum = '02f30e63eb4a47a57d514e9bab547203de80b374f6570a32bdd4cc4ca76ebb0e'
+dependencies = [
+    '@fld33/process',
+    '@fld33/relations',
+]
+
+[[package]]
+root = false
+name = '@fld33/methodology'
+version = '0.1.7'
+ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
+cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/organization'
+version = '0.1.4'
+ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
+cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/process'
+version = '0.1.2'
+ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
+cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/relations'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@fld33/relations/'
+cksum = '70727b40e2f6ca297a87376772733e92710a79e35e57675f67bbc299f80a2dcd'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33_domain/business_objects'
+version = '0.1.9'
+ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
+cksum = '1e872dfad97f2442e6546e429dac2ec363c6c33928185c099d4032d5d2a474e1'
+dependencies = [
+    '@fld33/methodology',
+    '@fld33/organization',
+    '@fld33/relations',
+]
+
+[[package]]
+root = true
+name = '@apqc_cross_industry/manage_external_relationships'
+version = '0.1.10'
+ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/manage_external_relationships/'
+cksum = '8da798bc3b57869dd8d1dc8a510160ef2a97045615dae797b6aa6fc9aa4e76fe'
+dependencies = [
+    '@fld33/relations',
+    '@apqc/apqc',
+    '@fld33_domain/business_objects',
+]
+
+[[package]]
+root = false
+name = '@apqc/apqc'
+version = '0.1.6'
+ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
+cksum = '02f30e63eb4a47a57d514e9bab547203de80b374f6570a32bdd4cc4ca76ebb0e'
+dependencies = [
+    '@fld33/process',
+    '@fld33/relations',
+]
+
+[[package]]
+root = false
+name = '@fld33/methodology'
+version = '0.1.7'
+ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
+cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/organization'
+version = '0.1.4'
+ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
+cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/process'
+version = '0.1.2'
+ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
+cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/relations'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@fld33/relations/'
+cksum = '70727b40e2f6ca297a87376772733e92710a79e35e57675f67bbc299f80a2dcd'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33_domain/business_objects'
+version = '0.1.9'
+ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
+cksum = '1e872dfad97f2442e6546e429dac2ec363c6c33928185c099d4032d5d2a474e1'
+dependencies = [
+    '@fld33/methodology',
+    '@fld33/organization',
+    '@fld33/relations',
+]
+
+[[package]]
+root = true
+name = '@apqc_cross_industry/manage_enterprise_risk_compliance_remediation_and_resiliency'
+version = '0.1.10'
+ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/manage_enterprise_risk_compliance_remediation_and_resiliency/'
+cksum = 'ae2bbb7322230b027a773a3424e82e0f07f5a25bcbe334f51783078441edd109'
+dependencies = [
+    '@fld33/relations',
+    '@apqc/apqc',
+    '@fld33_domain/business_objects',
+]
+
+[[package]]
+root = false
+name = '@apqc/apqc'
+version = '0.1.6'
+ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
+cksum = '02f30e63eb4a47a57d514e9bab547203de80b374f6570a32bdd4cc4ca76ebb0e'
+dependencies = [
+    '@fld33/process',
+    '@fld33/relations',
+]
+
+[[package]]
+root = false
+name = '@fld33/methodology'
+version = '0.1.7'
+ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
+cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/organization'
+version = '0.1.4'
+ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
+cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/process'
+version = '0.1.2'
+ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
+cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/relations'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@fld33/relations/'
+cksum = '70727b40e2f6ca297a87376772733e92710a79e35e57675f67bbc299f80a2dcd'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33_domain/business_objects'
+version = '0.1.9'
+ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
+cksum = '1e872dfad97f2442e6546e429dac2ec363c6c33928185c099d4032d5d2a474e1'
+dependencies = [
+    '@fld33/methodology',
+    '@fld33/organization',
+    '@fld33/relations',
+]
+
+[[package]]
+root = true
+name = '@apqc_cross_industry/develop_and_manage_human_capital'
+version = '0.1.10'
+ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/develop_and_manage_human_capital/'
+cksum = 'f28e82e92ca853ac397c214f987bab6c3c8040af4299a8c5c8cb09320e57669b'
+dependencies = [
+    '@fld33/relations',
+    '@apqc/apqc',
+    '@fld33_domain/business_objects',
+]
+
+[[package]]
+root = false
+name = '@apqc/apqc'
+version = '0.1.6'
+ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
+cksum = '02f30e63eb4a47a57d514e9bab547203de80b374f6570a32bdd4cc4ca76ebb0e'
+dependencies = [
+    '@fld33/process',
+    '@fld33/relations',
+]
+
+[[package]]
+root = false
+name = '@fld33/methodology'
+version = '0.1.7'
+ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
+cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/organization'
+version = '0.1.4'
+ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
+cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/process'
+version = '0.1.2'
+ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
+cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/relations'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@fld33/relations/'
+cksum = '70727b40e2f6ca297a87376772733e92710a79e35e57675f67bbc299f80a2dcd'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33_domain/business_objects'
+version = '0.1.9'
+ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
+cksum = '1e872dfad97f2442e6546e429dac2ec363c6c33928185c099d4032d5d2a474e1'
+dependencies = [
+    '@fld33/methodology',
+    '@fld33/organization',
+    '@fld33/relations',
+]
+
+[[package]]
+root = true
+name = '@apqc/apqc'
+version = '0.1.6'
+ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
+cksum = '02f30e63eb4a47a57d514e9bab547203de80b374f6570a32bdd4cc4ca76ebb0e'
+dependencies = [
+    '@fld33/process',
+    '@fld33/relations',
+]
+
+[[package]]
+root = false
+name = '@fld33/process'
+version = '0.1.2'
+ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
+cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/relations'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@fld33/relations/'
+cksum = '70727b40e2f6ca297a87376772733e92710a79e35e57675f67bbc299f80a2dcd'
+dependencies = []
+
+[[package]]
+root = true
+name = '@apqc_cross_industry/develop_vision_and_strategy'
+version = '0.1.10'
+ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/develop_vision_and_strategy/'
+cksum = 'a2177e3ae1e2ce15a6a71f3e64f01ecba2ada53341e8e247bf9d3b27df62f150'
+dependencies = [
+    '@fld33/relations',
+    '@apqc/apqc',
+    '@fld33_domain/business_objects',
+]
+
+[[package]]
+root = false
+name = '@apqc/apqc'
+version = '0.1.6'
+ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
+cksum = '02f30e63eb4a47a57d514e9bab547203de80b374f6570a32bdd4cc4ca76ebb0e'
+dependencies = [
+    '@fld33/process',
+    '@fld33/relations',
+]
+
+[[package]]
+root = false
+name = '@fld33/methodology'
+version = '0.1.7'
+ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
+cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/organization'
+version = '0.1.4'
+ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
+cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/process'
+version = '0.1.2'
+ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
+cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/relations'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@fld33/relations/'
+cksum = '70727b40e2f6ca297a87376772733e92710a79e35e57675f67bbc299f80a2dcd'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33_domain/business_objects'
+version = '0.1.9'
+ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
+cksum = '1e872dfad97f2442e6546e429dac2ec363c6c33928185c099d4032d5d2a474e1'
+dependencies = [
+    '@fld33/methodology',
+    '@fld33/organization',
+    '@fld33/relations',
+]
+
+[[package]]
+root = true
+name = '@apqc_cross_industry/manage_supply_chain_for_physical_products'
+version = '0.1.10'
+ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/'
+cksum = 'a0402c7e0bc3627ef285a2ad4e130a00bf69e68f7778fd435a36512e4ba8ffc3'
+dependencies = [
+    '@fld33/relations',
+    '@apqc/apqc',
+    '@fld33_domain/business_objects',
+]
+
+[[package]]
+root = false
+name = '@apqc/apqc'
+version = '0.1.6'
+ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
+cksum = '02f30e63eb4a47a57d514e9bab547203de80b374f6570a32bdd4cc4ca76ebb0e'
+dependencies = [
+    '@fld33/process',
+    '@fld33/relations',
+]
+
+[[package]]
+root = false
+name = '@fld33/methodology'
+version = '0.1.7'
+ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
+cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/organization'
+version = '0.1.4'
+ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
+cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/process'
+version = '0.1.2'
+ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
+cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/relations'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@fld33/relations/'
+cksum = '70727b40e2f6ca297a87376772733e92710a79e35e57675f67bbc299f80a2dcd'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33_domain/business_objects'
+version = '0.1.9'
+ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
+cksum = '1e872dfad97f2442e6546e429dac2ec363c6c33928185c099d4032d5d2a474e1'
+dependencies = [
+    '@fld33/methodology',
+    '@fld33/organization',
+    '@fld33/relations',
+]
+
+[[package]]
+root = true
+name = '@apqc_cross_industry/apqc_cross_industry'
+version = '0.1.12'
+ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry'
+cksum = '31308a8b02b93ce8a05ef9f4f68479378d7fb92a69fa6b84ee99d0d675fb7122'
+dependencies = [
+    '@fld33_domain/business_objects',
+    '@apqc_cross_industry/develop_vision_and_strategy',
+    '@apqc_cross_industry/develop_and_manage_products_and_services',
+    '@apqc_cross_industry/market_and_sell_products_and_services',
+    '@apqc_cross_industry/manage_supply_chain_for_physical_products',
+    '@apqc_cross_industry/deliver_services',
+    '@apqc_cross_industry/manage_customer_service',
+    '@apqc_cross_industry/develop_and_manage_human_capital',
+    '@apqc_cross_industry/manage_information_technology_it',
+    '@apqc_cross_industry/manage_financial_resources',
+    '@apqc_cross_industry/acquire_construct_and_manage_assets',
+    '@apqc_cross_industry/manage_enterprise_risk_compliance_remediation_and_resiliency',
+    '@apqc_cross_industry/manage_external_relationships',
+    '@apqc_cross_industry/develop_and_manage_business_capabilities',
+]
+
+[[package]]
+root = false
+name = '@apqc/apqc'
+version = '0.1.6'
+ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
+cksum = '02f30e63eb4a47a57d514e9bab547203de80b374f6570a32bdd4cc4ca76ebb0e'
+dependencies = [
+    '@fld33/process',
+    '@fld33/relations',
+]
+
+[[package]]
+root = false
+name = '@apqc_cross_industry/acquire_construct_and_manage_assets'
+version = '0.1.10'
+ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/acquire_construct_and_manage_assets/'
+cksum = '17d67074fecc10e72a2e30cb6d02ae848e1e024c415ec775a4d494ad73146f59'
+dependencies = [
+    '@fld33/relations',
+    '@apqc/apqc',
+    '@fld33_domain/business_objects',
+]
+
+[[package]]
+root = false
+name = '@apqc_cross_industry/deliver_services'
+version = '0.1.11'
+ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/deliver_services/'
+cksum = 'bc3598403cb3aacc5058712dc6e80a65f8f8517f2d7f7f1e663d4d29bae0fa15'
+dependencies = [
+    '@fld33/relations',
+    '@apqc/apqc',
+    '@fld33_domain/business_objects',
+]
+
+[[package]]
+root = false
+name = '@apqc_cross_industry/develop_and_manage_business_capabilities'
+version = '0.1.10'
+ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/develop_and_manage_business_capabilities/'
+cksum = '822def613156d425faf44529a66fec9de4bb919a4812d2aacb4ff880a369c079'
+dependencies = [
+    '@fld33/relations',
+    '@apqc/apqc',
+    '@fld33_domain/business_objects',
+]
+
+[[package]]
+root = false
+name = '@apqc_cross_industry/develop_and_manage_human_capital'
+version = '0.1.10'
+ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/develop_and_manage_human_capital/'
+cksum = 'f28e82e92ca853ac397c214f987bab6c3c8040af4299a8c5c8cb09320e57669b'
+dependencies = [
+    '@fld33/relations',
+    '@apqc/apqc',
+    '@fld33_domain/business_objects',
+]
+
+[[package]]
+root = false
+name = '@apqc_cross_industry/develop_and_manage_products_and_services'
+version = '0.1.10'
+ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/develop_and_manage_products_and_services/'
+cksum = 'e9083fb5850c04599a0f0c2e799eecaefc352d98d9f963014f566b031b44eefc'
+dependencies = [
+    '@fld33/relations',
+    '@apqc/apqc',
+    '@fld33_domain/business_objects',
+]
+
+[[package]]
+root = false
+name = '@apqc_cross_industry/develop_vision_and_strategy'
+version = '0.1.10'
+ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/develop_vision_and_strategy/'
+cksum = 'a2177e3ae1e2ce15a6a71f3e64f01ecba2ada53341e8e247bf9d3b27df62f150'
+dependencies = [
+    '@fld33/relations',
+    '@apqc/apqc',
+    '@fld33_domain/business_objects',
+]
+
+[[package]]
+root = false
+name = '@apqc_cross_industry/manage_customer_service'
+version = '0.1.10'
+ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/manage_customer_service/'
+cksum = '66f9b3f3cbbb8c50d221f95fdf5e1db9215f70df9ff3ea8ee8c60c567220e273'
+dependencies = [
+    '@fld33/relations',
+    '@apqc/apqc',
+    '@fld33_domain/business_objects',
+]
+
+[[package]]
+root = false
+name = '@apqc_cross_industry/manage_enterprise_risk_compliance_remediation_and_resiliency'
+version = '0.1.10'
+ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/manage_enterprise_risk_compliance_remediation_and_resiliency/'
+cksum = 'ae2bbb7322230b027a773a3424e82e0f07f5a25bcbe334f51783078441edd109'
+dependencies = [
+    '@fld33/relations',
+    '@apqc/apqc',
+    '@fld33_domain/business_objects',
+]
+
+[[package]]
+root = false
+name = '@apqc_cross_industry/manage_external_relationships'
+version = '0.1.10'
+ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/manage_external_relationships/'
+cksum = '8da798bc3b57869dd8d1dc8a510160ef2a97045615dae797b6aa6fc9aa4e76fe'
+dependencies = [
+    '@fld33/relations',
+    '@apqc/apqc',
+    '@fld33_domain/business_objects',
+]
+
+[[package]]
+root = false
+name = '@apqc_cross_industry/manage_financial_resources'
+version = '0.1.10'
+ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/manage_financial_resources/'
+cksum = '61ae641d48517e7baeea707995c7c1c75a3d27cb5da01705139f42c7e0a9170f'
+dependencies = [
+    '@fld33/relations',
+    '@apqc/apqc',
+    '@fld33_domain/business_objects',
+]
+
+[[package]]
+root = false
+name = '@apqc_cross_industry/manage_information_technology_it'
+version = '0.1.10'
+ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/manage_information_technology_it/'
+cksum = '5921bdd980ec8fec778959658ed2fc2dc051009885f02ef597bbbc9f3418c5bf'
+dependencies = [
+    '@fld33/relations',
+    '@apqc/apqc',
+    '@fld33_domain/business_objects',
+]
+
+[[package]]
+root = false
+name = '@apqc_cross_industry/manage_supply_chain_for_physical_products'
+version = '0.1.10'
+ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/'
+cksum = 'a0402c7e0bc3627ef285a2ad4e130a00bf69e68f7778fd435a36512e4ba8ffc3'
+dependencies = [
+    '@fld33/relations',
+    '@apqc/apqc',
+    '@fld33_domain/business_objects',
+]
+
+[[package]]
+root = false
+name = '@apqc_cross_industry/market_and_sell_products_and_services'
+version = '0.1.10'
+ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/market_and_sell_products_and_services/'
+cksum = 'dacf50a2e7505f1336e3214d1c2393158907784be9314f3302714c594c129616'
+dependencies = [
+    '@fld33/relations',
+    '@apqc/apqc',
+    '@fld33_domain/business_objects',
+]
+
+[[package]]
+root = false
+name = '@fld33/methodology'
+version = '0.1.7'
+ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
+cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/organization'
+version = '0.1.4'
+ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
+cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/process'
+version = '0.1.2'
+ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
+cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/relations'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@fld33/relations/'
+cksum = '70727b40e2f6ca297a87376772733e92710a79e35e57675f67bbc299f80a2dcd'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33_domain/business_objects'
+version = '0.1.9'
+ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
+cksum = '1e872dfad97f2442e6546e429dac2ec363c6c33928185c099d4032d5d2a474e1'
+dependencies = [
+    '@fld33/methodology',
+    '@fld33/organization',
+    '@fld33/relations',
+]
+
+[[package]]
+root = true
+name = '@apqc_cross_industry/develop_and_manage_products_and_services'
+version = '0.1.10'
+ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/develop_and_manage_products_and_services/'
+cksum = 'e9083fb5850c04599a0f0c2e799eecaefc352d98d9f963014f566b031b44eefc'
+dependencies = [
+    '@fld33/relations',
+    '@apqc/apqc',
+    '@fld33_domain/business_objects',
+]
+
+[[package]]
+root = false
+name = '@apqc/apqc'
+version = '0.1.6'
+ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
+cksum = '02f30e63eb4a47a57d514e9bab547203de80b374f6570a32bdd4cc4ca76ebb0e'
+dependencies = [
+    '@fld33/process',
+    '@fld33/relations',
+]
+
+[[package]]
+root = false
+name = '@fld33/methodology'
+version = '0.1.7'
+ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
+cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/organization'
+version = '0.1.4'
+ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
+cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/process'
+version = '0.1.2'
+ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
+cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/relations'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@fld33/relations/'
+cksum = '70727b40e2f6ca297a87376772733e92710a79e35e57675f67bbc299f80a2dcd'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33_domain/business_objects'
+version = '0.1.9'
+ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
+cksum = '1e872dfad97f2442e6546e429dac2ec363c6c33928185c099d4032d5d2a474e1'
+dependencies = [
+    '@fld33/methodology',
+    '@fld33/organization',
+    '@fld33/relations',
+]
+
+[[package]]
+root = true
+name = '@fld33/organization_communication'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@fld33/organization_communication/'
+cksum = '49a88dece89ec5fc2d84d7068ff564e0c9cd701a6dc455282dd99d24ac9d6519'
 dependencies = [
     '@fld33/communication',
     '@fld33/organization',
@@ -33,11 +897,11 @@ dependencies = []
 [[package]]
 root = true
 name = '@apqc_cross_industry/acquire_construct_and_manage_assets'
-version = '0.1.7'
+version = '0.1.10'
 ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/acquire_construct_and_manage_assets/'
-cksum = '40290ea2be47311ea617e97d93da1e95a0f232de5921da6d8be006cc0d4a0ad2'
+cksum = '17d67074fecc10e72a2e30cb6d02ae848e1e024c415ec775a4d494ad73146f59'
 dependencies = [
-    '@fld33/relations_0_1_0',
+    '@fld33/relations',
     '@apqc/apqc',
     '@fld33_domain/business_objects',
 ]
@@ -45,12 +909,12 @@ dependencies = [
 [[package]]
 root = false
 name = '@apqc/apqc'
-version = '0.1.3'
+version = '0.1.6'
 ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
-cksum = '81626f5a7ee9f8fe42956742ff114f2cbae0e714ba5862353d069ad46f69ee43'
+cksum = '02f30e63eb4a47a57d514e9bab547203de80b374f6570a32bdd4cc4ca76ebb0e'
 dependencies = [
     '@fld33/process',
-    '@fld33/relations_0_1_0',
+    '@fld33/relations',
 ]
 
 [[package]]
@@ -79,400 +943,135 @@ dependencies = []
 
 [[package]]
 root = false
-name = '@fld33/relations_0_1_0'
-version = '0.1.10'
-ontology_iri = 'http://field33.com/ontologies/@fld33/relations_0_1_0/'
-cksum = '41b316299844859263eaf124a0a57c8e0c354c80e99bd263e697c439e3d23244'
+name = '@fld33/relations'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@fld33/relations/'
+cksum = '70727b40e2f6ca297a87376772733e92710a79e35e57675f67bbc299f80a2dcd'
 dependencies = []
 
 [[package]]
 root = false
 name = '@fld33_domain/business_objects'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
-cksum = '4cea7002e7984edae121be2256fd37ac79964de6213cc3edd3a3d92f8bbf50dc'
-dependencies = [
-    '@fld33/methodology',
-    '@fld33/organization',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = true
-name = '@apqc_cross_industry/develop_and_manage_products_and_services'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/develop_and_manage_products_and_services/'
-cksum = 'fb98b4c7e100d85ddb25ba7f537aa8286b8c15148717b4457aa5ec8eb437ae86'
-dependencies = [
-    '@fld33/relations_0_1_0',
-    '@apqc/apqc',
-    '@fld33_domain/business_objects',
-]
-
-[[package]]
-root = false
-name = '@apqc/apqc'
-version = '0.1.3'
-ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
-cksum = '81626f5a7ee9f8fe42956742ff114f2cbae0e714ba5862353d069ad46f69ee43'
-dependencies = [
-    '@fld33/process',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = false
-name = '@fld33/methodology'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
-cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/organization'
-version = '0.1.4'
-ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
-cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/process'
-version = '0.1.2'
-ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
-cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/relations_0_1_0'
-version = '0.1.10'
-ontology_iri = 'http://field33.com/ontologies/@fld33/relations_0_1_0/'
-cksum = '41b316299844859263eaf124a0a57c8e0c354c80e99bd263e697c439e3d23244'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33_domain/business_objects'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
-cksum = '4cea7002e7984edae121be2256fd37ac79964de6213cc3edd3a3d92f8bbf50dc'
-dependencies = [
-    '@fld33/methodology',
-    '@fld33/organization',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = true
-name = '@apqc_cross_industry/manage_customer_service'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/manage_customer_service/'
-cksum = '7c20574d6aa6aa13999a32c5bf6ebdf20f185ef2ba316285e0f3fb1876c416b6'
-dependencies = [
-    '@fld33/relations_0_1_0',
-    '@apqc/apqc',
-    '@fld33_domain/business_objects',
-]
-
-[[package]]
-root = false
-name = '@apqc/apqc'
-version = '0.1.3'
-ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
-cksum = '81626f5a7ee9f8fe42956742ff114f2cbae0e714ba5862353d069ad46f69ee43'
-dependencies = [
-    '@fld33/process',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = false
-name = '@fld33/methodology'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
-cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/organization'
-version = '0.1.4'
-ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
-cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/process'
-version = '0.1.2'
-ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
-cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/relations_0_1_0'
-version = '0.1.10'
-ontology_iri = 'http://field33.com/ontologies/@fld33/relations_0_1_0/'
-cksum = '41b316299844859263eaf124a0a57c8e0c354c80e99bd263e697c439e3d23244'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33_domain/business_objects'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
-cksum = '4cea7002e7984edae121be2256fd37ac79964de6213cc3edd3a3d92f8bbf50dc'
-dependencies = [
-    '@fld33/methodology',
-    '@fld33/organization',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = true
-name = '@apqc_cross_industry/apqc_cross_industry'
 version = '0.1.9'
-ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/apqc_cross_industry'
-cksum = 'e64d1066e5e55c312151301111b9f49c4fadb275d58189f8cfd0873450a60c51'
+ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
+cksum = '1e872dfad97f2442e6546e429dac2ec363c6c33928185c099d4032d5d2a474e1'
 dependencies = [
+    '@fld33/methodology',
+    '@fld33/organization',
+    '@fld33/relations',
+]
+
+[[package]]
+root = true
+name = '@fld33_domain/business_objects'
+version = '0.1.9'
+ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
+cksum = '1e872dfad97f2442e6546e429dac2ec363c6c33928185c099d4032d5d2a474e1'
+dependencies = [
+    '@fld33/methodology',
+    '@fld33/organization',
+    '@fld33/relations',
+]
+
+[[package]]
+root = false
+name = '@fld33/methodology'
+version = '0.1.7'
+ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
+cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/organization'
+version = '0.1.4'
+ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
+cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/relations'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@fld33/relations/'
+cksum = '70727b40e2f6ca297a87376772733e92710a79e35e57675f67bbc299f80a2dcd'
+dependencies = []
+
+[[package]]
+root = true
+name = '@apqc/apqc_aerospace_and_defence'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@apqc/apqc_aerospace_and_defence/'
+cksum = 'c5b70200dd433d47c98c35a847e579172e29086216c83e67951bcf12c9669e6d'
+dependencies = [
+    '@fld33/relations',
+    '@apqc/apqc',
     '@fld33_domain/business_objects',
-    '@apqc_cross_industry/develop_vision_and_strategy',
-    '@apqc_cross_industry/develop_and_manage_products_and_services',
-    '@apqc_cross_industry/market_and_sell_products_and_services',
-    '@apqc_cross_industry/manage_supply_chain_for_physical_products',
-    '@apqc_cross_industry/deliver_services',
-    '@apqc_cross_industry/manage_customer_service',
-    '@apqc_cross_industry/develop_and_manage_human_capital',
-    '@apqc_cross_industry/manage_information_technology_it',
-    '@apqc_cross_industry/manage_financial_resources',
-    '@apqc_cross_industry/acquire_construct_and_manage_assets',
-    '@apqc_cross_industry/manage_enterprise_risk_compliance_remediation_and_resiliency',
-    '@apqc_cross_industry/manage_external_relationships',
-    '@apqc_cross_industry/develop_and_manage_business_capabilities',
 ]
 
 [[package]]
 root = false
 name = '@apqc/apqc'
-version = '0.1.3'
+version = '0.1.6'
 ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
-cksum = '81626f5a7ee9f8fe42956742ff114f2cbae0e714ba5862353d069ad46f69ee43'
+cksum = '02f30e63eb4a47a57d514e9bab547203de80b374f6570a32bdd4cc4ca76ebb0e'
 dependencies = [
     '@fld33/process',
-    '@fld33/relations_0_1_0',
+    '@fld33/relations',
 ]
 
 [[package]]
 root = false
-name = '@apqc_cross_industry/acquire_construct_and_manage_assets'
+name = '@fld33/methodology'
 version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/acquire_construct_and_manage_assets/'
-cksum = '40290ea2be47311ea617e97d93da1e95a0f232de5921da6d8be006cc0d4a0ad2'
-dependencies = [
-    '@fld33/relations_0_1_0',
-    '@apqc/apqc',
-    '@fld33_domain/business_objects',
-]
+ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
+cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
+dependencies = []
 
 [[package]]
 root = false
-name = '@apqc_cross_industry/deliver_services'
-version = '0.1.8'
-ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/deliver_services/'
-cksum = '92c4809f76db4c392654ee8750b3396fdc3cb31f540a8fa8bf9aa7a83ad40730'
-dependencies = [
-    '@fld33/relations_0_1_0',
-    '@apqc/apqc',
-    '@fld33_domain/business_objects',
-]
+name = '@fld33/organization'
+version = '0.1.4'
+ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
+cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
+dependencies = []
 
 [[package]]
 root = false
+name = '@fld33/process'
+version = '0.1.2'
+ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
+cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/relations'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@fld33/relations/'
+cksum = '70727b40e2f6ca297a87376772733e92710a79e35e57675f67bbc299f80a2dcd'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33_domain/business_objects'
+version = '0.1.9'
+ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
+cksum = '1e872dfad97f2442e6546e429dac2ec363c6c33928185c099d4032d5d2a474e1'
+dependencies = [
+    '@fld33/methodology',
+    '@fld33/organization',
+    '@fld33/relations',
+]
+
+[[package]]
+root = true
 name = '@apqc_cross_industry/develop_and_manage_business_capabilities'
-version = '0.1.7'
+version = '0.1.10'
 ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/develop_and_manage_business_capabilities/'
-cksum = '1cceb545f57a56f43f26fcc8db078065c62cb7e7bc6cc1cb72dc0bbd784cfdab'
+cksum = '822def613156d425faf44529a66fec9de4bb919a4812d2aacb4ff880a369c079'
 dependencies = [
-    '@fld33/relations_0_1_0',
-    '@apqc/apqc',
-    '@fld33_domain/business_objects',
-]
-
-[[package]]
-root = false
-name = '@apqc_cross_industry/develop_and_manage_human_capital'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/develop_and_manage_human_capital/'
-cksum = '8a907c299b1b899fa6877aaa89bea068c7a605aa8b67d2690d9ace38c99aa468'
-dependencies = [
-    '@fld33/relations_0_1_0',
-    '@apqc/apqc',
-    '@fld33_domain/business_objects',
-]
-
-[[package]]
-root = false
-name = '@apqc_cross_industry/develop_and_manage_products_and_services'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/develop_and_manage_products_and_services/'
-cksum = 'fb98b4c7e100d85ddb25ba7f537aa8286b8c15148717b4457aa5ec8eb437ae86'
-dependencies = [
-    '@fld33/relations_0_1_0',
-    '@apqc/apqc',
-    '@fld33_domain/business_objects',
-]
-
-[[package]]
-root = false
-name = '@apqc_cross_industry/develop_vision_and_strategy'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/develop_vision_and_strategy/'
-cksum = '41bb8e4d7ad8d0db632551bde263444b12b0aa5767c74cf38d1318014004ff4a'
-dependencies = [
-    '@fld33/relations_0_1_0',
-    '@apqc/apqc',
-    '@fld33_domain/business_objects',
-]
-
-[[package]]
-root = false
-name = '@apqc_cross_industry/manage_customer_service'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/manage_customer_service/'
-cksum = '7c20574d6aa6aa13999a32c5bf6ebdf20f185ef2ba316285e0f3fb1876c416b6'
-dependencies = [
-    '@fld33/relations_0_1_0',
-    '@apqc/apqc',
-    '@fld33_domain/business_objects',
-]
-
-[[package]]
-root = false
-name = '@apqc_cross_industry/manage_enterprise_risk_compliance_remediation_and_resiliency'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/manage_enterprise_risk_compliance_remediation_and_resiliency/'
-cksum = '808236179859a5747de55e91006e4994d47caa6194d05f028c15da81f7701da7'
-dependencies = [
-    '@fld33/relations_0_1_0',
-    '@apqc/apqc',
-    '@fld33_domain/business_objects',
-]
-
-[[package]]
-root = false
-name = '@apqc_cross_industry/manage_external_relationships'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/manage_external_relationships/'
-cksum = '3651d8bdfe6affa9be1a944d4ed0d37a109744bc7fc8d5ae33d462f910e2c374'
-dependencies = [
-    '@fld33/relations_0_1_0',
-    '@apqc/apqc',
-    '@fld33_domain/business_objects',
-]
-
-[[package]]
-root = false
-name = '@apqc_cross_industry/manage_financial_resources'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/manage_financial_resources/'
-cksum = 'f871dc7d4f2a4abb844c1f19584e62406e158b3d6910789d349123d3eb5bd788'
-dependencies = [
-    '@fld33/relations_0_1_0',
-    '@apqc/apqc',
-    '@fld33_domain/business_objects',
-]
-
-[[package]]
-root = false
-name = '@apqc_cross_industry/manage_information_technology_it'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/manage_information_technology_it/'
-cksum = '8876b4e8ef3cc1760b21dc48c7dd6793034cb1fe8806a476c63914207b4ec29c'
-dependencies = [
-    '@fld33/relations_0_1_0',
-    '@apqc/apqc',
-    '@fld33_domain/business_objects',
-]
-
-[[package]]
-root = false
-name = '@apqc_cross_industry/manage_supply_chain_for_physical_products'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/'
-cksum = 'd223498862e9f785320df34686abf02dd652cf725fe457c1f97ecee2e7775e04'
-dependencies = [
-    '@fld33/relations_0_1_0',
-    '@apqc/apqc',
-    '@fld33_domain/business_objects',
-]
-
-[[package]]
-root = false
-name = '@apqc_cross_industry/market_and_sell_products_and_services'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/market_and_sell_products_and_services/'
-cksum = '459bb93fd62c3be05748e49ed8655f1bba7ebfb1c3032e52e6f8855ce08b0cc2'
-dependencies = [
-    '@fld33/relations_0_1_0',
-    '@apqc/apqc',
-    '@fld33_domain/business_objects',
-]
-
-[[package]]
-root = false
-name = '@fld33/methodology'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
-cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/organization'
-version = '0.1.4'
-ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
-cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/process'
-version = '0.1.2'
-ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
-cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/relations_0_1_0'
-version = '0.1.10'
-ontology_iri = 'http://field33.com/ontologies/@fld33/relations_0_1_0/'
-cksum = '41b316299844859263eaf124a0a57c8e0c354c80e99bd263e697c439e3d23244'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33_domain/business_objects'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
-cksum = '4cea7002e7984edae121be2256fd37ac79964de6213cc3edd3a3d92f8bbf50dc'
-dependencies = [
-    '@fld33/methodology',
-    '@fld33/organization',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = true
-name = '@apqc_cross_industry/manage_financial_resources'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/manage_financial_resources/'
-cksum = 'f871dc7d4f2a4abb844c1f19584e62406e158b3d6910789d349123d3eb5bd788'
-dependencies = [
-    '@fld33/relations_0_1_0',
+    '@fld33/relations',
     '@apqc/apqc',
     '@fld33_domain/business_objects',
 ]
@@ -480,12 +1079,12 @@ dependencies = [
 [[package]]
 root = false
 name = '@apqc/apqc'
-version = '0.1.3'
+version = '0.1.6'
 ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
-cksum = '81626f5a7ee9f8fe42956742ff114f2cbae0e714ba5862353d069ad46f69ee43'
+cksum = '02f30e63eb4a47a57d514e9bab547203de80b374f6570a32bdd4cc4ca76ebb0e'
 dependencies = [
     '@fld33/process',
-    '@fld33/relations_0_1_0',
+    '@fld33/relations',
 ]
 
 [[package]]
@@ -514,32 +1113,32 @@ dependencies = []
 
 [[package]]
 root = false
-name = '@fld33/relations_0_1_0'
-version = '0.1.10'
-ontology_iri = 'http://field33.com/ontologies/@fld33/relations_0_1_0/'
-cksum = '41b316299844859263eaf124a0a57c8e0c354c80e99bd263e697c439e3d23244'
+name = '@fld33/relations'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@fld33/relations/'
+cksum = '70727b40e2f6ca297a87376772733e92710a79e35e57675f67bbc299f80a2dcd'
 dependencies = []
 
 [[package]]
 root = false
 name = '@fld33_domain/business_objects'
-version = '0.1.7'
+version = '0.1.9'
 ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
-cksum = '4cea7002e7984edae121be2256fd37ac79964de6213cc3edd3a3d92f8bbf50dc'
+cksum = '1e872dfad97f2442e6546e429dac2ec363c6c33928185c099d4032d5d2a474e1'
 dependencies = [
     '@fld33/methodology',
     '@fld33/organization',
-    '@fld33/relations_0_1_0',
+    '@fld33/relations',
 ]
 
 [[package]]
 root = true
-name = '@apqc_cross_industry/manage_supply_chain_for_physical_products'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/'
-cksum = 'd223498862e9f785320df34686abf02dd652cf725fe457c1f97ecee2e7775e04'
+name = '@apqc_cross_industry/manage_financial_resources'
+version = '0.1.10'
+ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/manage_financial_resources/'
+cksum = '61ae641d48517e7baeea707995c7c1c75a3d27cb5da01705139f42c7e0a9170f'
 dependencies = [
-    '@fld33/relations_0_1_0',
+    '@fld33/relations',
     '@apqc/apqc',
     '@fld33_domain/business_objects',
 ]
@@ -547,12 +1146,12 @@ dependencies = [
 [[package]]
 root = false
 name = '@apqc/apqc'
-version = '0.1.3'
+version = '0.1.6'
 ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
-cksum = '81626f5a7ee9f8fe42956742ff114f2cbae0e714ba5862353d069ad46f69ee43'
+cksum = '02f30e63eb4a47a57d514e9bab547203de80b374f6570a32bdd4cc4ca76ebb0e'
 dependencies = [
     '@fld33/process',
-    '@fld33/relations_0_1_0',
+    '@fld33/relations',
 ]
 
 [[package]]
@@ -581,30 +1180,57 @@ dependencies = []
 
 [[package]]
 root = false
-name = '@fld33/relations_0_1_0'
-version = '0.1.10'
-ontology_iri = 'http://field33.com/ontologies/@fld33/relations_0_1_0/'
-cksum = '41b316299844859263eaf124a0a57c8e0c354c80e99bd263e697c439e3d23244'
+name = '@fld33/relations'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@fld33/relations/'
+cksum = '70727b40e2f6ca297a87376772733e92710a79e35e57675f67bbc299f80a2dcd'
 dependencies = []
 
 [[package]]
 root = false
 name = '@fld33_domain/business_objects'
-version = '0.1.7'
+version = '0.1.9'
 ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
-cksum = '4cea7002e7984edae121be2256fd37ac79964de6213cc3edd3a3d92f8bbf50dc'
+cksum = '1e872dfad97f2442e6546e429dac2ec363c6c33928185c099d4032d5d2a474e1'
 dependencies = [
     '@fld33/methodology',
     '@fld33/organization',
-    '@fld33/relations_0_1_0',
+    '@fld33/relations',
 ]
+
+[[package]]
+root = true
+name = '@fld33_domain/software_development_lifecycle'
+version = '0.1.5'
+ontology_iri = 'http://field33.com/ontologies/@fld33_domain/software_development_lifecycle/'
+cksum = '5d766c737d60f773e41f4d34b7e472feec6919b1795f21d676716c916ddc1a58'
+dependencies = [
+    '@fld33/process',
+    '@fld33/relations',
+]
+
+[[package]]
+root = false
+name = '@fld33/process'
+version = '0.1.2'
+ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
+cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/relations'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@fld33/relations/'
+cksum = '70727b40e2f6ca297a87376772733e92710a79e35e57675f67bbc299f80a2dcd'
+dependencies = []
 
 [[package]]
 root = true
 name = '@fld33_domain/software_implementation_metric'
-version = '0.1.2'
+version = '0.1.3'
 ontology_iri = 'http://field33.com/ontologies/@fld33_domain/software_implementation_metric/'
-cksum = '8670502ca1f4f6da20d904d0a5be4dd4a2a77870d840b278367d6052745965e0'
+cksum = '8b6ac44e4484c0c58361b97a29ff6f647c58050ce948f1769c54a636ed5c2bc3'
 dependencies = ['@fld33/methodology']
 
 [[package]]
@@ -617,15 +1243,11 @@ dependencies = []
 
 [[package]]
 root = true
-name = '@fld33_domain/business_objects'
+name = '@fld33_domain/software_development_metric'
 version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
-cksum = '4cea7002e7984edae121be2256fd37ac79964de6213cc3edd3a3d92f8bbf50dc'
-dependencies = [
-    '@fld33/methodology',
-    '@fld33/organization',
-    '@fld33/relations_0_1_0',
-]
+ontology_iri = 'http://field33.com/ontologies/@fld33_domain/software_development_metric/'
+cksum = 'a5d0dc5922a9fe6723289e97c49c0f91d54926cb299d58694f3c3ca2f7a315db'
+dependencies = ['@fld33/methodology']
 
 [[package]]
 root = false
@@ -633,193 +1255,16 @@ name = '@fld33/methodology'
 version = '0.1.7'
 ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
 cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/organization'
-version = '0.1.4'
-ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
-cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/relations_0_1_0'
-version = '0.1.10'
-ontology_iri = 'http://field33.com/ontologies/@fld33/relations_0_1_0/'
-cksum = '41b316299844859263eaf124a0a57c8e0c354c80e99bd263e697c439e3d23244'
-dependencies = []
-
-[[package]]
-root = true
-name = '@apqc_cross_industry/develop_and_manage_human_capital'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/develop_and_manage_human_capital/'
-cksum = '8a907c299b1b899fa6877aaa89bea068c7a605aa8b67d2690d9ace38c99aa468'
-dependencies = [
-    '@fld33/relations_0_1_0',
-    '@apqc/apqc',
-    '@fld33_domain/business_objects',
-]
-
-[[package]]
-root = false
-name = '@apqc/apqc'
-version = '0.1.3'
-ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
-cksum = '81626f5a7ee9f8fe42956742ff114f2cbae0e714ba5862353d069ad46f69ee43'
-dependencies = [
-    '@fld33/process',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = false
-name = '@fld33/methodology'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
-cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/organization'
-version = '0.1.4'
-ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
-cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/process'
-version = '0.1.2'
-ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
-cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/relations_0_1_0'
-version = '0.1.10'
-ontology_iri = 'http://field33.com/ontologies/@fld33/relations_0_1_0/'
-cksum = '41b316299844859263eaf124a0a57c8e0c354c80e99bd263e697c439e3d23244'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33_domain/business_objects'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
-cksum = '4cea7002e7984edae121be2256fd37ac79964de6213cc3edd3a3d92f8bbf50dc'
-dependencies = [
-    '@fld33/methodology',
-    '@fld33/organization',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = true
-name = '@apqc_cross_industry/develop_vision_and_strategy'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/develop_vision_and_strategy/'
-cksum = '41bb8e4d7ad8d0db632551bde263444b12b0aa5767c74cf38d1318014004ff4a'
-dependencies = [
-    '@fld33/relations_0_1_0',
-    '@apqc/apqc',
-    '@fld33_domain/business_objects',
-]
-
-[[package]]
-root = false
-name = '@apqc/apqc'
-version = '0.1.3'
-ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
-cksum = '81626f5a7ee9f8fe42956742ff114f2cbae0e714ba5862353d069ad46f69ee43'
-dependencies = [
-    '@fld33/process',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = false
-name = '@fld33/methodology'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
-cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/organization'
-version = '0.1.4'
-ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
-cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/process'
-version = '0.1.2'
-ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
-cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/relations_0_1_0'
-version = '0.1.10'
-ontology_iri = 'http://field33.com/ontologies/@fld33/relations_0_1_0/'
-cksum = '41b316299844859263eaf124a0a57c8e0c354c80e99bd263e697c439e3d23244'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33_domain/business_objects'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
-cksum = '4cea7002e7984edae121be2256fd37ac79964de6213cc3edd3a3d92f8bbf50dc'
-dependencies = [
-    '@fld33/methodology',
-    '@fld33/organization',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = true
-name = '@apqc/apqc'
-version = '0.1.3'
-ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
-cksum = '81626f5a7ee9f8fe42956742ff114f2cbae0e714ba5862353d069ad46f69ee43'
-dependencies = [
-    '@fld33/process',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = false
-name = '@fld33/process'
-version = '0.1.2'
-ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
-cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/relations_0_1_0'
-version = '0.1.10'
-ontology_iri = 'http://field33.com/ontologies/@fld33/relations_0_1_0/'
-cksum = '41b316299844859263eaf124a0a57c8e0c354c80e99bd263e697c439e3d23244'
 dependencies = []
 
 [[package]]
 root = true
 name = '@apqc_cross_industry/market_and_sell_products_and_services'
-version = '0.1.7'
+version = '0.1.10'
 ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/market_and_sell_products_and_services/'
-cksum = '459bb93fd62c3be05748e49ed8655f1bba7ebfb1c3032e52e6f8855ce08b0cc2'
+cksum = 'dacf50a2e7505f1336e3214d1c2393158907784be9314f3302714c594c129616'
 dependencies = [
-    '@fld33/relations_0_1_0',
+    '@fld33/relations',
     '@apqc/apqc',
     '@fld33_domain/business_objects',
 ]
@@ -827,12 +1272,12 @@ dependencies = [
 [[package]]
 root = false
 name = '@apqc/apqc'
-version = '0.1.3'
+version = '0.1.6'
 ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
-cksum = '81626f5a7ee9f8fe42956742ff114f2cbae0e714ba5862353d069ad46f69ee43'
+cksum = '02f30e63eb4a47a57d514e9bab547203de80b374f6570a32bdd4cc4ca76ebb0e'
 dependencies = [
     '@fld33/process',
-    '@fld33/relations_0_1_0',
+    '@fld33/relations',
 ]
 
 [[package]]
@@ -861,45 +1306,33 @@ dependencies = []
 
 [[package]]
 root = false
-name = '@fld33/relations_0_1_0'
-version = '0.1.10'
-ontology_iri = 'http://field33.com/ontologies/@fld33/relations_0_1_0/'
-cksum = '41b316299844859263eaf124a0a57c8e0c354c80e99bd263e697c439e3d23244'
+name = '@fld33/relations'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@fld33/relations/'
+cksum = '70727b40e2f6ca297a87376772733e92710a79e35e57675f67bbc299f80a2dcd'
 dependencies = []
 
 [[package]]
 root = false
 name = '@fld33_domain/business_objects'
-version = '0.1.7'
+version = '0.1.9'
 ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
-cksum = '4cea7002e7984edae121be2256fd37ac79964de6213cc3edd3a3d92f8bbf50dc'
+cksum = '1e872dfad97f2442e6546e429dac2ec363c6c33928185c099d4032d5d2a474e1'
 dependencies = [
     '@fld33/methodology',
     '@fld33/organization',
-    '@fld33/relations_0_1_0',
+    '@fld33/relations',
 ]
 
 [[package]]
 root = true
-name = '@apqc_cross_industry/develop_and_manage_business_capabilities'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/develop_and_manage_business_capabilities/'
-cksum = '1cceb545f57a56f43f26fcc8db078065c62cb7e7bc6cc1cb72dc0bbd784cfdab'
+name = '@fld33_domain/software_architecture_metric'
+version = '0.1.5'
+ontology_iri = 'http://field33.com/ontologies/@fld33_domain/software_architecture_metric/'
+cksum = '02d339086942b453c9494ca1178d4e93c6b471b528b0ce03e4766f88e2250908'
 dependencies = [
-    '@fld33/relations_0_1_0',
-    '@apqc/apqc',
-    '@fld33_domain/business_objects',
-]
-
-[[package]]
-root = false
-name = '@apqc/apqc'
-version = '0.1.3'
-ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
-cksum = '81626f5a7ee9f8fe42956742ff114f2cbae0e714ba5862353d069ad46f69ee43'
-dependencies = [
-    '@fld33/process',
-    '@fld33/relations_0_1_0',
+    '@fld33/methodology',
+    '@fld33/relations',
 ]
 
 [[package]]
@@ -912,184 +1345,22 @@ dependencies = []
 
 [[package]]
 root = false
-name = '@fld33/organization'
-version = '0.1.4'
-ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
-cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
+name = '@fld33/relations'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@fld33/relations/'
+cksum = '70727b40e2f6ca297a87376772733e92710a79e35e57675f67bbc299f80a2dcd'
 dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/process'
-version = '0.1.2'
-ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
-cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/relations_0_1_0'
-version = '0.1.10'
-ontology_iri = 'http://field33.com/ontologies/@fld33/relations_0_1_0/'
-cksum = '41b316299844859263eaf124a0a57c8e0c354c80e99bd263e697c439e3d23244'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33_domain/business_objects'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
-cksum = '4cea7002e7984edae121be2256fd37ac79964de6213cc3edd3a3d92f8bbf50dc'
-dependencies = [
-    '@fld33/methodology',
-    '@fld33/organization',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = true
-name = '@apqc_cross_industry/manage_enterprise_risk_compliance_remediation_and_resiliency'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/manage_enterprise_risk_compliance_remediation_and_resiliency/'
-cksum = '808236179859a5747de55e91006e4994d47caa6194d05f028c15da81f7701da7'
-dependencies = [
-    '@fld33/relations_0_1_0',
-    '@apqc/apqc',
-    '@fld33_domain/business_objects',
-]
-
-[[package]]
-root = false
-name = '@apqc/apqc'
-version = '0.1.3'
-ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
-cksum = '81626f5a7ee9f8fe42956742ff114f2cbae0e714ba5862353d069ad46f69ee43'
-dependencies = [
-    '@fld33/process',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = false
-name = '@fld33/methodology'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
-cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/organization'
-version = '0.1.4'
-ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
-cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/process'
-version = '0.1.2'
-ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
-cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/relations_0_1_0'
-version = '0.1.10'
-ontology_iri = 'http://field33.com/ontologies/@fld33/relations_0_1_0/'
-cksum = '41b316299844859263eaf124a0a57c8e0c354c80e99bd263e697c439e3d23244'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33_domain/business_objects'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
-cksum = '4cea7002e7984edae121be2256fd37ac79964de6213cc3edd3a3d92f8bbf50dc'
-dependencies = [
-    '@fld33/methodology',
-    '@fld33/organization',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = true
-name = '@fld33_domain/apqc_airline'
-version = '0.1.2'
-ontology_iri = 'http://field33.com/ontologies/@fld33_domain/apqc_airline/'
-cksum = 'b4fa1bbe72abecadc77162f5a7756d776f92f20eff227e06439b8e9133dfb97d'
-dependencies = [
-    '@fld33/relations_0_1_0',
-    '@apqc/apqc',
-    '@fld33_domain/business_objects',
-]
-
-[[package]]
-root = false
-name = '@apqc/apqc'
-version = '0.1.3'
-ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
-cksum = '81626f5a7ee9f8fe42956742ff114f2cbae0e714ba5862353d069ad46f69ee43'
-dependencies = [
-    '@fld33/process',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = false
-name = '@fld33/methodology'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
-cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/organization'
-version = '0.1.4'
-ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
-cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/process'
-version = '0.1.2'
-ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
-cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/relations_0_1_0'
-version = '0.1.10'
-ontology_iri = 'http://field33.com/ontologies/@fld33/relations_0_1_0/'
-cksum = '41b316299844859263eaf124a0a57c8e0c354c80e99bd263e697c439e3d23244'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33_domain/business_objects'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
-cksum = '4cea7002e7984edae121be2256fd37ac79964de6213cc3edd3a3d92f8bbf50dc'
-dependencies = [
-    '@fld33/methodology',
-    '@fld33/organization',
-    '@fld33/relations_0_1_0',
-]
 
 [[package]]
 root = true
 name = '@fld33_domain/software_development'
-version = '0.2.1'
+version = '0.2.2'
 ontology_iri = 'http://field33.com/ontologies/@fld33_domain/software_development/'
-cksum = '2114f8956b2abf18887dfe64025de889f1def023d4c93d9961ca768910ff6061'
+cksum = 'e4fb491ffd28456146182d7691ffad92e6ed01bc1e11fc514c0789afb95a3510'
 dependencies = [
     '@fld33/methodology',
     '@fld33/process',
-    '@fld33/relations_0_1_0',
+    '@fld33/relations',
     '@fld33_domain/software_development_lifecycle',
     '@fld33_domain/software_development_metric',
     '@fld33_domain/software_team_metric',
@@ -1113,51 +1384,51 @@ dependencies = []
 
 [[package]]
 root = false
-name = '@fld33/relations_0_1_0'
-version = '0.1.10'
-ontology_iri = 'http://field33.com/ontologies/@fld33/relations_0_1_0/'
-cksum = '41b316299844859263eaf124a0a57c8e0c354c80e99bd263e697c439e3d23244'
+name = '@fld33/relations'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@fld33/relations/'
+cksum = '70727b40e2f6ca297a87376772733e92710a79e35e57675f67bbc299f80a2dcd'
 dependencies = []
 
 [[package]]
 root = false
 name = '@fld33_domain/software_development_lifecycle'
-version = '0.1.4'
+version = '0.1.5'
 ontology_iri = 'http://field33.com/ontologies/@fld33_domain/software_development_lifecycle/'
-cksum = '0d1f9f63525cc3afc88addbeaadab5edbcd3dfd601c837c36a943e4fd15d9243'
+cksum = '5d766c737d60f773e41f4d34b7e472feec6919b1795f21d676716c916ddc1a58'
 dependencies = [
     '@fld33/process',
-    '@fld33/relations_0_1_0',
+    '@fld33/relations',
 ]
 
 [[package]]
 root = false
 name = '@fld33_domain/software_development_metric'
-version = '0.1.6'
+version = '0.1.7'
 ontology_iri = 'http://field33.com/ontologies/@fld33_domain/software_development_metric/'
-cksum = '7d974e8a7c6378f91a842cf963acef1894c23c9512da8bcfbf91a6a98410cb1c'
+cksum = 'a5d0dc5922a9fe6723289e97c49c0f91d54926cb299d58694f3c3ca2f7a315db'
 dependencies = ['@fld33/methodology']
 
 [[package]]
 root = false
 name = '@fld33_domain/software_team_metric'
-version = '0.1.6'
+version = '0.1.7'
 ontology_iri = 'http://field33.com/ontologies/@fld33_domain/software_team_metric/'
-cksum = '613be679157df3446ccc3e33779ed6b5ff782b27bc726760b5b8a9d374d5c842'
+cksum = '71af4f29b451afdded2bbacddbd7cc2fd4f5718b6148f52707590b58094e27f4'
 dependencies = [
     '@fld33/methodology',
-    '@fld33/relations_0_1_0',
+    '@fld33/relations',
 ]
 
 [[package]]
 root = true
 name = '@fld33_domain/software_team_metric'
-version = '0.1.6'
+version = '0.1.7'
 ontology_iri = 'http://field33.com/ontologies/@fld33_domain/software_team_metric/'
-cksum = '613be679157df3446ccc3e33779ed6b5ff782b27bc726760b5b8a9d374d5c842'
+cksum = '71af4f29b451afdded2bbacddbd7cc2fd4f5718b6148f52707590b58094e27f4'
 dependencies = [
     '@fld33/methodology',
-    '@fld33/relations_0_1_0',
+    '@fld33/relations',
 ]
 
 [[package]]
@@ -1170,47 +1441,20 @@ dependencies = []
 
 [[package]]
 root = false
-name = '@fld33/relations_0_1_0'
-version = '0.1.10'
-ontology_iri = 'http://field33.com/ontologies/@fld33/relations_0_1_0/'
-cksum = '41b316299844859263eaf124a0a57c8e0c354c80e99bd263e697c439e3d23244'
+name = '@fld33/relations'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@fld33/relations/'
+cksum = '70727b40e2f6ca297a87376772733e92710a79e35e57675f67bbc299f80a2dcd'
 dependencies = []
 
 [[package]]
 root = true
-name = '@fld33_domain/software_development_lifecycle'
-version = '0.1.4'
-ontology_iri = 'http://field33.com/ontologies/@fld33_domain/software_development_lifecycle/'
-cksum = '0d1f9f63525cc3afc88addbeaadab5edbcd3dfd601c837c36a943e4fd15d9243'
-dependencies = [
-    '@fld33/process',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = false
-name = '@fld33/process'
-version = '0.1.2'
-ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
-cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/relations_0_1_0'
+name = '@apqc_cross_industry/manage_customer_service'
 version = '0.1.10'
-ontology_iri = 'http://field33.com/ontologies/@fld33/relations_0_1_0/'
-cksum = '41b316299844859263eaf124a0a57c8e0c354c80e99bd263e697c439e3d23244'
-dependencies = []
-
-[[package]]
-root = true
-name = '@fld33_domain/apqc_aerospace_and_defence'
-version = '0.1.2'
-ontology_iri = 'http://field33.com/ontologies/@fld33_domain/apqc_aerospace_and_defence/'
-cksum = '309a9829ab28fd7db82831382aef75eaf81f299995c084712eefbad9ccbd643d'
+ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/manage_customer_service/'
+cksum = '66f9b3f3cbbb8c50d221f95fdf5e1db9215f70df9ff3ea8ee8c60c567220e273'
 dependencies = [
-    '@fld33/relations_0_1_0',
+    '@fld33/relations',
     '@apqc/apqc',
     '@fld33_domain/business_objects',
 ]
@@ -1218,293 +1462,13 @@ dependencies = [
 [[package]]
 root = false
 name = '@apqc/apqc'
-version = '0.1.3'
-ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
-cksum = '81626f5a7ee9f8fe42956742ff114f2cbae0e714ba5862353d069ad46f69ee43'
-dependencies = [
-    '@fld33/process',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = false
-name = '@fld33/methodology'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
-cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/organization'
-version = '0.1.4'
-ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
-cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/process'
-version = '0.1.2'
-ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
-cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/relations_0_1_0'
-version = '0.1.10'
-ontology_iri = 'http://field33.com/ontologies/@fld33/relations_0_1_0/'
-cksum = '41b316299844859263eaf124a0a57c8e0c354c80e99bd263e697c439e3d23244'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33_domain/business_objects'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
-cksum = '4cea7002e7984edae121be2256fd37ac79964de6213cc3edd3a3d92f8bbf50dc'
-dependencies = [
-    '@fld33/methodology',
-    '@fld33/organization',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = true
-name = '@apqc_cross_industry/deliver_services'
-version = '0.1.8'
-ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/deliver_services/'
-cksum = '92c4809f76db4c392654ee8750b3396fdc3cb31f540a8fa8bf9aa7a83ad40730'
-dependencies = [
-    '@fld33/relations_0_1_0',
-    '@apqc/apqc',
-    '@fld33_domain/business_objects',
-]
-
-[[package]]
-root = false
-name = '@apqc/apqc'
-version = '0.1.3'
-ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
-cksum = '81626f5a7ee9f8fe42956742ff114f2cbae0e714ba5862353d069ad46f69ee43'
-dependencies = [
-    '@fld33/process',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = false
-name = '@fld33/methodology'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
-cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/organization'
-version = '0.1.4'
-ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
-cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/process'
-version = '0.1.2'
-ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
-cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/relations_0_1_0'
-version = '0.1.10'
-ontology_iri = 'http://field33.com/ontologies/@fld33/relations_0_1_0/'
-cksum = '41b316299844859263eaf124a0a57c8e0c354c80e99bd263e697c439e3d23244'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33_domain/business_objects'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
-cksum = '4cea7002e7984edae121be2256fd37ac79964de6213cc3edd3a3d92f8bbf50dc'
-dependencies = [
-    '@fld33/methodology',
-    '@fld33/organization',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = true
-name = '@apqc_cross_industry/manage_information_technology_it'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/manage_information_technology_it/'
-cksum = '8876b4e8ef3cc1760b21dc48c7dd6793034cb1fe8806a476c63914207b4ec29c'
-dependencies = [
-    '@fld33/relations_0_1_0',
-    '@apqc/apqc',
-    '@fld33_domain/business_objects',
-]
-
-[[package]]
-root = false
-name = '@apqc/apqc'
-version = '0.1.3'
-ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
-cksum = '81626f5a7ee9f8fe42956742ff114f2cbae0e714ba5862353d069ad46f69ee43'
-dependencies = [
-    '@fld33/process',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = false
-name = '@fld33/methodology'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
-cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/organization'
-version = '0.1.4'
-ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
-cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/process'
-version = '0.1.2'
-ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
-cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/relations_0_1_0'
-version = '0.1.10'
-ontology_iri = 'http://field33.com/ontologies/@fld33/relations_0_1_0/'
-cksum = '41b316299844859263eaf124a0a57c8e0c354c80e99bd263e697c439e3d23244'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33_domain/business_objects'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
-cksum = '4cea7002e7984edae121be2256fd37ac79964de6213cc3edd3a3d92f8bbf50dc'
-dependencies = [
-    '@fld33/methodology',
-    '@fld33/organization',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = true
-name = '@apqc_cross_industry/manage_external_relationships'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@apqc_cross_industry/manage_external_relationships/'
-cksum = '3651d8bdfe6affa9be1a944d4ed0d37a109744bc7fc8d5ae33d462f910e2c374'
-dependencies = [
-    '@fld33/relations_0_1_0',
-    '@apqc/apqc',
-    '@fld33_domain/business_objects',
-]
-
-[[package]]
-root = false
-name = '@apqc/apqc'
-version = '0.1.3'
-ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
-cksum = '81626f5a7ee9f8fe42956742ff114f2cbae0e714ba5862353d069ad46f69ee43'
-dependencies = [
-    '@fld33/process',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = false
-name = '@fld33/methodology'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
-cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/organization'
-version = '0.1.4'
-ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
-cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/process'
-version = '0.1.2'
-ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
-cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/relations_0_1_0'
-version = '0.1.10'
-ontology_iri = 'http://field33.com/ontologies/@fld33/relations_0_1_0/'
-cksum = '41b316299844859263eaf124a0a57c8e0c354c80e99bd263e697c439e3d23244'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33_domain/business_objects'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
-cksum = '4cea7002e7984edae121be2256fd37ac79964de6213cc3edd3a3d92f8bbf50dc'
-dependencies = [
-    '@fld33/methodology',
-    '@fld33/organization',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = true
-name = '@fld33_domain/software_architecture_metric'
-version = '0.1.4'
-ontology_iri = 'http://field33.com/ontologies/@fld33_domain/software_architecture_metric/'
-cksum = 'e6b0ab28ab511e95c7ae543212352d3eb190116a0ec7de39c15024d108a43817'
-dependencies = [
-    '@fld33/methodology',
-    '@fld33/relations_0_1_0',
-]
-
-[[package]]
-root = false
-name = '@fld33/methodology'
-version = '0.1.7'
-ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
-cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
-dependencies = []
-
-[[package]]
-root = false
-name = '@fld33/relations_0_1_0'
-version = '0.1.10'
-ontology_iri = 'http://field33.com/ontologies/@fld33/relations_0_1_0/'
-cksum = '41b316299844859263eaf124a0a57c8e0c354c80e99bd263e697c439e3d23244'
-dependencies = []
-
-[[package]]
-root = true
-name = '@fld33_domain/software_development_metric'
 version = '0.1.6'
-ontology_iri = 'http://field33.com/ontologies/@fld33_domain/software_development_metric/'
-cksum = '7d974e8a7c6378f91a842cf963acef1894c23c9512da8bcfbf91a6a98410cb1c'
-dependencies = ['@fld33/methodology']
+ontology_iri = 'http://field33.com/ontologies/@apqc/apqc/'
+cksum = '02f30e63eb4a47a57d514e9bab547203de80b374f6570a32bdd4cc4ca76ebb0e'
+dependencies = [
+    '@fld33/process',
+    '@fld33/relations',
+]
 
 [[package]]
 root = false
@@ -1513,3 +1477,39 @@ version = '0.1.7'
 ontology_iri = 'http://field33.com/ontologies/@fld33/methodology/'
 cksum = 'a3efb4297539b942e36860a6630ed73c9069691e1e0fba90b4a2b9f7baffc390'
 dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/organization'
+version = '0.1.4'
+ontology_iri = 'http://field33.com/ontologies/@fld33/organization/'
+cksum = '3bb18fac614b24f2904374e1797e6a3a953f6275d0c1803c833a0fc4307ef308'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/process'
+version = '0.1.2'
+ontology_iri = 'http://field33.com/ontologies/@fld33/process/'
+cksum = '0c15a73708b1695158848c387c1e800b62c6711469c1a8d563c2d34568b6406e'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33/relations'
+version = '0.2.0'
+ontology_iri = 'http://field33.com/ontologies/@fld33/relations/'
+cksum = '70727b40e2f6ca297a87376772733e92710a79e35e57675f67bbc299f80a2dcd'
+dependencies = []
+
+[[package]]
+root = false
+name = '@fld33_domain/business_objects'
+version = '0.1.9'
+ontology_iri = 'http://field33.com/ontologies/@fld33_domain/business_objects/'
+cksum = '1e872dfad97f2442e6546e429dac2ec363c6c33928185c099d4032d5d2a474e1'
+dependencies = [
+    '@fld33/methodology',
+    '@fld33/organization',
+    '@fld33/relations',
+]
