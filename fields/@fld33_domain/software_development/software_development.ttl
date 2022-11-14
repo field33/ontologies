@@ -29,7 +29,7 @@
                                                                                       "Software Development" ;
                                                                      registry:ontologyFormatVersion "v1" ;
                                                                      registry:packageName "@fld33_domain/software_development" ;
-                                                                     registry:packageVersion "0.2.2" ;
+                                                                     registry:packageVersion "0.2.3" ;
                                                                      registry:licenseSPDX "Apache-2.0" ;
                                                                      registry:repository "https://github.com/field33/ontologies/tree/main/%40fld33_domain/software_development" ;
                                                                      registry:shortDescription "Software development ontology"@en ;
@@ -318,10 +318,22 @@ registry:packageVersion rdf:type owl:AnnotationProperty .
                       rdfs:label "Continous Integration"@en .
 
 
+###  http://field33.com/ontologies/@fld33_domain/software_development/Commit
+:Commit rdf:type owl:Class ;
+            rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Activity> ;
+            rdfs:label "Commit"@en .
+
+
 ###  http://field33.com/ontologies/@fld33_domain/software_development/Deployment
 :Deployment rdf:type owl:Class ;
-            rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Process> ;
+            rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Activity> ;
             rdfs:label "Deployment"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development/DeploymentProcess
+:DeploymentProcess rdf:type owl:Class ;
+            rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Process> ;
+            rdfs:label "Deployment Process"@en .
 
 
 ###  http://field33.com/ontologies/@fld33_domain/software_development/EpicTicket
