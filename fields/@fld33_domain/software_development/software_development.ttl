@@ -4,8 +4,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix registry: <http://field33.com/ontologies/REGISTRY/> .
-@base <http://field33.com/ontologies/@fld33_domain/software_development/> .
+@prefix registry: <http://field33.com/ontologies/REGISTRY/> .@base <http://field33.com/ontologies/@fld33_domain/software_development/> .
 
 <http://field33.com/ontologies/@fld33_domain/software_development/> rdf:type owl:Ontology ;
                                                                      owl:imports <http://field33.com/ontologies/@fld33/methodology/> ,
@@ -69,9 +68,7 @@ registry:packageVersion rdf:type owl:AnnotationProperty .
                         rdfs:subPropertyOf :CountOf ;
                         rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development_metric/BugFeatureRatio> ;
                         rdfs:range [ rdf:type owl:Class ;
-                                     owl:unionOf ( :BugTicket
-                                                   :FeatureTicket
-                                                 )
+                                     owl:unionOf (:BugTicket :FeatureTicket)
                                    ] ;
                         rdfs:label "Count of"@en .
 
@@ -316,6 +313,17 @@ registry:packageVersion rdf:type owl:AnnotationProperty .
                       rdfs:subClassOf :ContinousDelivery ;
                       rdfs:comment "Continuous Integration (CI) is the process of taking features from the Program Backlog and developing, testing, integrating, and validating them in a staging environment where they are ready for deployment and release."@en ;
                       rdfs:label "Continous Integration"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development/Incident
+:Incident rdf:type owl:Class ;
+            rdfs:label "Incident"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development/Failure
+:Failure rdf:type owl:Class ;
+            rdfs:subClassOf :Incident ;
+            rdfs:label "Failure"@en .
 
 
 ###  http://field33.com/ontologies/@fld33_domain/software_development/Commit
