@@ -17,7 +17,7 @@
                                                                  "Upper Ontology" ;
                                                 registry:ontologyFormatVersion "v1" ;
                                                 registry:packageName "@fld33/people" ;
-                                                registry:packageVersion "0.1.4" ;
+                                                registry:packageVersion "0.1.5" ;
                                                 registry:licenseSPDX "Apache-2.0" ;
                                                 registry:repository "https://github.com/field33/ontologies/tree/main/%40fld33/people" ;
                                                 registry:shortDescription "People upper ontology"@en ;
@@ -31,6 +31,7 @@
 
 ###  http://field33.com/ontologies/@fld33/people/FirstName
 :FirstName rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :Name ;
            rdfs:domain :Person ;
            rdfs:range xsd:string ;
            rdfs:label "First Name"@en .
@@ -38,9 +39,17 @@
 
 ###  http://field33.com/ontologies/@fld33/people/LastName
 :LastName rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf :Name ;
           rdfs:domain :Person ;
           rdfs:range xsd:string ;
           rdfs:label "Last Name"@en .
+
+
+###  http://field33.com/ontologies/@fld33/people/Name
+:Name rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Person ;
+          rdfs:range xsd:string ;
+          rdfs:label "Name"@en .
 
 
 #################################################################
