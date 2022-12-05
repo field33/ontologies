@@ -1,0 +1,17 @@
+setup_jena:
+  mkdir -p tmp
+  mkdir -p bin
+  cd tmp && wget --timestamping https://dlcdn.apache.org/jena/binaries/apache-jena-4.6.1.tar.gz
+  cd tmp && tar -xzvf apache-jena-4.6.1.tar.gz
+  cp -r tmp/apache-jena-4.6.1/ bin/apache-jena/
+
+  cd tmp && wget --timestamping https://repo1.maven.org/maven2/org/apache/jena/jena-serviceenhancer/4.6.1/jena-serviceenhancer-4.6.1.jar
+  cp tmp/jena-serviceenhancer-4.6.1.jar bin/apache-jena/lib/
+
+
+retrieve_wikidata:
+  cargo run --release --bin retrieve_wikidata
+
+
+merge:
+  cargo run --release --bin merge_to_datasets
