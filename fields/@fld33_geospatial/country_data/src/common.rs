@@ -9,12 +9,19 @@ pub fn countries_to_retrieve() -> Vec<Country> {
         Country::new("DE", "Q183", "P439"),
         // Austria
         Country::new("AT", "Q40", "P964"),
-        // TODO: Poland
-        // Country::new("Q36", ""),
+        // Poland
+        // TODO: the values of P1653 look to deviate from the LAU codes according to the Eurostat table
+        Country::new("PL", "Q36", "P1653"),
         // France
         Country::new("FR", "Q142", "P374"),
         // Switzerland
         Country::new("CH", "Q39", "P771"),
+        // Netherlands
+        Country::new("NL", "Q55", "P382"),
+        // Denmark
+        Country::new("DK", "Q35", "P1168"),
+        // Belgium
+        Country::new("BE", "Q31", "P1567"),
     ]
 }
 
