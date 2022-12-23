@@ -20,13 +20,18 @@
                                                     registry:keyword "Foaf" ,
                                                                      "Friend of a Friend" ,
                                                                      "people" ;
-                                                    registry:license "Copyright 2000-2014 Dan Brickley and Libby Miller; This work is licensed under a Creative Commons Attribution License. This copyright applies to the FOAF Vocabulary Specification and accompanying documentation in RDF." ;
+                                                    registry:licenseSPDX "CC-BY-1.0" ;
                                                     registry:ontologyFormatVersion "v1" ;
                                                     registry:packageName "@foaf_mirror/foaf" ;
                                                     registry:packageVersion "0.99.0" ;
                                                     registry:repository "https://github.com/field33/ontologies/tree/main/%40foaf_mirror/foaf" ;
-                                                    registry:shortDescription "FOAF collects a variety of terms; some describe people, some groups, some documents."@en ;
-                                                    rdfs:comment """# FOAF at a glance
+                                                    registry:shortDescription "Document 14 January 2014 - Paddington Edition. FOAF collects a variety of terms; some describe people, some groups, some documents."@en ;
+                                                    rdfs:comment """# FOAF Ontology Mirror
+This ontology was mirrored from http://xmlns.com/foaf/0.1/ and converted from .rdf to .ttl. In the GitHub repository for this Field (ontology) you'll find the original file.
+
+Currently the full spec file can be found here: https://web.archive.org/web/20220625074928/http://xmlns.com/foaf/spec/
+
+## FOAF at a glance
 FOAF describes the world using simple ideas inspired by the Web. In FOAF descriptions, there are only various kinds of things and links, which we call properties. The types of the things we talk about in FOAF are called classes. FOAF is therefore defined as a dictionary of terms, each of which is either a class or a property. Other projects alongside FOAF provide other sets of classes and properties, many of which are linked with those defined in FOAF.
 
 FOAF descriptions are themselves published as linked documents in the Web (eg. using RDF/XML or RDFa syntax). The result of the FOAF project is a network of documents describing a network of people (and other stuff). Each FOAF document is itself an encoding of a descriptive network structure. Although these documents do not always agree or tell the truth, they have the useful characteristic that they can be easily merged, allowing partial and decentralised descriptions to be combined in interesting ways.
