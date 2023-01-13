@@ -18,9 +18,9 @@
                                                                                                 "Interoperability" ;
                                                                                registry:ontologyFormatVersion "v1" ;
                                                                                registry:packageName "@contrib/generic_innovation_interoperability" ;
-                                                                               registry:packageVersion "0.1.1" ;
+                                                                               registry:packageVersion "0.1.2" ;
                                                                                registry:licenseSPDX "Apache-2.0" ;
-                                                                               registry:repository "https://github.com/field33/ontologies-contrib/blob/main/ontologies" ;
+                                                                               registry:repository "https://github.com/field33/ontologies/tree/main/fields/%40contrib/generic_innovation_interoperability" ;
                                                                                registry:shortDescription "An Ontology for Generic Innovation Interoperability"@en ;
                                                                                purl:creator """Lamy ELBA, Ph.D.
 Innovation & Entrepreneurship

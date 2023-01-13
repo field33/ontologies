@@ -22,8 +22,8 @@
   registry:keyword "APQC" ,
                    "Field 33 Package" ,
                    "Process" ;
-  registry:packageVersion "0.2.0" ;
-  registry:repository "https://github.com/field33/ontologies/tree/main/%40apqc/apqc_airline" ;
+  registry:packageVersion "0.2.1" ;
+  registry:repository "https://github.com/field33/ontologies/tree/main/fields/%40apqc/apqc_airline" ;
   registry:shortDescription "APQC airline"@en ;
   rdfs:comment "# APQC airline<br>This package is rdf:type domain ontology describing concepts of APQC Airline."@en ;
   registry:license "2022 APQC. ALL RIGHTS RESERVED. This Process Classification Framework (PCF) is the copyrighted intellectual property of APQC. APQC encourages the wide distribution, discussion, and use of the PCF for classifying and defining organizational processes. Accordingly, APQC hereby grants you a perpetual, worldwide, royalty-free license to use, copy, publish, modify, and create derivative works of the PCF, provided that all copies of the PCF and any derivative works contain this notice."@en ;

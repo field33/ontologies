@@ -20,9 +20,9 @@
                                                                       "Process" ;
                                                      registry:ontologyFormatVersion "v1" ;
                                                      registry:packageName "@apqc/apqc" ;
-                                                     registry:packageVersion "0.1.6" ;
+                                                     registry:packageVersion "0.1.7" ;
                                                      registry:shortDescription "APQC ontology"@en ;
-                                                     registry:repository "https://github.com/field33/ontologies/tree/main/%40apqc/apqc" ;
+                                                     registry:repository "https://github.com/field33/ontologies/tree/main/fields/%40apqc/apqc" ;
                                                      rdfs:comment "# APQC Ontology<br>This package is an domain specific ontology describing the higher level concepts of APQC"@en ;
                                                      registry:license "2022 APQC. ALL RIGHTS RESERVED. This Process Classification Framework (PCF) is the copyrighted intellectual property of APQC."@en ;
                                                      rdfs:label "APQC"@en .
