@@ -18,12 +18,12 @@
   registry:license "2022 APQC. ALL RIGHTS RESERVED. This Process Classification Framework (PCF) is the copyrighted intellectual property of APQC."@en ;
   registry:ontologyFormatVersion "v1" ;
   registry:packageName "@apqc_cross_industry/market_and_sell_products_and_services" ;
-  registry:packageVersion "0.1.10" ;
+  registry:packageVersion "0.1.11" ;
   registry:category "Process" ;
   registry:keyword "APQC" ,
                    "Cross Industry" ,
                    "Process" ;
-  registry:repository "https://github.com/field33/ontologies/tree/main/%40apqc_cross_industry/market_and_sell_products_and_services" ;
+  registry:repository "https://github.com/field33/ontologies/tree/main/fields/%40apqc_cross_industry/market_and_sell_products_and_services" ;
   registry:shortDescription "APQC cross industry category: Market and Sell Products and Services Ontology"@en ;
   rdfs:comment "# Market and Sell Products and Services<br>This package is a domain ontology describing the category \"Market and Sell Products and Services\" as part of APQC for cross industry."@en ;
   rdfs:label "Market and Sell Products and Services"@en ;

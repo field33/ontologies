@@ -12,7 +12,7 @@
     registry:ontologyFormatVersion "v1" ;
     registry:author "Field 33 <fields@field33.com>", "Deborah L. McGuinness <dlm@cs.rpi.edu>", "Satya Sahoo <satya.sahoo@case.edu>" ;
     registry:packageName "@w3c_mirror/prov_o" ;
-    registry:packageVersion "0.1.0" ;
+    registry:packageVersion "0.1.1" ;
     registry:category "Upper Ontology", "Change Tracking" ;
     registry:keyword "Provenance", "w3c", "prov-o" ;
     registry:shortDescription "Provenance is information about entities, activities, and people involved in producing a piece of data or thing, which can be used to form assessments about its quality, reliability or trustworthiness."@en ;
@@ -35,7 +35,7 @@
     Jun Zhao, University of Oxford, UK<br>
     """@en ;
     rdfs:label "PROV-O: The PROV Ontology"@en ;
-    registry:repository "https://github.com/field33/ontologies/tree/main/%40w3c_mirror/prov-o" ;
+    registry:repository "https://github.com/field33/ontologies/tree/main/fields/%40w3c_mirror/prov-o" ;
     registry:homepage "https://www.w3.org/TR/prov-o/" ;
     registry:license "Copyright © 2011-2013 W3C® (MIT, ERCIM, Keio, Beihang), All Rights Reserved." .
 

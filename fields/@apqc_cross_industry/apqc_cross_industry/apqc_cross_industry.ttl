@@ -12,12 +12,12 @@
   registry:canonicalPrefix "apqc_cross_industry" ;
   registry:ontologyFormatVersion "v1" ;
   registry:packageName "@apqc_cross_industry/apqc_cross_industry" ;
-  registry:packageVersion "0.1.12" ;
+  registry:packageVersion "0.1.13" ;
   registry:category "Process" ;
   registry:keyword "APQC" ,
                    "Cross Industry" ,
                    "Process" ;
-  registry:repository "https://github.com/field33/ontologies/tree/main/%40apqc_cross_industry/apqc_cross_industry" ;
+  registry:repository "https://github.com/field33/ontologies/tree/main/fields/%40apqc_cross_industry/apqc_cross_industry" ;
   registry:shortDescription "APQC cross industry"@en ;
   rdfs:comment "# APQC cross industry<br>This package is a domain ontology describing concepts of APQC Cross Industry."@en ;
   rdfs:label "APQC cross industry"@en ;

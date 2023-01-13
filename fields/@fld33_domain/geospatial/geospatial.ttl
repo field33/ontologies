@@ -17,8 +17,8 @@
                                                            registry:licenseSPDX "MIT" ;
                                                            registry:ontologyFormatVersion "v1" ;
                                                            registry:packageName "@fld33_domain/geospatial" ;
-                                                           registry:packageVersion "0.1.0" ;
-                                                           registry:repository "https://github.com/field33/ontologies/tree/main/%40fld33_domain/geospatial" ;
+                                                           registry:packageVersion "0.1.1" ;
+                                                           registry:repository "https://github.com/field33/ontologies/tree/main/fields/@fld33_domain/geospatial" ;
                                                            registry:shortDescription "Geospatial upper ontology"@en ;
                                                            rdfs:comment """# Geospatial Ontology
 This package is part of the upper ontologies we use at Field 33 and describes non restrictive concepts around geosptial constructs.

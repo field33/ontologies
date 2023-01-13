@@ -17,9 +17,9 @@
                                                                   "Upper Ontology" ;
                                                  registry:ontologyFormatVersion "v1" ;
                                                  registry:packageName "@fld33/process" ;
-                                                 registry:packageVersion "0.1.2" ;
+                                                 registry:packageVersion "0.1.3" ;
                                                  registry:licenseSPDX "Apache-2.0" ;
-                                                 registry:repository "https://github.com/field33/ontologies/tree/main/%40fld33/process" ;
+                                                 registry:repository "https://github.com/field33/ontologies/tree/main/fields/%40fld33/process" ;
                                                  registry:shortDescription "Process upper ontology"@en ;
                                                  rdfs:comment "# Process Ontology<br>This package is part of the upper ontologies we use at Field 33 and describes non restrictive concepts around processes."@en ;
                                                  rdfs:label "Process"@en .

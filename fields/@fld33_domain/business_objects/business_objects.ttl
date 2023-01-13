@@ -23,9 +23,9 @@
                                                                                   "Purchase" ;
                                                                  registry:ontologyFormatVersion "v1" ;
                                                                  registry:packageName "@fld33_domain/business_objects" ;
-                                                                 registry:packageVersion "0.1.10" ;
+                                                                 registry:packageVersion "0.1.11" ;
                                                                  registry:licenseSPDX "Apache-2.0" ;
-                                                                 registry:repository "https://github.com/field33/ontologies/tree/main/%40fld33_domain/business_objects" ;
+                                                                 registry:repository "https://github.com/field33/ontologies/tree/main/fields/%40fld33_domain/business_objects" ;
                                                                  registry:shortDescription "Business Objects ontology"@en ;
                                                                  rdfs:comment "# Business Objects Ontology<br>This package is part of the domain specific ontologies describing concepts for business objects and purchase processes."@en ;
                                                                  rdfs:label "Business Objects"@en .

@@ -22,9 +22,9 @@
                                                                                                 "Software Development Lifecycle" ;
                                                                                registry:ontologyFormatVersion "v1" ;
                                                                                registry:packageName "@fld33_domain/software_development_lifecycle" ;
-                                                                               registry:packageVersion "0.1.5" ;
+                                                                               registry:packageVersion "0.1.6" ;
                                                                                registry:licenseSPDX "Apache-2.0" ;
-                                                                               registry:repository "https://github.com/field33/ontologies/tree/main/%40fld33_domain/software_development_lifecycle" ;
+                                                                               registry:repository "https://github.com/field33/ontologies/tree/main/fields/%40fld33_domain/software_development_lifecycle" ;
                                                                                registry:shortDescription "Software development lifecylce ontology"@en ;
                                                                                rdfs:comment "# Software Development Lifecycle Ontology<br>This package is an internal ontology describing concepts for software development lifecylce."@en ;
                                                                                rdfs:label "Software Development Lifecycle"@en .

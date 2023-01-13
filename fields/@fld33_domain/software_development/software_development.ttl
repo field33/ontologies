@@ -34,8 +34,8 @@
                                                                      registry:licenseSPDX "Apache-2.0" ;
                                                                      registry:ontologyFormatVersion "v1" ;
                                                                      registry:packageName "@fld33_domain/software_development" ;
-                                                                     registry:packageVersion "0.2.7" ;
-                                                                     registry:repository "https://github.com/field33/ontologies/tree/main/%40fld33_domain/software_development" ;
+                                                                     registry:packageVersion "0.2.8" ;
+                                                                     registry:repository "https://github.com/field33/ontologies/tree/main/fields/%40fld33_domain/software_development" ;
                                                                      registry:shortDescription "Software development ontology"@en ;
                                                                      rdfs:comment "# Software Development Ontology<br>This package is an internal ontology describing concepts for software development."@en ;
                                                                      rdfs:label "Software Development"@en .

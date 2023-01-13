@@ -24,9 +24,9 @@
                                                                                       "Software Team Metric" ;
                                                                      registry:ontologyFormatVersion "v1" ;
                                                                      registry:packageName "@fld33_domain/software_team_metric" ;
-                                                                     registry:packageVersion "0.1.7" ;
+                                                                     registry:packageVersion "0.1.8" ;
                                                                      registry:licenseSPDX "Apache-2.0" ;
-                                                                     registry:repository "https://github.com/field33/ontologies/tree/main/%40fld33_domain/software_team_metric" ;
+                                                                     registry:repository "https://github.com/field33/ontologies/tree/main/fields/%40fld33_domain/software_team_metric" ;
                                                                      registry:shortDescription "Software team metric ontology"@en ;
                                                                      rdfs:comment "# Software Team Metric Ontology<br>This package is an internal ontology describing concepts for software team metrics."@en ;
                                                                      rdfs:label "Software Team Metric"@en .

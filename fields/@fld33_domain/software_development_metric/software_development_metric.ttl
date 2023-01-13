@@ -20,9 +20,9 @@
                                                                                              "Software Development Metric" ;
                                                                             registry:ontologyFormatVersion "v1" ;
                                                                             registry:packageName "@fld33_domain/software_development_metric" ;
-                                                                            registry:packageVersion "0.1.7" ;
+                                                                            registry:packageVersion "0.1.8" ;
                                                                             registry:licenseSPDX "Apache-2.0" ;
-                                                                            registry:repository "https://github.com/field33/ontologies/tree/main/%40fld33_domain/software_development_metric" ;
+                                                                            registry:repository "https://github.com/field33/ontologies/tree/main/fields/%40fld33_domain/software_development_metric" ;
                                                                             registry:shortDescription "Software development metric ontology"@en ;
                                                                             rdfs:comment "# Software Development Metric Ontology<br>This package is an internal ontology describing concepts for software development metrics."@en ;
                                                                             rdfs:label "Software Development Metric"@en .
