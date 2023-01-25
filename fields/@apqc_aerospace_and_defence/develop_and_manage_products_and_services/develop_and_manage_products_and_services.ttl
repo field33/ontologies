@@ -19,7 +19,7 @@
     registry:license "2022 APQC. ALL RIGHTS RESERVED. This Process Classification Framework (PCF) is the copyrighted intellectual property of APQC."@en ;
     registry:ontologyFormatVersion "v1" ;
     registry:packageName "@apqc_aerospace_and_defence/develop_and_manage_products_and_services" ;
-    registry:packageVersion "0.1.1" ;
+    registry:packageVersion "0.1.2" ;
     registry:category "Process" ;
     registry:keyword "APQC" ,
                     "Aerospace" ,
@@ -345,7 +345,7 @@ This package is a domain ontology describing the category "Develop and Manage Pr
     rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
                 
 :16814 rdf:type owl:Class ;
-    rdfs:label "Derive ‘services-as-a-product’ offering"@en ;
+    rdfs:label "Derive services-as-a-product offering"@en ;
     rdfs:comment """Productizing the service by defining the scope of the service/cost.  Target market for the service and make the service more tangible."""@en ;
     rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
                 

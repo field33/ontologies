@@ -5,6 +5,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [^0.1.1] - 2022-01-25
+Public field submission APQC aerospace
+
+`@apqc_aerospace_and_defence/acquire_construct_and_manage_assets ^0.1.1`
+`@apqc_aerospace_and_defence/deliver_physical_products ^0.1.1`
+`@apqc_aerospace_and_defence/deliver_services ^0.1.1`
+`@apqc_aerospace_and_defence/develop_and_manage_business_capabilities ^0.1.1`
+`@apqc_aerospace_and_defence/develop_and_manage_human_capital ^0.1.1`
+`@apqc_aerospace_and_defence/develop_and_manage_products_and_services ^0.1.1`
+`@apqc_aerospace_and_defence/develop_vision_and_strategy ^0.1.1`
+`@apqc_aerospace_and_defence/manage_customer_service ^0.1.1`
+`@apqc_aerospace_and_defence/manage_enterprise_risk_compliance_remediation_and_resiliency ^0.1.1`
+`@apqc_aerospace_and_defence/manage_external_relationships ^0.1.1`
+`@apqc_aerospace_and_defence/manage_financial_resources ^0.1.1`
+`@apqc_aerospace_and_defence/manage_information_technology_it ^0.1.1`
+`@apqc_aerospace_and_defence/market_and_sell_products_and_services ^0.1.1`
+`@apqc_aerospace_and_defence/apqc_aerospace_and_defence ^0.1.1`
+`@apqc_aerospace_and_defence/metrics ^0.1.1`
+ 
+### Added
+- Bulk add for APQC aerospace ontologies
+### Changed
+
+### Fixed
+
 ## [*] - 2022-01-13
 `@w3c_mirror/prov-o/prov-o`
 `@contrib/generic_innovation_interoperability/generic_innovation_interoperability`

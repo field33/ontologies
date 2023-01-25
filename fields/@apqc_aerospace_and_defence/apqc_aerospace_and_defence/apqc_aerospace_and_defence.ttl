@@ -1,0 +1,46 @@
+@base <http://field33.com/ontologies/@apqc_aerospace_and_defence/apqc_aerospace_and_defence/> .
+@prefix : <http://field33.com/ontologies/@apqc_aerospace_and_defence/apqc_aerospace_and_defence/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix registry: <http://field33.com/ontologies/REGISTRY/> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://field33.com/ontologies/@apqc_aerospace_and_defence/apqc_aerospace_and_defence/> rdf:type owl:Ontology ;
+    registry:author "Field 33 <contribution@field33.com>" ;
+    registry:canonicalPrefix "apqc_aerospace_and_defence" ;
+    registry:dependency "@fld33/methodology ^0.1.8" ;
+    registry:license "2022 APQC. ALL RIGHTS RESERVED. This Process Classification Framework (PCF) is the copyrighted intellectual property of APQC."@en ;
+    registry:ontologyFormatVersion "v1" ;
+    registry:packageName "@apqc_aerospace_and_defence/apqc_aerospace_and_defence" ;
+    registry:packageVersion "0.1.1" ;
+    registry:category "Process" ;
+    registry:keyword "APQC" ,
+                    "Aerospace" ,
+                    "Process" ;
+    registry:repository "https://github.com/field33/ontologies/tree/main/fields/%40apqc_aerospace_and_defence/apqc_aerospace_and_defence" ;
+    registry:shortDescription "APQC Aerospace and Defence Ontology"@en ;
+    rdfs:comment """
+# APQC Aerospace and Defence
+
+This package is the upper domain ontology for APQC Aerospace and Defence."""@en ;
+    rdfs:label "APQC Aerospace and Defence"@en .
+
+###  http://field33.com/ontologies/@apqc_aerospace_and_defence/apqc_aerospace_and_defence/Formula
+:Formula rdf:type owl:DatatypeProperty ;
+                   rdfs:domain <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "Formula"@en .
+
+
+###  http://field33.com/ontologies/@apqc_aerospace_and_defence/apqc_aerospace_and_defence/MetricCategory
+:MetricCategory rdf:type owl:Class ;
+         rdfs:label "Metric Category"@en .
+
+
+<http://field33.com/ontologies/@fld33/methodology/Metric> rdf:type owl:Class ;
+         rdfs:subClassOf :MetricCategory .

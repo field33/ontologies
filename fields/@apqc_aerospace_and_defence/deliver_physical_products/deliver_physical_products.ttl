@@ -19,7 +19,7 @@
     registry:license "2022 APQC. ALL RIGHTS RESERVED. This Process Classification Framework (PCF) is the copyrighted intellectual property of APQC."@en ;
     registry:ontologyFormatVersion "v1" ;
     registry:packageName "@apqc_aerospace_and_defence/deliver_physical_products" ;
-    registry:packageVersion "0.1.1" ;
+    registry:packageVersion "0.1.2" ;
     registry:category "Process" ;
     registry:keyword "APQC" ,
                     "Aerospace" ,
@@ -370,7 +370,7 @@ This package is a domain ontology describing the category "Deliver Physical Prod
     rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
                 
 :10285 rdf:type owl:Class ;
-    rdfs:label "Analyze organization’s spend profile"@en ;
+    rdfs:label "Analyze organization's spend profile"@en ;
     rdfs:comment """Evaluating the spend profile of the organization. Collect, cleanse, classify, and analyze the procurement data with the purpose of reducing procurement costs, improving efficiency, and monitoring compliance."""@en ;
     rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
                 
@@ -728,7 +728,7 @@ This package is a domain ontology describing the category "Deliver Physical Prod
                 
 :19563 rdf:type owl:Class ;
     rdfs:label "Model and simulate plant"@en ;
-    rdfs:comment """Creating a representation of plant facilities to optimize material flow, resource utilization, and logistics for all levels of plant planning from global production facilities, through local plants, to specific lines and enabling the comparison of production�alternatives,."""@en ;
+    rdfs:comment """Creating a representation of plant facilities to optimize material flow, resource utilization, and logistics for all levels of plant planning from global production facilities, through local plants, to specific lines and enabling the comparison of productionalternatives,."""@en ;
     rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
                 
 :10306 rdf:type owl:Class ;
@@ -949,7 +949,7 @@ This package is a domain ontology describing the category "Deliver Physical Prod
     rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
                 
 :12026 rdf:type owl:Class ;
-    rdfs:label "Quarantine nonconformance matériel"@en ;
+    rdfs:label "Quarantine nonconformance materiel"@en ;
     rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
                 
 :12027 rdf:type owl:Class ;
