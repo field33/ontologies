@@ -1,0 +1,1548 @@
+
+@base <http://field33.com/ontologies/@apqc_aerospace_and_defence/manage_customer_service/> .
+@prefix : <http://field33.com/ontologies/@apqc_aerospace_and_defence/manage_customer_service/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix registry: <http://field33.com/ontologies/REGISTRY/> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://field33.com/ontologies/@apqc_aerospace_and_defence/manage_customer_service/> rdf:type owl:Ontology ;
+    registry:author "Field 33 <contribution@field33.com>" ;
+    registry:canonicalPrefix "manage_customer_service" ;
+    registry:dependency "@fld33/relations ^0.2.0", "@apqc/apqc ^0.1.6",
+    "@fld33_domain/business_objects ^0.1.9" ;
+    registry:license "2022 APQC. ALL RIGHTS RESERVED. This Process Classification Framework (PCF) is the copyrighted intellectual property of APQC."@en ;
+    registry:ontologyFormatVersion "v1" ;
+    registry:packageName "@apqc_aerospace_and_defence/manage_customer_service" ;
+    registry:packageVersion "0.1.1" ;
+    registry:category "Process" ;
+    registry:keyword "APQC" ,
+                    "Aerospace" ,
+                    "Process" ;
+    registry:repository "https://github.com/field33/ontologies/tree/main/fields/%40apqc_aerospace_and_defence/manage_customer_service" ;
+    registry:shortDescription "APQC Aerospace and Defence category: Manage Customer Service Ontology"@en ;
+    rdfs:comment """
+# Manage Customer Service
+
+This package is a domain ontology describing the category "Manage Customer Service" as part of APQC for cross industry."""@en ;
+    rdfs:label "Manage Customer Service"@en ;
+    owl:imports <http://field33.com/ontologies/@fld33/relations/>, <http://field33.com/ontologies/@apqc/apqc/>,
+    <http://field33.com/ontologies/@fld33_domain/business_objects/> .
+
+:20085 rdf:type owl:Class ;
+    rdfs:label "Manage Customer Service"@en ;
+    rdfs:comment """Managing customers before and after the delivery of services. This includes developing and planning customer service practices with an eye on steering processes relating to inquiries after sales, feedback, warranties, and recalls."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCCateogry> .
+                
+:10378 rdf:type owl:Class ;
+    rdfs:label "Develop customer care/customer service strategy"@en ;
+    rdfs:comment """Defining a plan that removes customer obstacles by gathering operational insight and competitive insight, as well as improving soft skills and forward resolution for employees. Develop customer segmentation. Define rules and regulations for customer service. Establish service levels for customers."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+                
+:20086 rdf:type owl:Class ;
+    rdfs:label "Define customer service requirements across the enterprise"@en ;
+    rdfs:comment """Defining a set of behaviors, skills, and policies needed to provide customer service effectively across the enterprise."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:20087 rdf:type owl:Class ;
+    rdfs:label "Define customer service experience"@en ;
+    rdfs:comment """Communicating to the customer service resources what is expected when engaging the customer. Relate service level expectations to the workforce. Ensure positive customer experience."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:20088 rdf:type owl:Class ;
+    rdfs:label "Define and manage customer service channel strategy"@en ;
+    rdfs:comment """Establishing and refining procedures for customer service and technical support."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:10381 rdf:type owl:Class ;
+    rdfs:label "Develop customer service segmentation/prioritization (e.g., tiers)"@en ;
+    rdfs:comment """Identifying and categorizing customer needs, and creating priority lists around them. Order and prioritize existing customers into segments. Adjust the customer service strategy accordingly. Analyze customer feedback."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:10384 rdf:type owl:Class ;
+    rdfs:label "Analyze existing customers"@en ;
+    rdfs:comment """Analyzing existing customers needs and behaviors to enhance the customer experience as a whole. Use techniques such as behavior analysis, purchasing analysis, and ceiling price analysis."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:10385 rdf:type owl:Class ;
+    rdfs:label "Analyze feedback of customer's needs"@en ;
+    rdfs:comment """Adopting a feedback strategy by designing and implementing feedback forms--or through direct communication by phone or online. Comprehend the customer needs and behavior to help develop customer segmentation."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:10382 rdf:type owl:Class ;
+    rdfs:label "Define customer service policies and procedures"@en ;
+    rdfs:comment """Outlining the framework of policies and methods for developing customer service strategy. Establish the rules and regulations that serve as a guideline for the customer service strategy. Take into account customer needs and behavior."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:10383 rdf:type owl:Class ;
+    rdfs:label "Establish target service level for each customer segment"@en ;
+    rdfs:comment """Determining and implementing levels for customer services. Benchmark certain customer service practices, and base customer level services on those benchmarks. Create a service level agreement, which is a negotiated agreement designed to create a common understanding about services, priorities, and responsibilities."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:20089 rdf:type owl:Class ;
+    rdfs:label "Define warranty offering"@en ;
+    rdfs:comment """Determining the exact terms and conditions under which specific warranties apply to certain goods or services."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:16893 rdf:type owl:Class ;
+    rdfs:label "Determine and document warranty policies"@en ;
+    rdfs:comment """Establishing warranty policies to assure customers that the company will guarantee its warranties that it issues."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16890 rdf:type owl:Class ;
+    rdfs:label "Create and manage warranty rules/claim codes for products"@en ;
+    rdfs:comment """Establishing and maintaining claims processing and routing rules. Establish and maintain claims processing and routing rules for product warranties, coverage lists, repair, fault, trouble codes, repair time setup, and warranty policy registration. This also includes rolling out the codes and rules, and the improvements/updates to these rules and codes via systematic updates."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:20090 rdf:type owl:Class ;
+    rdfs:label "Agree on warranty responsibilities with suppliers"@en ;
+    rdfs:comment """Negotiating with manufacturers and dealers the obligations of each party in upholding warranties."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:20091 rdf:type owl:Class ;
+    rdfs:label "Define warranty related offerings for customers"@en ;
+    rdfs:comment """Informing customers about warranties that apply to promoted products or services."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:12673 rdf:type owl:Class ;
+    rdfs:label "Communicate warranty policies and offerings"@en ;
+    rdfs:comment """Communicating rules and updates via training manuals for new products and training resources."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:20092 rdf:type owl:Class ;
+    rdfs:label "Develop recall strategy"@en ;
+    rdfs:comment """Establishing procedures to handle recalls of defective products."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:10379 rdf:type owl:Class ;
+    rdfs:label "Plan and manage customer service contacts"@en ;
+    rdfs:comment """Planning and administering work force operations for customer service provision by taking care of customer services requests/inquiries, as well as the complaints."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+                
+:10387 rdf:type owl:Class ;
+    rdfs:label "Plan and manage customer service work force"@en ;
+    rdfs:comment """Creating and administering the work force deployed for the customer service process. Forecast the customer work force needs to correctly schedule the work force. Track the utility of the work force deployed. Examine the interactions between the customer and customer service representatives to achieve high quality."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:10390 rdf:type owl:Class ;
+    rdfs:label "Forecast volume of customer service contacts"@en ;
+    rdfs:comment """Projecting the total work force required to service customer service inquiries in order to effectively predict the volume of vendor contracts required. Estimate the number of the customer service contracts in an agreed-upon time frame in order to strategically maintain the work force necessitated for customer inquires. Analyze historical data around customer service contracts, the universe of customer inquiries, frequency of inquiries, servicing capability (per head) of the employees, etc."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:10391 rdf:type owl:Class ;
+    rdfs:label "Schedule customer service work force"@en ;
+    rdfs:comment """Deploying the work force to manage customer service contracts. Create a systematic summary of the operations and service required, as well as the specific amount of work force that is to be deployed to the customer service operations. Ensure work force is directly proportional to the estimated forecast of customer service contracts."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:10392 rdf:type owl:Class ;
+    rdfs:label "Track work force utilization"@en ;
+    rdfs:comment """Tracking the utilization of work force deployed for managing customer service operations. Monitor the utility of the work force deployed for managing customer service operations in order to evaluate its efficiency and cost effectiveness. Calculate the overall labor effectiveness, which measures the utility, performance, and quality of the work force."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:10393 rdf:type owl:Class ;
+    rdfs:label "Monitor and evaluate quality of customer interactions with customer service representatives"@en ;
+    rdfs:comment """Tracking and determining the quality of interactions between the customer and customer representatives. Use electronic devices to record and effectively assess customer representatives' interactions."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:10388 rdf:type owl:Class ;
+    rdfs:label "Manage customer service problems, requests, and inquiries"@en ;
+    rdfs:comment """Handling the requests and inquiries from customers that seek information regarding the organization's products/services. Obtain the customer requests online and by phone. Direct these requests to higher-level representatives. Approve requests, and respond to customers."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:10394 rdf:type owl:Class ;
+    rdfs:label "Receive customer problems, requests, and inquiries"@en ;
+    rdfs:comment """Receiving requests for information from customers over multiple channels. Receive various requests and inquiries from customers regarding products/services. Accept these inquiries through channels such as email, telephone, online forms, text messages, social media, and in person. Supply dedicated equipment, systems, and personnel."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:13482 rdf:type owl:Class ;
+    rdfs:label "Analyze problems, requests, and inquiries"@en ;
+    rdfs:comment """Analyzing various requests and inquiries from customers regarding products/services. Provide answers and offerings to satisfy the customer's needs."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:10395 rdf:type owl:Class ;
+    rdfs:label "Resolve customer problems, requests, and inquiries"@en ;
+    rdfs:comment """Routing customer inquiries in order to service them with the most apposite response. Direct customer inquires to the best suited personnel or system. Have a system or procedure capable of efficiently channeling these requests."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:10396 rdf:type owl:Class ;
+    rdfs:label "Respond to customer problems, requests, and inquiries"@en ;
+    rdfs:comment """Responding to customer requests by email, conversation, interactive voice response, mail, etc. with the most appropriate reply. Instill a robust process to locate the right information for a solution to a customer's problem."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16928 rdf:type owl:Class ;
+    rdfs:label "Identify and capture upsell/cross-sell opportunities"@en ;
+    rdfs:comment """Utilizing customer inquiries as opportunities to either provide a comparable service to the one in question, offer additional complimentary service, or suggest a service that is better than what was initially offered."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16937 rdf:type owl:Class ;
+    rdfs:label "Deliver opportunity to sales team"@en ;
+    rdfs:comment """Providing possible sales leads to the sales team in an effort to garner more business opportunities."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:12197 rdf:type owl:Class ;
+    rdfs:label "Support customer order status inquiry"@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:12198 rdf:type owl:Class ;
+    rdfs:label "Support customer deliver status inquiry"@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:12199 rdf:type owl:Class ;
+    rdfs:label "Support customer financial inquiry"@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:10389 rdf:type owl:Class ;
+    rdfs:label "Manage customer complaints"@en ;
+    rdfs:comment """Obtaining customer complaints online or by phone. Direct these complaints to higher-level representatives as appropriate. Resolve them. Respond to customers."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:10397 rdf:type owl:Class ;
+    rdfs:label "Receive customer complaints"@en ;
+    rdfs:comment """Receiving any complaints or grievances from customers for the organization's products/services. Receive objections, complaints, and criticism from customers regarding products/services through email, telephone, online forms, text messages, social media, in person, etc. Dedicate equipment, systems, and personnel."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:10398 rdf:type owl:Class ;
+    rdfs:label "Route customer complaints"@en ;
+    rdfs:comment """Routing any complaints or grievances received from customers in order to address them in the most appropriate manner. Direct complaints to the best suited personnel or system. Implement a system or procedure capable of efficiently channeling the various objections, complaints, and criticism from customers over the offerings provided by the organization."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:10399 rdf:type owl:Class ;
+    rdfs:label "Resolve customer complaints"@en ;
+    rdfs:comment """Resolving any customer complaints that are deemed to be sound and reasonable. Redress any objections, grievances, and complaints received from customers regarding the offerings provided by the organization. Identify the legitimate complaints, where the situation needs to be appropriately corrected. Deploy personnel who can rectify the issue within a stipulated time frame."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:10400 rdf:type owl:Class ;
+    rdfs:label "Respond to customer complaints"@en ;
+    rdfs:comment """Responding to customer complaints including all activities necessitated to service any objections, complaints, or grievances with the most appropriate reply. Source the right information to formulate a response that eases the discomfort being experienced by the customer. (Closely coordinate with Resolve customer complaints [10399].)"""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:12200 rdf:type owl:Class ;
+    rdfs:label "Support customer complaints and service"@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:19072 rdf:type owl:Class ;
+    rdfs:label "Analyze customer complaints and response/redressal"@en ;
+    rdfs:comment """Analyzing complaint logs to provide input for continuous service improvement and customer profiling."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:20094 rdf:type owl:Class ;
+    rdfs:label "Process returns"@en ;
+    rdfs:comment """Acquiring returns and identify if the returns are scraped or salvaged."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:10364 rdf:type owl:Class ;
+    rdfs:label "Authorize return"@en ;
+    rdfs:comment """Approving and carrying forward the requests by the customers to return the product. This is part of the process of returning a product in order to receive a refund, replacement, or repair during the product's warranty period."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:20095 rdf:type owl:Class ;
+    rdfs:label "Process return and record reason"@en ;
+    rdfs:comment """Notating the reason for the return of the product."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:12840 rdf:type owl:Class ;
+    rdfs:label "Report incidents and risks to regulatory bodies"@en ;
+    rdfs:comment """Notifying all stakeholders, legal, and industry regulatory bodies of the incidents and risks related to a return or recall, if needed."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:12658 rdf:type owl:Class ;
+    rdfs:label "Service products after sales"@en ;
+    rdfs:comment """Assigning post-sales policies and paying claims on purchased products.  This is a process that is an administrative function focused on creating rules (claim codes). This group ensures that claims are valid and are processed quickly.  As well as to quickly determine responsibility for claim settlement."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+                
+:20605 rdf:type owl:Class ;
+    rdfs:label "Register products"@en ;
+    rdfs:comment """Filing product registrations."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:12669 rdf:type owl:Class ;
+    rdfs:label "Process warranty claims"@en ;
+    rdfs:comment """Identifying, investigating, and processes warranty claims. This process includes: receipt and validation of a warranty claim; definition and diagnosis /root cause analysis of an issue and recommendation for corrective action; the determination of responsibility for settlement of the claim; the transaction being approved or denied; and the originator being notified and payment authorized. In the case of a recurring event, further investigation (definition and diagnosis or root cause analysis) is performed, and a recommendation for corrective action is made and implemented in production/design. It ends when the claim is closed."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:20096 rdf:type owl:Class ;
+    rdfs:label "Receive warranty claim"@en ;
+    rdfs:comment """Receiving incoming warranty claims. Route claim to correct department. Document claim."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:12671 rdf:type owl:Class ;
+    rdfs:label "Validate warranty claim"@en ;
+    rdfs:comment """Ensuring that the claim falls within the parameters of the warranty in question. After validation is made, the claim must be investigated."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:20097 rdf:type owl:Class ;
+    rdfs:label "Investigate warranty issues"@en ;
+    rdfs:comment """Executing investigational and analysis of warranty claims. This involves notification and definition of a warranty issue, includes the scheduling of a field service agent to perform further investigation; the request and receipt of defective parts; and diagnosis/root cause analysis. This concludes with the receipt of the result and recommendation for corrective action."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:20098 rdf:type owl:Class ;
+    rdfs:label "Define issue"@en ;
+    rdfs:comment """Defining the issue of the claim. The warranty team will look into the issue and understand whether it is covered by the claim code or if more detail is required. Field service will be scheduled to further qualify the definition of the issue and to collect more evidence."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+                
+:12677 rdf:type owl:Class ;
+    rdfs:label "Schedule field service"@en ;
+    rdfs:comment """Scheduling additional investigative field service. This is performed for high priority claims or claims that require additional investigation. Field service engineers will gather additional information, perform further investigation, and qualify the definition of the issue."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+                
+:12678 rdf:type owl:Class ;
+    rdfs:label "Request and receive defective part"@en ;
+    rdfs:comment """Requesting receipt of a defective part for further investigation."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+                
+:20099 rdf:type owl:Class ;
+    rdfs:label "Investigate issue/perform root cause analysis"@en ;
+    rdfs:comment """Investigating claims by an appropriate functional representative. Once the issue has been clearly defined and diagnosed and a recommendation for corrective action is determined, it will be provided to the warranty management team."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+                
+:20100 rdf:type owl:Class ;
+    rdfs:label "Receive investigation result/recommendation for corrective action"@en ;
+    rdfs:comment """Receiving investigative results to assess claim approval or denial. The warranty team will assess the results of the investigation and the recommendations for corrective action."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+                
+:20101 rdf:type owl:Class ;
+    rdfs:label "Determine responsible party"@en ;
+    rdfs:comment """Identifying responsible party for a claim. There is no negotiation with the supplier at this point. There can be multiple warranties applicable to the same part: a new part warranty, a new product warranty (for the product the part is installed on), and a supplier warranty from the company that last repaired the part. The information required for this decision would be the output of Receive component/part and analyze fault [19728]."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:20102 rdf:type owl:Class ;
+    rdfs:label "Manage preauthorizations"@en ;
+    rdfs:comment """Authorizing claims prior to submittal."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:12668 rdf:type owl:Class ;
+    rdfs:label "Approve or reject warranty claim"@en ;
+    rdfs:comment """Following Defining issue [20098], an approval or rejection with be made against the warranty claim. If it is deemed that the claim falls within the warranty parameters, the claim will be approved. If the claim is deemed to fall outside warranty parameters, the claim with be rejected."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:20103 rdf:type owl:Class ;
+    rdfs:label "Notify originator of approve/reject decision"@en ;
+    rdfs:comment """Contacting the originator of whether the warranty claim has been approved or rejected."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:20104 rdf:type owl:Class ;
+    rdfs:label "Authorize payment"@en ;
+    rdfs:comment """Allowing for a payment to be made to the claimant."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:20105 rdf:type owl:Class ;
+    rdfs:label "Close claim"@en ;
+    rdfs:comment """Archiving and closing the warranty claim after a final decision has been made to either approve or reject."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:12667 rdf:type owl:Class ;
+    rdfs:label "Reconcile warranty transaction disposition"@en ;
+    rdfs:comment """Assuring that the warranty transaction has been completed."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:20106 rdf:type owl:Class ;
+    rdfs:label "Manage supplier recovery"@en ;
+    rdfs:comment """Managing the recovery of costs from suppliers for individual claims."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:20107 rdf:type owl:Class ;
+    rdfs:label "Create supplier recovery claims"@en ;
+    rdfs:comment """Raising a supplier recovery claim. This is based off the decision made in Receive investigation result/recommendation for corrective action [20100]."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:20108 rdf:type owl:Class ;
+    rdfs:label "Negotiate recoveries with suppliers"@en ;
+    rdfs:comment """Arranging the returns of recalled products to suppliers."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:10218 rdf:type owl:Class ;
+    rdfs:label "Service products"@en ;
+    rdfs:comment """Validating specific service requirements for individual customers. Determine and schedule resource to fulfill these requirements. Provide service to specific individual customers. Ensure the quality of service delivery."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:10321 rdf:type owl:Class ;
+    rdfs:label "Identify and schedule resources to meet service requirements"@en ;
+    rdfs:comment """Determining and scheduling the resources required to fulfill customer service requirements. Create a detailed schedule about the service orders and development of these service orders."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:10327 rdf:type owl:Class ;
+    rdfs:label "Create resourcing plan and schedule"@en ;
+    rdfs:comment """Developing a plan for sourcing and deploying the resources required to fulfill customer service needs. Document a detailed summary of all types of resources (equipment, finance, personnel, time, etc.) required to complete customer service requests and procure these resources. Identify and assess various sources in order to effectively create a resourcing plan."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+                
+:10328 rdf:type owl:Class ;
+    rdfs:label "Create service order fulfillment schedule"@en ;
+    rdfs:comment """Designing a detailed summary of customer service order requirements, along with information concerning the timing and duration for these services. Categorize the customer needs. Monitor the services delivered."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+                
+:10322 rdf:type owl:Class ;
+    rdfs:label "Provide service to specific customers"@en ;
+    rdfs:comment """Dispatching resources for managing and fulfilling daily service requirements. Manage the progress of order fulfillment. Complete order blocks."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:10330 rdf:type owl:Class ;
+    rdfs:label "Organize daily service order fulfillment schedule"@en ;
+    rdfs:comment """Laying out a daily plan of specific service orders that need to be fulfilled. Document and systematically order these activities to ensure high effectiveness and efficiency."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+                
+:10331 rdf:type owl:Class ;
+    rdfs:label "Execute product repair"@en ;
+    rdfs:comment """Dispatching and delivering the resources needed for the specific service requirements from the source/warehouse. Manage the dispatch, transportation, and delivery of the services."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+                
+:10332 rdf:type owl:Class ;
+    rdfs:label "Manage service order fulfillment"@en ;
+    rdfs:comment """Handling and managing orders fulfilled, along with the orders are not or partially fulfilled to track the order fulfillment progress. Use electronic devices such as trackers and GPS in order track and ensure delivery of the orders."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+                
+:10323 rdf:type owl:Class ;
+    rdfs:label "Ensure quality of service"@en ;
+    rdfs:comment """Guaranteeing the quality of service provided to customers. Identify the successful and unsuccessful orders along with the service failures. Collect customer feedback. Process the feedback to ensure the quality of service in the future."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:10334 rdf:type owl:Class ;
+    rdfs:label "Identify completed service orders for feedback"@en ;
+    rdfs:comment """Determining the service orders that have been successfully delivered. Identify the service orders completed and delivered to the customer. Leverage communication systems to ensure coordination with the customers in order to avoid mishaps."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+                
+:10335 rdf:type owl:Class ;
+    rdfs:label "Identify incomplete service orders and service failures"@en ;
+    rdfs:comment """Determining orders which have not been completed or delivered. Identify the service orders that are partially or entirely incomplete, as well as the orders that have not been delivered to the customer. Use techniques such as project trackers to recognize the progress of the service orders."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+                
+:10336 rdf:type owl:Class ;
+    rdfs:label "Solicit customer feedback on services delivered"@en ;
+    rdfs:comment """Obtaining and procuring customer reviews or feedback on the services delivered. Design a customer feedback form, or communicate with the customer through the phone or online."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+                
+:10337 rdf:type owl:Class ;
+    rdfs:label "Process customer feedback on services delivered"@en ;
+    rdfs:comment """Assessing and incorporating customer reviews/feedback into the service plan to ensure high quality of service."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+                
+:20110 rdf:type owl:Class ;
+    rdfs:label "Manage product recalls and regulatory audits"@en ;
+    rdfs:comment """Removing defective products from the distribution chain. Participate in audits from watchdog agencies."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+                
+:20111 rdf:type owl:Class ;
+    rdfs:label "Initiate recall"@en ;
+    rdfs:comment """Commencing the removal process of defective products."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:20112 rdf:type owl:Class ;
+    rdfs:label "Assess the likelihood and consequences of occurrence of any hazards"@en ;
+    rdfs:comment """Performing risk analysis. Identify all dangers, evaluate how probable they are, and what kinds of negative results or or adverse side effect they carry."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:20113 rdf:type owl:Class ;
+    rdfs:label "Manage recall related communications"@en ;
+    rdfs:comment """Handling communications that are related to product recalls."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:20114 rdf:type owl:Class ;
+    rdfs:label "Submit regulatory reports"@en ;
+    rdfs:comment """Creating and delivering reports to regulatory agencies to provide details about handling product recalls."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:20115 rdf:type owl:Class ;
+    rdfs:label "Monitor and audit recall effectiveness"@en ;
+    rdfs:comment """Analyzing the effectiveness of product recalls."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:20116 rdf:type owl:Class ;
+    rdfs:label "Manage recall termination"@en ;
+    rdfs:comment """Ending product recalls, communicating to the public and filing reports."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:20595 rdf:type owl:Class ;
+    rdfs:label "Evaluate customer service operations and customer satisfaction"@en ;
+    rdfs:comment """Calculating and assessing the operational activities of the customer service function. Evaluation is achieved through the customer requests/inquiries handling process, the customer complaint handling process, and product and services quality. Examine activities to ensure high levels of customer service."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+                
+:10401 rdf:type owl:Class ;
+    rdfs:label "Measure customer satisfaction with customer problems, requests, and inquiries handling"@en ;
+    rdfs:comment """Calculating satisfaction levels of customers by effectively evaluating the process of handling requests/inquiries of customers. Effectively calculate the performance of customer-requests/inquiries handling and resolution. Obtain information regarding requests/inquiries handling and resolution through customer feedback. Use it to explore new ideas and opportunities for enhanced customer requests/inquiries handling and resolution process."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:11687 rdf:type owl:Class ;
+    rdfs:label "Solicit customer feedback on customer service experience"@en ;
+    rdfs:comment """Creating an avenue for which the customer can provide feedback on their experience with how their inquiry, problem, or request was handled."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:11688 rdf:type owl:Class ;
+    rdfs:label "Analyze customer service data and identify improvement opportunities"@en ;
+    rdfs:comment """Reviewing customer service feedback to identify areas in which improvements can be made. Engage with management to discuss issues."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:18126 rdf:type owl:Class ;
+    rdfs:label "Provide customer feedback to product management on customer service experience"@en ;
+    rdfs:comment """Handing over data to management to analyze common issues in regards to customer service."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:10402 rdf:type owl:Class ;
+    rdfs:label "Measure customer satisfaction with customer- complaint handling and resolution"@en ;
+    rdfs:comment """Measuring the satisfaction level of customers as pertains to how their complaints are handled and resolved. This process element requires the organization to estimate the customers level of fulfillment with the process reconciling their complaints and towards the objective of ensuring customer retention. The feedback received can be used to develop concepts for new opportunities to boost the level of customer satisfaction."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:11236 rdf:type owl:Class ;
+    rdfs:label "Solicit customer feedback on complaint handling and resolution"@en ;
+    rdfs:comment """Requesting customer feedback on the process of handling and resolving customer complaints. Obtain information about the effectiveness and performance of the customer complaint handling process from the customers through various means (e.g., online and by phone)."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:11237 rdf:type owl:Class ;
+    rdfs:label "Analyze customer complaint data and identify improvement opportunities"@en ;
+    rdfs:comment """Examining the information obtained through handling and resolving complaints for development/improvement opportunities. Categorize the customer complaints data on the basis of speed, accuracy, courtesy, price, product choice, availability, hours, location, etc. Determine complaint patterns in order to diagnose areas needing enhancement."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:11689 rdf:type owl:Class ;
+    rdfs:label "Identify common customer complaints"@en ;
+    rdfs:comment """Determining complaint patterns in order to identify common issues. Document common problems for correction."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:10403 rdf:type owl:Class ;
+    rdfs:label "Measure customer satisfaction with products and services"@en ;
+    rdfs:comment """Calculating satisfaction levels of customers with products/services. Obtain customer feedback on products/services, as well as the effectiveness of the advertising campaigns. Examine this information to reach meaningful conclusions, which could then be used to enhance the customer service operations."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:11238 rdf:type owl:Class ;
+    rdfs:label "Gather and solicit post-sale customer feedback on products and services"@en ;
+    rdfs:comment """Obtaining customer feedback/review on the quality and utility derived from the products/services after the sale is complete. Use techniques such as surveys, feedback boxes, and user activity and usability tests."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:11239 rdf:type owl:Class ;
+    rdfs:label "Solicit post-sale customer feedback on ad effectiveness"@en ;
+    rdfs:comment """Assessing the influence of advertisements on purchasing behavior. Use techniques such as surveys and product recognition tests, questionnaires or feedback flyers, and toll-free numbers in order to encourage customer interaction after the sale."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:20117 rdf:type owl:Class ;
+    rdfs:label "Solicit customer feedback on cross-channel experience"@en ;
+    rdfs:comment """Engaging with the customer to understand their cross-channel experience. Find out what channels were effective and what areas need improvement."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:11240 rdf:type owl:Class ;
+    rdfs:label "Analyze product and service satisfaction data and identify improvement opportunities"@en ;
+    rdfs:comment """Assessing the information collected on customer satisfaction levels with products/services in order to determine areas for improvement. Examine the data and information extracted from the customer feedback and reviews to measure the satisfaction levels of the customers. Identify opportunities that could enhance the customer satisfaction levels and the overall customer service strategy."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:11241 rdf:type owl:Class ;
+    rdfs:label "Provide feedback and insights to appropriate teams (product design/development, marketing, manufacturing)"@en ;
+    rdfs:comment """Providing feedback from customers on products/services to the product management team. Analyze information collected through Gather and solicit post-sale customer feedback on products/services [11238]. Share with the product management team for consideration while improving existing offerings or developing new products/services."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:12672 rdf:type owl:Class ;
+    rdfs:label "Evaluate and manage warranty performance"@en ;
+    rdfs:comment """Assessing the cost and effectiveness of warranties."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:20118 rdf:type owl:Class ;
+    rdfs:label "Measure customer satisfaction with warranty handling and resolution"@en ;
+    rdfs:comment """Evaluating how satisfied customers are with how product warranties are managed and resolved."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:12676 rdf:type owl:Class ;
+    rdfs:label "Monitor and report on warranty management metrics"@en ;
+    rdfs:comment """Comparing warranties by using using applicable metrics to see how they are handled and resolved. Develop and submit reports that summarize significant conclusions."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:20119 rdf:type owl:Class ;
+    rdfs:label "Identify improvement opportunities"@en ;
+    rdfs:comment """Determining how warranties and warranty management can be made better and more efficient."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:12674 rdf:type owl:Class ;
+    rdfs:label "Identify opportunities to eliminate warranty waste"@en ;
+    rdfs:comment """Finding ways to phase out unused or seldom used warranties."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:20120 rdf:type owl:Class ;
+    rdfs:label "Investigate fraudulent claims"@en ;
+    rdfs:comment """Reviewing and assessing claims that contain deliberately incorrect information or that have been submitted with the goal to deceive the system."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:20121 rdf:type owl:Class ;
+    rdfs:label "Evaluate recall performance"@en ;
+    rdfs:comment """Reviewing customer service feedback to identify areas in which improvements can be made. Engage with management to discuss issues."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:19769 rdf:type owl:Class ;
+    rdfs:label "Manage recalls"@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:10378PartOf20085 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10378 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20085 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:10379PartOf20085 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10379 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20085 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:12658PartOf20085 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12658 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20085 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:20110PartOf20085 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20110 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20085 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:20595PartOf20085 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20595 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20085 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:20086PartOf10378 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20086 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10378 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:20087PartOf10378 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20087 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10378 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:20088PartOf10378 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20088 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10378 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10381PartOf10378 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10381 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10378 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10382PartOf10378 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10382 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10378 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10383PartOf10378 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10383 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10378 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:20089PartOf10378 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20089 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10378 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:20092PartOf10378 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20092 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10378 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10387PartOf10379 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10387 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10379 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10388PartOf10379 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10388 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10379 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10389PartOf10379 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10389 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10379 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:20094PartOf10379 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20094 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10379 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:12840PartOf10379 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12840 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10379 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:20605PartOf12658 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20605 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :12658 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:12669PartOf12658 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12669 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :12658 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:20106PartOf12658 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20106 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :12658 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10218PartOf12658 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10218 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :12658 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:20111PartOf20110 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20111 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20110 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:20112PartOf20110 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20112 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20110 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:20113PartOf20110 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20113 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20110 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:20114PartOf20110 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20114 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20110 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:20115PartOf20110 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20115 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20110 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:20116PartOf20110 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20116 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20110 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10401PartOf20595 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10401 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20595 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10402PartOf20595 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10402 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20595 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10403PartOf20595 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10403 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20595 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:12672PartOf20595 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12672 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20595 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:20121PartOf20595 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20121 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20595 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10384PartOf10381 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10384 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10381 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10384FollowedBy10385 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10384 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :10385 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10385PartOf10381 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10385 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10381 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16893PartOf20089 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16893 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20089 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16893FollowedBy16890 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16893 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16890 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16890PartOf20089 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16890 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20089 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16890FollowedBy20090 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16890 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :20090 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20090PartOf20089 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20090 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20089 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20090FollowedBy20091 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20090 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :20091 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20091PartOf20089 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20091 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20089 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20091FollowedBy12673 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20091 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :12673 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:12673PartOf20089 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12673 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20089 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10390PartOf10387 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10390 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10387 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10390FollowedBy10391 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10390 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :10391 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10391PartOf10387 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10391 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10387 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10391FollowedBy10392 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10391 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :10392 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10392PartOf10387 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10392 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10387 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10392FollowedBy10393 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10392 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :10393 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10393PartOf10387 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10393 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10387 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10394PartOf10388 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10394 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10388 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10394FollowedBy13482 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10394 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :13482 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:13482PartOf10388 rdf:type owl:ObjectProperty ;
+    rdfs:domain :13482 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10388 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:13482FollowedBy10395 rdf:type owl:ObjectProperty ;
+    rdfs:domain :13482 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :10395 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10395PartOf10388 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10395 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10388 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10395FollowedBy10396 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10395 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :10396 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10396PartOf10388 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10396 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10388 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10396FollowedBy16928 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10396 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16928 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16928PartOf10388 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16928 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10388 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16928FollowedBy16937 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16928 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16937 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16937PartOf10388 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16937 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10388 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16937FollowedBy12197 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16937 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :12197 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:12197PartOf10388 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12197 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10388 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:12197FollowedBy12198 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12197 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :12198 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:12198PartOf10388 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12198 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10388 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:12198FollowedBy12199 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12198 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :12199 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:12199PartOf10388 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12199 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10388 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10397PartOf10389 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10397 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10389 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10397FollowedBy10398 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10397 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :10398 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10398PartOf10389 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10398 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10389 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10398FollowedBy10399 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10398 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :10399 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10399PartOf10389 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10399 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10389 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10399FollowedBy10400 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10399 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :10400 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10400PartOf10389 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10400 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10389 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10400FollowedBy12200 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10400 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :12200 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:12200PartOf10389 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12200 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10389 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:12200FollowedBy19072 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12200 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :19072 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:19072PartOf10389 rdf:type owl:ObjectProperty ;
+    rdfs:domain :19072 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10389 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10364PartOf20094 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10364 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20094 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10364FollowedBy20095 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10364 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :20095 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20095PartOf20094 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20095 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20094 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20096PartOf12669 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20096 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :12669 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20096FollowedBy12671 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20096 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :12671 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:12671PartOf12669 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12671 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :12669 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:12671FollowedBy20097 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12671 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :20097 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20097PartOf12669 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20097 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :12669 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20097FollowedBy20101 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20097 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :20101 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20101PartOf12669 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20101 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :12669 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20101FollowedBy20102 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20101 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :20102 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20102PartOf12669 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20102 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :12669 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20102FollowedBy12668 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20102 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :12668 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:12668PartOf12669 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12668 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :12669 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:12668FollowedBy20103 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12668 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :20103 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20103PartOf12669 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20103 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :12669 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20103FollowedBy20104 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20103 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :20104 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20104PartOf12669 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20104 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :12669 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20104FollowedBy20105 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20104 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :20105 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20105PartOf12669 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20105 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :12669 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20105FollowedBy12667 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20105 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :12667 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:12667PartOf12669 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12667 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :12669 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20107PartOf20106 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20107 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20106 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20107FollowedBy20108 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20107 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :20108 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20108PartOf20106 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20108 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20106 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10321PartOf10218 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10321 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10218 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10321FollowedBy10322 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10321 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :10322 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10322PartOf10218 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10322 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10218 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10322FollowedBy10323 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10322 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :10323 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10323PartOf10218 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10323 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10218 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11687PartOf10401 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11687 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10401 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11687FollowedBy11688 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11687 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :11688 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11688PartOf10401 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11688 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10401 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11688FollowedBy18126 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11688 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :18126 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:18126PartOf10401 rdf:type owl:ObjectProperty ;
+    rdfs:domain :18126 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10401 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11236PartOf10402 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11236 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10402 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11236FollowedBy11237 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11236 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :11237 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11237PartOf10402 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11237 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10402 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11237FollowedBy11689 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11237 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :11689 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11689PartOf10402 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11689 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10402 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11238PartOf10403 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11238 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10403 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11238FollowedBy11239 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11238 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :11239 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11239PartOf10403 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11239 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10403 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11239FollowedBy20117 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11239 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :20117 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20117PartOf10403 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20117 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10403 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20117FollowedBy11240 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20117 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :11240 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11240PartOf10403 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11240 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10403 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11240FollowedBy11241 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11240 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :11241 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11241PartOf10403 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11241 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10403 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20118PartOf12672 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20118 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :12672 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20118FollowedBy12676 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20118 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :12676 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:12676PartOf12672 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12676 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :12672 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:12676FollowedBy20119 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12676 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :20119 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20119PartOf12672 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20119 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :12672 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20119FollowedBy12674 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20119 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :12674 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:12674PartOf12672 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12674 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :12672 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:12674FollowedBy20120 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12674 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :20120 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20120PartOf12672 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20120 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :12672 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:19769PartOf20121 rdf:type owl:ObjectProperty ;
+    rdfs:domain :19769 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20121 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20098PartOf20097 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20098 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20097 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:20098FollowedBy12677 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20098 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :12677 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:12677PartOf20097 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12677 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20097 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:12677FollowedBy12678 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12677 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :12678 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:12678PartOf20097 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12678 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20097 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:12678FollowedBy20099 rdf:type owl:ObjectProperty ;
+    rdfs:domain :12678 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :20099 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:20099PartOf20097 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20099 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20097 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:20099FollowedBy20100 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20099 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :20100 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:20100PartOf20097 rdf:type owl:ObjectProperty ;
+    rdfs:domain :20100 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :20097 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10327PartOf10321 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10327 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10321 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10327FollowedBy10328 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10327 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :10328 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:10328PartOf10321 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10328 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10321 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10330PartOf10322 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10330 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10322 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10330FollowedBy10331 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10330 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :10331 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:10331PartOf10322 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10331 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10322 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10331FollowedBy10332 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10331 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :10332 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:10332PartOf10322 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10332 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10322 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10334PartOf10323 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10334 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10323 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10334FollowedBy10335 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10334 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :10335 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:10335PartOf10323 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10335 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10323 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10335FollowedBy10336 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10335 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :10336 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:10336PartOf10323 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10336 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10323 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10336FollowedBy10337 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10336 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :10337 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:10337PartOf10323 rdf:type owl:ObjectProperty ;
+    rdfs:domain :10337 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :10323 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
