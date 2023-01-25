@@ -1,0 +1,836 @@
+
+@base <http://field33.com/ontologies/@apqc_aerospace_and_defence/manage_enterprise_risk_compliance_remediation_and_resiliency/> .
+@prefix : <http://field33.com/ontologies/@apqc_aerospace_and_defence/manage_enterprise_risk_compliance_remediation_and_resiliency/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix registry: <http://field33.com/ontologies/REGISTRY/> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://field33.com/ontologies/@apqc_aerospace_and_defence/manage_enterprise_risk_compliance_remediation_and_resiliency/> rdf:type owl:Ontology ;
+    registry:author "Field 33 <contribution@field33.com>" ;
+    registry:canonicalPrefix "manage_enterprise_risk_compliance_remediation_and_resiliency" ;
+    registry:dependency "@fld33/relations ^0.2.0", "@apqc/apqc ^0.1.6",
+    "@fld33_domain/business_objects ^0.1.9" ;
+    registry:license "2022 APQC. ALL RIGHTS RESERVED. This Process Classification Framework (PCF) is the copyrighted intellectual property of APQC."@en ;
+    registry:ontologyFormatVersion "v1" ;
+    registry:packageName "@apqc_aerospace_and_defence/manage_enterprise_risk_compliance_remediation_and_resiliency" ;
+    registry:packageVersion "0.1.1" ;
+    registry:category "Process" ;
+    registry:keyword "APQC" ,
+                    "Aerospace" ,
+                    "Process" ;
+    registry:repository "https://github.com/field33/ontologies/tree/main/fields/%40apqc_aerospace_and_defence/manage_enterprise_risk_compliance_remediation_and_resiliency" ;
+    registry:shortDescription "APQC Aerospace and Defence category: Manage Enterprise Risk, Compliance, Remediation, and Resiliency Ontology"@en ;
+    rdfs:comment """
+# Manage Enterprise Risk, Compliance, Remediation, and Resiliency
+
+This package is a domain ontology describing the category "Manage Enterprise Risk, Compliance, Remediation, and Resiliency" as part of APQC for cross industry."""@en ;
+    rdfs:label "Manage Enterprise Risk, Compliance, Remediation &Resiliency"@en ;
+    owl:imports <http://field33.com/ontologies/@fld33/relations/>, <http://field33.com/ontologies/@apqc/apqc/>,
+    <http://field33.com/ontologies/@fld33_domain/business_objects/> .
+
+:16437 rdf:type owl:Class ;
+    rdfs:label "Manage Enterprise Risk, Compliance, Remediation, and Resiliency"@en ;
+    rdfs:comment """Ensuring that an organization effectively manages its risk. Process groups are aligned with traditional risk management activities."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCCateogry> .
+                
+:17060 rdf:type owl:Class ;
+    rdfs:label "Manage enterprise risk"@en ;
+    rdfs:comment """Creating requisite frameworks and coordinating all risk management activities for the entire organization and each function. Manage the enterprise risk by outlining the risk policies and procedures. Monitor and communicate all risk management activities. Encourage correspondence among the business units. Manage the risk of all business units and functions."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+                
+:16439 rdf:type owl:Class ;
+    rdfs:label "Establish the enterprise risk framework and policies"@en ;
+    rdfs:comment """Creating an agenda for the rules and regulations of enterprise risk that deal with hazardous, financial, operational, and strategic risks."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:16440 rdf:type owl:Class ;
+    rdfs:label "Determine risk tolerance for organization"@en ;
+    rdfs:comment """Recognizing the organization's tolerance for risk, given risk-return trade-offs for one or more anticipated and predictable consequences."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16441 rdf:type owl:Class ;
+    rdfs:label "Develop and maintain enterprise risk policies and procedures"@en ;
+    rdfs:comment """Establishing and maintaining the policies and procedures for managing risk. Create rules and regulations for enterprise risk dealing with hazardous, financial, operational, and strategic risks."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16442 rdf:type owl:Class ;
+    rdfs:label "Identify and implement enterprise risk management tools"@en ;
+    rdfs:comment """Recognizing and implementing tools for managing risk. Identify and apply enterprise risk management tools. Leverage methods and processes to manage risks and opportunities associated with business objectives."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16443 rdf:type owl:Class ;
+    rdfs:label "Coordinate the sharing of risk knowledge across the organization"@en ;
+    rdfs:comment """Communicating the knowledge about risk within the organization. Identify operational risks. Share risk information within the organization."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16444 rdf:type owl:Class ;
+    rdfs:label "Prepare and report enterprise risk to executive management and board"@en ;
+    rdfs:comment """Preparing and presenting reports about enterprise risk to the management of the organization. Create reports for management on hazard risks (e.g., property damage and liability torts), financial risks (e.g., currency and liquidity risks), and operational risks (e.g., product failure, customer satisfaction, social trends, and competition)."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16445 rdf:type owl:Class ;
+    rdfs:label "Oversee and coordinate enterprise risk management activities"@en ;
+    rdfs:comment """Coordinating to plan, organize, lead, and control the activities of an organization in order to minimize the special effects of risk on capital and earnings."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:16446 rdf:type owl:Class ;
+    rdfs:label "Identify enterprise level risks"@en ;
+    rdfs:comment """Determining risks that could thwart objectives. Document and communicate the concern."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16447 rdf:type owl:Class ;
+    rdfs:label "Assess risks to determine which to mitigate"@en ;
+    rdfs:comment """Identifying options/actions to enhance opportunities and reduce threats. Recognize the root reasons of the identified risks."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16448 rdf:type owl:Class ;
+    rdfs:label "Develop risk mitigation and management strategy and integrate with existing performance management processes"@en ;
+    rdfs:comment """Developing activities to improve opportunities and lessen threats. Specify the organization's objectives. Evolve strategies and policies to attain these objectives. Assign resources to project objectives."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16449 rdf:type owl:Class ;
+    rdfs:label "Verify business unit and functional risk mitigation plans are implemented"@en ;
+    rdfs:comment """Checking that the blueprint created for managing risk in individual business units and divisions is correctly effectuated. Validate the implementation of all activities geared to mitigate risks."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16450 rdf:type owl:Class ;
+    rdfs:label "Ensure risks and risk mitigation actions are monitored"@en ;
+    rdfs:comment """Ensuring risk monitoring and mitigation activities. Monitor actions to enhance opportunities and reduce threats to project objectives."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16451 rdf:type owl:Class ;
+    rdfs:label "Report on enterprise risk activities"@en ;
+    rdfs:comment """Creating a report of activities to address hazard risks, liability torts, financial risks, operational risks, social trends, competition, etc."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16452 rdf:type owl:Class ;
+    rdfs:label "Coordinate business unit and functional risk management activities"@en ;
+    rdfs:comment """Coordinating risk management activities to improve opportunities and lessen threats. Specify the organization's objectives. Assign resources to project objectives."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16453 rdf:type owl:Class ;
+    rdfs:label "Ensure that each business unit/function follows the enterprise risk management process"@en ;
+    rdfs:comment """Checking each business unit's/function's options and activities to improve opportunities and lessen threats."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16454 rdf:type owl:Class ;
+    rdfs:label "Ensure that each business unit/function follows the enterprise risk reporting process"@en ;
+    rdfs:comment """Checking the reporting process of each business unit's/function's options and activities to improve opportunities and lessen threats."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:17462 rdf:type owl:Class ;
+    rdfs:label "Manage business unit and function risk"@en ;
+    rdfs:comment """Analyzing the threats a business unit/function faces to prioritize the controls it implements.."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:16456 rdf:type owl:Class ;
+    rdfs:label "Identify risks"@en ;
+    rdfs:comment """Developing a timely and continuous process to identify activities that might hinder a project's goals."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16457 rdf:type owl:Class ;
+    rdfs:label "Assess risks using enterprise risk framework policies and procedures"@en ;
+    rdfs:comment """Determining the possibility that a specified undesirable event will occur using established tools, implements, and frameworks. Use risk assessments to determine, for example, whether to undertake a particular venture, what rate of return a particular investment requires, and how to mitigate an activity's potential losses."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16458 rdf:type owl:Class ;
+    rdfs:label "Develop mitigation plans for risks"@en ;
+    rdfs:comment """Developing possibilities and arrangements to improve opportunities and reduce deviations to project objectives."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:18129 rdf:type owl:Class ;
+    rdfs:label "Assess adequacy of insurance coverage"@en ;
+    rdfs:comment """Evaluating the changing needs for insurance coverage. Research available insurance providers and offerings."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+                
+:16459 rdf:type owl:Class ;
+    rdfs:label "Implement mitigation plans for risks"@en ;
+    rdfs:comment """Executing mitigation plans to improve opportunities and reduce deviations to project objectives."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16460 rdf:type owl:Class ;
+    rdfs:label "Monitor risks"@en ;
+    rdfs:comment """Identifying, examining, and recognizing/justifying any improbability in investment decision making."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16461 rdf:type owl:Class ;
+    rdfs:label "Analyze risk activities and update plans"@en ;
+    rdfs:comment """Examining the impact of risk activities in order to update the existing scheme of risk management. Analyze and substantiate the potential for adverse consequences to occur. Consider the risks associated with the activity and the methods available to manage those risks."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16462 rdf:type owl:Class ;
+    rdfs:label "Report on function risk activities"@en ;
+    rdfs:comment """Creating reports on risk activities, and communicating them to management. Prepare reports on the potential for adverse safety consequences."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:17467 rdf:type owl:Class ;
+    rdfs:label "Manage compliance"@en ;
+    rdfs:comment """Managing steps to confirm enduring compliance to industry regulations and government legislation."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+                
+:17468 rdf:type owl:Class ;
+    rdfs:label "Establish compliance framework and policies"@en ;
+    rdfs:comment """Developing a set of procedures detailing an organization's progress in complying with established guidelines, provisions, and legislation."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:17469 rdf:type owl:Class ;
+    rdfs:label "Develop enterprise compliance policies and procedures"@en ;
+    rdfs:comment """Creating a standardized approach to ethics and compliance. Have a programmatic approach for compliance that focuses on the definite risks the organization faces."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:17470 rdf:type owl:Class ;
+    rdfs:label "Implement enterprise compliance activities"@en ;
+    rdfs:comment """Implementing standardized for ethics and compliance. Have a programmatic approach, built from the top down, to enterprise compliance that focuses on the definite risks the organization faces."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:14133 rdf:type owl:Class ;
+    rdfs:label "Manage internal audits"@en ;
+    rdfs:comment """Managing accounts and prepare regular reports on financial performance."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:14137 rdf:type owl:Class ;
+    rdfs:label "Maintain controls-related technologies and tools"@en ;
+    rdfs:comment """Managing technologies and tools related to the confidentiality, integrity, and availability of data in order to ensure the security of the organization's information."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16463 rdf:type owl:Class ;
+    rdfs:label "Manage regulatory compliance"@en ;
+    rdfs:comment """Obeying laws, guidelines, strategies, and stipulations related to the business."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:16464 rdf:type owl:Class ;
+    rdfs:label "Develop regulatory compliance procedures"@en ;
+    rdfs:comment """Developing procedures and methodologies to comply with relevant laws and regulations of an organization's obedience to laws, guidelines, strategies and stipulations related to business."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16465 rdf:type owl:Class ;
+    rdfs:label "Identify applicable regulatory requirements"@en ;
+    rdfs:comment """Determining the regulatory requirements that are most appropriate for the organization. Identify goals in order to follow the appropriate rules and regulations, guidelines, and strategies."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16466 rdf:type owl:Class ;
+    rdfs:label "Monitor the regulatory environment for changing or emerging regulations"@en ;
+    rdfs:comment """Analyzing and overseeing the regulatory environment in order to spot any changing or emerging regulations. This process element calls upon the organization to monitor the regulatory environment for any new statutes, policies, and enactments issued by the respective government authorities or those which have been updated."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16467 rdf:type owl:Class ;
+    rdfs:label "Assess current compliance position and identify weaknesses or shortfalls therein"@en ;
+    rdfs:comment """Evaluating current regulatory policies and regulations. Assess their performance. Make necessary changes."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16468 rdf:type owl:Class ;
+    rdfs:label "Implement missing or stronger regulatory compliance controls and policies"@en ;
+    rdfs:comment """Assessing the current policies and policies. Implement missing and necessary changes environmental changes, political changes, technological changes, etc."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16469 rdf:type owl:Class ;
+    rdfs:label "Monitor and test regulatory compliance position and existing controls"@en ;
+    rdfs:comment """Monitoring, appraising, and evaluating the compliance position of the organization in order to fine-tune for effective remediation. Track efforts for handling regulatory and compliance requirements necessitated by law. Test the robustness of internal frameworks, procedures, and approaches for dealing with these requirements, in order to clearly identify any necessary changes."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:19595 rdf:type owl:Class ;
+    rdfs:label "Compile and communicate compliance scorecard(s)"@en ;
+    rdfs:comment """Creating a graphical representation of metrics in order to communicate the general health of the organization in relation to risk and compliancy."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:19596 rdf:type owl:Class ;
+    rdfs:label "Compile and communicate internal and regulatory compliance reports"@en ;
+    rdfs:comment """Submitting compliance reports to regulatory agencies. These reports can be made to environmental, securities, or human resources agencies as stipulated by the local governing body."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:16470 rdf:type owl:Class ;
+    rdfs:label "Maintain relationships with regulators as appropriate"@en ;
+    rdfs:comment """Developing and preserving relationships with the regulators, without compromising the legal basis of the relationship."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:19777 rdf:type owl:Class ;
+    rdfs:label "Certify capabilities"@en ;
+    rdfs:comment """Inspecting maintenance capabilities. The applicable regulatory authority must inspect the maintenance capabilities and indicate that the company is capable of providing maintenance services for XXX aircraft types."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+                
+:11185 rdf:type owl:Class ;
+    rdfs:label "Manage remediation efforts"@en ;
+    rdfs:comment """Administering the efforts and activities for remediation. This process element requires the organization to create plans for corrective action in collaboration with government agencies and pertinent professional services agencies which specialize in remediation efforts relevant to the organization's operations. Additionally, the organization needs to consult experts to validate the plan, determine resources allocation, resolve any legal concerns, and formulate a company-wide policy for remediation."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+                
+:11201 rdf:type owl:Class ;
+    rdfs:label "Create remediation plans"@en ;
+    rdfs:comment """Creating plans for remediation efforts. Make a plan to address a case of environmental adulteration. Identify and treat the adulteration so that the area will become operational again."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:11202 rdf:type owl:Class ;
+    rdfs:label "Contact and confer with experts"@en ;
+    rdfs:comment """Discussing and soliciting advice from experts for in order to incorporate their suggestion (regarding Create remediation plans [11201])."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:11203 rdf:type owl:Class ;
+    rdfs:label "Identify/Dedicate resources"@en ;
+    rdfs:comment """Identifying and dedicating the resources for managing remediation efforts. Discern the resources needed for remediation efforts. Dispense with resources in a sound and well-reasoned manner."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:11204 rdf:type owl:Class ;
+    rdfs:label "Investigate legal aspects"@en ;
+    rdfs:comment """Examining regulatory and legislative frameworks. Obligate the organization to remediate any damages through compensations, fines, and any other remedial efforts necessitated to correct the situations. Analyze local environmental laws, binding international covenants, etc. in order to examine legal accuracy about the rules and procedures."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:11205 rdf:type owl:Class ;
+    rdfs:label "Investigate damage cause"@en ;
+    rdfs:comment """Studying the causes of damage, which could be environmental, physical, social, etc. at country level in order to institute better policies and regulations."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:11206 rdf:type owl:Class ;
+    rdfs:label "Amend or create policy"@en ;
+    rdfs:comment """Crafting a new framework of policies and procedures for deploying remediation efforts, or change existing policies and procedures. Adapt the policy structure to the context of the apposite national and international regulatory frameworks."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:11216 rdf:type owl:Class ;
+    rdfs:label "Manage business resiliency"@en ;
+    rdfs:comment """Including the processes required to rapidly adapt and respond to any internal or external opportunity, demand, disruption, or threat. Develop a more dynamic, strategic, and integrated approach to managing compliance obligations."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+                
+:11221 rdf:type owl:Class ;
+    rdfs:label "Develop the business resilience strategy"@en ;
+    rdfs:comment """Creating a strategy for rapidly adapting to disturbances. Maintain continuous business processes and protecting employees, assets, and overall brand equity."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:11222 rdf:type owl:Class ;
+    rdfs:label "Perform continuous business operations planning"@en ;
+    rdfs:comment """Developing plans to ensure continuous business operations."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:11223 rdf:type owl:Class ;
+    rdfs:label "Test continuous business operations"@en ;
+    rdfs:comment """Assessing ongoing activities within the organization that are not intended to stop except for in an emergency."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:11224 rdf:type owl:Class ;
+    rdfs:label "Maintain continuous business operations"@en ;
+    rdfs:comment """Evaluating business operations. Determine which activities generate revenues, perform best, and provide good returns."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:16471 rdf:type owl:Class ;
+    rdfs:label "Share knowledge of specific risks across other parts of the organization"@en ;
+    rdfs:comment """Sharing information about risks and resilience strategies of business operations across the organization so that prospective risks can be avoided."""@en ;
+    rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+                
+:17060PartOf16437 rdf:type owl:ObjectProperty ;
+    rdfs:domain :17060 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16437 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:17467PartOf16437 rdf:type owl:ObjectProperty ;
+    rdfs:domain :17467 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16437 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:11185PartOf16437 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11185 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16437 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:11216PartOf16437 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11216 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16437 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:16439PartOf17060 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16439 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :17060 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:16445PartOf17060 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16445 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :17060 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:17462PartOf17060 rdf:type owl:ObjectProperty ;
+    rdfs:domain :17462 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :17060 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:17468PartOf17467 rdf:type owl:ObjectProperty ;
+    rdfs:domain :17468 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :17467 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:16463PartOf17467 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16463 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :17467 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:11201PartOf11185 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11201 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :11185 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:11202PartOf11185 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11202 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :11185 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:11203PartOf11185 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11203 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :11185 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:11204PartOf11185 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11204 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :11185 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:11205PartOf11185 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11205 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :11185 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:11206PartOf11185 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11206 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :11185 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:11221PartOf11216 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11221 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :11216 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:11222PartOf11216 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11222 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :11216 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:11223PartOf11216 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11223 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :11216 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:11224PartOf11216 rdf:type owl:ObjectProperty ;
+    rdfs:domain :11224 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :11216 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:16471PartOf11216 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16471 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :11216 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:16440PartOf16439 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16440 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16439 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16440FollowedBy16441 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16440 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16441 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16441PartOf16439 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16441 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16439 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16441FollowedBy16442 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16441 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16442 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16442PartOf16439 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16442 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16439 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16442FollowedBy16443 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16442 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16443 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16443PartOf16439 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16443 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16439 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16443FollowedBy16444 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16443 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16444 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16444PartOf16439 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16444 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16439 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16446PartOf16445 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16446 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16445 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16446FollowedBy16447 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16446 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16447 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16447PartOf16445 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16447 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16445 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16447FollowedBy16448 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16447 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16448 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16448PartOf16445 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16448 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16445 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16448FollowedBy16449 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16448 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16449 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16449PartOf16445 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16449 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16445 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16449FollowedBy16450 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16449 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16450 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16450PartOf16445 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16450 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16445 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16450FollowedBy16451 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16450 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16451 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16451PartOf16445 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16451 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16445 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16451FollowedBy16452 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16451 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16452 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16452PartOf16445 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16452 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16445 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16452FollowedBy16453 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16452 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16453 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16453PartOf16445 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16453 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16445 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16453FollowedBy16454 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16453 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16454 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16454PartOf16445 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16454 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16445 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16456PartOf17462 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16456 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :17462 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16456FollowedBy16457 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16456 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16457 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16457PartOf17462 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16457 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :17462 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16457FollowedBy16458 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16457 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16458 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16458PartOf17462 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16458 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :17462 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16458FollowedBy16459 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16458 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16459 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16459PartOf17462 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16459 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :17462 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16459FollowedBy16460 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16459 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16460 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16460PartOf17462 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16460 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :17462 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16460FollowedBy16461 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16460 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16461 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16461PartOf17462 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16461 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :17462 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16461FollowedBy16462 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16461 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16462 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16462PartOf17462 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16462 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :17462 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:17469PartOf17468 rdf:type owl:ObjectProperty ;
+    rdfs:domain :17469 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :17468 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:17469FollowedBy17470 rdf:type owl:ObjectProperty ;
+    rdfs:domain :17469 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :17470 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:17470PartOf17468 rdf:type owl:ObjectProperty ;
+    rdfs:domain :17470 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :17468 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:17470FollowedBy14133 rdf:type owl:ObjectProperty ;
+    rdfs:domain :17470 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :14133 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:14133PartOf17468 rdf:type owl:ObjectProperty ;
+    rdfs:domain :14133 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :17468 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:14133FollowedBy14137 rdf:type owl:ObjectProperty ;
+    rdfs:domain :14133 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :14137 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:14137PartOf17468 rdf:type owl:ObjectProperty ;
+    rdfs:domain :14137 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :17468 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16464PartOf16463 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16464 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16463 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16464FollowedBy16465 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16464 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16465 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16465PartOf16463 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16465 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16463 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16465FollowedBy16466 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16465 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16466 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16466PartOf16463 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16466 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16463 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16466FollowedBy16467 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16466 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16467 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16467PartOf16463 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16467 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16463 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16467FollowedBy16468 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16467 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16468 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16468PartOf16463 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16468 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16463 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16468FollowedBy16469 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16468 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16469 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16469PartOf16463 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16469 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16463 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16469FollowedBy19595 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16469 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :19595 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:19595PartOf16463 rdf:type owl:ObjectProperty ;
+    rdfs:domain :19595 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16463 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:19595FollowedBy19596 rdf:type owl:ObjectProperty ;
+    rdfs:domain :19595 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :19596 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:19596PartOf16463 rdf:type owl:ObjectProperty ;
+    rdfs:domain :19596 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16463 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:19596FollowedBy16470 rdf:type owl:ObjectProperty ;
+    rdfs:domain :19596 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :16470 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16470PartOf16463 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16470 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16463 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16470FollowedBy19777 rdf:type owl:ObjectProperty ;
+    rdfs:domain :16470 ;
+    rdfs:label "Followed By"@en ;
+    rdfs:range :19777 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:19777PartOf16463 rdf:type owl:ObjectProperty ;
+    rdfs:domain :19777 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16463 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:18129PartOf16458 rdf:type owl:ObjectProperty ;
+    rdfs:domain :18129 ;
+    rdfs:label "Part Of"@en ;
+    rdfs:range :16458 ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
