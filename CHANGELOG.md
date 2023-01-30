@@ -49,6 +49,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 
 ## [^0.1.10] - 2022-01-13
+`@fld33_domain/software_development`
+ 
+### Added
+- Object property: `DeploymentPartOfTicket`
+### Changed
+
+### Fixed
+## [^0.1.10] - 2022-01-13
 `@fld33_domain/business_objects`
  
 ### Added
