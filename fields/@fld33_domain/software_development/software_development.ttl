@@ -221,6 +221,14 @@
               rdfs:label "Part of"@en .
 
 
+###  http://field33.com/ontologies/@fld33_domain/software_development/DeploymentPartOfTicket
+:DeploymentPartOfTicket rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/partOf> ;
+              rdfs:domain :Deployment ;
+              rdfs:range :Ticket ;
+              rdfs:label "Part of"@en .
+
+
 #################################################################
 #    Classes
 #################################################################
