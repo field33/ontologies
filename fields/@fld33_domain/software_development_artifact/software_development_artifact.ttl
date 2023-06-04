@@ -1,0 +1,120 @@
+@prefix : <http://field33.com/ontologies/@fld33_domain/software_development_artifact/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix registry: <http://field33.com/ontologies/REGISTRY/> .
+@base <http://field33.com/ontologies/@fld33_domain/software_development_artifact/> .
+
+<http://field33.com/ontologies/@fld33_domain/software_development_artifact/> rdf:type owl:Ontology ;
+                                                                     registry:author "Field 33 <contribution@field33.com>" ;
+                                                                     registry:canonicalPrefix "software_development_artifact" ;
+                                                                     registry:category "Software Development" ;
+                                                                     registry:dependency "@fld33_domain/software_development ^0.3.4" ;
+                                                                     registry:keyword "Field 33 Package" ,
+                                                                                      "Software Artifact" ,
+                                                                                      "Software Development" ;
+                                                                     registry:ontologyFormatVersion "v1" ;
+                                                                     registry:packageName "@fld33_domain/software_development_artifact" ;
+                                                                     registry:packageVersion "0.1.1" ;
+                                                                     registry:licenseSPDX "Apache-2.0" ;
+                                                                     registry:repository "https://github.com/field33/ontologies/tree/main/fields/%40fld33_domain/software_development_artifact" ;
+                                                                     registry:shortDescription "Artifacts in software development"@en ;
+                                                                     rdfs:comment """# Software development artifact ontology
+This package is an internal ontology describing concepts for software development artifacts.
+"""@en ;
+                                                                     rdfs:label "Software development artifact"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_artifact/SoftwareDevelopmentArtifact
+:SoftwareDevelopmentArtifact rdf:type owl:Class ;
+                             rdfs:label "Software development artifact"@en .
+
+
+<http://field33.com/ontologies/@fld33_domain/software_development/Scope> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf :SoftwareDevelopmentArtifact .
+
+
+<http://field33.com/ontologies/@fld33_domain/software_development/Roadmap> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf :SoftwareDevelopmentArtifact .
+
+
+<http://field33.com/ontologies/@fld33_domain/software_development/FunctionalRequirement> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf :SoftwareDevelopmentArtifact .
+
+
+<http://field33.com/ontologies/@fld33_domain/software_development/NonFunctionalRequirement> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf :SoftwareDevelopmentArtifact .
+
+
+<http://field33.com/ontologies/@fld33_domain/software_development/Test> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf :SoftwareDevelopmentArtifact .
+
+
+<http://field33.com/ontologies/@fld33_domain/software_development/Code> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf :SoftwareDevelopmentArtifact .
+
+
+<http://field33.com/ontologies/@fld33_domain/software_development/Repository> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf :SoftwareDevelopmentArtifact .
+
+
+<http://field33.com/ontologies/@fld33_domain/software_development/Commit> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf :SoftwareDevelopmentArtifact .
+
+
+<http://field33.com/ontologies/@fld33_domain/software_development/ApplicationArchitecture> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf :SoftwareDevelopmentArtifact .
+
+
+<http://field33.com/ontologies/@fld33_domain/software_development/DataArchitecture> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf :SoftwareDevelopmentArtifact .
+
+
+<http://field33.com/ontologies/@fld33_domain/software_development/InfrastructureArchitecture> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf :SoftwareDevelopmentArtifact .
+
+
+<http://field33.com/ontologies/@fld33_domain/software_development/APIDesign> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf :SoftwareDevelopmentArtifact .
+
+
+<http://field33.com/ontologies/@fld33_domain/software_development/Branch> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf :SoftwareDevelopmentArtifact .
+
+
+<http://field33.com/ontologies/@fld33_domain/software_development/PullRequest> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf :SoftwareDevelopmentArtifact .
+
+
+<http://field33.com/ontologies/@fld33_domain/software_development/Build> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf :SoftwareDevelopmentArtifact .
+
+
+<http://field33.com/ontologies/@fld33_domain/software_development/Documentation> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf :SoftwareDevelopmentArtifact .
+
+
+<http://field33.com/ontologies/@fld33_domain/software_development/Deployment> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf :SoftwareDevelopmentArtifact .
+
+
+<http://field33.com/ontologies/@fld33_domain/software_development/CodeChange> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf :SoftwareDevelopmentArtifact .
+
+
+<http://field33.com/ontologies/@fld33_domain/software_development/Failure> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf :SoftwareDevelopmentArtifact .
+
+
+<http://field33.com/ontologies/@fld33_domain/software_development/Incident> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf :SoftwareDevelopmentArtifact .
+
+
+<http://field33.com/ontologies/@fld33_domain/software_development/Ticket> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf :SoftwareDevelopmentArtifact .

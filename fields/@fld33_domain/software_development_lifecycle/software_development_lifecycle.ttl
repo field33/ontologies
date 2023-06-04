@@ -8,25 +8,27 @@
 @base <http://field33.com/ontologies/@fld33_domain/software_development_lifecycle/> .
 
 <http://field33.com/ontologies/@fld33_domain/software_development_lifecycle/> rdf:type owl:Ontology ;
-                                                                               owl:imports <http://field33.com/ontologies/@fld33/process/> ,
-                                                                                           <http://field33.com/ontologies/@fld33/relations/> ;
                                                                                registry:author "Field 33 <contribution@field33.com>" ;
                                                                                registry:canonicalPrefix "software_development_lifecycle" ;
                                                                                registry:category "Process" ,
                                                                                                  "Software Development" ;
                                                                                registry:dependency "@fld33/process ^0.1.2" ,
-                                                                                                   "@fld33/relations ^0.2.0" ;
+                                                                                                   "@fld33/relations ^0.2.2" ,
+                                                                                                   "@fld33_domain/software_development ^0.3.0" ;
                                                                                registry:keyword "Field 33 Package" ,
                                                                                                 "Process" ,
                                                                                                 "Software Development" ,
                                                                                                 "Software Development Lifecycle" ;
                                                                                registry:ontologyFormatVersion "v1" ;
                                                                                registry:packageName "@fld33_domain/software_development_lifecycle" ;
-                                                                               registry:packageVersion "0.1.6" ;
+                                                                               registry:packageVersion "0.2.3" ;
                                                                                registry:licenseSPDX "Apache-2.0" ;
                                                                                registry:repository "https://github.com/field33/ontologies/tree/main/fields/%40fld33_domain/software_development_lifecycle" ;
                                                                                registry:shortDescription "Software development lifecylce ontology"@en ;
-                                                                               rdfs:comment "# Software Development Lifecycle Ontology<br>This package is an internal ontology describing concepts for software development lifecylce."@en ;
+                                                                               rdfs:comment """### Note:
+This package won't be maintained further, please check `software_development_process` and `agile_software_development_process`
+
+# Software Development Lifecycle Ontology<br>This package is an internal ontology describing concepts for software development lifecylce."""@en ;
                                                                                rdfs:label "Software Development Lifecycle"@en .
 
 #################################################################
@@ -36,6 +38,14 @@
 ###  http://field33.com/ontologies/@fld33_domain/software_development_lifecycle/ContainingOf
 :ContainingOf rdf:type owl:ObjectProperty ;
               rdfs:label "Containing of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_lifecycle/SoftwareDevelopmentPartOf
+:SoftwareDevelopmentPartOfDevelopment rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/partOf> ;
+                           rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/SoftwareDevelopment> ;
+                           rdfs:range :Development ;
+                           rdfs:label "Part of"@en .
 
 
 ###  http://field33.com/ontologies/@fld33_domain/software_development_lifecycle/DevelopmentContainingOf

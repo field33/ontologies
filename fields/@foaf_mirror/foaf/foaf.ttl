@@ -24,7 +24,7 @@
                                                     registry:ontologyFormatVersion "v1" ;
                                                     registry:packageName "@foaf_mirror/foaf" ;
                                                     registry:packageVersion "0.99.1" ;
-                                                    registry:repository "https://github.com/field33/ontologies/tree/main/fields/%40foaf_mirror/foaf" ;
+                                                    registry:repository "https://github.com/field33/ontologies/tree/main/fields/@foaf_mirror/foaf" ;
                                                     registry:shortDescription "Document 14 January 2014 - Paddington Edition. FOAF collects a variety of terms; some describe people, some groups, some documents."@en ;
                                                     rdfs:comment """# FOAF Ontology Mirror
 This ontology was mirrored from http://xmlns.com/foaf/0.1/ and converted from .rdf to .ttl. In the GitHub repository for this Field (ontology) you'll find the original file.

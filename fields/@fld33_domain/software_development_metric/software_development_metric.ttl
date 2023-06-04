@@ -13,14 +13,15 @@
                                                                             registry:canonicalPrefix "software_development_metric" ;
                                                                             registry:category "Metric" ,
                                                                                               "Software Development" ;
-                                                                            registry:dependency "@fld33/methodology ^0.1.7" ;
+                                                                            registry:dependency "@fld33/methodology ^0.1.7" ,
+                                                                                                "@fld33_domain/software_development ^0.3.0" ;
                                                                             registry:keyword "Field 33 Package" ,
                                                                                              "Metric" ,
                                                                                              "Software Development" ,
                                                                                              "Software Development Metric" ;
                                                                             registry:ontologyFormatVersion "v1" ;
                                                                             registry:packageName "@fld33_domain/software_development_metric" ;
-                                                                            registry:packageVersion "0.1.8" ;
+                                                                            registry:packageVersion "0.2.0" ;
                                                                             registry:licenseSPDX "Apache-2.0" ;
                                                                             registry:repository "https://github.com/field33/ontologies/tree/main/fields/%40fld33_domain/software_development_metric" ;
                                                                             registry:shortDescription "Software development metric ontology"@en ;
@@ -36,6 +37,28 @@
                 rdfs:label "Metric Function"@en ;
                 rdfs:range xsd:string ;
                 rdfs:domain <http://field33.com/ontologies/@fld33/methodology/Metric> .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+
+### http://field33.com/ontologies/@fld33_domain/software_development_metric/CountOf
+:CountOf rdf:type owl:ObjectProperty ;
+         rdfs:label "Count of"@en .
+
+
+### http://field33.com/ontologies/@fld33_domain/software_development_metric/BugFeatureRatioCountOf
+:BugFeatureRatioCountOf rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :CountOf ;
+                        rdfs:domain :BugFeatureRatio ;
+                        rdfs:range [ rdf:type owl:Class ;
+                                     owl:unionOf ( <http://field33.com/ontologies/@fld33_domain/software_development/BugTicket>
+                                                   <http://field33.com/ontologies/@fld33_domain/software_development/FeatureTicket>
+                                                 )
+                                   ] ;
+                        rdfs:label "Count of"@en .
 
 
 #################################################################
