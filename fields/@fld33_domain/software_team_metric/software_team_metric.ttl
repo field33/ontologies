@@ -16,7 +16,8 @@
                                                                                        "Organization" ,
                                                                                        "Software Development" ;
                                                                      registry:dependency "@fld33/methodology ^0.1.7" ,
-                                                                                         "@fld33/relations ^0.2.0" ;
+                                                                                         "@fld33/relations ^0.2.2" ,
+                                                                                         "@fld33_domain/software_development ^0.3.0" ;
                                                                      registry:keyword "Field 33 Package" ,
                                                                                       "Metric" ,
                                                                                       "Organization" ,
@@ -24,7 +25,7 @@
                                                                                       "Software Team Metric" ;
                                                                      registry:ontologyFormatVersion "v1" ;
                                                                      registry:packageName "@fld33_domain/software_team_metric" ;
-                                                                     registry:packageVersion "0.1.7" ;
+                                                                     registry:packageVersion "0.2.0" ;
                                                                      registry:licenseSPDX "Apache-2.0" ;
                                                                      registry:repository "https://github.com/field33/ontologies/tree/main/%40fld33_domain/software_team_metric" ;
                                                                      registry:shortDescription "Software team metric ontology"@en ;
