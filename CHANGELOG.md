@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [*] - 2023-06-05
+Changes applied to all fields, restructuring the folder structure to extend public ontology workspace further.
+ 
+### Added
+
+### Changed
+
+### Fixed
+
 ## [*] - 2022-01-13
 `@w3c_mirror/prov-o/prov-o`
 `@contrib/generic_innovation_interoperability/generic_innovation_interoperability`
@@ -48,6 +57,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Updated repository linkings and bumped all versions
 ### Fixed
 
+## [^0.1.10] - 2022-01-13
+`@fld33_domain/software_development`
+ 
+### Added
+- Object property: `DeploymentPartOfTicket`
+### Changed
+
+### Fixed
 ## [^0.1.10] - 2022-01-13
 `@fld33_domain/business_objects`
  

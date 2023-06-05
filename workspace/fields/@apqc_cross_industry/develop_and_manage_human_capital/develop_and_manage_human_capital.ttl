@@ -1,0 +1,2181 @@
+@base <http://field33.com/ontologies/@apqc_cross_industry/develop_and_manage_human_capital/> .
+@prefix : <http://field33.com/ontologies/@apqc_cross_industry/develop_and_manage_human_capital/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix registry: <http://field33.com/ontologies/REGISTRY/> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://field33.com/ontologies/@apqc_cross_industry/develop_and_manage_human_capital/> rdf:type owl:Ontology ;
+  registry:author "Field 33 <contribution@field33.com>" ;
+  registry:canonicalPrefix "develop_and_manage_human_capital" ;
+  registry:dependency "@fld33/relations ^0.2.0", "@apqc/apqc ^0.1.6",
+    "@fld33_domain/business_objects ^0.1.9" ;
+  registry:license "2022 APQC. ALL RIGHTS RESERVED. This Process Classification Framework (PCF) is the copyrighted intellectual property of APQC."@en ;
+  registry:ontologyFormatVersion "v1" ;
+  registry:packageName "@apqc_cross_industry/develop_and_manage_human_capital" ;
+  registry:packageVersion "0.1.11" ;
+  registry:category "Process" ;
+  registry:keyword "APQC" ,
+                   "Cross Industry" ,
+                   "Process" ;
+  registry:repository "https://github.com/field33/ontologies/tree/main/workspace/fields/%40apqc_cross_industry/develop_and_manage_human_capital" ;
+  registry:shortDescription "APQC cross industry category: Develop and Manage Human Capital Ontology"@en ;
+  rdfs:comment "# Develop and Manage Human Capital<br>This package is a domain ontology describing the category \"Develop and Manage Human Capital\" as part of APQC for cross industry."@en ;
+  rdfs:label "Develop and Manage Human Capital"@en ;
+  owl:imports <http://field33.com/ontologies/@fld33/relations/>, <http://field33.com/ontologies/@apqc/apqc/>,
+    <http://field33.com/ontologies/@fld33_domain/business_objects/> .
+
+:10007 rdf:type owl:Class ;
+  rdfs:comment "Delivering processes traditionally defined as \"human resources\". Process groups include those related to developing and maintaining workforce strategy, recruiting employees, developing and counseling employees, managing employee relations, rewarding and retaining employees, redeploying and retiring employees, managing employee information, and managing employee communications."@en ;
+  rdfs:label "Develop and Manage Human Capital"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCCategory> .
+
+:10210 rdf:type owl:Class ;
+  rdfs:comment "Creating a scheme of awards and recognition for sales employees to promote a results-based culture. Create specific incentives to reach desired outcomes, such as landing key clients, growing the customer base, providing exceptional servicing, and increasing profit margins."@en ;
+  rdfs:label "Establish incentive strategy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:10210PartOf10425 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10210 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10425 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10410 rdf:type owl:Class ;
+  rdfs:comment "Determining and handling employee requirements. Recruit or source the candidates as per the requirements. Screen and select the most appropriate candidates. Take care of the newly hired and re-hired employees. Maintain records of information for all applicants. "@en ;
+  rdfs:label "Recruit, source, and select employees"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+
+:10410PartOf10007 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10410 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10007 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:10412 rdf:type owl:Class ;
+  rdfs:comment "Creating frameworks for rewarding and recognizing employees with the objective of retaining them. Create and manage programs for provision of rewards, recognition, and motivation. Manage and administer the benefits for employees. Help assist and retain employees. Administer payroll to employees."@en ;
+  rdfs:label "Reward and retain employees"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+
+:10412PartOf10007 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10412 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10007 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:10413 rdf:type owl:Class ;
+  rdfs:comment "Managing the reassignment and retirement of employees. Manage the process of employee promotion and demotion. Administer separation, retirement, and leaves of absence. Outplace employees. Deploy personnel. Relocate employees in order to manage assignments."@en ;
+  rdfs:label "Redeploy and retire employees"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+
+:10413PartOf10007 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10413 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10007 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:10417 rdf:type owl:Class ;
+  rdfs:comment "Supervising the HR strategy, plans, and policies in order to refurbish them whenever needed. Determine the performance of HR plans and policies by measuring the objective achievement rate and its contribution to the overall business strategy. Ensure that information about these plans and strategies is effectively communicated to various stakeholders. Incorporate any suggestions by these stakeholders when revising HR plans and policies."@en ;
+  rdfs:label "Monitor and update strategy, plans, and policies"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10417PartOf17043 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10417 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17043 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10418 rdf:type owl:Class ;
+  rdfs:comment "Strategically defining the current and future needs for developing an efficient HR strategy. "@en ;
+  rdfs:label "Identify strategic HR needs"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10418FollowedBy10419 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10418 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10419 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10418PartOf20958 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10418 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20958 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10419 rdf:type owl:Class ;
+  rdfs:comment "Outlining the charge and duty of the HR function by defining its responsibility areas, as well as ensuring its accountability. Establish the HR function by laying out the roles and responsibilities for this function and the rules and regulations guiding HR. Define the goals and objectives of the HR, as well as a mission and vision for this function. Create a mechanism involving a set of policies, code of conduct, and institutional procedure to ensure HR accountability."@en ;
+  rdfs:label "Define HR and business function roles and accountability"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10419FollowedBy21430 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10419 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :21430 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10419PartOf20958 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10419 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20958 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10420 rdf:type owl:Class ;
+  rdfs:comment "Ascertaining the costs and expenses of the HR function. Identify and report HR investments using, for example, a cost approach or a present value of future earnings approach."@en ;
+  rdfs:label "Determine HR costs"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10420FollowedBy10421 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10420 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10421 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10420PartOf20958 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10420 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20958 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10421 rdf:type owl:Class ;
+  rdfs:comment "Evaluating the performance of HR function. Lay out the course of HR procedures that would formulate a plan of action needed to fulfill strategic HR needs. Deploy measures such as hiring policies, leave management, internal code of conducts, and compensation structure."@en ;
+  rdfs:label "Establish HR measures"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10421FollowedBy10422 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10421 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10422 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10421PartOf20958 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10421 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20958 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10422 rdf:type owl:Class ;
+  rdfs:comment "Conveying the strategies of HR function to employees and management. Effectively explain the vision, plans, and anticipated benefits of the HR strategy employees, as well as the public. Develop statements and messages that are easy to read, informative, and relevant to the audience."@en ;
+  rdfs:label "Communicate HR strategies"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10422FollowedBy10432 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10422 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10432 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10422PartOf20958 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10422 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20958 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10423 rdf:type owl:Class ;
+  rdfs:comment "Evaluating the current and future skill requirements of the organization with regard to the overall corporate strategy of the organization and market conditions. Identify and establish the minimum skills needed for the requisite HR needs."@en ;
+  rdfs:label "Perform workforce planning"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10423FollowedBy10424 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10423 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10424 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10423PartOf17045 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10423 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17045 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10424 rdf:type owl:Class ;
+  rdfs:comment "Determining the requirements for employees and the need for employee resourcing for each every unit/function. Lay out a plan detailing employee resourcing requirements of individual functions and the organization as a whole."@en ;
+  rdfs:label "Perform operational workforce planning"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10424FollowedBy10425 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10424 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10425 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10424PartOf17045 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10424 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17045 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10425 rdf:type owl:Class ;
+  rdfs:comment "Designing a plan that specifies the combination of wages, salaries, and benefits the employees receive in exchange for work. Define the total amount of compensation, in addition to the manner in which the compensation is paid and the purposes for which employees can receive bonuses, salary increases, and incentives."@en ;
+  rdfs:label "Develop compensation strategy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10425FollowedBy10426 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10425 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10426 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10425PartOf17045 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10425 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17045 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10426 rdf:type owl:Class ;
+  rdfs:comment "Creating and implementing the plan for continuation of key positions within the organization. Identify internal people with the potential to fill key business leadership positions. Provide critical development experiences to employees who can move into important roles. Engage leaders to support the development of high-potential leaders."@en ;
+  rdfs:label "Develop succession plan"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10426FollowedBy16938 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10426 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :16938 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10426PartOf17045 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10426 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17045 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10427 rdf:type owl:Class ;
+  rdfs:comment "Creating and implementing the plan for ensuring a diverse work force. Develop and hire employees with varying characteristics including, but not limited to, religious and political beliefs, gender, ethnicity, education, socioeconomic background, sexual orientation, and geographic location."@en ;
+  rdfs:label "Develop diversity, equity, and inclusion plan"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10427FollowedBy21433 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10427 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :21433 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10427PartOf17045 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10427 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17045 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10428 rdf:type owl:Class ;
+  rdfs:comment "Creating HR programs and services such as employee engagements programs to promote positive employee behavior. Create a variety of programs and services to support employees' professional and personal needs at work and at home."@en ;
+  rdfs:label "Develop other HR programs"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10428FollowedBy10429 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10428 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10429 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10428PartOf17045 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10428 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17045 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10429 rdf:type owl:Class ;
+  rdfs:comment "Creating rules and regulations that govern the HR function. Develop a policy plan that serves as a guideline for setting rules and regulations that help in achieving the HR goals and objectives."@en ;
+  rdfs:label "Develop HR policies"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10429FollowedBy10430 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10429 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10430 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10429PartOf17045 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10429 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17045 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10430 rdf:type owl:Class ;
+  rdfs:comment "Ensuring rules and regulations are followed and are flexible enough to accommodate indispensable deviations."@en ;
+  rdfs:label "Administer HR policies"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10430FollowedBy10431 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10430 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10431 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10430PartOf17045 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10430 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17045 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10431 rdf:type owl:Class ;
+  rdfs:comment "Planning benefits in kind (also called fringe benefits, perquisites, or perks). Include various types of non-wage compensations provided to employees in addition to normal wages or salaries."@en ;
+  rdfs:label "Plan employee benefits"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10431FollowedBy10433 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10431 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10433 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10431PartOf17045 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10431 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17045 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10432 rdf:type owl:Class ;
+  rdfs:comment "Creating a strategy for the use of systems/technologies/tools in operating the HR function. Create a strategy concerning the use and utility of HR support tools and technologies. Decide what specific tools to use and in what quantity. Determine the levels of technology required for the HR management."@en ;
+  rdfs:label "Develop strategy for HR systems/technologies/tools"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10432FollowedBy20606 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10432 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :20606 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10432PartOf20958 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10432 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20958 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10433 rdf:type owl:Class ;
+  rdfs:comment "Creating and implementing models for effectively strategizing the work force of the organization. Develop a model that specifies the organization's overall approach for maximizing the performance of its work force by defining the goals, objectives, and expectations of the work force. Manage all aspects of performance required for the work force to function, including recruitment, selection, retention, and professional development."@en ;
+  rdfs:label "Develop workforce strategy models"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10433FollowedBy20122 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10433 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :20122 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10433PartOf17045 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10433 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17045 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10434 rdf:type owl:Class ;
+  rdfs:comment "Determining the accomplishment of HR goals and objectives. Evaluate the effectiveness of the HR function by estimating the present rate of achievement of the established objectives. Use metrics to determine if the objectives are being realized. Leverage measures such as turnover, training, return on human capital, costs of labor, and expenses per employee."@en ;
+  rdfs:label "Measure realization of objectives"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10434FollowedBy10435 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10434 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10435 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10434PartOf10417 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10434 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10417 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10435 rdf:type owl:Class ;
+  rdfs:comment "Determining the role of HR function in implementing the organizational strategy. Measure the correlation between the HR performance and the overall business strategy. Calculate the amount of contribution of the HR function to the overall business growth."@en ;
+  rdfs:label "Measure contribution to business strategy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10435FollowedBy10436 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10435 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10436 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10435PartOf10417 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10435 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10417 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10436 rdf:type owl:Class ;
+  rdfs:comment "Conveying the plans for HR function to stakeholders. Ensure that the HR plans and strategy are effectively communicated to the people who can affect or be affected by the organization's actions, objectives, and policies such as the creditors, shareholders, employees, and suppliers. Provide regular updates to these stakeholders to ensure effective communication."@en ;
+  rdfs:label "Communicate plans and provide updates to stakeholders"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10436FollowedBy10438 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10436 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10438 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10436PartOf10417 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10436 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10417 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10438 rdf:type owl:Class ;
+  rdfs:comment "Reassessing the strategies, plans, and policies of the HR function, with the objective of revising them. Revisit the schematic plans for the HR function. Taking stock of any suggestions or feedback from the stakeholders, revamp the blueprint of HR strategies and plans."@en ;
+  rdfs:label "Review and revise HR plans"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10438PartOf10417 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10438 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10417 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10439 rdf:type owl:Class ;
+  rdfs:comment "Handling the requirements for new employees. Create and open job requisitions by clearly defining the job descriptions. Post these requirements internally and externally, and modify them as appropriate. Manage the dates of the whole requisition process."@en ;
+  rdfs:label "Manage employee requisitions"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10439PartOf10410 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10439 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10410 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10440 rdf:type owl:Class ;
+  rdfs:comment "Recruiting new candidates for deployment across various functional areas inside the organization. Select methods for sourcing new employees. Manage relationships with third-party agencies. Stage recruitment fairs and drives. Manage employee referral programs."@en ;
+  rdfs:label "Recruit/Source candidates"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10440PartOf10410 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10440 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10410 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10443 rdf:type owl:Class ;
+  rdfs:comment "Creating and making job offers to the selected candidates. Fairly negotiate the job offers. Agree on terms with the candidate to complete the hiring process."@en ;
+  rdfs:label "Manage new hire/re-hire"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10443PartOf10410 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10443 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10410 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10444 rdf:type owl:Class ;
+  rdfs:comment "Creating and maintaining a system for managing the information of applicants. Create records for all candidates who apply. Maintain and track information through the use applicant-tracking systems."@en ;
+  rdfs:label "Manage applicant information"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10444PartOf10410 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10444 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10410 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10445 rdf:type owl:Class ;
+  rdfs:comment "Creating a correspondence between the plan for hiring new employees and the desired employee requirements. Staff an adequate amount of people with the appropriate skills to effectively accomplish its legislative, regulatory, service, and production requirements."@en ;
+  rdfs:label "Align staffing plan to work force plan and business unit strategies/resource needs"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10445FollowedBy10447 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10445 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10447 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10445PartOf10439 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10445 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10439 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10446 rdf:type owl:Class ;
+  rdfs:comment "Developing specific job requisitions, and ensuring their accessibility. Create and open a job requisition to fill the vacant positions within the organization. Clearly describe the job title, department, fill date, and the requisite skills and qualifications for the job."@en ;
+  rdfs:label "Open job requisitions"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10446FollowedBy10448 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10446 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10448 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10446PartOf10439 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10446 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10439 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10447 rdf:type owl:Class ;
+  rdfs:comment "Creating descriptions for job requisitions. Define the normal components of a job description, such as the overall position description with general areas of responsibility listed, essential functions of the job described with a couple of examples of each, required knowledge, skills, abilities, required education and experience, a description of the physical demands, and a description of the work environment."@en ;
+  rdfs:label "Develop and maintain job descriptions"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10447FollowedBy10446 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10447 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10446 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10447PartOf10439 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10447 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10439 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10448 rdf:type owl:Class ;
+  rdfs:comment "Posting and advertising job descriptions. Display open job descriptions internally and externally. Use public portals, online portals, and websites to upload these requisitions in order for applications to be received."@en ;
+  rdfs:label "Post job requisitions"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10448FollowedBy10450 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10448 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10450 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10448PartOf10439 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10448 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10439 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10450 rdf:type owl:Class ;
+  rdfs:comment "Making the necessary alterations to job requisitions. Revamp or revise the job requisitions in case a position is filled or is not vacant anymore, as well as in case of any new openings. (It involves Manage the internal/external job posting websites [10449] to make the necessary changes.)"@en ;
+  rdfs:label "Modify job requisitions"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10450FollowedBy10451 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10450 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10451 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10450PartOf10439 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10450 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10439 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10451 rdf:type owl:Class ;
+  rdfs:comment "Informing and communicating with the hiring manager. Notify the manager responsible for the hiring process in cases of any new position openings or changes."@en ;
+  rdfs:label "Notify hiring manager"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10451FollowedBy10452 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10451 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10452 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10451PartOf10439 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10451 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10439 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10452 rdf:type owl:Class ;
+  rdfs:comment "Determining and managing the dates for the employee requisition process. "@en ;
+  rdfs:label "Manage requisition dates"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10452PartOf10439 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10452 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10439 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10453 rdf:type owl:Class ;
+  rdfs:comment "Defining the methods and channels for recruitments in order to maximize the amount of candidate availability. Use channels such as headhunting, job postings, job portals, networking websites, and media advertising. Choose from the various methods of recruitment such as internal/external third-party sourcing."@en ;
+  rdfs:label "Determine recruitment methods and channels"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10453FollowedBy10454 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10453 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10454 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10453PartOf10440 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10453 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10440 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10454 rdf:type owl:Class ;
+  rdfs:comment "Organizing and executing recruiting activities and events. Activities and events include on-campus hiring, refresher courses, information sessions, career fairs, etc. to increase the coverage of the sourcing in order to ensure that the most deserving and appropriate candidates are hired."@en ;
+  rdfs:label "Perform recruiting activities/events"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10454FollowedBy10455 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10454 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10455 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10454PartOf10440 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10454 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10440 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10455 rdf:type owl:Class ;
+  rdfs:comment "Establishing and maintaining relationships with recruitment vendors (suppliers). Create and maintain relationships with third-party agencies such as staffing and firms to expand. Use these relationships to implement the sourcing process effectively."@en ;
+  rdfs:label "Manage recruitment vendors"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10455FollowedBy17047 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10455 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :17047 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10455PartOf10440 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10455 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10440 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10456 rdf:type owl:Class ;
+  rdfs:comment "Identifying and implementing tools for the selection of candidates. Recognize candidate selection tools such as screening, telephone interviews, hiring manager interviews, drug testing, and skills assessment. Effectively deploy these tools to check if the candidates fit in the workplace or not, as well as to ensure workplace safety."@en ;
+  rdfs:label "Identify and deploy candidate selection tools"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10456FollowedBy10457 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10456 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10457 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10456PartOf20123 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10456 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20123 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10457 rdf:type owl:Class ;
+  rdfs:comment "Assessing the candidates by their performance in the interviews. Conduct HR interview, technical interview, hiring manager interview, etc. Understand the mindset of the candidate, and comprehend his/her personal and professional lives."@en ;
+  rdfs:label "Interview candidates"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10457FollowedBy10458 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10457 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10458 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10457PartOf20123 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10457 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20123 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10458 rdf:type owl:Class ;
+  rdfs:comment "Examining the candidates through tests. Prepare tools such as aptitude, technical, and grammar tests. Test the skills of the candidate through a written, oral, or computerized test."@en ;
+  rdfs:label "Test candidates"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10458FollowedBy10459 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10458 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10459 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10458PartOf20123 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10458 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20123 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10459 rdf:type owl:Class ;
+  rdfs:comment "Approving the deserving candidates, and rejecting the others. Examining the performance of candidates. Ensure candidates would fit well with the organization. (Assess performance from Interview candidates [10457] and Test candidates [10458].)"@en ;
+  rdfs:label "Select and reject candidates"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10459PartOf20123 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10459 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20123 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10460 rdf:type owl:Class ;
+  rdfs:comment "Conducting a background investigation on the candidates with the objective of looking up and compiling criminal, commercial, and financial records."@en ;
+  rdfs:label "Obtain candidate background information"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10460FollowedBy10466 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10460 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10466 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10460PartOf10444 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10460 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10444 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10463 rdf:type owl:Class ;
+  rdfs:comment "Compiling job-related information for the selected candidates in order to make up a job. Include information about the job description, reporting relationship, salary, bonus potential, benefits, and vacation allotment."@en ;
+  rdfs:label "Draw up and make offer"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10463FollowedBy10464 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10463 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10464 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10463PartOf10443 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10463 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10443 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10464 rdf:type owl:Class ;
+  rdfs:comment "Negotiating an offer with selected candidates. Discuss the job offer with the candidate to ensure a mutual understanding. "@en ;
+  rdfs:label "Negotiate offer"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10464FollowedBy10465 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10464 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10465 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10464PartOf10443 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10464 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10443 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10465 rdf:type owl:Class ;
+  rdfs:comment "Wrapping up the process for hiring candidates. Agree to all hiring terms and conditions. Have the candidate accept and sign the job offer. "@en ;
+  rdfs:label "Hire candidate"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10465PartOf10443 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10465 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10443 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10466 rdf:type owl:Class ;
+  rdfs:comment "Creating and documenting the records of all applicants. Manage all individual applicants, including hires and non-hires. Maintain records to avoid any duplication and promote efficiency."@en ;
+  rdfs:label "Create applicant record"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10466FollowedBy10467 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10466 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10467 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10466PartOf10444 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10466 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10444 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10467 rdf:type owl:Class ;
+  rdfs:comment "Keeping track of all the information about the candidates who apply for jobs. Use applicant-tracking systems that can be accessed online as a central location and database for recruitment efforts. "@en ;
+  rdfs:label "Manage/track applicant data"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10467FollowedBy10468 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10467 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10468 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10467PartOf10444 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10467 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10444 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10468 rdf:type owl:Class ;
+  rdfs:comment "Retaining and storing the records of the candidates who were rejected and not hired to ensure future availability in case the need arises. Create a centralized repository of profiles. Label these records in order to readily identify them. Add remarks for any future consideration."@en ;
+  rdfs:label "Archive and retain records of non-hires"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10468PartOf10444 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10468 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10444 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10469 rdf:type owl:Class ;
+  rdfs:comment "Creating and maintaining various employee on-boarding programs typically known as induction programs in order to ensure that the new employees are effectively introduced to the organization and its existing employees. Examine and evaluate the performance of these induction programs. Execute these programs on the ground level."@en ;
+  rdfs:label "Manage employee orientation and deployment"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10469PartOf20599 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10469 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20599 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10470 rdf:type owl:Class ;
+  rdfs:comment "Defining individual performance objectives. Review performance in order to provide appraisals. Evaluate the efficiency and effectiveness of the current performance program. Update it regularly."@en ;
+  rdfs:label "Manage employee performance"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10470PartOf20599 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10470 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20599 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10472 rdf:type owl:Class ;
+  rdfs:comment "Establishing employee development guidelines. Lay out career paths and plans for them. Manage the development of their skills to enhance their skills, ability, and knowledge."@en ;
+  rdfs:label "Manage employee career development"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10472PartOf20599 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10472 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20599 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10473 rdf:type owl:Class ;
+  rdfs:comment "Creating a link between employee and organizational development needs. Conduct and manage employee training programs by considering the need and availability of these programs. "@en ;
+  rdfs:label "Develop and train employees"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10473PartOf20599 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10473 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20599 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10474 rdf:type owl:Class ;
+  rdfs:comment "Creating and maintaining a mechanism through which new employees acquire the necessary knowledge, skills, and behaviors to become effective organizational members and insiders. Conduct formal meetings, lectures, videos, printed materials, and/or computer-based orientations to introduce newcomers to their new jobs and the organization."@en ;
+  rdfs:label "Create/maintain employee onboarding program"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10474FollowedBy11243 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10474 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11243 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10474PartOf10469 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10474 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10469 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10477 rdf:type owl:Class ;
+  rdfs:comment "Designing a program to systematically introduce newly hired employees to the organizational culture of the company."@en ;
+  rdfs:label "Develop employee induction program"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:10477FollowedBy10478 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10477 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10478 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:10477PartOf10474 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10477 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10474 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10478 rdf:type owl:Class ;
+  rdfs:comment "Managing the orientation and training of new employees about the organizational culture of the company."@en ;
+  rdfs:label "Maintain/Update employee induction program"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:10478PartOf10474 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10478 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10474 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10479 rdf:type owl:Class ;
+  rdfs:comment "Outlining the objectives for employee performance. Establish key performance objectives and measures such as customer-focus objectives, financially focused objectives, and employee growth objectives."@en ;
+  rdfs:label "Define employee performance objectives"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10479FollowedBy21434 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10479 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :21434 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10479PartOf10470 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10479 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10470 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10481 rdf:type owl:Class ;
+  rdfs:comment "Assessing and revamping performance programs, including the instruments used to measure employee performance standards. Review and upgrade these performance programs to avoid any deprivations and ensure effectiveness."@en ;
+  rdfs:label "Evaluate and review performance program"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10481PartOf10470 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10481 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10470 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10483 rdf:type owl:Class ;
+  rdfs:comment "Managing labor relations, the collective bargaining process, and the relationships between the labor and management. Take care of employee grievances."@en ;
+  rdfs:label "Manage labor relations"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10483PartOf17052 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10483 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17052 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10484 rdf:type owl:Class ;
+  rdfs:comment "Managing any negotiations between an employer and a group of employees that determine the conditions of employment. Engage employees to reach agreements in regulating working conditions. "@en ;
+  rdfs:label "Manage collective bargaining process"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10484PartOf17052 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10484 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17052 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10485 rdf:type owl:Class ;
+  rdfs:comment "Handling partnerships between labor and management. Develop a lasting two-way relationship that is beneficial for the labor, management, and the organization."@en ;
+  rdfs:label "Manage labor management partnerships"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10485PartOf17052 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10485 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17052 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10487 rdf:type owl:Class ;
+  rdfs:comment "Outlining the guidelines for development of employees. Design development policies and procedures to identify areas of growth for employees, either in their current position or in preparation for future roles. Include topics related to knowledge and skill development."@en ;
+  rdfs:label "Define employee development guidelines"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10487FollowedBy10488 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10487 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10488 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10487PartOf10472 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10487 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10472 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10488 rdf:type owl:Class ;
+  rdfs:comment "Designing a future career path for the employees that encourages them to explore and gather information. "@en ;
+  rdfs:label "Develop employee career plans and career paths"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10488FollowedBy17051 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10488 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :17051 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10488PartOf10472 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10488 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10472 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10490 rdf:type owl:Class ;
+  rdfs:comment "Aligning the needs of the employees to development needs."@en ;
+  rdfs:label "Align employee with organization development needs"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10490FollowedBy16940 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10490 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :16940 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10490PartOf10473 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10490 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10473 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10491 rdf:type owl:Class ;
+  rdfs:comment "Aligning the learning programs with the core capabilities and competencies of the organization. Contextualize the training programs so that employees can expand their knowledge base and add new skills in line with the core competencies of the organization."@en ;
+  rdfs:label "Align learning programs with competencies and skills"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10491FollowedBy10492 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10491 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10492 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10491PartOf10473 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10491 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10473 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10492 rdf:type owl:Class ;
+  rdfs:comment "Determining the training necessitated by business processes, using an examination of skill sets that are needed by the organization and those already possessed. Examine the various skills required by individual employees. Design training in light of the availability of resources to provide specific segments of training."@en ;
+  rdfs:label "Establish training needs by analysis of required and available skills"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10492FollowedBy10493 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10492 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10493 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10492PartOf10473 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10492 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10473 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10493 rdf:type owl:Class ;
+  rdfs:comment "Creating, implementing, and managing the programs for training employees. Create and design sessions on the basis of the needs and the availability of the skills. Conduct the sessions on the ground. Manage all aspects related to the training programs. Consider including literacy training, interpersonal skills training, technical training, problem-solving training, diversity or sensitivity training, etc."@en ;
+  rdfs:label "Develop, conduct, and manage employee and/or management training programs"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10493FollowedBy20125 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10493 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :20125 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10493PartOf10473 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10493 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10473 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10495 rdf:type owl:Class ;
+  rdfs:comment "Managing and ensuring benefits enrollment by the employees. Process any benefit claims made by the employees. Balance the estimated amount and entitled amount of benefits."@en ;
+  rdfs:label "Manage and administer benefits"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10495PartOf10412 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10495 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10412 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10497 rdf:type owl:Class ;
+  rdfs:comment "Managing the sum of all financial records of salaries for an employee, including wages, bonuses, and deductions. Use a payroll management system to deal with the financial aspects of employees' salaries, allowances, deductions, gross pay, net pay, etc. Generate pay slips for a specific period."@en ;
+  rdfs:label "Administer payroll"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10497PartOf10412 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10497 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10412 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10498 rdf:type owl:Class ;
+  rdfs:comment "Creating the framework for the provision of salary/compensation to employees. Break down the salary structure into different components such as fixed pay, variable pay, bonus, and allowances such medical allowance, and rent allowance, etc. Develop, adjust, and maintain a pay structure."@en ;
+  rdfs:label "Develop salary/compensation structure and plan"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10498FollowedBy10499 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10498 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10499 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10498PartOf21438 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10498 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :21438 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10499 rdf:type owl:Class ;
+  rdfs:comment "Developing a plan for provision of rewards, commission, and benefits to employees. Plan health benefits, retirement benefits, non-monetary benefits, etc."@en ;
+  rdfs:label "Develop benefits and rewards plan"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10499FollowedBy10500 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10499 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10500 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10499PartOf21438 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10499 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :21438 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10500 rdf:type owl:Class ;
+  rdfs:comment "Analyzing and evaluating the organization's benefits and rewards plan. Compare/Benchmark the benefits and employees plan with other organizations to adhere to industry standard practices."@en ;
+  rdfs:label "Perform competitive analysis of benefits and rewards"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10500FollowedBy10501 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10500 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10501 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10500PartOf21438 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10500 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :21438 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10501 rdf:type owl:Class ;
+  rdfs:comment "Recognizing the employee requirements for compensation on the basis of the financial, benefits, and HR policies of the organization. Recognize individual compensation requirements regarding the financial policies of the organization. Consider the benefits plan and overall HR policies while selecting compensation requirements."@en ;
+  rdfs:label "Identify compensation requirements based on financial, benefits, and HR policies"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10501FollowedBy10502 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10501 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10502 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10501PartOf21438 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10501 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :21438 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10502 rdf:type owl:Class ;
+  rdfs:comment "Managing the provision of compensations and rewards to the employees while maintaining consistency with the compensation and benefits plan. Follow the compensation and benefits plan rigorously in order to avoid any discrepancies."@en ;
+  rdfs:label "Administer compensation and rewards to employees"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10502FollowedBy10503 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10502 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10503 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10502PartOf21438 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10502 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :21438 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10503 rdf:type owl:Class ;
+  rdfs:comment "Rewarding and stimulating the performance efforts of employees. Create methods for motivating employees. Spur extrinsic and intrinsic motivation."@en ;
+  rdfs:label "Reward and motivate employees"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10503FollowedBy10510 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10503 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10510 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10503PartOf21438 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10503 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :21438 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10504 rdf:type owl:Class ;
+  rdfs:comment "Implementing the programs that specify employee benefits, other than salary provided, such as those concerning medical care, death, and disability."@en ;
+  rdfs:label "Deliver employee benefits program"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10504FollowedBy10505 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10504 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10505 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10504PartOf10495 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10504 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10495 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10505 rdf:type owl:Class ;
+  rdfs:comment "Handling the employee enrollment for obtaining benefits. Manage employee enrollment and eligibility. Encourage employees to enroll for benefits."@en ;
+  rdfs:label "Administer benefit enrollment"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10505FollowedBy10506 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10505 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10506 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10505PartOf10495 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10505 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10495 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10506 rdf:type owl:Class ;
+  rdfs:comment "Processing any formal requests or demands made by the employees claiming that they have earned some benefits. Send the request further up the managerial hierarchy to ensure approval."@en ;
+  rdfs:label "Process claims"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10506FollowedBy10507 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10506 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10507 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10506PartOf10495 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10506 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10495 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10507 rdf:type owl:Class ;
+  rdfs:comment "Carrying out reconciliation of benefits delivered to employees. Compare the estimated benefit requirement made by the employee and the actual amount of benefits the employee is entitled to receive."@en ;
+  rdfs:label "Perform benefit reconciliation"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10507PartOf10495 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10507 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10495 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10508 rdf:type owl:Class ;
+  rdfs:comment "Designing programs that prompt proper balance between work (i.e., career and ambition) and lifestyle (i.e., health, pleasure, leisure, family, and spiritual development/meditation). Account for dependent care, flexible working arrangements, leaves of absence, on-the-job training, etc."@en ;
+  rdfs:label "Deliver programs to support work/life balance for employees"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10508FollowedBy10509 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10508 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10509 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10508PartOf21439 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10508 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :21439 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10509 rdf:type owl:Class ;
+  rdfs:comment "Creating a support structure that aligns with local and federal laws that allow for support for families. This could include things like maternity leave, care for a family member, or in some cases, extended sick leave."@en ;
+  rdfs:label "Develop family support systems"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10509PartOf21439 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10509 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :21439 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10510 rdf:type owl:Class ;
+  rdfs:comment "Reassessing the indicators for retention and motivation of employees. Monitor the indicators that signal the levels of motivation and retention. Regularly update and upgrade indicators to avoid depreciation and ensure high efficiency."@en ;
+  rdfs:label "Review retention and motivation indicators"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10510FollowedBy10511 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10510 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10511 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10510PartOf21438 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10510 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :21438 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10511 rdf:type owl:Class ;
+  rdfs:comment "Analyzing existing compensation plans and making changes necessary to continue to retain employees. "@en ;
+  rdfs:label "Review compensation plan"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10511PartOf21438 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10511 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :21438 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10512 rdf:type owl:Class ;
+  rdfs:comment "Administering the process of promoting and demoting employees. Design a system for advancing or demoting an employee's rank or position. Leverage techniques such as horizontal promotion, vertical promotion, dry promotion, and involuntary/voluntary demotion."@en ;
+  rdfs:label "Manage promotion and demotion process"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10512PartOf10413 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10512 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10413 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10513 rdf:type owl:Class ;
+  rdfs:comment "Managing the process of employee separation, including resignations, discharges, and layoffs. Inform the employee of the termination. Complete paperwork for continuation of benefits."@en ;
+  rdfs:label "Manage separation"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10513PartOf10413 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10513 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10413 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10514 rdf:type owl:Class ;
+  rdfs:comment "Managing and administering instances where a person stops employment completely."@en ;
+  rdfs:label "Manage retirement"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10514PartOf10413 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10514 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10413 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10515 rdf:type owl:Class ;
+  rdfs:comment "Managing the period of time that an employee must be away from their primary job, while maintaining the status of employee (i.e., paid and unpaid leave of absence but not vacations, holidays, hiatuses, sabbaticals, and work-from-home programs)."@en ;
+  rdfs:label "Manage leave of absence"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10515PartOf10413 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10515 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10413 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10516 rdf:type owl:Class ;
+  rdfs:comment "Helping former employees transition to new jobs or to re-orient themselves in the job market. Deliver help through one-on-one sessions or in a group format. Provide guidance in career evaluation, resume writing, interview preparation, developing networks, and job searching."@en ;
+  rdfs:label "Develop and implement employee outplacement"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10516PartOf10413 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10516 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10413 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10517 rdf:type owl:Class ;
+  rdfs:comment "Allocating employees. Deploy personnel to ensure that the labor of the organization is continuously in an optimal relation to the jobs and organizational structure. "@en ;
+  rdfs:label "Manage resource deployment"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10517PartOf20132 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10517 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20132 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10520 rdf:type owl:Class ;
+  rdfs:comment "Managing foreign resources. Manage employees who are sent to live abroad for a defined time period, as well as non-native employees."@en ;
+  rdfs:label "Manage expatriates"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10520PartOf17055 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10520 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17055 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10522 rdf:type owl:Class ;
+  rdfs:comment "Providing information and reports regarding employees to management."@en ;
+  rdfs:label "Manage reporting processes"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10522PartOf17056 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10522 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17056 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10523 rdf:type owl:Class ;
+  rdfs:comment "Handling instances where an employee believes that he/she has been inappropriately treated or he/she desires clarification. Encourage employees to inquire when needed. Record and clarify the issues for which the enquiry has been made."@en ;
+  rdfs:label "Manage employee inquiry process"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10523PartOf17056 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10523 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17056 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10524 rdf:type owl:Class ;
+  rdfs:comment "Capturing and updating employee information and data and information on the employees. "@en ;
+  rdfs:label "Manage and maintain employee data"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10524PartOf17056 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10524 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17056 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10525 rdf:type owl:Class ;
+  rdfs:comment "Administering and maintaining HR information systems that take care of activities related to HR, accounting, management, and payroll."@en ;
+  rdfs:label "Manage human resource information systems HRIS"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10525PartOf17056 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10525 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17056 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10526 rdf:type owl:Class ;
+  rdfs:comment "Creating and maintaining performance metrics for employees. Create and manage a strategic system of data and statistics to accurately gauge each employee's information. Consider productivity metrics, efficiency metrics, training metrics, etc."@en ;
+  rdfs:label "Develop and manage employee measures"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10526PartOf17056 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10526 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17056 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10527 rdf:type owl:Class ;
+  rdfs:comment "Developing and maintaining systems for managing the time and attendance of employees. Routinely upgrade the process and systems that track when employees start and stop work, the department where the work is performed, attendance in addition to tracking meals and breaks, the type of work performed, and the number of items produced."@en ;
+  rdfs:label "Develop and manage time and attendance systems"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10527PartOf17056 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10527 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17056 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10529 rdf:type owl:Class ;
+  rdfs:comment "Creating a plan for managing communication among employees. Inform employees of direction. Counter resistance with change management approaches. Seek specific areas of input to the decision-making process. Seek varying degrees of involvement and co-creation."@en ;
+  rdfs:label "Develop employee communication plan"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10529PartOf21451 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10529 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :21451 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10530 rdf:type owl:Class ;
+  rdfs:comment "Procuring and handling suggestions from employees, and performing research on employees. Manage and analyze the programs that help the organization to tap into employee ideas for improving the organization's processes and/or products. Use surveys, focus groups, and other data-gathering methods to find out the attitudes, opinions, and feelings of members of an organization."@en ;
+  rdfs:label "Manage/Collect employee suggestions and perform employee research"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10530PartOf17056 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10530 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17056 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10531 rdf:type owl:Class ;
+  rdfs:comment "Taking care or resolving any complaint raised by an employee by procedures provided for in a collective agreement, an employment contract, or by other mechanisms established by an employer."@en ;
+  rdfs:label "Manage employee grievances"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10531PartOf17052 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10531 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17052 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10532 rdf:type owl:Class ;
+  rdfs:comment "Implementing the communication plan for employees. Initiate dialogues and engagement by monitoring the exchange of ideas and opinions, the development of personal relationships, etc."@en ;
+  rdfs:label "Deliver employee communications"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10532PartOf21451 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10532 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :21451 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:11243 rdf:type owl:Class ;
+  rdfs:comment "Assessing the performance and effectiveness of employee on-boarding program. Examine the performance of on-boarding program through feedback and reviews from the new employees. Create web and written forms. Obtain information through face-to-face discussions."@en ;
+  rdfs:label "Evaluate the effectiveness of the employee onboarding program"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11243FollowedBy17050 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11243 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :17050 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11243PartOf10469 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11243 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10469 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11622 rdf:type owl:Class ;
+  rdfs:comment "Identifying skills, knowledge, and attributes that need enhancement in order to perform a job. Develop the appropriate training programs. These programs can be computer-based, classroom, or on-the-job training, etc."@en ;
+  rdfs:label "Design talent development program"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11622FollowedBy11623 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11622 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11623 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11622PartOf17045 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11622 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17045 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:11623 rdf:type owl:Class ;
+  rdfs:comment "Developing a program to entice prospective resources to engage with the organization for a position of employment."@en ;
+  rdfs:label "Design talent acquisition program"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:11623FollowedBy10428 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11623 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10428 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:11623PartOf17045 rdf:type owl:ObjectProperty ;
+  rdfs:domain :11623 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17045 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16938 rdf:type owl:Class ;
+  rdfs:comment "Creating a program that incorporates incentives and compensation put forth by the organization to recognize high performing workers and excellence in leadership."@en ;
+  rdfs:label "Develop high performers/leadership programs"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:16938FollowedBy10427 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16938 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10427 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16938PartOf17045 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16938 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17045 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16940 rdf:type owl:Class ;
+  rdfs:comment "Defining the skills, knowledge, abilities, and attributes needed to carry out a specific job."@en ;
+  rdfs:label "Define employee competencies and skills"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:16940FollowedBy10491 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16940 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10491 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:16940PartOf10473 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16940 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10473 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16944 rdf:type owl:Class ;
+  rdfs:comment "Questioning employees to ascertain overall workplace satisfaction. "@en ;
+  rdfs:label "Conduct employee engagement surveys"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:16944PartOf21451 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16944 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :21451 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:17043 rdf:type owl:Class ;
+  rdfs:comment "Creating strategies for the HR function. Create and implement strategies for managing the work force. Supervise and enhance the strategies, plans, and policies supporting the HR function. Developing models for managing competency levels of the HR of the organization."@en ;
+  rdfs:label "Develop and manage human resources planning, policies, and strategies"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+
+:17043PartOf10007 rdf:type owl:ObjectProperty ;
+  rdfs:domain :17043 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10007 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:17045 rdf:type owl:Class ;
+  rdfs:comment "Creating and executing strategies and policies for smooth administration of work force. Determine and gather skill requirements. Plan the requirements for employee resourcing per unit. Create compensation, succession, HR program, and employee diversity plans. Develop and administer policies for HR. Develop benefits for employees. Create models for work force strategies."@en ;
+  rdfs:label "Develop and implement workforce strategy and policies"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:17045PartOf17043 rdf:type owl:ObjectProperty ;
+  rdfs:domain :17045 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17043 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:17046 rdf:type owl:Class ;
+  rdfs:comment "Creating and implementing the tools for managing the competency levels of HR. Design a model for integrating HR planning with business planning. Assess current HR capacity based on the competencies against the capacity needed to achieve the vision, mission, and business goals of the organization. Consider factors such as employee development, career path, compensation policies, and performance management."@en ;
+  rdfs:label "Develop competency management models"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:17046PartOf17043 rdf:type owl:ObjectProperty ;
+  rdfs:domain :17046 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17043 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:17047 rdf:type owl:Class ;
+  rdfs:comment "Creating and managing a recruiting strategy where current employees are rewarded for referring qualified candidates for employment. "@en ;
+  rdfs:label "Manage employee referral programs"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:17047FollowedBy17048 rdf:type owl:ObjectProperty ;
+  rdfs:domain :17047 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :17048 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:17047PartOf10440 rdf:type owl:ObjectProperty ;
+  rdfs:domain :17047 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10440 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:17048 rdf:type owl:Class ;
+  rdfs:comment "Establishing and maintaining channels for recruiting. Extract the best out of every recruitment channel. Manage all the processes related to all the sourcing channels."@en ;
+  rdfs:label "Manage recruitment channels"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:17048PartOf10440 rdf:type owl:ObjectProperty ;
+  rdfs:domain :17048 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10440 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:17050 rdf:type owl:Class ;
+  rdfs:comment "Bringing the employee on-boarding program into effect. Implement Create/Maintain employee on-boarding program [10474]. Conduct training sessions and employee engagement programs."@en ;
+  rdfs:label "Execute onboarding program"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:17050PartOf10469 rdf:type owl:ObjectProperty ;
+  rdfs:domain :17050 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10469 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:17051 rdf:type owl:Class ;
+  rdfs:comment "Administering the development of employee skills. Conduct training, coaching and mentoring, job-rotation and cross training, lateral moves, etc."@en ;
+  rdfs:label "Manage employee skill and competency development"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:17051PartOf10472 rdf:type owl:ObjectProperty ;
+  rdfs:domain :17051 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10472 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:17052 rdf:type owl:Class ;
+  rdfs:comment "Assisting general management in developing, maintaining, and improving employee relationships. This is accomplished through communication, performance management, processing grievances, and/or dispute. Interpret and convey organizational policies."@en ;
+  rdfs:label "Manage employee relations"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+
+:17052PartOf10007 rdf:type owl:ObjectProperty ;
+  rdfs:domain :17052 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10007 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:17055 rdf:type owl:Class ;
+  rdfs:comment "Managing the relocation of employees in order to carry out assignments. Manage internal business processes to transfer employees, their families, and/or entire departments of a business to a new location."@en ;
+  rdfs:label "Relocate employees and manage assignments"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:17055PartOf10413 rdf:type owl:ObjectProperty ;
+  rdfs:domain :17055 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10413 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:17056 rdf:type owl:Class ;
+  rdfs:comment "Managing the employee reporting processes, employee inquiry process, employee information and data, and the HR information systems. Create and administer the employee metrics. Develop and handle the time and attendance systems. Refurbish the indicators for employee retention and motivation."@en ;
+  rdfs:label "Manage employee information and analytics"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+
+:17056PartOf10007 rdf:type owl:ObjectProperty ;
+  rdfs:domain :17056 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10007 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:20122 rdf:type owl:Class ;
+  rdfs:comment "Implementing models for effectively strategizing the work force of the organization. Carry out all aspects of performance required for the work force to function, including recruitment, selection, retention, and professional development."@en ;
+  rdfs:label "Implement workforce strategy models"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:20122PartOf17045 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20122 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17045 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20123 rdf:type owl:Class ;
+  rdfs:comment "Evaluating and selecting potential employees through interviews, tests, etc."@en ;
+  rdfs:label "Screen and select candidates"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:20123PartOf10410 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20123 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10410 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:20124 rdf:type owl:Class ;
+  rdfs:comment "Identifying the requirements for the position to be filled. Determine the experience and skills necessary to perform the tasks outlined."@en ;
+  rdfs:label "Complete position classification and level of experience"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:20124PartOf10467 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20124 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10467 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:20125 rdf:type owl:Class ;
+  rdfs:comment "Managing identified training programs for employees. Engage with industries to provide certifications, administer certification test, and maintain active certification."@en ;
+  rdfs:label "Manage examinations and certifications"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:20125FollowedBy21436 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20125 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :21436 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20125PartOf10473 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20125 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10473 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20126 rdf:type owl:Class ;
+  rdfs:comment "Coordinating with third party certification authorities to provide training and certifications for necessary skills."@en ;
+  rdfs:label "Liaise with external certification authorities"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:20126FollowedBy20127 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20126 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :20127 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:20126PartOf20125 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20126 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20125 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:20127 rdf:type owl:Class ;
+  rdfs:comment "Providing tests to the workforce that will satisfy completion of certifications."@en ;
+  rdfs:label "Administer certification tests"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:20127FollowedBy20128 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20127 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :20128 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:20127PartOf20125 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20127 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20125 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:20128 rdf:type owl:Class ;
+  rdfs:comment "Ascertaining the experience level needed to qualify for a specific job or certification within the organization. Some certificates require practical experience as well as training programs."@en ;
+  rdfs:label "Appraise experience qualifications"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:20128FollowedBy20129 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20128 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :20129 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:20128PartOf20125 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20128 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20125 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:20129 rdf:type owl:Class ;
+  rdfs:comment "Administering certificates to all candidates that have successfully met experience qualifications, and passed all tests necessary to obtain the certificate. "@en ;
+  rdfs:label "Administer certificate issue and maintenance"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:20129PartOf20125 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20129 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20125 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:20132 rdf:type owl:Class ;
+  rdfs:comment "Organizing the workforce so that all positions are covered for all shifts with the necessary skilled resources in place. Have a system in place to backfill positions while an employee is on leave."@en ;
+  rdfs:label "Manage workforce scheduling"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:20132PartOf10413 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20132 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10413 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:20133 rdf:type owl:Class ;
+  rdfs:comment "Obtaining resources necessary to fill a position utilizing specific skills and capabilities."@en ;
+  rdfs:label "Receive required resources/skills and capabilities"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:20133FollowedBy10517 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20133 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10517 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20133PartOf20132 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20133 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20132 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20599 rdf:type owl:Class ;
+  rdfs:comment "Assisting employees in developing their capabilities, and providing them counseling services. Handle the orientation and deployment of the employees. Administer the performance of employees. Administer the development and enhancement of the employees. Provide training and development programs for employees."@en ;
+  rdfs:label "Manage employee onboarding, training, and development"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+
+:20599PartOf10007 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20599 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10007 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:20606 rdf:type owl:Class ;
+  rdfs:comment "Creating, maintaining and communicating company's reputation and values to keep current employees and attract potential hires."@en ;
+  rdfs:label "Manage employer branding"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:20606FollowedBy21432 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20606 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :21432 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20606PartOf20958 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20606 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20958 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20958 rdf:type owl:Class ;
+  rdfs:comment "Creating a long-term plan to associate human resource requirements with the strategic goals of the company to ensure that there is enough qualified staffing to achieve those goals, to maintain competitive advantage and to reduce employee turnover."@en ;
+  rdfs:label "Develop human resources strategy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:20958PartOf17043 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20958 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17043 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:21430 rdf:type owl:Class ;
+  rdfs:comment "Establishing the roles that are required to execute the HR function.  This process also examines the organizational structure required to support the organization."@en ;
+  rdfs:label "Determine HR function roles and structure"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:21430FollowedBy21431 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21430 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :21431 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:21430PartOf20958 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21430 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20958 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:21431 rdf:type owl:Class ;
+  rdfs:comment "Determining how an organization's human resources department offers services to and interacts with employees. "@en ;
+  rdfs:label "Determine HR delivery model"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:21431FollowedBy10420 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21431 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10420 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:21431PartOf20958 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21431 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20958 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:21432 rdf:type owl:Class ;
+  rdfs:comment "Overseeing a group of similar individual or teams with similar education, skills, training, or experience.  "@en ;
+  rdfs:label "Manage job families and positions"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:21432PartOf20958 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21432 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20958 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:21433 rdf:type owl:Class ;
+  rdfs:comment "Execution of diversity, equity, and inclusion plans within an organization.  Often called a DEI plan.  "@en ;
+  rdfs:label "Implement diversity, equity, and inclusion plan"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:21433FollowedBy11622 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21433 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :11622 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:21433PartOf17045 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21433 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17045 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:21434 rdf:type owl:Class ;
+  rdfs:comment "Execution of employee reviews/performance on a frequent basis. "@en ;
+  rdfs:label "Review employee performance"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:21434FollowedBy21435 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21434 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :21435 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:21434PartOf10470 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21434 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10470 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:21435 rdf:type owl:Class ;
+  rdfs:comment "Management of reviewing employee performance.  This includes the tools that are used, the frequency of the reviews, and how the reviews are used within the organization. "@en ;
+  rdfs:label "Manage employee performance"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:21435FollowedBy10481 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21435 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10481 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:21435PartOf10470 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21435 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10470 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:21436 rdf:type owl:Class ;
+  rdfs:comment "Oversight of the organization's learning programs.  This process also includes the effectiveness of these programs. "@en ;
+  rdfs:label "Monitor and evaluate learning programs"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:21436PartOf10473 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21436 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10473 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:21437 rdf:type owl:Class ;
+  rdfs:comment "Awareness of the employee legislature that is in place for the organization.  The regulatory environment could include areas, regions, or countries.  "@en ;
+  rdfs:label "Understand legal and regulatory environment"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:21437PartOf17052 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21437 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17052 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:21438 rdf:type owl:Class ;
+  rdfs:label "Develop and manage reward, recognition, and motivation programs"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:21438PartOf10412 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21438 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10412 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:21439 rdf:type owl:Class ;
+  rdfs:comment "Managing activities centered around delivering programs to support work/life balance for employees ; developing family support systems ; reviewing retention and motivation indicators ; and reviewing compensation plans."@en ;
+  rdfs:label "Manage employee assistance and retention"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:21439PartOf10412 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21439 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10412 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:21440 rdf:type owl:Class ;
+  rdfs:comment "Creation and execution of a plan that might allow for work from home days, or alternate hours. "@en ;
+  rdfs:label "Manage flexible working"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:21440PartOf10508 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21440 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10508 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:21441 rdf:type owl:Class ;
+  rdfs:comment "Understand, develop, and gather workforce data in support of stakeholder requirements."@en ;
+  rdfs:label "Develop workforce analytics"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:21441PartOf17056 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21441 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17056 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:21442 rdf:type owl:Class ;
+  rdfs:comment "Collect and manage requirements from various enterprise stakeholders about workforce analytics."@en ;
+  rdfs:label "Determine stakeholder requirements"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:21442FollowedBy21443 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21442 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :21443 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:21442PartOf21441 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21442 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :21441 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:21443 rdf:type owl:Class ;
+  rdfs:comment "Summarize stakeholder requirements into discrete research questions in support of workforce analytics. "@en ;
+  rdfs:label "Identify research questions"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:21443FollowedBy21444 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21443 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :21444 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:21443PartOf21441 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21443 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :21441 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:21444 rdf:type owl:Class ;
+  rdfs:comment "Consider stakeholder requirements, research questions, and organizations standards around research to select appropriate research methodology in support of workforce analytics."@en ;
+  rdfs:label "Select workforce analysis methodology"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:21444FollowedBy21445 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21444 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :21445 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:21444PartOf21441 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21444 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :21441 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:21445 rdf:type owl:Class ;
+  rdfs:comment "Identify appropriate data sources for workforce analytics data while considering organizational standards for data sources.  "@en ;
+  rdfs:label "Identify workforce data sources"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:21445FollowedBy21446 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21445 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :21446 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:21445PartOf21441 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21445 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :21441 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:21446 rdf:type owl:Class ;
+  rdfs:comment "Collect and procure, as needed, workforce data from internal and external data sources in support of workforce analytics.  "@en ;
+  rdfs:label "Gather workforce data"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:21446PartOf21441 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21446 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :21441 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:21447 rdf:type owl:Class ;
+  rdfs:comment "Transform, develop, and communicate workforce data into analytics in support of organizational requirements.  "@en ;
+  rdfs:label "Implement workforce analytics"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:21447PartOf17056 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21447 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17056 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:21448 rdf:type owl:Class ;
+  rdfs:comment "Logically and statistically validate collected or purchased data in support of analytics needs"@en ;
+  rdfs:label "Transform workforce analysis data"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:21448FollowedBy21449 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21448 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :21449 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:21448PartOf21447 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21448 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :21447 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:21449 rdf:type owl:Class ;
+  rdfs:comment "Synthesize insights from workforce analytics data"@en ;
+  rdfs:label "Develop insights into workforce analytics outcomes"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:21449FollowedBy21450 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21449 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :21450 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:21449PartOf21447 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21449 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :21447 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:21450 rdf:type owl:Class ;
+  rdfs:comment "Summarize, package, and distribute results of workforce analysis.  "@en ;
+  rdfs:label "Communicate workforce analysis outcomes"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:21450PartOf21447 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21450 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :21447 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:21451 rdf:type owl:Class ;
+  rdfs:comment "Creating an effective plan that initiates and promotes communication and engagement among the employees and between employees and management."@en ;
+  rdfs:label "Manage employee communication"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+
+:21451PartOf10007 rdf:type owl:ObjectProperty ;
+  rdfs:domain :21451 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10007 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .

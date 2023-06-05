@@ -9,7 +9,7 @@ jobs:
       - name: Configure plow CLI
         run: |
           curl https://sh.rustup.rs -sSf -y | sh
-          cargo install plow_cli --version 0.3.6
+          cargo install plow_cli --version 0.5.0
 
       - name: Setup SSH
         uses: MrSquaare/ssh-setup-action@v1

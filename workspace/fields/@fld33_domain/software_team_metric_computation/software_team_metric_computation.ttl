@@ -1,0 +1,2270 @@
+@prefix : <http://field33.com/ontologies/@fld33_domain/software_team_metric_computation/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix comp: <http://field33.com/ontologies/@fld33/computation/> .
+@prefix oxo: <http://field33.com/ontologies/@fld33/oxolotl/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix registry: <http://field33.com/ontologies/REGISTRY/> .
+@base <http://field33.com/ontologies/@fld33_domain/software_team_metric_computation/> .
+
+<http://field33.com/ontologies/@fld33_domain/software_team_metric_computation/> rdf:type owl:Ontology ;
+                                                                     registry:author "Field 33 <contribution@field33.com>" ;
+                                                                     registry:canonicalPrefix "software_team_metric_computation" ;
+                                                                     registry:category "Metric" ,
+                                                                                       "Organization" ,
+                                                                                       "Software Development" ;
+                                                                     registry:dependency "@fld33/organization ^0.1.4" ,
+                                                                                         "@fld33/people ^0.1.5" ,
+                                                                                         "@fld33/relations ^0.2.2" ,
+                                                                                         "@fld33/oxolotl ^0.1.0" ,
+                                                                                         "@fld33/computation ^0.2.1" ,
+                                                                                         "@fld33_domain/software_team_metric ^0.2.0" ,
+                                                                                         "@fld33_domain/software_development ^0.3.2" ;
+                                                                     registry:keyword "Field 33 Package" ,
+                                                                                      "Metric" ,
+                                                                                      "Organization" ,
+                                                                                      "Software Development" ,
+                                                                                      "Software Team Metric" ;
+                                                                     registry:ontologyFormatVersion "v1" ;
+                                                                     registry:packageName "@fld33_domain/software_team_metric_computation" ;
+                                                                     registry:packageVersion "0.1.3" ;
+                                                                     registry:licenseSPDX "Apache-2.0" ;
+                                                                     registry:repository "https://github.com/field33/ontologies/tree/main/workspace/fields/%40fld33_domain/software_team_metric_computation" ;
+                                                                     registry:shortDescription "Computations around team metrics for software development domain."@en ;
+                                                                     rdfs:comment "# Software Team Metric Computation Ontology<br>This package is an internal ontology describing concepts for software team metric computations."@en ;
+                                                                     rdfs:label "Software Team Metric Computation"@en .
+
+
+#################################################################
+#    Datatype Properties
+#################################################################
+
+:deploymentFrequency
+  rdf:type    owl:DatatypeProperty ;
+  rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_team_metric/DeploymentFrequency> ;
+  rdfs:range  xsd:decimal ;
+  rdfs:label  "Deployment frequency"@en ;
+  rdfs:comment  "The deployment frequency indicates how often a deployment is done in a given range."@en .
+
+:teamDeploymentFrequency
+  rdf:type           owl:DatatypeProperty ;
+  rdfs:subPropertyOf :deploymentFrequency ;
+  rdfs:domain <http://field33.com/ontologies/@fld33/organization/Team> ;
+  rdfs:range  xsd:decimal ;
+  rdfs:label  "Deployment frequency for a team"@en .
+
+:changeFailureRate
+  rdf:type   owl:DatatypeProperty ;
+  rdfs:range  xsd:decimal ;
+  rdfs:label "Change failure rate"@en .
+
+:personChangeFailureRate
+  rdf:type   owl:DatatypeProperty ;
+  rdfs:subPropertyOf :changeFailureRate ;
+  rdfs:domain <http://field33.com/ontologies/@fld33/people/Person> ;
+  rdfs:range  xsd:decimal ;
+  rdfs:label "Change failure rate for a person"@en .
+
+:teamChangeFailureRate
+  rdf:type   owl:DatatypeProperty ;
+  rdfs:subPropertyOf :changeFailureRate ;
+  rdfs:domain <http://field33.com/ontologies/@fld33/organization/Team> ;
+  rdfs:range  xsd:decimal ;
+  rdfs:label "Change failure rate for a team"@en .
+
+:personChangeFailureRateBetweenDates
+  rdf:type   owl:DatatypeProperty ;
+  rdfs:subPropertyOf :personChangeFailureRate ;
+  rdfs:domain <http://field33.com/ontologies/@fld33/people/Person> ;
+  rdfs:range  xsd:decimal ;
+  rdfs:label "Change failure rate between dates for a person"@en .
+
+:teamChangeFailureRateBetweenDates
+  rdf:type   owl:DatatypeProperty ;
+  rdfs:subPropertyOf :teamChangeFailureRate ;
+  rdfs:domain <http://field33.com/ontologies/@fld33/organization/Team> ;
+  rdfs:range  xsd:decimal ;
+  rdfs:label "Change failure rate between dates for a team"@en .
+
+:changeLeadTime
+  rdf:type   owl:DatatypeProperty ;
+  rdfs:range  xsd:duration ;
+  rdfs:label "Change lead time"@en .
+
+:commitChangeLeadTime
+  rdf:type   owl:DatatypeProperty ;
+  rdfs:subPropertyOf :changeLeadTime ;
+  rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/Commit> ;
+  rdfs:range  xsd:duration ;
+  rdfs:label "Commit change lead time"@en .
+
+:teamChangeLeadTime
+  rdf:type   owl:DatatypeProperty ;
+  rdfs:subPropertyOf :changeLeadTime ;
+  rdfs:domain <http://field33.com/ontologies/@fld33/organization/Team> ;
+  rdfs:range  xsd:duration ;
+  rdfs:label "Change lead time for a team"@en .
+
+:teamChangeLeadTimeBetweenDates
+  rdf:type   owl:DatatypeProperty ;
+  rdfs:subPropertyOf :teamChangeLeadTime ;
+  rdfs:domain <http://field33.com/ontologies/@fld33/organization/Team> ;
+  rdfs:range  xsd:duration ;
+  rdfs:label "Change lead time between dates for a team"@en .
+
+:personChangeLeadTime
+  rdf:type   owl:DatatypeProperty ;
+  rdfs:subPropertyOf :changeLeadTime ;
+  rdfs:domain <http://field33.com/ontologies/@fld33/people/Person> ;
+  rdfs:range  xsd:duration ;
+  rdfs:label "Change lead time for a person"@en .
+
+:personChangeLeadTimeBetweenDates
+  rdf:type   owl:DatatypeProperty ;
+  rdfs:subPropertyOf :personChangeLeadTime ;
+  rdfs:domain <http://field33.com/ontologies/@fld33/people/Person> ;
+  rdfs:range  xsd:duration ;
+  rdfs:label "Change lead time between dates for a person"@en .
+
+:commitIsDeployed
+  rdf:type   owl:DatatypeProperty ;
+  rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/Commit> ;
+  rdfs:range xsd:boolean ;
+  rdfs:label "Commit is deployed"@en .
+
+:timeToRestoreService
+  rdf:type   owl:DatatypeProperty ;
+  rdfs:range  xsd:duration ;
+  rdfs:label "Time to restore service"@en .
+
+:personTimeToRestoreService
+  rdf:type   owl:DatatypeProperty ;
+  rdfs:subPropertyOf :timeToRestoreService ;
+  rdfs:domain <http://field33.com/ontologies/@fld33/people/Person> ;
+  rdfs:range  xsd:duration ;
+  rdfs:label "Time to restore service for a person"@en .
+
+:personTimeToRestoreServiceBetweenDates
+  rdf:type   owl:DatatypeProperty ;
+  rdfs:subPropertyOf :personTimeToRestoreService ;
+  rdfs:domain <http://field33.com/ontologies/@fld33/people/Person> ;
+  rdfs:range  xsd:duration ;
+  rdfs:label "Time to restore service between dates for a person"@en .
+
+:teamTimeToRestoreService
+  rdf:type   owl:DatatypeProperty ;
+  rdfs:subPropertyOf :timeToRestoreService ;
+  rdfs:domain <http://field33.com/ontologies/@fld33/organization/Team> ;
+  rdfs:range  xsd:duration ;
+  rdfs:label "Time to restore service for a team"@en .
+
+:teamTimeToRestoreServiceBetweenDates
+  rdf:type   owl:DatatypeProperty ;
+  rdfs:subPropertyOf :teamTimeToRestoreService ;
+  rdfs:domain <http://field33.com/ontologies/@fld33/organization/Team> ;
+  rdfs:range  xsd:duration ;
+  rdfs:label "Time to restore service between dates for a team"@en .
+
+:failureTimeToRestoreService
+  rdf:type   owl:DatatypeProperty ;
+  rdfs:subPropertyOf :timeToRestoreService ;
+  rdfs:range  xsd:duration ;
+  rdfs:label "Failure time to restore service"@en .
+
+:deploymentHasFailure
+  rdf:type    owl:DatatypeProperty ;
+  rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/Deployment> ;
+  rdfs:range  xsd:boolean ;
+  rdfs:label  "Deployment has failure"@en .
+
+:deploymentHasFailureBetweenDates
+  rdf:type    owl:DatatypeProperty ;
+  rdfs:subPropertyOf :deploymentHasFailure ;
+  rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/Deployment> ;
+  rdfs:range  xsd:boolean ;
+  rdfs:label  "Deployment has failure between dates"@en .
+
+:failureCount
+  rdf:type    owl:DatatypeProperty ;
+  rdfs:range  xsd:decimal ;
+  rdfs:label  "Failure count"@en .
+
+:personFailureCount
+  rdf:type    owl:DatatypeProperty ;
+  rdfs:subPropertyOf :failureCount ;
+  rdfs:domain <http://field33.com/ontologies/@fld33/people/Person> ;
+  rdfs:range  xsd:decimal ;
+  rdfs:label  "Failure count of a person"@en .
+
+:personFailureCountBetweenDates
+  rdf:type    owl:DatatypeProperty ;
+  rdfs:subPropertyOf :personFailureCount ;
+  rdfs:domain <http://field33.com/ontologies/@fld33/people/Person> ;
+  rdfs:range  xsd:decimal ;
+  rdfs:label  "Failure count between dates for a person"@en .
+
+:teamFailureCount
+  rdf:type    owl:DatatypeProperty ;
+  rdfs:subPropertyOf :failureCount ;
+  rdfs:domain <http://field33.com/ontologies/@fld33/organization/Team> ;
+  rdfs:range  xsd:decimal ;
+  rdfs:label  "Failure count for a team"@en .
+
+:teamFailureCountBetweenDates
+  rdf:type    owl:DatatypeProperty ;
+  rdfs:subPropertyOf :teamFailureCount ;
+  rdfs:domain <http://field33.com/ontologies/@fld33/organization/Team> ;
+  rdfs:range  xsd:decimal ;
+  rdfs:label  "Failure count between dates for a team"@en .
+
+:deploymentCount
+  rdf:type    owl:DatatypeProperty ;
+  rdfs:range  xsd:decimal ;
+  rdfs:label  "Deployment count"@en .
+
+:deploymentCountBetweenDates
+  rdf:type    owl:DatatypeProperty ;
+  rdfs:subPropertyOf :deploymentCount ;
+  rdfs:label  "Deployment count between dates"@en .
+
+:personDeploymentCountBetweenDates
+  rdf:type    owl:DatatypeProperty ;
+  rdfs:subPropertyOf :deploymentCountBetweenDates ;
+  rdfs:domain <http://field33.com/ontologies/@fld33/people/Person> ;
+  rdfs:range  xsd:decimal ;
+  rdfs:label  "Deployment count between dates for a person"@en .
+
+:teamDeploymentCountBetweenDates
+  rdf:type    owl:DatatypeProperty ;
+  rdfs:subPropertyOf :deploymentCountBetweenDates ;
+  rdfs:domain <http://field33.com/ontologies/@fld33/organization/Team> ;
+  rdfs:range  xsd:decimal ;
+  rdfs:label  "Deployment count between dates for a team"@en .
+
+:personDeploymentCountBetweenDatesForTeam
+  rdf:type    owl:DatatypeProperty ;
+  rdfs:subPropertyOf :deploymentCountBetweenDates ;
+  rdfs:domain <http://field33.com/ontologies/@fld33/organization/Team> ;
+  rdfs:range  xsd:decimal ;
+  rdfs:label  "Deployment count between dates from a person of a team"@en .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+
+:PersonHasAuthoredDeploymentBetweenDates # in the future e.g. pre-computations we should assign the from to Date as properties on the assertion later
+    rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/software_development/PersonHasAuthoredDeployment> ;
+    rdfs:domain <http://field33.com/ontologies/@fld33/people/Person> ;
+    rdfs:range <http://field33.com/ontologies/@fld33_domain/software_development/Deployment> ;
+    rdfs:comment "Person has authored deployments between dates" ;
+    rdfs:label "Has authored" .
+
+
+:DeploymentHasRelatedFailureBetweenDates
+    rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/software_development/DeploymentHasRelatedFailure> ;
+    rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/Deployment> ;
+    rdfs:range <http://field33.com/ontologies/@fld33_domain/software_development/Failure> ;
+    rdfs:comment "Deployment has related failure between dates" ;
+    rdfs:label "Has related" .
+
+
+:PersonRelatesToFailureBetweenDates
+    rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@fld33_domain/software_development/PersonRelatesToFailure> ;
+	rdfs:domain <http://field33.com/ontologies/@fld33/people/Person> ;
+  	rdfs:range <http://field33.com/ontologies/@fld33_domain/software_development/Failure> ;
+    rdfs:comment "Person relates to failure" ;
+    rdfs:label "Relates to" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://field33.com/ontologies/@fld33/organization/Team
+<http://field33.com/ontologies/@fld33/organization/Team>
+  rdfs:subClassOf <http://field33.com/ontologies/@fld33/organization/Organization> .
+
+
+#################################################################
+#    Computations v2
+#################################################################
+
+
+:TeamParam
+  a                   fno:Parameter ;
+  fno:predicate       comp:computationSubject ;
+  comp:sparqlVariable "Team" ;
+  fno:type            <http://field33.com/ontologies/@fld33/organization/Team> ;
+  fno:required        "true"^^xsd:boolean .
+
+:TeamDeploymentFrequencyOutput
+  a                   fno:Output ;
+  fno:predicate       :TeamDeploymentFrequency ;
+  comp:sparqlVariable "DeploymentCountPerTeam" ;
+  fno:required        "false"^^xsd:boolean ;
+  fno:type            xsd:decimal .
+
+:TeamChangeFailureRateOutput
+  a                   fno:Output ;
+  fno:predicate       :TeamChangeFailureRate ;
+  comp:sparqlVariable "ChangeFailureRatePerTeam" ;
+  fno:required        "false"^^xsd:boolean ;
+  fno:type            xsd:decimal .
+
+:TeamChangeLeadTimeOutput
+  a                   fno:Output ;
+  fno:predicate       :TeamChangeLeadTime ;
+  comp:sparqlVariable "ChangeLeadTimePerTeam" ;
+  fno:required        "false"^^xsd:boolean ;
+  fno:type            xsd:decimal .
+
+:TeamTimeToRestoreServiceOutput
+  a                   fno:Output ;
+  fno:predicate       :TeamTimeToRestoreService ;
+  comp:sparqlVariable "TimeToRestoreServicePerTeam" ;
+  fno:required        "false"^^xsd:boolean ;
+  fno:type            xsd:decimal .
+
+
+# parameter for a computation that accepts individuals of class :Person
+:PersonParam
+  a                   fno:Parameter ;
+  fno:predicate       comp:computationSubject ; # main computation subject, following the SPO logic this is where the computation originates from
+  fno:type            <http://field33.com/ontologies/@fld33/people/Person> ;
+  fno:required        "true"^^xsd:boolean . # is a required parameter for the computation it is used on
+
+# parameter for a computation that accepts individuals of class :Commit
+:CommitParam
+  a                   fno:Parameter ;
+  fno:predicate       comp:computationSubject ; # main computation subject, following the SPO logic this is where the computation originates from
+  fno:type            <http://field33.com/ontologies/@fld33_domain/software_development/Commit> ;
+  fno:required        "true"^^xsd:boolean . # is a required parameter for the computation it is used on
+
+# parameter for a computation that accepts individuals of class :Deployment
+:DeploymentParam
+  a                   fno:Parameter ;
+  fno:predicate       comp:computationSubject ; # main computation subject, following the SPO logic this is where the computation originates from
+  fno:type            <http://field33.com/ontologies/@fld33_domain/software_development/Deployment> ;
+  fno:required        "true"^^xsd:boolean . # is a required parameter for the computation it is used on
+
+# parameter for a computation that accepts individuals of class :Failure
+:FailureParam
+  a                   fno:Parameter ;
+  fno:predicate       comp:computationSubject ; # main computation subject, following the SPO logic this is where the computation originates from
+  fno:type            <http://field33.com/ontologies/@fld33_domain/software_development/Failure> ;
+  fno:required        "true"^^xsd:boolean . # is a required parameter for the computation it is used on
+
+# parameter for a computation that accepts inputs of type xsd:dateTime for further use as "from date" of a date range
+:FromDateParam
+  a                   fno:Parameter ;
+  fno:type            xsd:dateTime ;
+  fno:required        "true"^^xsd:boolean .
+
+# parameter for a computation that accepts inputs of type xsd:dateTime for further use as "to date" of a date range
+:ToDateParam
+  a                   fno:Parameter ;
+  fno:type            xsd:dateTime ;
+  fno:required        "true"^^xsd:boolean .
+
+# parameter for a computation that accepts inputs of type xsd:dateTime for further use as "to date" of a date range
+:FailureToDateParam
+  a                   fno:Parameter ;
+  fno:type            xsd:dateTime ;
+  fno:required        "false"^^xsd:boolean .
+
+
+:IntervalParam
+  a                   fno:Parameter ;
+  fno:type            xsd:dateTime ;
+  fno:required        "true"^^xsd:boolean .
+
+
+:PersonHasAuthoredDeploymentBetweenDatesOutput
+  a                   fno:Output ;
+  fno:predicate       :PersonHasAuthoredDeploymentBetweenDates ;
+  fno:required        "false"^^xsd:boolean ;
+  fno:type            xsd:anyURI .
+
+
+:PersonDeploymentCountBetweenDatesOutput
+  a                   fno:Output ;
+  fno:predicate       :personDeploymentCountBetweenDates ;
+  fno:required        "false"^^xsd:boolean ;
+  fno:type            xsd:anyURI .
+
+
+:TeamDeploymentCountBetweenDatesOutput
+  a                   fno:Output ;
+  fno:predicate       :teamDeploymentCountBetweenDates ;
+  fno:required        "false"^^xsd:boolean ;
+  fno:type            xsd:anyURI .
+
+
+:TeamHasPersonCountAuthoredDeploymentsBetweenDatesOutput
+  a                   fno:Output ;
+  fno:predicate       :personDeploymentCountBetweenDatesForTeam ;
+  fno:required        "false"^^xsd:boolean ;
+  fno:type            xsd:anyURI .
+
+
+:TeamDeploymentFrequencyOutput
+  a                   fno:Output ;
+  fno:predicate       :teamDeploymentFrequency ;
+  fno:required        "false"^^xsd:boolean ;
+  fno:type            xsd:anyURI .
+
+
+:DeploymentHasRelatedFailureBetweenDatesOutput
+  a                   fno:Output ;
+  fno:predicate       :DeploymentHasRelatedFailureBetweenDates ;
+  fno:required        "false"^^xsd:boolean ;
+  fno:type            xsd:anyURI .
+
+
+:DeploymentHasFailureBetweenDatesOutput
+  a                   fno:Output ;
+  fno:predicate       :deploymentHasFailureBetweenDates ;
+  fno:required        "false"^^xsd:boolean ;
+  fno:type            xsd:anyURI .
+
+
+:PersonChangeFailureRateBetweenDatesOutput
+  a                   fno:Output ;
+  fno:predicate       :personChangeFailureRateBetweenDates ;
+  fno:required        "false"^^xsd:boolean ;
+  fno:type            xsd:anyURI .
+
+
+:TeamChangeFailureRateBetweenDatesOutput
+  a                   fno:Output ;
+  fno:predicate       :teamChangeFailureRateBetweenDates ;
+  fno:required        "false"^^xsd:boolean ;
+  fno:type            xsd:anyURI .
+
+
+:PersonFailureCountBetweenDatesOutput
+  a                   fno:Output ;
+  fno:predicate       :personFailureCountBetweenDates ;
+  fno:required        "false"^^xsd:boolean ;
+  fno:type            xsd:anyURI .
+
+
+:TeamFailureCountBetweenDatesOutput
+  a                   fno:Output ;
+  fno:predicate       :teamFailureCountBetweenDates ;
+  fno:required        "false"^^xsd:boolean ;
+  fno:type            xsd:anyURI .
+
+
+:TeamChangeFailureRateBetweenDatesOutput
+  a                   fno:Output ;
+  fno:predicate       :teamChangeFailureRateBetweenDates ;
+  fno:required        "false"^^xsd:boolean ;
+  fno:type            xsd:anyURI .
+
+
+:CommitChangeLeadTimeOutput
+  a                   fno:Output ;
+  fno:predicate       :commitChangeLeadTime ;
+  fno:required        "false"^^xsd:boolean ;
+  fno:type            xsd:anyURI .
+
+
+:CommitIsDeployedOutput
+  a                   fno:Output ;
+  fno:predicate       :commitIsDeployed ;
+  fno:required        "false"^^xsd:boolean ;
+  fno:type            xsd:anyURI .
+
+
+:PersonChangeLeadTimeBetweenDatesOutput
+  a                   fno:Output ;
+  fno:predicate       :personChangeLeadTimeBetweenDates ;
+  fno:required        "false"^^xsd:boolean ;
+  fno:type            xsd:anyURI .
+
+
+:TeamChangeLeadTimeBetweenDatesOutput
+  a                   fno:Output ;
+  fno:predicate       :teamChangeLeadTimeBetweenDates ;
+  fno:required        "false"^^xsd:boolean ;
+  fno:type            xsd:anyURI .
+
+
+:FailureTimeToRestoreOutput
+  a                   fno:Output ;
+  fno:predicate       :failureTimeToRestoreService ;
+  fno:required        "false"^^xsd:boolean ;
+  fno:type            xsd:anyURI .
+
+
+:PersonTimeToRestoreServiceOutput
+  a                   fno:Output ;
+  fno:predicate       :personTimeToRestoreServiceBetweenDates ;
+  fno:required        "false"^^xsd:boolean ;
+  fno:type            xsd:anyURI .
+
+
+:TeamTimeToRestoreServiceBetweenDatesOutput
+  a                   fno:Output ;
+  fno:predicate       :teamTimeToRestoreServiceBetweenDates ;
+  fno:required        "false"^^xsd:boolean ;
+  fno:type            xsd:anyURI .
+
+
+:PersonRelatesToFailureBetweenDatesOutput
+  a                   fno:Output ;
+  fno:predicate       :PersonRelatesToFailureBetweenDates ;
+  fno:required        "false"^^xsd:boolean ;
+  fno:type            xsd:anyURI .
+
+
+:ComputeTeamTimeToRestoreServiceBetweenDates
+    a                fno:Function ;
+    a                comp:Computation ;
+    rdfs:label "Team time to restore service between dates" ;
+    rdfs:comment "" ;
+    fno:expects      ( :TeamParam :FromDateParam :ToDateParam :FailureToDateParam ) ;
+    fno:returns      ( :TeamTimeToRestoreServiceBetweenDatesOutput ) ;
+    oxo:oxolotlQuery :ComputeTeamTimeToRestoreServiceBetweenDatesQuery .
+
+:ComputeTeamTimeToRestoreServiceBetweenDatesQuery
+	a oxo:RecordFieldAggregateQuery ;
+    oxo:joinedQuery [
+        a oxo:AggregateQuery ;
+        oxo:measure oxo:MeasureAverage ;
+        oxo:joinedField [
+            a oxo:IndividualFieldObjectPropertyAssertionsIncoming ;
+            oxo:joinedQuery [
+                a oxo:ObjectPropertyAssertionQuery ;
+                oxo:filterCondition :ObjectPropertyMatchesPersonPartOfTeam ;
+                oxo:joinedField [
+                    a oxo:ObjectPropertyAssertionFieldSubjectIndividual ;
+                    oxo:joinedQuery [
+                        a oxo:IndividualQuery ;
+                        oxo:joinedField [
+                            a oxo:IndividualFieldDataPropertyAssertions ;
+                            oxo:joinedQuery [
+                                a oxo:DataPropertyAssertionQuery ;
+                                oxo:computationParameters :ComputationParameterForwardFromToFailureDateParam ;
+                                oxo:filterCondition :DataPropertyMatchesPersonTimeToRestoreServiceBetweenDates ;
+                            ] ;
+                        ] ;
+                    ] ;
+                ] ;
+            ] ;
+        ] ;
+        oxo:expressionToAggregate [
+            a oxo:ExpressionCurrentRecordField ;
+            oxo:recordField oxo:DataPropertyAssertionFieldValue ;
+        ] ;
+        oxo:returnsTriples :ComputeTeamTimeToRestoreServiceBetweenDatesReturnsTriples ;
+    ] .
+
+:ComputeTeamTimeToRestoreServiceBetweenDatesReturnsTriples
+    a oxo:TriplesExpressionAggregated ;
+    oxo:triplePredicate [
+        a oxo:ExpressionIri ;
+        rdf:value :teamTimeToRestoreServiceBetweenDates ;
+    ] .
+
+
+
+:ComputeTimeToRestoreServiceByPersonRelatedChangesBetweenDates
+	a                fno:Function ;
+    a                comp:Computation ;
+    rdfs:label "Time to restore service by person related changes" ;
+    rdfs:comment "" ;
+    fno:expects      ( :PersonParam :FromDateParam :ToDateParam :FailureToDateParam ) ;
+    fno:returns      ( :PersonTimeToRestoreServiceOutput ) ;
+    oxo:oxolotlQuery :ComputeTimeToRestoreServiceByPersonRelatedChangesBetweenDatesQuery .
+
+:ComputeTimeToRestoreServiceByPersonRelatedChangesBetweenDatesQuery
+	a oxo:RecordFieldAggregateQuery ;
+	oxo:joinedQuery [
+		a oxo:AggregateQuery ;
+		oxo:measure oxo:MeasureAverage ;
+		oxo:joinedField [
+			a oxo:IndividualFieldObjectPropertyAssertionsOutgoing ;
+			oxo:joinedQuery [
+				a oxo:ObjectPropertyAssertionQuery ;
+				oxo:computationParameters :ComputationParameterForwardFromToFailureDateParam ;
+				oxo:filterCondition :ObjectPropertyMatchesPersonRelatesToFailureBetweenDates ;
+				oxo:joinedField [
+					a oxo:ObjectPropertyAssertionFieldTargetIndividual ;
+					oxo:joinedQuery [
+						a oxo:IndividualQuery ;
+						oxo:joinedField [
+							a oxo:IndividualFieldDataPropertyAssertions ;
+							oxo:joinedQuery [
+								a oxo:DataPropertyAssertionQuery ;
+								oxo:filterCondition :DataPropertyMatchesFailureTimeToRestoreService ;
+							] ;
+						] ;
+					] ;
+				] ;
+			] ;
+		] ;
+		oxo:expressionToAggregate [
+            a oxo:ExpressionCurrentRecordField ;
+            oxo:recordField oxo:DataPropertyAssertionFieldValue ;
+        ] ;
+        oxo:returnsTriples :ComputeTimeToRestoreServiceByPersonRelatedChangesBetweenDatesReturnsTriples ;
+    ] .
+
+:ComputeTimeToRestoreServiceByPersonRelatedChangesBetweenDatesReturnsTriples
+    a oxo:TriplesExpressionAggregated ;
+    oxo:triplePredicate [
+        a oxo:ExpressionIri ;
+        rdf:value :personTimeToRestoreServiceBetweenDates ;
+    ] .
+
+
+:ComputePersonRelatesToFailuresBetweenDates
+	a                fno:Function ;
+    a                comp:Computation ;
+    rdfs:label "Person relates to failures between dates" ;
+    rdfs:comment "" ;
+    fno:expects      ( :PersonParam :FromDateParam :ToDateParam :FailureToDateParam ) ;
+    fno:returns      ( :PersonRelatesToFailureBetweenDatesOutput ) ;
+    oxo:oxolotlQuery :ComputePersonRelatesToFailuresBetweenDatesQuery .
+
+:ComputePersonRelatesToFailuresBetweenDatesQuery
+	a oxo:IndividualFieldObjectPropertyAssertionsOutgoing ;
+	oxo:joinedQuery [
+		a oxo:ObjectPropertyAssertionQuery ;
+        oxo:distinctRecords true ;
+		oxo:computationParameters :ComputationParameterForwardFromToDateParam ;
+		oxo:filterCondition :ObjectPropertyMatchesPersonHasAuthoredDeploymentBetweenDates ;
+		oxo:joinedField [
+			a oxo:ObjectPropertyAssertionFieldTargetIndividual ;
+			oxo:joinedQuery [
+				a oxo:IndividualQuery ;
+				oxo:joinedField [
+					a oxo:IndividualFieldObjectPropertyAssertionsOutgoing ;
+					oxo:joinedQuery [
+						a oxo:ObjectPropertyAssertionQuery ;
+                        oxo:distinctRecords true ;
+						oxo:computationParameters :ComputationParameterForwardFromToFailureDateParam ;
+						oxo:filterCondition :ObjectPropertyMatchesDeploymentHasRelatedFailureBetweenDates ;
+						oxo:returnsTriples :ComputePersonRelatesToFailuresBetweenDatesReturnsTriples ;
+					] ;
+				] ;
+			] ;
+		] ;
+	] .
+
+:ComputePersonRelatesToFailuresBetweenDatesReturnsTriples
+	a oxo:TriplesExpressionTriple ;
+    oxo:tripleSubject [
+        a oxo:ExpressionComputationSubject
+    ] ;
+    oxo:triplePredicate [
+        a oxo:ExpressionIri ;
+        rdf:value :PersonRelatesToFailureBetweenDates ;
+    ] ;
+    oxo:tripleObject [
+        a oxo:ExpressionCurrentRecordField ;
+        oxo:recordField oxo:ObjectPropertyAssertionFieldTarget ;
+    ] .
+
+
+:ComputeTimeToRestoreOnFailure
+	a                fno:Function ;
+    a                comp:Computation ;
+    rdfs:label "Time to restore on failure" ;
+    rdfs:comment "" ;
+    fno:expects      ( :FailureParam ) ;
+    fno:returns      ( :FailureTimeToRestoreOutput ) ;
+    oxo:oxolotlQuery :ComputeTimeToRestoreOnFailureQuery .
+
+:ComputeTimeToRestoreOnFailureQuery
+	a oxo:IndividualFieldAnnotations ;
+	oxo:joinedQuery [
+		a oxo:AnnotationQuery ;
+		oxo:filterCondition :AnnotationPropertyMatchesCreatedAt ;
+		oxo:joinedField [
+			a oxo:AnnotationFieldSubjectIndividual ;
+			oxo:joinedQuery [
+				a oxo:IndividualQuery ;
+				oxo:joinedField [
+					a oxo:IndividualFieldAnnotations ;
+					oxo:joinedQuery [
+						a oxo:AnnotationQuery ;
+						oxo:filterCondition :AnnotationPropertyMatchesResolvedAt ;
+						oxo:returnsTriples :ComputeTimeToRestoreOnFailureReturnsTriples ;
+					] ;
+				] ;
+			] ;
+		] ;
+	] .
+
+:ComputeTimeToRestoreOnFailureReturnsTriples
+	a oxo:TriplesExpressionTriple ;
+	oxo:tripleSubject [
+        a oxo:ExpressionComputationSubject ;
+    ] ;
+    oxo:triplePredicate [
+        a oxo:ExpressionIri ;
+        rdf:value :failureTimeToRestoreService ;
+    ] ;
+	oxo:tripleObject :SubtractDatesForChildOnResolvedAt .
+
+:SubtractDatesForChildOnResolvedAt
+	a oxo:ExpressionScalarFunction ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionSubtract ;
+        oxo:outputType xsd:duration ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:AnnotationFieldValue ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionSelection ;
+                oxo:selectionRoot [
+                    a oxo:ParentReference ;
+                    oxo:parentStepsOut 2 ;
+                ] ;
+                oxo:recordField oxo:AnnotationFieldValue ;
+            ] ;
+        ] ;
+    ] .
+
+
+:ComputeTeamCommitChangeLeadTimeBetweenDates
+    a                fno:Function ;
+    a                comp:Computation ;
+    rdfs:label "Team change lead time between dates" ;
+    rdfs:comment "" ;
+    fno:expects      ( :TeamParam :FromDateParam :ToDateParam ) ;
+    fno:returns      ( :TeamChangeLeadTimeBetweenDatesOutput ) ;
+    oxo:oxolotlQuery :ComputeTeamCommitChangeLeadTimeBetweenDatesQuery .
+
+:ComputeTeamCommitChangeLeadTimeBetweenDatesQuery
+	a oxo:RecordFieldAggregateQuery ;
+    oxo:joinedQuery [
+        a oxo:AggregateQuery ;
+        oxo:measure oxo:MeasureAverage ;
+        oxo:joinedField [
+            a oxo:IndividualFieldObjectPropertyAssertionsIncoming ;
+            oxo:joinedQuery [
+                a oxo:ObjectPropertyAssertionQuery ;
+                oxo:filterCondition :ObjectPropertyMatchesPersonPartOfTeam ;
+                oxo:joinedField [
+                    a oxo:ObjectPropertyAssertionFieldSubjectIndividual ;
+                    oxo:joinedQuery [
+                        a oxo:IndividualQuery ;
+                        oxo:joinedField [
+                            a oxo:IndividualFieldDataPropertyAssertions ;
+                            oxo:joinedQuery [
+                                a oxo:DataPropertyAssertionQuery ;
+                                oxo:computationParameters :ComputationParameterForwardFromToDateParam ;
+                                oxo:filterCondition :DataPropertyMatchesPersonChangeLeadTimeBetweenDates ;
+                            ] ;
+                        ] ;
+                    ] ;
+                ] ;
+            ] ;
+        ] ;
+        oxo:expressionToAggregate [
+            a oxo:ExpressionCurrentRecordField ;
+            oxo:recordField oxo:DataPropertyAssertionFieldValue ;
+        ] ;
+        oxo:returnsTriples :ComputeTeamCommitChangeLeadTimeBetweenDatesReturnsTriples ;
+    ] .
+
+:ComputeTeamCommitChangeLeadTimeBetweenDatesReturnsTriples
+    a oxo:TriplesExpressionAggregated ;
+    oxo:triplePredicate [
+        a oxo:ExpressionIri ;
+        rdf:value :teamChangeLeadTimeBetweenDates ;
+    ] .
+
+
+:ComputePersonCommitChangeLeadTimeBetweenDates
+    a                fno:Function ;
+    a                comp:Computation ;
+    rdfs:label "Person change lead time between dates" ;
+    rdfs:comment "" ;
+    fno:expects      ( :PersonParam :FromDateParam :ToDateParam ) ;
+    fno:returns      ( :PersonChangeLeadTimeBetweenDatesOutput ) ;
+    oxo:oxolotlQuery :ComputePersonCommitChangeLeadTimeBetweenDatesQuery .
+
+:ComputePersonCommitChangeLeadTimeBetweenDatesQuery
+	a oxo:RecordFieldAggregateQuery ;
+	oxo:joinedQuery [
+		a oxo:AggregateQuery ;
+		oxo:measure oxo:MeasureAverage ;
+		oxo:joinedField [
+			a oxo:IndividualFieldObjectPropertyAssertionsOutgoing ;
+			oxo:joinedQuery [
+				a oxo:ObjectPropertyAssertionQuery ;
+                oxo:distinctRecords true ;
+                oxo:computationParameters :ComputationParameterForwardFromToDateParam ;
+                oxo:filterCondition :ObjectPropertyMatchesPersonHasAuthoredDeploymentBetweenDates ;
+				oxo:joinedField [
+					a oxo:ObjectPropertyAssertionFieldTargetIndividual ;
+					oxo:joinedQuery [
+						a oxo:IndividualQuery ;
+						oxo:joinedField [
+							a oxo:IndividualFieldObjectPropertyAssertionsIncoming ;
+							oxo:joinedQuery [
+								a oxo:ObjectPropertyAssertionQuery ;
+								oxo:filterCondition :ObjectPropertyMatchesCommitPartOfDeployment ;
+								oxo:joinedField [
+									a oxo:ObjectPropertyAssertionFieldSubjectIndividual ;
+									oxo:joinedQuery [
+										a oxo:IndividualQuery ;
+										oxo:joinedField [
+											a oxo:IndividualFieldDataPropertyAssertions ;
+											oxo:joinedQuery [
+												a oxo:DataPropertyAssertionQuery ;
+												oxo:filterCondition :DataPropertyMatchesCommitChangeLeadTime ;
+											] ;
+										] ;
+									] ;
+								] ;
+							] ;
+						] ;
+					] ;
+				] ;
+			] ;
+		] ;
+		oxo:expressionToAggregate [
+            a oxo:ExpressionCurrentRecordField ;
+            oxo:recordField oxo:DataPropertyAssertionFieldValue ;
+        ] ;
+		oxo:returnsTriples :ComputePersonCommitChangeLeadTimeBetweenDatesReturnsTriples ;
+	] .
+
+:ComputePersonCommitChangeLeadTimeBetweenDatesReturnsTriples
+    a oxo:TriplesExpressionAggregated ;
+    oxo:triplePredicate [
+        a oxo:ExpressionIri ;
+        rdf:value :personChangeLeadTimeBetweenDates ;
+    ] .
+
+
+:ComputeCommitChangeLeadTime
+    a                fno:Function ;
+    a                comp:Computation ;
+    rdfs:label "Commit change lead time" ;
+    rdfs:comment "" ;
+    fno:expects      ( :CommitParam ) ;
+    fno:returns      ( :CommitChangeLeadTimeOutput ) ;
+    oxo:oxolotlQuery :ComputeCommitChangeLeadTimeQuery .
+
+:ComputeCommitChangeLeadTimeQuery
+	a oxo:IndividualFieldAnnotations ;
+	oxo:joinedQuery [
+        a oxo:AnnotationQuery ;
+		oxo:filterCondition :AnnotationPropertyMatchesCreatedAt ;
+		oxo:joinedField [
+			a oxo:AnnotationFieldSubjectIndividual ;
+			oxo:joinedQuery [
+				a oxo:IndividualQuery ;
+				oxo:joinedField [
+					a oxo:IndividualFieldObjectPropertyAssertionsOutgoing ;
+					oxo:joinedQuery [
+						a oxo:ObjectPropertyAssertionQuery ;
+						oxo:filterCondition :ObjectPropertyMatchesCommitPartOfDeployment ;
+						oxo:joinedField [
+							a oxo:ObjectPropertyAssertionFieldTargetIndividual ;
+							oxo:joinedQuery [
+								a oxo:IndividualQuery ;
+								oxo:joinedField [
+									a oxo:IndividualFieldDataPropertyAssertions ;
+									oxo:joinedQuery [
+										a oxo:DataPropertyAssertionQuery ;
+										oxo:filterCondition :DataPropertyMatchesDeploymentDate ;
+										oxo:returnsTriples :ComputeCommitChangeLeadTimeReturnsTriples ;
+									] ;
+								] ;
+							] ;
+						] ;
+					] ;
+				] ;
+			] ;
+		] ;
+	] .
+
+:ComputeCommitChangeLeadTimeReturnsTriples
+    a oxo:TriplesExpressionTriple ;
+    oxo:tripleSubject [
+        a oxo:ExpressionComputationSubject ;
+    ] ;
+    oxo:triplePredicate [
+        a oxo:ExpressionIri ;
+        rdf:value :commitChangeLeadTime ;
+    ] ;
+    oxo:tripleObject :DeploymentDateSubtractCommitDate .
+
+:DeploymentDateSubtractCommitDate
+	a oxo:ExpressionScalarFunction ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionSubtract ;
+        oxo:outputType xsd:duration ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:DataPropertyAssertionFieldValue ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionSelection ;
+                oxo:selectionRoot [
+                    a oxo:ParentReference ;
+                    oxo:parentStepsOut 4 ;
+                ] ;
+                oxo:recordField oxo:AnnotationFieldValue ;
+            ] ;
+        ] ;
+    ] .
+
+:ComputeCommitIsDeployed
+    a                fno:Function ;
+    a                comp:Computation ;
+    rdfs:label "Commit is deployed" ;
+    rdfs:comment "" ;
+    fno:expects      ( :CommitParam ) ;
+    fno:returns      ( :CommitIsDeployedOutput ) ;
+    oxo:oxolotlQuery :ComputeCommitIsDeployedQuery .
+
+:ComputeCommitIsDeployedQuery
+	a oxo:IndividualFieldObjectPropertyAssertionsOutgoing ;
+	oxo:joinedQuery [
+		a oxo:ObjectPropertyAssertionQuery ;
+		oxo:filterCondition :ObjectPropertyMatchesCommitPartOfDeployment ;
+		oxo:returnsTriples :ComputeCommitIsDeployedReturnsTriples ;
+	] .
+
+:ComputeCommitIsDeployedReturnsTriples
+	a oxo:TriplesExpressionTriple ;
+    oxo:tripleSubject [
+        a oxo:ExpressionComputationSubject ;
+    ] ;
+    oxo:triplePredicate [
+        a oxo:ExpressionIri ;
+        rdf:value :commitIsDeployed ;
+    ] ;
+    oxo:tripleObject [
+        a oxo:ExpressionLiteral ;
+        rdf:value true ;
+    ] .
+
+:PersonChangeFailureRateBetweenDates
+    a                fno:Function ;
+    a                comp:Computation ;
+    rdfs:label "Person change failure rate between dates" ;
+    rdfs:comment "" ;
+    fno:expects      ( :PersonParam :FromDateParam :ToDateParam :FailureToDateParam ) ;
+    fno:returns      ( :PersonChangeFailureRateBetweenDatesOutput ) ;
+    oxo:oxolotlQuery :PersonChangeFailureRateBetweenDatesQuery .
+
+:PersonChangeFailureRateBetweenDatesQuery
+    a oxo:IndividualFieldDataPropertyAssertions ;
+    oxo:joinedQuery [
+        a oxo:DataPropertyAssertionQuery ;
+        oxo:computationParameters :ComputationParameterForwardFromToFailureDateParam ;
+        oxo:filterCondition :DataPropertyMatchesPersonDeploymentCountBetweenDates ;
+        oxo:joinedField [
+            a oxo:DataPropertyAssertionFieldSubjectIndividual ;
+            oxo:joinedQuery [
+                a oxo:IndividualQuery ;
+                oxo:joinedField [
+                    a oxo:IndividualFieldDataPropertyAssertions ;
+                    oxo:joinedQuery [
+                        a oxo:DataPropertyAssertionQuery ;
+                        oxo:computationParameters :ComputationParameterForwardFromToFailureDateParam ;
+                        oxo:filterCondition :DataPropertyMatchesPersonFailureCountBetweenDates ;
+                        oxo:returnsTriples :PersonChangeFailureRateBetweenDatesReturnsTriples ;
+                    ] ;
+                ] ;
+            ] ;
+        ] ;
+    ] .
+
+:PersonChangeFailureRateBetweenDatesReturnsTriples
+    a oxo:TriplesExpressionTriple ;
+    oxo:tripleSubject [
+        a oxo:ExpressionComputationSubject ;
+    ] ;
+    oxo:triplePredicate [
+        a oxo:ExpressionIri ;
+        rdf:value :personChangeFailureRateBetweenDates ;
+    ] ;
+    oxo:tripleObject :DevisionOfFailuresByDeployments .
+
+
+:TeamChangeFailureRateBetweenDates
+    a                fno:Function ;
+    a                comp:Computation ;
+    rdfs:label "Team change failure rate between dates" ;
+    rdfs:comment "" ;
+    fno:expects      ( :TeamParam :FromDateParam :ToDateParam :FailureToDateParam ) ;
+    fno:returns      ( :TeamChangeFailureRateBetweenDatesOutput ) ;
+    oxo:oxolotlQuery :TeamChangeFailureRateBetweenDatesQuery .
+
+:TeamChangeFailureRateBetweenDatesQuery
+    a oxo:IndividualFieldDataPropertyAssertions ;
+    oxo:joinedQuery [
+        a oxo:DataPropertyAssertionQuery ;
+        oxo:computationParameters :ComputationParameterForwardFromToFailureDateParam ;
+        oxo:filterCondition :DataPropertyMatchesTeamDeploymentCountBetweenDates ;
+        oxo:joinedField [
+            a oxo:DataPropertyAssertionFieldSubjectIndividual ;
+            oxo:joinedQuery [
+                a oxo:IndividualQuery ;
+                oxo:joinedField [
+                    a oxo:IndividualFieldDataPropertyAssertions ;
+                    oxo:joinedQuery [
+                        a oxo:DataPropertyAssertionQuery ;
+                        oxo:computationParameters :ComputationParameterForwardFromToFailureDateParam ;
+                        oxo:filterCondition :DataPropertyMatchesTeamFailureCountBetweenDates ;
+                        oxo:returnsTriples :TeamChangeFailureRateBetweenDatesReturnsTriples ;
+                    ] ;
+                ] ;
+            ] ;
+        ] ;
+    ] .
+
+:TeamChangeFailureRateBetweenDatesReturnsTriples
+    a oxo:TriplesExpressionTriple ;
+    oxo:tripleSubject [
+        a oxo:ExpressionComputationSubject ;
+    ] ;
+    oxo:triplePredicate [
+        a oxo:ExpressionIri ;
+        rdf:value :teamChangeFailureRateBetweenDates ;
+    ] ;
+    oxo:tripleObject :DevisionOfFailuresByDeployments .
+
+:DevisionOfFailuresByDeployments
+    a oxo:ExpressionScalarFunction ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionDivide ;
+        oxo:outputType xsd:decimal ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:DataPropertyAssertionFieldValue ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionSelection ;
+                oxo:selectionRoot [
+                    a oxo:ParentReference ;
+                    oxo:parentStepsOut 2 ;
+                ] ;
+                oxo:recordField oxo:DataPropertyAssertionFieldValue ;
+            ] ;
+        ] ;
+    ] .
+
+:TeamDeploymentFailureCountBetweenDates
+    a                fno:Function ;
+    a                comp:Computation ;
+    rdfs:label "Team failure count between dates" ;
+    rdfs:comment "" ;
+    fno:expects      ( :TeamParam :FromDateParam :ToDateParam :FailureToDateParam ) ;
+    fno:returns      ( :TeamFailureCountBetweenDatesOutput ) ;
+    oxo:oxolotlQuery :TeamDeploymentFailureCountBetweenDatesQuery .
+
+:TeamDeploymentFailureCountBetweenDatesQuery
+    a oxo:RecordFieldAggregateQuery ;
+    oxo:joinedQuery [
+        a oxo:AggregateQuery ;
+        oxo:measure oxo:MeasureSum ;
+        oxo:joinedField [
+            a oxo:IndividualFieldObjectPropertyAssertionsIncoming ;
+            oxo:joinedQuery [
+                a oxo:ObjectPropertyAssertionQuery ;
+                oxo:filterCondition :ObjectPropertyMatchesPersonPartOfTeam ;
+                oxo:joinedField [
+                    a oxo:ObjectPropertyAssertionFieldSubjectIndividual ;
+                    oxo:joinedQuery [
+                        a oxo:IndividualQuery ;
+                        oxo:joinedField [
+                            a oxo:IndividualFieldDataPropertyAssertions ;
+                            oxo:joinedQuery [
+                                a oxo:DataPropertyAssertionQuery ;
+                                oxo:computationParameters :ComputationParameterForwardFromToFailureDateParam ;
+                                oxo:filterCondition :DataPropertyMatchesPersonFailureCountBetweenDates ;
+                            ] ;
+                        ] ;
+                    ] ;
+                ] ;
+            ] ;
+        ] ;
+        oxo:expressionToAggregate [
+            a oxo:ExpressionCurrentRecordField ;
+            oxo:recordField oxo:DataPropertyAssertionFieldValue ;
+        ] ;
+        oxo:returnsTriples :TeamDeploymentFailureCountBetweenDatesReturnsTriples ;
+    ] .
+
+:TeamDeploymentFailureCountBetweenDatesReturnsTriples
+    a oxo:TriplesExpressionAggregated ;
+    oxo:triplePredicate [
+        a oxo:ExpressionIri ;
+        rdf:value :teamFailureCountBetweenDates ;
+    ] .
+
+
+:PersonDeploymentFailureCountBetweenDates
+    a                fno:Function ;
+    a                comp:Computation ;
+    rdfs:label "Person failure count between dates" ;
+    rdfs:comment "" ;
+    fno:expects      ( :PersonParam :FromDateParam :ToDateParam :FailureToDateParam ) ;
+    fno:returns      ( :PersonFailureCountBetweenDatesOutput ) ;
+    oxo:oxolotlQuery :PersonDeploymentFailureCountBetweenDatesQuery .
+
+:PersonDeploymentFailureCountBetweenDatesQuery
+    a oxo:RecordFieldAggregateQuery ;
+    oxo:joinedQuery [
+        a oxo:AggregateQuery ;
+        oxo:measure oxo:MeasureCountDistinct ;
+        oxo:joinedField [
+            a oxo:IndividualFieldObjectPropertyAssertionsOutgoing ;
+            oxo:joinedQuery [
+                a oxo:ObjectPropertyAssertionQuery ;
+                oxo:distinctRecords true ;
+                oxo:computationParameters :ComputationParameterForwardFromToDateParam ;
+                oxo:filterCondition :ObjectPropertyMatchesPersonHasAuthoredDeploymentBetweenDates ;
+                oxo:joinedField [
+                    a oxo:ObjectPropertyAssertionFieldTargetIndividual ;
+                    oxo:joinedQuery [
+                        a oxo:IndividualQuery ;
+                        oxo:joinedField [
+                            a oxo:IndividualFieldDataPropertyAssertions ;
+                            oxo:joinedQuery [
+                                a oxo:DataPropertyAssertionQuery ;
+                                oxo:computationParameters :ComputationParameterForwardFromToFailureDateParam ;
+                                oxo:filterCondition :DataPropertyMatchesDeploymentHasFailureBetweenDates ;
+                            ] ;
+                        ] ;
+                    ] ;
+                ] ;
+            ] ;
+        ] ;
+        oxo:expressionToAggregate [
+            a oxo:ExpressionCurrentRecordField ;
+            oxo:recordField oxo:DataPropertyAssertionFieldSubjectIRI ;
+        ] ;
+        oxo:returnsTriples :PersonDeploymentFailureCountBetweenDatesReturnsTriples ;
+    ] .
+
+:PersonDeploymentFailureCountBetweenDatesReturnsTriples
+    a oxo:TriplesExpressionAggregated ;
+    oxo:triplePredicate [
+        a oxo:ExpressionIri ;
+        rdf:value :personFailureCountBetweenDates ;
+    ] .
+
+
+:DeploymentHasFailureBetweenDates
+    a                fno:Function ;
+    a                comp:Computation ;
+    rdfs:label "Deployment has at least one failure between dates" ;
+    rdfs:comment "" ;
+    fno:expects      ( :DeploymentParam :FromDateParam :ToDateParam :FailureToDateParam ) ;
+    fno:returns      ( :DeploymentHasFailureBetweenDatesOutput ) ;
+    oxo:oxolotlQuery :DeploymentHasFailureBetweenDatesQuery .
+
+:DeploymentHasFailureBetweenDatesQuery
+    a oxo:IndividualFieldObjectPropertyAssertionsOutgoing ;
+    oxo:joinedQuery [
+        a oxo:ObjectPropertyAssertionQuery ;
+        oxo:computationParameters :ComputationParameterForwardFromToFailureDateParam ;
+        oxo:filterCondition :ObjectPropertyMatchesDeploymentHasRelatedFailureBetweenDates ;
+        oxo:returnsTriples :DeploymentHasFailureBetweenDatesReturnsTriples ;
+    ] .
+
+:DeploymentHasFailureBetweenDatesReturnsTriples
+    a oxo:TriplesExpressionTriple ;
+    oxo:tripleSubject [
+        a oxo:ExpressionComputationSubject ;
+    ] ;
+    oxo:triplePredicate [
+        a oxo:ExpressionIri ;
+        rdf:value :deploymentHasFailureBetweenDates ;
+    ] ;
+    oxo:tripleObject [
+        a oxo:ExpressionLiteral ;
+        rdf:value true ;
+    ] .
+
+
+:FailureBetweenDatesViaRelatesToDeployment
+    a                fno:Function ;
+    a                comp:Computation ;
+    rdfs:label "Failure between dates via relates to deployment" ;
+    rdfs:comment "" ;
+    fno:expects      ( :DeploymentParam :FromDateParam :ToDateParam :FailureToDateParam ) ;
+    fno:returns      ( :DeploymentHasRelatedFailureBetweenDatesOutput ) ;
+    oxo:oxolotlQuery :FailureBetweenDatesViaRelatesToDeploymentQuery .
+
+:FailureBetweenDatesViaRelatesToDeploymentQuery
+    a oxo:IndividualFieldObjectPropertyAssertionsIncoming ;
+    oxo:joinedQuery [
+        a oxo:ObjectPropertyAssertionQuery ;
+        oxo:filterCondition :ObjectPropertyMatchesFailureRelatesToDeployment ;
+        oxo:joinedField [
+            a oxo:ObjectPropertyAssertionFieldSubjectIndividual ;
+            oxo:joinedQuery [
+                a oxo:IndividualQuery ;
+                oxo:joinedField [
+                    a oxo:IndividualFieldAnnotations ;
+                    oxo:joinedQuery [
+                        a oxo:AnnotationQuery ;
+                        oxo:filterCondition :AnnotationPropertyMatchesCreatedAt ;
+                        oxo:filterCondition :CreatedAtAfterEqualFromDate ;
+                        oxo:filterCondition :CreatedAtBeforeEqualToDateOrFailureToDate ;
+                        oxo:returnsTriples :FailureBetweenDatesViaRelatesToDeploymentReturnsTriples ;
+                    ] ;
+                ] ;
+            ] ;
+        ] ;
+    ] .
+
+:FailureBetweenDatesViaRelatesToDeploymentReturnsTriples
+    a oxo:TriplesExpressionTriple ;
+    oxo:tripleSubject [
+        a oxo:ExpressionComputationSubject
+    ] ;
+    oxo:triplePredicate [
+        a oxo:ExpressionIri ;
+        rdf:value :DeploymentHasRelatedFailureBetweenDates ;
+    ] ;
+    oxo:tripleObject [
+        a oxo:ExpressionCurrentRecordField ;
+        oxo:recordField oxo:AnnotationFieldSubjectIRI ;
+    ] .
+
+
+:TeamDeploymentFrequencyBetweenDates
+  a                fno:Function ;
+  a                comp:Computation ;
+  rdfs:label "Deployment frequency for teams" ;
+  rdfs:comment "" ;
+  fno:expects      ( :TeamParam :FromDateParam :ToDateParam :IntervalParam ) ;
+  fno:returns      ( :TeamDeploymentFrequencyOutput ) ;
+  oxo:oxolotlQuery :TeamDeploymentFrequencyBetweenDatesQuery .
+
+:TeamDeploymentFrequencyBetweenDatesQuery
+    a oxo:IndividualFieldDataPropertyAssertions ;
+    oxo:joinedQuery [
+        a oxo:DataPropertyAssertionQuery ;
+        oxo:computationParameters :ComputationParameterForwardFromToDateParam ;
+        oxo:filterCondition :DataPropertyMatchesTeamDeploymentCountBetweenDates ;
+        oxo:returnsTriples :TeamDeploymentFrequencyBetweenDatesQueryReturnsTriples ;
+    ] .
+
+:TeamDeploymentFrequencyBetweenDatesQueryReturnsTriples
+    a oxo:TriplesExpressionTriple ;
+    oxo:tripleSubject [
+        a oxo:ExpressionComputationSubject ;
+    ] ;
+    oxo:triplePredicate [
+        a oxo:ExpressionIri ;
+        rdf:value :teamDeploymentFrequency ;
+    ] ;
+    oxo:tripleObject :DeploymentCountDevisionByInterval .
+
+:DeploymentCountDevisionByInterval
+    a oxo:ExpressionScalarFunction ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionDivide ;
+        oxo:outputType xsd:decimal ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:DataPropertyAssertionFieldValue ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionComputationParameter ;
+                oxo:computationParameter :IntervalParam ;
+            ] ;
+        ] ;
+    ] .
+
+
+:TeamCountAuthoredDeploymentsBetweenDates 
+  a                fno:Function ;
+  a                comp:Computation ;
+  rdfs:label "Count authored deployments between dates for teams" ;
+  rdfs:comment "" ;
+  fno:expects      ( :TeamParam :FromDateParam :ToDateParam ) ;
+  fno:returns      ( :TeamDeploymentCountBetweenDatesOutput ) ;
+  oxo:oxolotlQuery :TeamCountAuthoredDeploymentsBetweenDatesQuery .
+
+
+:TeamCountAuthoredDeploymentsBetweenDatesQuery
+    a oxo:RecordFieldAggregateQuery ;
+    oxo:joinedQuery [
+        a oxo:AggregateQuery ;
+        oxo:measure oxo:MeasureSum ;
+        oxo:joinedField [
+            a oxo:IndividualFieldDataPropertyAssertions ;
+            oxo:joinedQuery [
+                a oxo:DataPropertyAssertionQuery ;
+                oxo:computationParameters :ComputationParameterForwardFromToDateParam ;
+                oxo:filterCondition :DataPropertyMatchesPersonDeploymentCountBetweenDatesForTeam ;
+            ] ;
+        ] ;
+        oxo:expressionToAggregate [
+            a oxo:ExpressionCurrentRecordField ;
+            oxo:recordField oxo:DataPropertyAssertionFieldValue ;
+        ] ;
+        oxo:returnsTriples :TeamCountAuthoredDeploymentsBetweenDatesQueryReturnsTriples ;
+    ] .
+
+:TeamCountAuthoredDeploymentsBetweenDatesQueryReturnsTriples
+    a oxo:TriplesExpressionAggregated ;
+    oxo:triplePredicate [
+        a oxo:ExpressionIri ;
+        rdf:value :teamDeploymentCountBetweenDates ;
+    ] .
+
+
+:TeamHasPersonCountAuthoredDeploymentsBetweenDates
+  a                fno:Function ;
+  a                comp:Computation ;
+  rdfs:label "Query counts of authored deployments between dates from persons" ;
+  rdfs:comment "" ;
+  fno:expects      ( :TeamParam :FromDateParam :ToDateParam ) ;
+  fno:returns      ( :TeamHasPersonCountAuthoredDeploymentsBetweenDatesOutput ) ;
+  oxo:oxolotlQuery :TeamHasPersonCountAuthoredDeploymentsBetweenDatesQuery .
+
+
+:TeamHasPersonCountAuthoredDeploymentsBetweenDatesQuery
+    a oxo:IndividualFieldObjectPropertyAssertionsIncoming ;
+    oxo:joinedQuery [
+        a oxo:ObjectPropertyAssertionQuery ;
+        oxo:filterCondition :ObjectPropertyMatchesPersonPartOfTeam ;
+        oxo:joinedField [
+            a oxo:ObjectPropertyAssertionFieldSubjectIndividual ;
+            oxo:joinedQuery [
+                a oxo:IndividualQuery ;
+                oxo:joinedField [
+                    a oxo:IndividualFieldDataPropertyAssertions ;
+                    oxo:joinedQuery [
+                        a oxo:DataPropertyAssertionQuery ;
+                        oxo:computationParameters :ComputationParameterForwardFromToDateParam ;
+                        oxo:filterCondition :DataPropertyMatchesPersonDeploymentCountBetweenDates ;
+                        oxo:returnsTriples :TeamHasPersonCountAuthoredDeploymentsBetweenDatesReturnTriples ;
+                    ] ;
+                ] ;
+            ] ;
+        ] ;
+    ] .
+
+
+:TeamHasPersonCountAuthoredDeploymentsBetweenDatesReturnTriples
+    a oxo:TriplesExpressionTriple ;
+    oxo:tripleSubject [ a oxo:ExpressionComputationSubject ] ;
+    oxo:triplePredicate [ a oxo:ExpressionIri ;
+                            rdf:value :personDeploymentCountBetweenDatesForTeam ] ;
+    oxo:tripleObject [ a oxo:ExpressionCurrentRecordField ;
+                         oxo:recordField oxo:DataPropertyAssertionFieldValue ] .
+
+
+:PersonCountAuthoredDeploymentsBetweenDates
+  a                fno:Function ;
+  a                comp:Computation ;
+  rdfs:label "Count authored deployments between dates for persons" ;
+  rdfs:comment "" ;
+  fno:expects      ( :PersonParam :FromDateParam :ToDateParam ) ;
+  fno:returns      ( :PersonDeploymentCountBetweenDatesOutput ) ;
+  oxo:oxolotlQuery :PersonCountAuthoredDeploymentsBetweenDatesQuery .
+
+
+:PersonCountAuthoredDeploymentsBetweenDatesQuery
+    a oxo:RecordFieldAggregateQuery ;
+    oxo:joinedQuery [
+        a oxo:AggregateQuery ;
+        oxo:measure oxo:MeasureCount ;
+        oxo:joinedField [
+            a oxo:IndividualFieldObjectPropertyAssertionsOutgoing ;
+            oxo:joinedQuery [
+                a oxo:ObjectPropertyAssertionQuery ;
+                oxo:distinctRecords true ;
+                oxo:computationParameters :ComputationParameterForwardFromToDateParam ;
+                oxo:filterCondition :ObjectPropertyMatchesPersonHasAuthoredDeploymentBetweenDates ;
+            ] ;
+        ] ;
+        oxo:expressionToAggregate [
+            a oxo:ExpressionCurrentRecordField ;
+            oxo:recordField oxo:ObjectPropertyAssertionFieldTarget ;
+        ] ;
+        oxo:returnsTriples :CountAuthoredDeploymentsBetweenDatesQueryReturnsTriples ;
+    ] .
+
+
+:CountAuthoredDeploymentsBetweenDatesQueryReturnsTriples
+    a oxo:TriplesExpressionAggregated ;
+    oxo:triplePredicate [
+        a oxo:ExpressionIri ;
+        rdf:value :personDeploymentCountBetweenDates ;
+    ] .
+
+
+:DeploymentBetweenDatesViaAuthoredByPerson
+  a                fno:Function ;
+  a                comp:Computation ;
+  rdfs:label "Deployment between dates via authored by person" ;
+  rdfs:comment "" ;
+  fno:expects      ( :PersonParam :FromDateParam :ToDateParam ) ;
+  fno:returns      ( :PersonHasAuthoredDeploymentBetweenDatesOutput ) ;
+  oxo:oxolotlQuery :DeploymentBetweenDatesViaAuthoredByPersonQuery .
+
+
+:DeploymentBetweenDatesViaAuthoredByPersonQuery
+    a oxo:IndividualFieldObjectPropertyAssertionsIncoming ;
+    oxo:joinedQuery [
+        a oxo:ObjectPropertyAssertionQuery ;
+        oxo:filterCondition :ObjectPropertyMatchesCommitAuthoredByPerson ;
+        oxo:joinedField [
+            a oxo:ObjectPropertyAssertionFieldSubjectIndividual ;
+            oxo:joinedQuery [
+                a oxo:IndividualQuery ;
+                oxo:joinedField [
+                    a oxo:IndividualFieldObjectPropertyAssertionsOutgoing ;
+                    oxo:joinedQuery [
+                        a oxo:ObjectPropertyAssertionQuery ;
+                        oxo:filterCondition :ObjectPropertyMatchesCommitPartOfDeployment ;
+                        oxo:joinedField [
+                            a oxo:ObjectPropertyAssertionFieldTargetIndividual ;
+                            oxo:joinedQuery [
+                                a oxo:IndividualQuery ;
+                                oxo:joinedField [
+                                    a oxo:IndividualFieldDataPropertyAssertions ;
+                                    oxo:joinedQuery [
+                                        a oxo:DataPropertyAssertionQuery ;
+                                        oxo:filterCondition :DataPropertyMatchesDeploymentDate ;
+                                        oxo:filterCondition :DeploymentDateAfterEqualFromDate ;
+                                        oxo:filterCondition :DeploymentDateBeforeEqualToDate ;
+                                        oxo:returnsTriples :DeploymentBetweenDatesViaAuthoredByPersonReturnsTriples ;
+                                    ] ;
+                                ] ;
+                            ] ;
+                        ] ;
+                    ] ;
+                ]
+            ] ;
+        ] ;
+    ] .
+
+
+:DeploymentBetweenDatesViaAuthoredByPersonReturnsTriples
+    a oxo:TriplesExpressionTriple ;
+    oxo:tripleSubject [ a oxo:ExpressionComputationSubject ] ;
+    oxo:triplePredicate [ a oxo:ExpressionIri ;
+                            rdf:value :PersonHasAuthoredDeploymentBetweenDates ] ;
+    oxo:tripleObject [ a oxo:ExpressionCurrentRecordField ;
+                         oxo:recordField oxo:DataPropertyAssertionFieldSubjectIRI ] .
+
+
+:DeploymentDateBeforeEqualToDate
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionLessThanOrEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:DataPropertyAssertionFieldValue ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionComputationParameter ;
+                oxo:computationParameter :ToDateParam ;
+            ] ;
+        ] ;
+    ] .
+
+
+:CreatedAtAfterEqualFromDate
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionGreaterThanOrEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:DataPropertyAssertionFieldValue ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionComputationParameter ;
+                oxo:computationParameter :FromDateParam ;
+            ] ;
+        ] ;
+    ] .
+
+
+:CreatedAtBeforeEqualToDateOrFailureToDate
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionLessThanOrEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:AnnotationFieldValue ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression :FailureToDateParamOrToDateParam ;
+        ] ;
+    ] .
+
+:FailureToDateParamOrToDateParam
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionCoalesce ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionComputationParameter ;
+                oxo:computationParameter :FailureToDateParam ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression :AddOneMonthToDateParam
+        ] ;
+    ] .
+
+:AddOneMonthToDateParam
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionAdd ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionComputationParameter ;
+                oxo:computationParameter :ToDateParam ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionLiteral ;
+                rdf:value "P30D"^^xsd:duration ;
+            ] ;
+        ] ;
+    ] .
+
+
+:DeploymentDateAfterEqualFromDate
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionGreaterThanOrEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:DataPropertyAssertionFieldValue ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionComputationParameter ;
+                oxo:computationParameter :FromDateParam ;
+            ] ;
+        ] ;
+    ] .
+
+
+:DataPropertyMatchesDeploymentHasFailureBetweenDates
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:DataPropertyAssertionFieldDataPropertyIRI ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionIri ;
+                rdf:value :deploymentHasFailureBetweenDates ;
+            ] ;
+        ] ;
+    ] .
+
+
+:DataPropertyMatchesFailureTimeToRestoreService
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:DataPropertyAssertionFieldDataPropertyIRI ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionIri ;
+                rdf:value :failureTimeToRestoreService ;
+            ] ;
+        ] ;
+    ] .
+
+
+:DataPropertyMatchesPersonTimeToRestoreServiceBetweenDates
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:DataPropertyAssertionFieldDataPropertyIRI ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionIri ;
+                rdf:value :personTimeToRestoreServiceBetweenDates ;
+            ] ;
+        ] ;
+    ] .
+
+
+:AnnotationPropertyMatchesResolvedAt
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:AnnotationFieldAnnotationPropertyIRI ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionIri ;
+                rdf:value <http://field33.com/ontologies/@fld33_domain/software_development/resolvedAt> ;
+            ] ;
+        ] ;
+    ] .
+
+
+:DataPropertyMatchesDeploymentDate
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:DataPropertyAssertionFieldDataPropertyIRI ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionIri ;
+                rdf:value <http://field33.com/ontologies/@fld33_domain/software_development/deploymentDate> ;
+            ] ;
+        ] ;
+    ] .
+
+
+:DataPropertyMatchesTeamDeploymentCountBetweenDates
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:DataPropertyAssertionFieldDataPropertyIRI ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionIri ;
+                rdf:value :teamDeploymentCountBetweenDates ;
+            ] ;
+        ] ;
+    ] .
+
+
+:DataPropertyMatchesPersonDeploymentCountBetweenDatesForTeam
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:DataPropertyAssertionFieldDataPropertyIRI ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionIri ;
+                rdf:value :personDeploymentCountBetweenDatesForTeam ;
+            ] ;
+        ] ;
+    ] .
+
+
+:DataPropertyMatchesTeamFailureCountBetweenDates
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:DataPropertyAssertionFieldDataPropertyIRI ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionIri ;
+                rdf:value :teamFailureCountBetweenDates ;
+            ] ;
+        ] ;
+    ] .
+
+
+:DataPropertyMatchesTeamDeploymentCountBetweenDates
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:DataPropertyAssertionFieldDataPropertyIRI ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionIri ;
+                rdf:value :teamDeploymentCountBetweenDates ;
+            ] ;
+        ] ;
+    ] .
+
+
+:DataPropertyMatchesPersonFailureCountBetweenDates
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:DataPropertyAssertionFieldDataPropertyIRI ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionIri ;
+                rdf:value :personFailureCountBetweenDates ;
+            ] ;
+        ] ;
+    ] .
+
+
+:DataPropertyMatchesCommitChangeLeadTime
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:DataPropertyAssertionFieldDataPropertyIRI ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionIri ;
+                rdf:value :commitChangeLeadTime ;
+            ] ;
+        ] ;
+    ] .
+
+
+:DataPropertyMatchesPersonDeploymentCountBetweenDates
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:DataPropertyAssertionFieldDataPropertyIRI ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionIri ;
+                rdf:value :personDeploymentCountBetweenDates ;
+            ] ;
+        ] ;
+    ] .
+
+
+:DataPropertyMatchesPersonChangeLeadTimeBetweenDates
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:DataPropertyAssertionFieldDataPropertyIRI ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionIri ;
+                rdf:value :personChangeLeadTimeBetweenDates ;
+            ] ;
+        ] ;
+    ] .
+
+
+:DataPropertyMatchesPersonChangeFailureRateBetweenDates
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:DataPropertyAssertionFieldDataPropertyIRI ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionIri ;
+                rdf:value :personChangeFailureRateBetweenDates ;
+            ] ;
+        ] ;
+    ] .
+
+
+:AnnotationPropertyMatchesCreatedAt
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:AnnotationFieldAnnotationPropertyIRI ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionIri ;
+                rdf:value <http://field33.com/ontologies/@fld33_domain/software_development/createdAt> ;
+            ] ;
+        ] ;
+    ] .
+
+
+:ObjectPropertyMatchesPersonRelatesToFailureBetweenDates
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:ObjectPropertyAssertionFieldObjectPropertyIRI ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionIri ;
+                rdf:value :PersonRelatesToFailureBetweenDates ;
+            ] ;
+        ] ;
+    ] .
+
+
+:ObjectPropertyMatchesDeploymentHasRelatedFailureBetweenDates
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:ObjectPropertyAssertionFieldObjectPropertyIRI ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionIri ;
+                rdf:value :DeploymentHasRelatedFailureBetweenDates ;
+            ] ;
+        ] ;
+    ] .
+
+
+:ObjectPropertyMatchesPersonPartOfTeam
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:ObjectPropertyAssertionFieldObjectPropertyIRI ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionIri ;
+                rdf:value <http://field33.com/ontologies/@fld33_domain/software_development/PersonPartOfTeam> ;
+            ] ;
+        ] ;
+    ] .
+
+
+:ObjectPropertyMatchesCommitPartOfDeployment
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:ObjectPropertyAssertionFieldObjectPropertyIRI ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionIri ;
+                rdf:value <http://field33.com/ontologies/@fld33_domain/software_development/CommitPartOfDeployment> ;
+            ] ;
+        ] ;
+    ] .
+
+
+:ObjectPropertyMatchesCommitAuthoredByPerson
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:ObjectPropertyAssertionFieldObjectPropertyIRI ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionIri ;
+                rdf:value <http://field33.com/ontologies/@fld33_domain/software_development/CommitAuthoredByPerson> ;
+            ] ;
+        ] ;
+    ] .
+
+
+:ObjectPropertyMatchesFailureRelatesToDeployment
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:ObjectPropertyAssertionFieldObjectPropertyIRI ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionIri ;
+                rdf:value <http://field33.com/ontologies/@fld33_domain/software_development/FailureRelatesToDeployment> ;
+            ] ;
+        ] ;
+    ] .
+
+
+:ObjectPropertyMatchesPersonHasAuthoredDeploymentBetweenDates
+    a oxo:ExpressionScalarFunction ;
+    rdfs:comment "" ;
+    oxo:expressionFunction [
+        a oxo:ScalarFunction ;
+        oxo:function oxo:FunctionEqual ;
+        oxo:outputType xsd:boolean ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 0 ;
+            oxo:valueExpression [
+                a oxo:ExpressionCurrentRecordField ;
+                oxo:recordField oxo:ObjectPropertyAssertionFieldObjectPropertyIRI ;
+            ] ;
+        ] ;
+        oxo:functionArgument [
+            a oxo:FunctionArgument ;
+            oxo:functionArgumentPosition 1 ;
+            oxo:valueExpression [
+                a oxo:ExpressionIri ;
+                rdf:value :PersonHasAuthoredDeploymentBetweenDates ;
+            ] ;
+        ] ;
+    ] .
+
+
+:ComputationParameterForwardFromToDateParam
+    a oxo:ComputationParameterList ;
+    oxo:computationParameterValue [
+        a oxo:ComputationParameterValue ;
+        oxo:computationParameterId :FromDateParam ;
+        oxo:computationParameterValueExpression [
+            a oxo:ExpressionComputationParameter ;
+            oxo:computationParameter :FromDateParam ;
+        ] ;
+    ] ;
+    oxo:computationParameterValue [
+        a oxo:ComputationParameterValue ;
+        oxo:computationParameterId :ToDateParam ;
+        oxo:computationParameterValueExpression [
+            a oxo:ExpressionComputationParameter ;
+            oxo:computationParameter :ToDateParam ;
+        ] ;
+    ] .
+
+
+:ComputationParameterForwardFromToFailureDateParam
+    a oxo:ComputationParameterList ;
+    oxo:computationParameterValue [
+        a oxo:ComputationParameterValue ;
+        oxo:computationParameterId :FromDateParam ;
+        oxo:computationParameterValueExpression [
+            a oxo:ExpressionComputationParameter ;
+            oxo:computationParameter :FromDateParam ;
+        ] ;
+    ] ;
+    oxo:computationParameterValue [
+        a oxo:ComputationParameterValue ;
+        oxo:computationParameterId :ToDateParam ;
+        oxo:computationParameterValueExpression [
+            a oxo:ExpressionComputationParameter ;
+            oxo:computationParameter :ToDateParam ;
+        ] ;
+    ] ;
+    oxo:computationParameterValue [
+        a oxo:ComputationParameterValue ;
+        oxo:computationParameterId :FailureToDateParam ;
+        oxo:computationParameterValueExpression [
+            a oxo:ExpressionComputationParameter ;
+            oxo:computationParameter :FailureToDateParam ;
+        ] ;
+    ] .
+

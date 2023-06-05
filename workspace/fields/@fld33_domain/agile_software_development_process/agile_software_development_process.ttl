@@ -1,0 +1,155 @@
+@prefix : <http://field33.com/ontologies/@fld33_domain/agile_software_development_process/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix registry: <http://field33.com/ontologies/REGISTRY/> .
+@base <http://field33.com/ontologies/@fld33_domain/agile_software_development_process/> .
+
+<http://field33.com/ontologies/@fld33_domain/agile_software_development_process/> rdf:type owl:Ontology ;
+                                                                     registry:author "Field 33 <contribution@field33.com>" ;
+                                                                     registry:canonicalPrefix "agile_software_development_process" ;
+                                                                     registry:category "Organization" ,
+                                                                                       "Process" ,
+                                                                                       "Software Development" ;
+                                                                     registry:dependency "@fld33/process ^0.1.2" ,
+                                                                                         "@fld33/relations ^0.2.3" ,
+                                                                                         "@fld33_domain/software_development_process ^0.1.1" ;
+                                                                     registry:keyword "Field 33 Package" ,
+                                                                                      "Organization" ;
+                                                                     registry:ontologyFormatVersion "v1" ;
+                                                                     registry:packageName "@fld33_domain/agile_software_development_process" ;
+                                                                     registry:packageVersion "0.1.0" ;
+                                                                     registry:licenseSPDX "Apache-2.0" ;
+                                                                     registry:repository "https://github.com/field33/ontologies/tree/main/workspace/fields/%40fld33_domain/agile_software_development_process" ;
+                                                                     registry:shortDescription "Agile Software Development ontology"@en ;
+                                                                     rdfs:comment "# Portfolio Ontology<br>This package is an internal ontology describing concepts for agile software development."@en ;
+                                                                     rdfs:label "Agile Software Development"@en .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+
+###  http://field33.com/ontologies/@fld33_domain/agile_software_development_process/IntegrationFollowedByPlanning
+:IntegrationFollowedByPlanning rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/FollowedBy> ;
+                               rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development_process/Integration> ;
+                               rdfs:range <http://field33.com/ontologies/@fld33_domain/software_development_process/Planning> ;
+                               rdfs:label "Followed by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/PlanningConsistOf
+<http://field33.com/ontologies/@fld33_domain/software_development_process/PlanningConsistOf> rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/ConsistOf> ;
+                   rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development_process/Planning> ;
+                   rdfs:range [ rdf:type owl:Class ;
+                               owl:unionOf ( <http://field33.com/ontologies/@fld33_domain/software_development_process/Administration>
+                                               <http://field33.com/ontologies/@fld33_domain/software_development_process/AllocateResource>
+                                               <http://field33.com/ontologies/@fld33_domain/software_development_process/EstimateResource>
+                                               <http://field33.com/ontologies/@fld33_domain/software_development_process/ScopeAndRoadmap>
+                                               :Retrospective
+                                           )
+                               ] ;
+                   rdfs:label "Consist of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/RequirementConsistOf
+<http://field33.com/ontologies/@fld33_domain/software_development_process/RequirementConsistOf> rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/ConsistOf> ;
+                      rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development_process/Requirement> ;
+                      rdfs:range [ rdf:type owl:Class ;
+                                  owl:unionOf ( <http://field33.com/ontologies/@fld33_domain/software_development_process/Administration>
+                                              <http://field33.com/ontologies/@fld33_domain/software_development_process/FunctionalRequirement>
+                                              <http://field33.com/ontologies/@fld33_domain/software_development_process/NonFunctionalRequirement>
+                                              <http://field33.com/ontologies/@fld33_domain/software_development_process/UseCase>
+                                              <http://field33.com/ontologies/@fld33_domain/software_development_process/UserStory>
+                                              :Retrospective
+                                              )
+                              ] ;
+                      rdfs:label "Consist of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/SystemArchitectureConsistOf
+<http://field33.com/ontologies/@fld33_domain/software_development_process/SystemArchitectureConsistOf> rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/ConsistOf> ;
+                             rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development_process/SystemArchitecture> ;
+                             rdfs:range [ rdf:type owl:Class ;
+                                             owl:unionOf ( <http://field33.com/ontologies/@fld33_domain/software_development_process/APIDesign>
+                                                         <http://field33.com/ontologies/@fld33_domain/software_development_process/Administration>
+                                                         <http://field33.com/ontologies/@fld33_domain/software_development_process/ApplicationArchitecture>
+                                                         <http://field33.com/ontologies/@fld33_domain/software_development_process/DataArchitecture>
+                                                         <http://field33.com/ontologies/@fld33_domain/software_development_process/InfrastructureArchitecture>
+                                                         :Retrospective
+                                                         )
+                                         ] ;
+                             rdfs:label "Consist of"@en .
+
+
+###  
+<http://field33.com/ontologies/@fld33_domain/software_development_process/DevelopmentConsistOf> rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/ConsistOf> ;
+                      rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development_process/Development> ;
+                      rdfs:range [ rdf:type owl:Class ;
+                                  owl:unionOf ( <http://field33.com/ontologies/@fld33_domain/software_development_process/Administration>
+                                              <http://field33.com/ontologies/@fld33_domain/software_development_process/BugFixing>
+                                              <http://field33.com/ontologies/@fld33_domain/software_development_process/ChoreManagement>
+                                              <http://field33.com/ontologies/@fld33_domain/software_development_process/Implementation>
+                                              <http://field33.com/ontologies/@fld33_domain/software_development_process/Setup>
+                                              <http://field33.com/ontologies/@fld33_domain/software_development_process/TechnicalDebtManagement>
+                                              <http://field33.com/ontologies/@fld33_domain/software_development_process/Training>
+                                              :Retrospective
+                                              )
+                              ] ;
+                      rdfs:label "Consist of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/IntegrationConsistOf
+<http://field33.com/ontologies/@fld33_domain/software_development_process/IntegrationConsistOf> rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/ConsistOf> ;
+                      rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development_process/Integration> ;
+                      rdfs:range [ rdf:type owl:Class ;
+                                  owl:unionOf ( <http://field33.com/ontologies/@fld33_domain/software_development_process/Administration>
+                                              <http://field33.com/ontologies/@fld33_domain/software_development_process/Endurance>
+                                              <http://field33.com/ontologies/@fld33_domain/software_development_process/StressTest>
+                                              <http://field33.com/ontologies/@fld33_domain/software_development_process/SystemIntegration>
+                                              <http://field33.com/ontologies/@fld33_domain/software_development_process/UserAcceptance>
+                                              :Retrospective
+                                              )
+                              ] ;
+                      rdfs:label "Consist of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/OperationConsistOf
+<http://field33.com/ontologies/@fld33_domain/software_development_process/OperationConsistOf> rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/ConsistOf> ;
+                    rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development_process/Operation> ;
+                    rdfs:range [ rdf:type owl:Class ;
+                                owl:unionOf ( <http://field33.com/ontologies/@fld33_domain/software_development_process/Administration>
+                                                <http://field33.com/ontologies/@fld33_domain/software_development_process/InfrastructureSetup>
+                                                <http://field33.com/ontologies/@fld33_domain/software_development_process/Maintenance>
+                                                <http://field33.com/ontologies/@fld33_domain/software_development_process/Monitoring>
+                                                <http://field33.com/ontologies/@fld33_domain/software_development_process/ReleaseManagement>
+                                                :Retrospective
+                                            )
+                                ] ;
+                    rdfs:label "Consist of"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+
+###  http://field33.com/ontologies/@fld33_domain/agile_software_development_process/AgileSoftwareDevelopmentProcess
+:AgileSoftwareDevelopmentProcess rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://field33.com/ontologies/@fld33_domain/software_development_process/SoftwareDevelopmentProcess> ;
+                                 rdfs:label "Agile software development process"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/agile_software_development_process/Retrospective
+:Retrospective rdf:type owl:Class ;
+               rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+               rdfs:label "Retrospective"@en .

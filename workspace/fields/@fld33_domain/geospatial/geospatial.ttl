@@ -1,0 +1,115 @@
+@prefix : <http://field33.com/ontologies/@fld33_domain/geospatial/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix registry: <http://field33.com/ontologies/REGISTRY/> .@base <http://field33.com/ontologies/@fld33_domain/geospatial/> .
+
+<http://field33.com/ontologies/@fld33_domain/geospatial/> rdf:type owl:Ontology ;
+                                                           owl:imports <http://field33.com/ontologies/@fld33/relations/> ;
+                                                           registry:author "Field 33 <contribution@field33.com>" ;
+                                                           registry:category "Core" ,
+                                                                             "Upper Ontology" ;
+                                                           registry:dependency "@fld33/relations ^0.2.0" ;
+                                                           registry:keyword "Field 33 Package" ,
+                                                                            "Upper Ontology" ;
+                                                           registry:licenseSPDX "MIT" ;
+                                                           registry:ontologyFormatVersion "v1" ;
+                                                           registry:packageName "@fld33_domain/geospatial" ;
+                                                           registry:packageVersion "0.1.1" ;
+                                                           registry:repository "https://github.com/field33/ontologies/tree/main/workspace/fields/%40fld33_domain/geospatial" ;
+                                                           registry:shortDescription "Geospatial upper ontology"@en ;
+                                                           rdfs:comment """# Geospatial Ontology
+This package is part of the upper ontologies we use at Field 33 and describes non restrictive concepts around geosptial constructs.
+
+## Contents
+The main contents are about geopolitical concepts such as countries, regions, cities and a basic and non-restrictive set of axioms stating their relations. This package shall serve as an upper ontology introducing high-level declarations that can be amended in more domain specific Fields (ontologies).
+
+The ontology itself contains labels for the concepts in English and German.
+
+## Inspiration
+We tried to follow the higher level contents from https://www.geonames.org/ontology/documentation.html in a much more simplified manner.
+"""@en ;
+                                                           rdfs:label "Geospatial"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://field33.com/ontologies/REGISTRY/dependency
+registry:dependency rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://field33.com/ontologies/@fld33_domain/geospatial/CityPartOfRegion
+:CityPartOfRegion rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/partOf> ;
+                  rdfs:domain :City ;
+                  rdfs:range :Region ;
+                  rdfs:label "part of"@en ;
+                  rdfs:label "teil von"@de .
+
+
+###  http://field33.com/ontologies/@fld33_domain/geospatial/CountryPartOfContinent
+:CountryPartOfContinent rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/partOf> ;
+                        rdfs:domain :Country ;
+                        rdfs:range :Continent ;
+                        rdfs:label "part of"@en ;
+                        rdfs:label "teil von"@de .
+
+
+###  http://field33.com/ontologies/@fld33_domain/geospatial/MunicipalityPartOfRegion
+:MunicipalityPartOfRegion rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/partOf> ;
+                          rdfs:domain :Municipality ;
+                          rdfs:range :Region ;
+                          rdfs:label "part of"@en ;
+                          rdfs:label "teil von"@de .
+
+
+###  http://field33.com/ontologies/@fld33_domain/geospatial/RegionPartOfCountry
+:RegionPartOfCountry rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/partOf> ;
+                     rdfs:domain :Region ;
+                     rdfs:range :Country ;
+                     rdfs:label "part of"@en ;
+                     rdfs:label "teil von"@de .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://field33.com/ontologies/@fld33_domain/geospatial/City
+:City rdf:type owl:Class ;
+      rdfs:label "City"@en ;
+      rdfs:label "Stadt"@de .
+
+
+###  http://field33.com/ontologies/@fld33_domain/geospatial/Continent
+:Continent rdf:type owl:Class ;
+           rdfs:label "Continent"@en ;
+           rdfs:label "Kontinent"@de .
+
+
+###  http://field33.com/ontologies/@fld33_domain/geospatial/Country
+:Country rdf:type owl:Class ;
+         rdfs:label "Country"@en ;
+         rdfs:label "Land"@de .
+
+
+###  http://field33.com/ontologies/@fld33_domain/geospatial/Municipality
+:Municipality rdf:type owl:Class ;
+              rdfs:label "Municipality"@en ;
+              rdfs:label "Gemeinde"@de .
+
+
+###  http://field33.com/ontologies/@fld33_domain/geospatial/Region
+:Region rdf:type owl:Class ;
+        rdfs:label "Region"@en ;
+        rdfs:label "Region"@de .

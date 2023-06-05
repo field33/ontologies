@@ -1,0 +1,77 @@
+@prefix : <http://field33.com/ontologies/@fld33_domain/digital_products/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix registry: <http://field33.com/ontologies/REGISTRY/> .
+@base <http://field33.com/ontologies/@fld33_domain/digital_products/> .
+
+<http://field33.com/ontologies/@fld33_domain/digital_products/> rdf:type owl:Ontology ;
+                                                                     registry:author "Field 33 <contribution@field33.com>" ;
+                                                                     registry:canonicalPrefix "digital_products" ;
+                                                                     registry:category "Metric" ,
+                                                                                       "Organization" ,
+                                                                                       "Software Development" ;
+                                                                     registry:dependency "@fld33/methodology ^0.1.7" ,
+                                                                                         "@fld33/relations ^0.2.0" ,
+                                                                                         "@fld33_domain/portfolio ^0.1.0" ,
+                                                                                         "@fld33_domain/software_development ^0.3.0" ;
+                                                                     registry:keyword "Field 33 Package" ,
+                                                                                      "Organization" ;
+                                                                     registry:ontologyFormatVersion "v1" ;
+                                                                     registry:packageName "@fld33_domain/digital_products" ;
+                                                                     registry:packageVersion "0.1.7" ;
+                                                                     registry:licenseSPDX "Apache-2.0" ;
+                                                                     registry:repository "https://github.com/field33/ontologies/tree/main/workspace/fields/%40fld33_domain/digital_products" ;
+                                                                     registry:shortDescription "Digital Products ontology"@en ;
+                                                                     rdfs:comment "# Digital Products Ontology<br>This package is an internal ontology describing concepts for digital products."@en ;
+                                                                     rdfs:label "Digital Products"@en .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://field33.com/ontologies/@fld33_domain/digital_products/ProductInfluenceOnCustomerJourney
+:ProductInfluenceOnCustomerJourney
+    rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/InfluenceOn> ;
+    rdfs:domain :Product ;
+    rdfs:range <http://field33.com/ontologies/@fld33_domain/portfolio/CustomerJourney> ;
+    rdfs:label "Influence on"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/digital_products/ProductConsistOfComponent
+:ProductConsistOfComponent
+    rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/ConsistOf> ;
+    rdfs:domain :Product ;
+    rdfs:range <http://field33.com/ontologies/@fld33_domain/software_development/Component> ;
+    rdfs:label "Consist of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/digital_products/ProductHasProductKPI
+:ProductHasProductKPI
+    rdf:type owl:ObjectProperty ;
+    rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/Has> ;
+    rdfs:domain :Product ;
+    rdfs:range :ProductKPI ;
+    rdfs:label "Has"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://field33.com/ontologies/@fld33_domain/digital_products/Product
+:Product
+    rdf:type owl:Class ;
+    rdfs:label "Product"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/digital_products/ProductKPI
+:ProductKPI
+    rdf:type owl:Class ;
+    rdfs:subClassOf <http://field33.com/ontologies/@fld33/methodology/Metric> ;
+    rdfs:label "Product KPI"@en .
