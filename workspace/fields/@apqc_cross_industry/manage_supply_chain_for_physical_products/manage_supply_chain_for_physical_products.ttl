@@ -1,0 +1,2236 @@
+@base <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/> .
+@prefix : <http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix registry: <http://field33.com/ontologies/REGISTRY/> .
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://field33.com/ontologies/@apqc_cross_industry/manage_supply_chain_for_physical_products/> rdf:type owl:Ontology ;
+  registry:author "Field 33 <contribution@field33.com>" ;
+  registry:canonicalPrefix "manage_supply_chain_for_physical_products" ;
+  registry:dependency "@fld33/relations ^0.2.0", "@apqc/apqc ^0.1.6",
+    "@fld33_domain/business_objects ^0.1.9" ;
+  registry:license "2022 APQC. ALL RIGHTS RESERVED. This Process Classification Framework (PCF) is the copyrighted intellectual property of APQC."@en ;
+  registry:ontologyFormatVersion "v1" ;
+  registry:packageName "@apqc_cross_industry/manage_supply_chain_for_physical_products" ;
+  registry:packageVersion "0.1.11" ;
+  registry:category "Process" ;
+  registry:keyword "APQC" ,
+                   "Cross Industry" ,
+                   "Process" ;
+  registry:repository "https://github.com/field33/ontologies/tree/main/workspace/fields/%40apqc_cross_industry/manage_supply_chain_for_physical_products" ;
+  registry:shortDescription "APQC cross industry category: Manage Supply Chain for Physical Products Ontology"@en ;
+  rdfs:comment "# Manage Supply Chain for Physical Products<br>This package is a domain ontology describing the category \"Manage Supply Chain for Physical Products\" as part of APQC for cross industry."@en ;
+  rdfs:label "Manage Supply Chain for Physical Products"@en ;
+  owl:imports <http://field33.com/ontologies/@fld33/relations/>, <http://field33.com/ontologies/@apqc/apqc/>,
+    <http://field33.com/ontologies/@fld33_domain/business_objects/> .
+
+:10215 rdf:type owl:Class ;
+  rdfs:comment "Creating strategies for production and materials. Handle the demand for the products of the organization. Develop plans for handling materials. Develop and administer the schedule for master production. Plan for distribution requirements and its constraints by reviewing and assessing distribution policies and performance and by establishing quality standards and procedures. "@en ;
+  rdfs:label "Plan for and align supply chain resources"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+
+:10215PartOf20022 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10215 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20022 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:10216 rdf:type owl:Class ;
+  rdfs:comment "Creating a plan for procuring materials and services. Develop strategies for sourcing materials and services. Choose the most appropriate suppliers, and develop contracts with them. Order the materials and services as per the requirements. Manage relationships with suppliers."@en ;
+  rdfs:label "Procure materials and services"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+
+:10216PartOf20022 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10216 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20022 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:10217 rdf:type owl:Class ;
+  rdfs:comment "Processing and delivering the finished goods manufactured by the organization. Schedule the production of products. Execute the product production activities. Perform tests to oversee and ensure quality of production. Maintain records of the production process. Track lots."@en ;
+  rdfs:label "Produce/Assemble/Test product"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+
+:10217PartOf20022 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10217 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20022 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:10219 rdf:type owl:Class ;
+  rdfs:comment "Administering and overseeing all activities related to logistics and warehousing. Outline and establish a strategy for the logistics function. Plan and administer the flow of inbound materials. Administer the operational activities of warehousing and outbound transportation. Manage reverse logistics including returns and exchanges."@en ;
+  rdfs:label "Manage logistics and warehousing"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroup> .
+
+:10219PartOf20022 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10219 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20022 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessGroupPartOfAPQCCategory> .
+
+:10221 rdf:type owl:Class ;
+  rdfs:comment "Creating strategies for production processes, as well as the process of managing materials. Define production and supply constraints. Design a blueprint of the workplace. Establish rules and regulations regarding the employees, outsourcing of services, and the expenditure to be incurred on the manufacturing capital."@en ;
+  rdfs:label "Develop production and materials strategies"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10221PartOf10215 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10221 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10215 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10222 rdf:type owl:Class ;
+  rdfs:comment "Forecasting demand for products using secondary research and customer feedback. Refine these forecasts. Inspect the approach used in creating forecasts, and determine its accuracy."@en ;
+  rdfs:label "Manage demand for products"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10222PartOf10215 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10222 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10215 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10223 rdf:type owl:Class ;
+  rdfs:comment "Developing a scheme that allows for advance planning for the availability of raw materials and spares. Start with an unconstrained plan, and refine based on supply chain realities by identifying critical materials required for production, checking material specifications, and collaborating with all vendors over the supply."@en ;
+  rdfs:label "Create materials plan"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10223PartOf10215 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10223 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10215 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10224 rdf:type owl:Class ;
+  rdfs:comment "Taking care of the master production plan. The master production includes creation and implementation of the site-level production plan, as well as management of the inventory that is currently in the production process."@en ;
+  rdfs:label "Create and manage master production schedule"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10224PartOf10215 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10224 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10215 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10226 rdf:type owl:Class ;
+  rdfs:comment "Instituting the constraints for planning of distribution process. Create a plan that specifies every element in the distribution process from the blueprint of the distribution centers to how and when the inventory would reach the distribution centers."@en ;
+  rdfs:label "Establish distribution planning constraints"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10226PartOf10215 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10226 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10215 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10227 rdf:type owl:Class ;
+  rdfs:comment "Revisiting and refurbishing the policies for planning the distribution process. Asses the distribution strategies, including how the products are to be made available and sent to different distributors. Set guidelines regarding relationships between the sources and the distribution centers."@en ;
+  rdfs:label "Review distribution planning policies"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10227PartOf10215 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10227 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10215 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10229 rdf:type owl:Class ;
+  rdfs:comment "Creating quantifiable strategic objectives for each manufacturing segment in conjunction with sales projections."@en ;
+  rdfs:label "Define manufacturing goals"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10229FollowedBy10230 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10229 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10230 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10229PartOf10221 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10229 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10221 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10230 rdf:type owl:Class ;
+  rdfs:comment "Setting up internal rules and regulations regarding the employees and the materials."@en ;
+  rdfs:label "Define labor and materials policies"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10230FollowedBy10231 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10230 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10231 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10230PartOf10221 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10230 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10221 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10231 rdf:type owl:Class ;
+  rdfs:comment "Creating rules and regulations regarding contracting out of a business process to another party in order to reduce costs."@en ;
+  rdfs:label "Define outsourcing policies"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10231FollowedBy10232 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10231 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10232 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10231PartOf10221 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10231 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10221 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10232 rdf:type owl:Class ;
+  rdfs:comment "Designing rules and regulations pertaining to the expenditure incurred in acquiring or upgrading the existing stock of manufacturing capital. "@en ;
+  rdfs:label "Define capital expense policies"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10232FollowedBy10233 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10232 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10233 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10232PartOf10221 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10232 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10221 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10233 rdf:type owl:Class ;
+  rdfs:comment "Outlining the manufacturing and processing capacities of the organization. Delineate the capabilities required for optimizing output with available resources. Analyze capabilities possessed by the organization concerning the raw materials required and the process necessitated for producing finished products. "@en ;
+  rdfs:label "Define capacities"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10233FollowedBy10234 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10233 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10234 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10233PartOf10221 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10233 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10221 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10234 rdf:type owl:Class ;
+  rdfs:comment "Defining limitations in the ability of the organization's supply chain to deliver a new stock, and creating a network of production stakeholders. Frame and manage relationships within the flow of manufacturing and processing operations. Identify probable supply issues."@en ;
+  rdfs:label "Define production network and supply constraints"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10234FollowedBy14193 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10234 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :14193 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10234PartOf10221 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10234 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10221 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10235 rdf:type owl:Class ;
+  rdfs:comment "Identify the bedrock levels of market demand anticipated for the organization's products/services. Estimate future demand for product and services using historical data, analysis of the market environment and any externalities, etc. to create ex ante approximations."@en ;
+  rdfs:label "Develop baseline demand forecasts"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10235FollowedBy10236 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10235 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10236 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10235PartOf10222 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10235 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10222 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10236 rdf:type owl:Class ;
+  rdfs:comment "Working closely with the organization's customers to understand their drives and behavior, with the objective of estimating future demand. Reach out to customers through various means to understand their behavior patterns, usage elasticity, and degree of variability--and ultimately determine demand for each offering."@en ;
+  rdfs:label "Collaborate demand with customers"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10236FollowedBy10237 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10236 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10237 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10236PartOf10222 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10236 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10222 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10237 rdf:type owl:Class ;
+  rdfs:comment "Arriving at a consensus over the forecasted levels of demand for products/services. Consensus is achieved by juxtaposing decisions developed in the baseline forecast with those reached at by collaborating with customers. Enlist senior-level decision makers of the sales and marketing functions."@en ;
+  rdfs:label "Develop demand consensus forecast"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10237FollowedBy10238 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10237 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10238 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10237PartOf10222 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10237 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10222 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10238 rdf:type owl:Class ;
+  rdfs:comment "Identify the volume of products/services that may be committed for delivery to fulfill sales. Figure out the amount of stock available. Forecast its volumes."@en ;
+  rdfs:label "Determine available to promise"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10238FollowedBy10239 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10238 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10239 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10238PartOf10222 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10238 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10222 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10239 rdf:type owl:Class ;
+  rdfs:comment "Picking out any activity that deviates from the forecast, and adjusting it. Closely track and study the levels of demand as they emerge. Refine the consensus forecast as needed."@en ;
+  rdfs:label "Monitor activity against demand forecast and revise forecast"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10239FollowedBy10240 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10239 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10240 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10239PartOf10222 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10239 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10222 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10240 rdf:type owl:Class ;
+  rdfs:comment "Examining the methodology used to estimate future demand. Refine it in light of current market realities and demand."@en ;
+  rdfs:label "Evaluate and revise demand forecasting approach"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10240FollowedBy10241 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10240 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10241 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10240PartOf10222 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10240 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10222 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10241 rdf:type owl:Class ;
+  rdfs:comment "Calculating and inspecting the accuracy of demand forecasts. Use metrics to check the reliability of the forecasts created. "@en ;
+  rdfs:label "Measure demand forecast accuracy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10241PartOf10222 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10241 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10222 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10242 rdf:type owl:Class ;
+  rdfs:comment "Developing a plan for raw materials and other inventory items in order to meet market demand. Ensure the availability of all inventory items such as raw materials and spares. Create a blueprint in line with Define labor and materials policies [10230]. "@en ;
+  rdfs:label "Create unconstrained plan"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10242FollowedBy10243 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10242 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10243 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10242PartOf10223 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10242 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10223 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10243 rdf:type owl:Class ;
+  rdfs:comment "Collaborating with vendors and contractual manufacturers with the objective of ensuring a continual supply of raw materials and spares. Leverage long-term connections/relationships with various suppliers, and cultivate new ones. Track the activities of all vendors. Receive regular updates to prepare for any fluctuations in supply."@en ;
+  rdfs:label "Collaborate with supplier and contract manufacturers"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10243FollowedBy10244 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10243 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10244 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10243PartOf10223 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10243 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10223 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10244 rdf:type owl:Class ;
+  rdfs:comment "Identifying principal materials needed for the manufacturing process and the levels of supply that may be ensured for them. Determine the essential and crucial inventory items required for the smooth functioning of all manufacturing processes. Estimate the average, peak, and baseline capacities of various vendors and suppliers. Establish the capability of individual suppliers from the market and the vendors."@en ;
+  rdfs:label "Identify critical materials and supplier capacity"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10244FollowedBy10245 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10244 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10245 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10244PartOf10223 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10244 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10223 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10245 rdf:type owl:Class ;
+  rdfs:comment "Observing and surveying all inventory items in order to check for the veracity of their specifications. Monitor various attributes and characteristics for respective inventory items such as density, volume, and size, as well as contextualized specifications particular to the respective materials."@en ;
+  rdfs:label "Monitor material specifications"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10245FollowedBy10246 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10245 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10246 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10245PartOf10223 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10245 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10223 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10246 rdf:type owl:Class ;
+  rdfs:comment "Generating a bounded plan that takes stock of the actual supply chain scenario. Take stock of all information collected while creating an inventory supply plan. "@en ;
+  rdfs:label "Generate constrained plan"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10246FollowedBy14196 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10246 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :14196 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10246PartOf10223 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10246 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10223 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10252 rdf:type owl:Class ;
+  rdfs:comment "Maintaining and preserving the master data plan for distribution requirements. Create a systematic collection of facts and figures regarding the distribution of the inventories. Maintain policies, processes, and tools covering the distribution function."@en ;
+  rdfs:label "Maintain master data"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10252FollowedBy10253 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10252 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10253 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10252PartOf17042 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10252 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17042 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10253 rdf:type owl:Class ;
+  rdfs:comment "Interact with the concerned person at the destination to validate the requirements and to avoid any miscommunication of information."@en ;
+  rdfs:label "Determine finished goods inventory requirements at destination"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10253FollowedBy19555 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10253 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :19555 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10253PartOf17042 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10253 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17042 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10254 rdf:type owl:Class ;
+  rdfs:comment "Interact with the concerned authority at the destination to reach a specific figure that correctly represents requirements."@en ;
+  rdfs:label "Calculate requirements at destination"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10254FollowedBy10255 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10254 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10255 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10254PartOf17042 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10254 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17042 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10255 rdf:type owl:Class ;
+  rdfs:comment "Determining the aggregate volume of products/services consolidated at the source. Calculate the number of finished products that are ready to be delivered to the customers, particularly at one date."@en ;
+  rdfs:label "Calculate consolidation at source"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10255FollowedBy10256 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10255 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10256 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10255PartOf17042 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10255 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17042 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10256 rdf:type owl:Class ;
+  rdfs:comment "Administering the plan for collaborative replenishment of goods. Replenish inventory by creating a plan in case of faulty production."@en ;
+  rdfs:label "Manage collaborative replenishment planning"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10256FollowedBy10258 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10256 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10258 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10256PartOf17042 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10256 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17042 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10258 rdf:type owl:Class ;
+  rdfs:comment "Estimating the timing and duration of the delivery of the inventory from the source to the destination. Plan the logistic details of all the distribution routes and activities."@en ;
+  rdfs:label "Calculate and optimize destination dispatch plan"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10258FollowedBy10259 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10258 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10259 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10258PartOf17042 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10258 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17042 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10259 rdf:type owl:Class ;
+  rdfs:comment "Accomplishing the dispatch plan. Strictly follow the schedule, and adjust for deviations. Coordinate with the concerned authorities at various destinations."@en ;
+  rdfs:label "Manage dispatch plan attainment"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10259FollowedBy10260 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10259 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10260 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10259PartOf17042 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10259 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17042 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10260 rdf:type owl:Class ;
+  rdfs:comment "Evaluating the plans for delivering loads to destinations. Create a systematic plan that specifies the load plans for every single destination."@en ;
+  rdfs:label "Calculate and optimize destination load plans"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10260FollowedBy10261 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10260 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10261 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10260PartOf17042 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10260 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17042 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10261 rdf:type owl:Class ;
+  rdfs:comment "Administering the load plan for partners. Manage the delivery, and dispatch from the source to the partners."@en ;
+  rdfs:label "Manage partner load plan"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10261FollowedBy10262 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10261 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10262 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10261PartOf17042 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10261 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17042 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10262 rdf:type owl:Class ;
+  rdfs:comment "Managing all expenses to provide products/services in the market. Estimate the overall cost of supplying of products/inventory, including the cost distributing it through various partners and channels. Consider the cost of all the logistical processes that occur from the moment a product is ready to be dispatched to the time it reaches the destination."@en ;
+  rdfs:label "Manage cost of supply"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10262FollowedBy10263 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10262 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10263 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10262PartOf17042 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10262 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17042 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10263 rdf:type owl:Class ;
+  rdfs:comment "Determining the capacity utilization of the organization's production process. Realize the extent to which an enterprise uses its installed productive capacity (i.e., the relationship between output and the potential output if capacity was fully used)."@en ;
+  rdfs:label "Manage capacity utilization"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10263PartOf17042 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10263 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17042 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10264 rdf:type owl:Class ;
+  rdfs:comment "Evaluating the system that defines how the products/inventory would reach from the source (i.e., manufacturer) to the destination (i.e., retailer/distributer)."@en ;
+  rdfs:label "Review distribution network"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10264FollowedBy10265 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10264 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10265 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10264PartOf10227 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10264 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10227 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10265 rdf:type owl:Class ;
+  rdfs:comment "Establishing relationships with transportation/distribution sources in order to ensure an effective distribution network and strategy. Screen and evaluate various sources available to pick out the best among them."@en ;
+  rdfs:label "Establish sourcing relationships"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10265FollowedBy10266 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10265 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10266 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10265PartOf10227 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10265 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10227 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10266 rdf:type owl:Class ;
+  rdfs:comment "Creating strategic guidelines on the availability of the products at all the distribution centers. Create a dynamic network to ensure availability at all times, even in cases of defaults."@en ;
+  rdfs:label "Establish dynamic deployment policies"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10266PartOf10227 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10266 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10227 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10267 rdf:type owl:Class ;
+  rdfs:comment "Instituting the constraints for creating a layout for distribution center. Consider factors such as the number of customers, demand forecasting, product groups, condition of product conservation, warehousing, and transportation management."@en ;
+  rdfs:label "Establish distribution center layout constraints"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10267FollowedBy10268 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10267 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10268 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10267PartOf10226 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10267 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10226 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10268 rdf:type owl:Class ;
+  rdfs:comment "Determining any problems that might be faced while managing inventory. Identify problems and possible issues in managing the warehousing of the raw materials, spares, and other items of inventory. Take stock of inventory needs, and determine the exact quantity of the inventory needed in the near future."@en ;
+  rdfs:label "Establish inventory management constraints"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10268FollowedBy10269 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10268 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10269 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10268PartOf10226 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10268 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10226 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10269 rdf:type owl:Class ;
+  rdfs:comment "Identifying any potential constraints while deciding on the dispatch and delivery plan from the source to the various distribution centers. Decide how the inventory will be transported , which and how many transportation means to use, what route to take, etc."@en ;
+  rdfs:label "Establish transportation management constraints"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10269FollowedBy19558 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10269 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :19558 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10269PartOf10226 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10269 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10226 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10277 rdf:type owl:Class ;
+  rdfs:comment "Creating strategies for procuring materials and services from various sources, and for managing and evaluating categories. Establish a procurement process that describes the approach for obtaining products and purchasing activities. Evaluate the sources. Create sourcing relationships in order to continuously improve. Re-evaluate purchasing activities. "@en ;
+  rdfs:label "Provide sourcing governance and perform category management"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10277PartOf10216 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10277 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10216 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10278 rdf:type owl:Class ;
+  rdfs:comment "Evaluating supplier options to select the most effective and efficient suppliers. Validate selected suppliers. Establish and manage supplier contracts."@en ;
+  rdfs:label "Select suppliers and develop/maintain contracts"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10278PartOf10216 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10278 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10216 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10279 rdf:type owl:Class ;
+  rdfs:comment "Creating and approving requisitions and distributing purchase orders accordingly. Hasten the procurement process to satisfy internal needs."@en ;
+  rdfs:label "Order materials and services"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10279PartOf10216 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10279 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10216 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10280 rdf:type owl:Class ;
+  rdfs:comment "Collecting and analyzing new information in order to track and rate suppliers through a supplier information management system."@en ;
+  rdfs:label "Manage suppliers"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10280PartOf10216 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10280 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10216 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10281 rdf:type owl:Class ;
+  rdfs:comment "Creating a plan for procuring materials and services. Plan what to buy, when, and from what sources. Include project requirements, the procurement team, the justification for the procurement, a timeline of events, and an explanation of the supplier selection process. Outline specific actions to start and complete purchases in order to adhere to best practices."@en ;
+  rdfs:label "Develop procurement plan"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10281FollowedBy10282 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10281 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10282 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10281PartOf10277 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10281 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10277 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10282 rdf:type owl:Class ;
+  rdfs:comment "Defining the purchasing requirements for materials and services. Specify the exact inventory required for the production process. Create a specific quotation for all the sources in order to avoid any duplication or overlap."@en ;
+  rdfs:label "Clarify purchasing requirements"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10282FollowedBy10283 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10282 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10283 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10282PartOf10277 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10282 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10277 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10283 rdf:type owl:Class ;
+  rdfs:comment "Developing a strategy to deal with issues projected to arise during implementation of the inventory plan. Identify how to react to issues that arise and require changes to the inventory plan, such as a vendor failing to deliver materials on time. Collaborate with production and suppliers to prepare solutions to projected problems."@en ;
+  rdfs:label "Establish materials management contingency plans"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10283FollowedBy10284 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10283 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10284 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10283PartOf10277 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10283 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10277 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10284 rdf:type owl:Class ;
+  rdfs:comment "Synchronizing the requirements of materials and services and the capacity of suppliers for providing these materials and services. Revamp the procurement needs of the company in consideration of the capabilities of the suppliers. "@en ;
+  rdfs:label "Match needs to supply capabilities"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10284FollowedBy10285 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10284 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10285 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10284PartOf10277 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10284 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10277 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10285 rdf:type owl:Class ;
+  rdfs:comment "Evaluating the spend profile of the organization. Collect, cleanse, classify, and analyze the procurement data with the purpose of reducing procurement costs, improving efficiency, and monitoring compliance."@en ;
+  rdfs:label "Analyze organizations spend profile"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10285FollowedBy10286 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10285 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10286 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10285PartOf10277 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10285 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10277 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10286 rdf:type owl:Class ;
+  rdfs:comment "Seeking the most efficient sourcing and procurement opportunities."@en ;
+  rdfs:label "Seek opportunities to improve efficiency and value"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10286FollowedBy10287 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10286 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10287 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10286PartOf10277 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10286 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10277 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10287 rdf:type owl:Class ;
+  rdfs:comment "Collaborating with the suppliers of materials and services in order to determine new opportunities for sourcing. "@en ;
+  rdfs:label "Collaborate with suppliers to identify sourcing opportunities"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10287PartOf10277 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10287 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10277 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10288 rdf:type owl:Class ;
+  rdfs:comment "Evaluating the pros and cons of various suppliers. Choose the most appropriate and cost-effective suppliers on the basis of their material quality, delivery schedules, and costs."@en ;
+  rdfs:label "Select suppliers"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10288FollowedBy10289 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10288 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10289 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10288PartOf10278 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10288 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10278 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10289 rdf:type owl:Class ;
+  rdfs:comment "Validating the supply sources, and provide certification as an official supplier."@en ;
+  rdfs:label "Certify and validate suppliers"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10289FollowedBy10290 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10289 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10290 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10289PartOf10278 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10289 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10278 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10290 rdf:type owl:Class ;
+  rdfs:comment "Legally binding suppliers with the company. Negotiate contracts individually with all the suppliers that include the promised material delivery, the delivery dates and duration, etc."@en ;
+  rdfs:label "Negotiate and establish contracts"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10290FollowedBy10291 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10290 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10291 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10290PartOf10278 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10290 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10278 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10291 rdf:type owl:Class ;
+  rdfs:comment "Keeping contracts up-to-date with routine evaluation. Maintain order and discipline with the contracts in order to avoid any loss of information and mishaps."@en ;
+  rdfs:label "Manage contracts"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10291PartOf10278 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10291 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10278 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10292 rdf:type owl:Class ;
+  rdfs:comment "Handling operations related to processing/reviewing the requisitions. Establish and maintain procedures for the initiation, authorization, and processing of purchase requirements to procure products/services."@en ;
+  rdfs:label "Process/Review requisitions"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10292FollowedBy10293 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10292 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10293 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10292PartOf10279 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10292 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10279 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10293 rdf:type owl:Class ;
+  rdfs:comment "Approving requisitions for materials and services. Examine distributor-specific requests, and validate them individually."@en ;
+  rdfs:label "Approve requisitions"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10293FollowedBy10294 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10293 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10294 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10293PartOf10279 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10293 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10279 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10294 rdf:type owl:Class ;
+  rdfs:comment "Requesting quotes from suppliers. Use a request for quotation (RFQ) to invite suppliers into a bidding process for specific products/services."@en ;
+  rdfs:label "Solicit/Track vendor quotes"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10294FollowedBy10295 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10294 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10295 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10294PartOf10279 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10294 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10279 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10295 rdf:type owl:Class ;
+  rdfs:comment "Creating and placing the orders for purchasing materials and services from suppliers. Analyze vendor quotes. Choose the most cost-effective vendors. Create vendor-specific orders. Distribute them in order to initiate the purchasing process."@en ;
+  rdfs:label "Create/Distribute purchase orders"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10295FollowedBy10296 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10295 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10296 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10295PartOf10279 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10295 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10279 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10296 rdf:type owl:Class ;
+  rdfs:comment "Accelerating the purchase orders in order to fulfill the internal needs (for raw materials) depicted through inquiries. "@en ;
+  rdfs:label "Expedite orders and satisfy inquiries"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10296FollowedBy10297 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10296 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10297 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10296PartOf10279 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10296 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10279 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10297 rdf:type owl:Class ;
+  rdfs:comment "Verify that purchase orders are filled as expected: verify that items and quantities are delivered as expected, based on purchase order details and goods receipts."@en ;
+  rdfs:label "Reconcile purchase orders"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10297FollowedBy10298 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10297 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10298 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10297PartOf10279 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10297 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10279 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10298 rdf:type owl:Class ;
+  rdfs:comment "Identifying and resolving any exceptions. Address the internal needs/inquiries for materials that cannot be procured immediately. Research inquiries that require the need of exceptional materials."@en ;
+  rdfs:label "Research/Resolve order exceptions"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10298PartOf10279 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10298 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10279 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10299 rdf:type owl:Class ;
+  rdfs:comment "Examining procurement and vendor performance. Report delivery timing and the quality of the materials procured through different vendors."@en ;
+  rdfs:label "Monitor/Manage supplier information"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10299FollowedBy10300 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10299 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10300 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10299PartOf10280 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10299 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10280 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10300 rdf:type owl:Class ;
+  rdfs:comment "Assisting the production and inventory processes through the information and reports created. Use the information and metrics of the procurement and vendor performance to enhance or improve the production process."@en ;
+  rdfs:label "Prepare/Analyze procurement and vendor performance"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10300FollowedBy10301 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10300 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10301 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10300PartOf10280 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10300 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10280 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10301 rdf:type owl:Class ;
+  rdfs:comment "Support inventory and production processes by analyzing impact of procurement decisions and collaborating to constantly improve. (For example, perhaps minimum order requirements could be negotiated to be lower, to reduce excessive inventory and make production more flexible.)"@en ;
+  rdfs:label "Support inventory and production processes"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10301FollowedBy10302 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10301 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10302 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10301PartOf10280 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10301 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10280 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10302 rdf:type owl:Class ;
+  rdfs:comment "Track the performance of the suppliers on product quality. Use this information to further improve sourcing and supplier performance. "@en ;
+  rdfs:label "Monitor quality of product delivered"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10302PartOf10280 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10302 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10280 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10303 rdf:type owl:Class ;
+  rdfs:comment "Scheduling the production of final products. Generate a detailed schedule plan. Create and release production orders and lots. Schedule the planned and unplanned maintenance orders."@en ;
+  rdfs:label "Schedule production"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10303PartOf10217 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10303 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10217 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10304 rdf:type owl:Class ;
+  rdfs:comment "Manufacturing the product. Convert the raw materials to develop consumer-ready products. Manage the raw materials to implement the detailed production schedule. Reproduce defectives to establish and remediate cause. Ensure production optimization and benchmark performance."@en ;
+  rdfs:label "Produce/Assemble product"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10304PartOf10217 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10304 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10217 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10306 rdf:type owl:Class ;
+  rdfs:comment "Initiating the line-level plan for production. Break down the production schedule into specific lines, specifying the various objectives the production schedule."@en ;
+  rdfs:label "Generate line level plan"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10306FollowedBy10307 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10306 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10307 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10306PartOf10303 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10306 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10303 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10307 rdf:type owl:Class ;
+  rdfs:comment "Broadening the line-level plan. Specify all the individual production processes, along with the timing and the duration to come up with a working schedule that tracks the whole process and any deviations that might occur."@en ;
+  rdfs:label "Generate detailed schedule"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10307FollowedBy10308 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10307 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10308 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10307PartOf10303 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10307 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10303 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10308 rdf:type owl:Class ;
+  rdfs:comment "Creating a schedule to commence production of orders received, and creating lots to consolidate the processing. Plan when the production orders are to be initiated by commencing the operations for processing products/services. Specify which materials to produce, where to produce them, which operations will facilitate this, and on which date production is to start. Define the size of production lots, demarcating the durations of batch production."@en ;
+  rdfs:label "Schedule production orders and create lots"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10308FollowedBy10315 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10308 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10315 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10308PartOf10303 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10308 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10303 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10309 rdf:type owl:Class ;
+  rdfs:comment "Initiating the delivery of production orders, and creating lots. Communicate the order that specifies which material to produce, where to produce it, which operations to require, and on which date production takes place. Define how to settle the order costs. Create production lots, which is a particular production unit of an assembly that is planned and manufactured."@en ;
+  rdfs:label "Release production orders and create lots"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10309PartOf10303 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10309 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10303 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10310 rdf:type owl:Class ;
+  rdfs:comment "Administering the inventory of raw materials. Manage the total cost of all component parts in stock but not yet used. Manage the cost of the direct materials (i.e., materials incorporated into the final product) and indirect materials (i.e., materials not incorporated into the final product but consumed during the production process)."@en ;
+  rdfs:label "Manage raw material inventory"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10310FollowedBy10311 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10310 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10311 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10310PartOf10304 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10310 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10304 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10311 rdf:type owl:Class ;
+  rdfs:comment "Creating and implementing the detailed line production schedule on the ground level. "@en ;
+  rdfs:label "Execute detailed line schedule"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10311FollowedBy10319 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10311 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10319 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10311PartOf10304 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10311 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10304 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10313 rdf:type owl:Class ;
+  rdfs:comment "Reproducing the items produced defectively. Assess the produced items by conducting quality and standardization tests in order to diagnose any discrepancies. Reproduce defective items."@en ;
+  rdfs:label "Rerun defective items"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10313FollowedBy19566 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10313 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :19566 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10313PartOf10304 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10313 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10304 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10314 rdf:type owl:Class ;
+  rdfs:comment "Analyzing and benchmarking the production process to judge its effectiveness and efficiency. Create production metrics to numerically calculate the performance of the production process."@en ;
+  rdfs:label "Assess production performance"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10314PartOf10304 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10314 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10304 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10315 rdf:type owl:Class ;
+  rdfs:comment "Scheduling planned maintenance of the production equipment."@en ;
+  rdfs:label "Schedule preventive (planned) maintenance (preventive maintenance orders)"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10315FollowedBy10316 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10315 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10316 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10315PartOf10303 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10315 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10303 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10316 rdf:type owl:Class ;
+  rdfs:comment "Scheduling requested maintenance in order to address breakdowns where repairs or corrective remedies are needed immediately. Create a scheme for undertaking unplanned maintenance work on equipment/machinery that has come to be in urgent need for it. Express turnaround to redress using specialized personnel."@en ;
+  rdfs:label "Schedule requested (unplanned) maintenance (work order cycle)"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10316FollowedBy10309 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10316 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10309 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10316PartOf10303 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10316 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10303 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10318 rdf:type owl:Class ;
+  rdfs:comment "Regulating the equipment used for performing quality tests. Assess correspondence between the quality testing equipment and the desired quality standards. Ensure the calibration standard is more accurate than the instrument being tested."@en ;
+  rdfs:label "Calibrate test equipment"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10318FollowedBy10374 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10318 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10374 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10318PartOf10369 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10318 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10369 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10319 rdf:type owl:Class ;
+  rdfs:comment "Recording and reporting any deviations or issues in the maintenance schedule, in the performance to the production management team, and for unplanned maintenance."@en ;
+  rdfs:label "Report maintenance issues"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10319FollowedBy10313 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10319 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10313 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10319PartOf10304 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10319 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10304 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10338 rdf:type owl:Class ;
+  rdfs:comment "Outlining the strategy for managing logistics. Translate customer requirements logistic requirements. Create an efficient logistic network and outsourcing portions of logistics activities. Design a logistics strategy that optimizes transportation costs and schedule. Define key performance indicators."@en ;
+  rdfs:label "Provide logistics governance"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10338PartOf10219 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10338 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10219 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10340 rdf:type owl:Class ;
+  rdfs:comment "Tracking the inventory deployment. Accept and store products. Ship the products. Measure the accuracy of the inventory. Assess the performance of the outsourced logistics activities."@en ;
+  rdfs:label "Operate warehousing"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10340PartOf10219 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10340 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10219 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10341 rdf:type owl:Class ;
+  rdfs:comment "Creating a plan that specifies the schedule and system for transportation and delivery of the outbound products, as well as tracking the performance of the carrier delivery system. Conduct vehicle management and processing of all carrier-related documents."@en ;
+  rdfs:label "Operate outbound transportation"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10341PartOf10219 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10341 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10219 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10343 rdf:type owl:Class ;
+  rdfs:comment "Determining the requirements for managing the flow of things between the point of origin and the point of consumption by assessing the service requirements of the customers."@en ;
+  rdfs:label "Translate customer service requirements into logistics requirements"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10343FollowedBy10344 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10343 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10344 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10343PartOf10338 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10343 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10338 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10344 rdf:type owl:Class ;
+  rdfs:comment "Developing a network for logistical activities. Create a network of entities through which materials and information flow, encompassing all related activities associated with the flow of transformation of products."@en ;
+  rdfs:label "Design logistics network"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10344FollowedBy10345 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10344 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10345 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10344PartOf10338 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10344 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10338 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10345 rdf:type owl:Class ;
+  rdfs:comment "Conveying outsourcing needs within the organization, with the objective of sourcing the assistance required. Define the portion of logistical activities that can be transferred to outside suppliers. Assess third-party agencies to carefully select the most appropriate agencies for outsourcing. Convey these needs to management or the appropriate authority."@en ;
+  rdfs:label "Communicate outsourcing needs"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10345FollowedBy10346 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10345 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10346 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10345PartOf10338 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10345 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10338 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10346 rdf:type owl:Class ;
+  rdfs:comment "Establishing rules and regulations, as well as the terms and conditions regarding the delivery of service by the company. Develop a delivery plan that specifies what, how, when, and in which way to deliver services to the customer."@en ;
+  rdfs:label "Develop and maintain delivery service policy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10346FollowedBy10347 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10346 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10347 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10346PartOf10338 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10346 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10338 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10347 rdf:type owl:Class ;
+  rdfs:comment "Optimizing the schedule and costs of transportation services. Design a logistics strategy by strategically creating delivery routes and systems, which optimizes the overall transportation schedules and costs. Evaluate different transportation sources in order to select the most appropriate and cost-effective sources."@en ;
+  rdfs:label "Optimize transportation schedules and costs"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10347FollowedBy10348 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10347 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10348 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10347PartOf10338 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10347 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10338 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10348 rdf:type owl:Class ;
+  rdfs:comment "Establishing measures for evaluating the performance of the logistics strategy of the organization. Establish key performance indicators, including the logistics performance index, delivery in full, and delivery on time."@en ;
+  rdfs:label "Define key performance measures"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10348FollowedBy16905 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10348 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :16905 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10348PartOf10338 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10348 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10338 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10349 rdf:type owl:Class ;
+  rdfs:comment "Managing the receipts of inbound materials. Create a plan accounting for the materials procured from the source of supply and the materials delivered to the distribution center or the warehouse."@en ;
+  rdfs:label "Plan inbound material receipts"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10349FollowedBy10350 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10349 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10350 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10349PartOf20936 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10349 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20936 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10350 rdf:type owl:Class ;
+  rdfs:comment "Managing all the internal activities related to the flow/transfer of materials. Manage materials being delivered to distribution center or warehouse. Gauge the time taken for delivery and if the delivery process is on time. "@en ;
+  rdfs:label "Manage inbound material flow"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10350FollowedBy10351 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10350 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10351 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10350PartOf20936 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10350 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20936 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10351 rdf:type owl:Class ;
+  rdfs:comment "Overseeing the performance of an inbound delivery system. Check the present delivery system's efficiency, cost effectiveness, and adherence to a delivery schedule."@en ;
+  rdfs:label "Monitor inbound delivery performance"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10351FollowedBy10352 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10351 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10352 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10351PartOf20936 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10351 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20936 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10352 rdf:type owl:Class ;
+  rdfs:comment "Tracking and taking care of the products that have been internally returned either because of their deficiency or in cases of incorrect delivery. "@en ;
+  rdfs:label "Manage flow of returned products"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10352FollowedBy12708 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10352 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :12708 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10352PartOf20936 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10352 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20936 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10353 rdf:type owl:Class ;
+  rdfs:comment "Tracking the logistical act of delivering or releasing an inventory item or entity to targeted end users. Track how much inventory has been deployed at all the distribution centers, individually."@en ;
+  rdfs:label "Manage and track inventory deployment"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10353FollowedBy10354 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10353 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10354 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10353PartOf10340 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10353 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10340 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10354 rdf:type owl:Class ;
+  rdfs:comment "Coordinating the incoming inbound materials/products. Accept the delivery of these materials and the subsequent storage. Track them at the warehouse/distribution center. "@en ;
+  rdfs:label "Receive, inspect, and store inbound deliveries"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10354FollowedBy10355 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10354 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10355 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10354PartOf10340 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10354 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10340 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10355 rdf:type owl:Class ;
+  rdfs:comment "Keeping track of the availability of different materials/products at the warehouse and distribution centers. "@en ;
+  rdfs:label "Track product availability"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10355FollowedBy10356 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10355 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10356 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10355PartOf10340 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10355 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10340 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10356 rdf:type owl:Class ;
+  rdfs:comment "Packing and shipping the product to deliver to the customer. Take care of the internal and external packaging of the products in order to ensure safe transportation of the products from the warehouse to delivery locations. Notify the ERP system and/or Accounts Receivable Dept."@en ;
+  rdfs:label "Pick, pack, and ship product for delivery"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10356FollowedBy10357 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10356 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10357 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10356PartOf10340 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10356 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10340 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10357 rdf:type owl:Class ;
+  rdfs:comment "Monitoring any discrepancies between electronic records that represent the inventory and the physical state of the inventory. Look for discrepancies such as phantom inventory, which includes products that an inventory accounting system considers to be available at the storage location but are not actually available."@en ;
+  rdfs:label "Track inventory accuracy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10357FollowedBy10358 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10357 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10358 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10357PartOf10340 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10357 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10340 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10358 rdf:type owl:Class ;
+  rdfs:comment "Keeping a track on the storage and shipping performance of third-party agencies. Monitor logistics storage and shipping performance for third-party agencies. Use measures such as a logistics scoreboard, activity-based costing, economic value analysis, and balanced scorecards."@en ;
+  rdfs:label "Track third-party logistics storage and shipping performance"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10358FollowedBy10359 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10358 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10359 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10358PartOf10340 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10358 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10340 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10359 rdf:type owl:Class ;
+  rdfs:comment "Administering the movement of the finished products that are processed by the organization through its warehouses. Track goods through the use of systems such as barcodes in order to monitor the volumes available, quantity of out-flowing goods, remaining shelf life of the product, etc.--ultimately, to best manage the warehouse capacity."@en ;
+  rdfs:label "Manage physical finished goods inventory"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10359FollowedBy20957 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10359 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :20957 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10359PartOf10340 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10359 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10340 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10360 rdf:type owl:Class ;
+  rdfs:comment "Organizing the transportation and delivery of outbound products. Plan and organize the transportation, shipping, and delivery of the end products. Create a plan that specifies dispatch and delivery of the product to its destination, as well the transportation."@en ;
+  rdfs:label "Plan, transport, and deliver outbound product"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10360FollowedBy10361 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10360 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10361 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10360PartOf10341 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10360 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10341 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10361 rdf:type owl:Class ;
+  rdfs:comment "Monitoring delivery performance when carrying products from the warehouse/distribution centers to the retailers or end consumers. Create a performance metrics based on the key performance indicators."@en ;
+  rdfs:label "Track carrier delivery performance"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10361FollowedBy10362 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10361 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10362 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10361PartOf10341 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10361 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10341 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10362 rdf:type owl:Class ;
+  rdfs:comment "Taking care of a range of functions related to the means of transport used for delivering the end products. Manage vehicle financing, vehicle maintenance, vehicle telematics (tracking and diagnostics), driver management, speed management, fuel management, and health and safety management."@en ;
+  rdfs:label "Manage transportation fleet"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10362FollowedBy10363 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10362 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10363 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10362PartOf10341 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10362 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10341 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10363 rdf:type owl:Class ;
+  rdfs:comment "Organizing and inspecting all account statements and any other documentation for the carriers used in delivery. Create, manage, and inspect all documents related to the financial, regulatory, and administrative accounts of all the carriers/freights. Generate receipts for all freight transactions."@en ;
+  rdfs:label "Process and audit carrier invoices and documents"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10363PartOf10341 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10363 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10341 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10366 rdf:type owl:Class ;
+  rdfs:comment "Executing activities for reinstating the returned products. Present the customer with additional incentives of compensation in case of any defective products delivery or any discrepancy in the product specifications in order to save the order from being permanently returned."@en ;
+  rdfs:label "Perform salvage activities"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:10366FollowedBy14195 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10366 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :14195 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:10366PartOf20109 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10366 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20109 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:10368 rdf:type owl:Class ;
+  rdfs:comment "Developing standards and procedures for maintaining the quality of products/services. Establish desired quality targets. Create standardized procedures for the quality. Ensure quality specifications are effectively communicated."@en ;
+  rdfs:label "Develop quality standards and procedures"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10368PartOf10215 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10368 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10215 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10369 rdf:type owl:Class ;
+  rdfs:comment "Executing tests to evaluate the quality of the products manufactured. Calibrate the test equipment. Conduct the actual tests. Record the results and outcomes of the quality test conducted."@en ;
+  rdfs:label "Perform quality testing"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10369PartOf10217 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10369 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10217 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10370 rdf:type owl:Class ;
+  rdfs:comment "Perpetuating the production records by systematically documenting and using it to ensure the effective management of lots. Determine the lot numbering system and its use. (The lot number enables tracking of the constituent parts, as well as labor and equipment records involved in the manufacturing of a product. It enables manufacturers and to perform quality control checks, calculate expiration dates, and issue corrections of their production output.)"@en ;
+  rdfs:label "Maintain production records and manage lot traceability"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:10370PartOf10217 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10370 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10217 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:10371 rdf:type owl:Class ;
+  rdfs:comment "Defining specific qualitative and quantitative target figures."@en ;
+  rdfs:label "Establish quality targets"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10371FollowedBy10372 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10371 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10372 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10371PartOf10368 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10371 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10368 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10372 rdf:type owl:Class ;
+  rdfs:comment "Creating standard procedures for testing the quality of products/services. Describe the steps of key processes to help ensure consistent and quality output. Define the routine instructions for performing the quality testing activity."@en ;
+  rdfs:label "Develop standard testing procedures"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10372FollowedBy10373 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10372 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10373 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10372PartOf10368 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10372 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10368 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10373 rdf:type owl:Class ;
+  rdfs:comment "Communicating the desired quality specifications to the manufacturing units, as well as the distribution centers, to avoid any misunderstanding or misinterpretation."@en ;
+  rdfs:label "Communicate quality specifications"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10373PartOf10368 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10373 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10368 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10374 rdf:type owl:Class ;
+  rdfs:comment "Performing testing using calibrated equipment and in consent with the standard testing procedure, including testing time."@en ;
+  rdfs:label "Perform testing using the standard testing procedure"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10374FollowedBy20956 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10374 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :20956 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10374PartOf10369 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10374 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10369 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10375 rdf:type owl:Class ;
+  rdfs:comment "Documenting the results and outcomes of the quality tests. Track the performance of the production process. Record/Document it to evaluate the qualitative efficiency of the production process. Use electronic devices and software in order to ensure effectiveness in recording the results and outcomes of the test."@en ;
+  rdfs:label "Record test results"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10375FollowedBy12045 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10375 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :12045 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10375PartOf10369 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10375 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10369 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10376 rdf:type owl:Class ;
+  rdfs:comment "Allotting an identification number to a particular quantity or lot of material manufactured. Assign lot numbers on the basis of specific production units, material similarity, etc. Place lot numbers on the outside of packaging."@en ;
+  rdfs:label "Determine lot numbering system"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10376FollowedBy10377 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10376 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10377 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:10376PartOf10370 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10376 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10370 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:10377 rdf:type owl:Class ;
+  rdfs:comment "Identifying the use of production lots. Define where, how, and when to use a specific production lot."@en ;
+  rdfs:label "Determine lot use"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:10377PartOf10370 rdf:type owl:ObjectProperty ;
+  rdfs:domain :10377 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10370 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:12045 rdf:type owl:Class ;
+  rdfs:comment "Managing and monitoring the occurrences of problems with a process or product. It is important that nonconformance occurrences are tracked in a standardized way so the data can easily be reviewed to assess the impact of the problem. Ongoing analysis of trends in nonconformance gives an organization the ability to make process changes to reduce the incidence and cost of nonconformances."@en ;
+  rdfs:label "Track and analyze non-conformance trends"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:12045FollowedBy12046 rdf:type owl:ObjectProperty ;
+  rdfs:domain :12045 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :12046 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:12045PartOf10369 rdf:type owl:ObjectProperty ;
+  rdfs:domain :12045 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10369 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:12046 rdf:type owl:Class ;
+  rdfs:comment "Using a technique that helps people answer the question of why a problem occurred in the first place. It seeks to identify the origin of a problem using a specific set of steps, with associated tools, to find the primary cause of the problem to determine what happened, why, and how to reduce the likelihood that it will happen again."@en ;
+  rdfs:label "Perform root cause analysis"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:12046PartOf10369 rdf:type owl:ObjectProperty ;
+  rdfs:domain :12046 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10369 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:12708 rdf:type owl:Class ;
+  rdfs:comment "Implement a checks and balances system to verify that returned parts meet acceptable quality standards to determine appropriate disposition activity."@en ;
+  rdfs:label "Control quality of returned parts"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:12708FollowedBy20109 rdf:type owl:ObjectProperty ;
+  rdfs:domain :12708 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :20109 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:12708PartOf20936 rdf:type owl:ObjectProperty ;
+  rdfs:domain :12708 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20936 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:14193 rdf:type owl:Class ;
+  rdfs:comment "Outlining the scheme of processing inventory into finished products/services. This includes the use of raw materials, machinery, skill sets, and knowledge to create new offerings."@en ;
+  rdfs:label "Define production process"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:14193FollowedBy19551 rdf:type owl:ObjectProperty ;
+  rdfs:domain :14193 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :19551 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:14193PartOf10221 rdf:type owl:ObjectProperty ;
+  rdfs:domain :14193 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10221 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:14194 rdf:type owl:Class ;
+  rdfs:comment "Determining the floor plans for the processing facility that is meant for delivering finished products/services. Identify the totality of infrastructure needed for using this space in the manufacturing process, including machinery, factory floors, offices, and furniture."@en ;
+  rdfs:label "Define production workplace layout and infrastructure"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:14194PartOf10221 rdf:type owl:ObjectProperty ;
+  rdfs:domain :14194 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10221 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:14195 rdf:type owl:Class ;
+  rdfs:comment "Administering the reinstatement of the returned product in order to return them back to customers. Repair or remanufacture the defective or ineffective products returned by the customer. Process the delivery of the repaired or remanufactured products back to the customer."@en ;
+  rdfs:label "Manage repair/refurbishment and return to customer/stock"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:14195PartOf20109 rdf:type owl:ObjectProperty ;
+  rdfs:domain :14195 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20109 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:14196 rdf:type owl:Class ;
+  rdfs:comment "Defining an equitable volume for the production of products/services that adheres to an equilibrium value, and creating a scheme of control for processing items. Create schematics for systematically planning, coordinating, and directing the manufacturing activities in line with the production balance determined."@en ;
+  rdfs:label "Define production balance and control"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:14196PartOf10223 rdf:type owl:ObjectProperty ;
+  rdfs:domain :14196 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10223 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:16905 rdf:type owl:Class ;
+  rdfs:comment "Establish a strategy that includes rules and regulations for the physical handling, information processing, and disposition of product and packaging returned by the buyer to the seller or an intermediary. Include return approval, transportation coordination, advance communication, product tracking, receipt, disposition of the return, and processing warranty claims in the strategy."@en ;
+  rdfs:label "Define reverse logistics strategy"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:16905PartOf10338 rdf:type owl:ObjectProperty ;
+  rdfs:domain :16905 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10338 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:17041 rdf:type owl:Class ;
+  rdfs:comment "Supervising and overseeing the plan for internal activities such as production, inventory, and staffing. Set the quantity of items to produce each week of a short-range planning horizon."@en ;
+  rdfs:label "Maintain master production schedule"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:17041PartOf10224 rdf:type owl:ObjectProperty ;
+  rdfs:domain :17041 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10224 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:17042 rdf:type owl:Class ;
+  rdfs:comment "Maintaining master data of finished products and inventory. Identify the requirements of finished products at the destination, as well as partner requirements. Calculate the consolidation at source. Manage replenishment planning. Create and administer a dispatch plan. Calculate load plans for destinations and partners. Manage the cost of supplying these products. Ensure effective utilization of capacity."@en ;
+  rdfs:label "Plan distribution requirements"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:17042PartOf10215 rdf:type owl:ObjectProperty ;
+  rdfs:domain :17042 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10215 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:19551 rdf:type owl:Class ;
+  rdfs:comment "Establishing or prescribing methods to be followed routinely for the performance of designated operations or in designated situations. This may include step-by-step instructions to help workers carry out complex routine operations. The goal is to improve efficiency, quality, and uniformity of performance, while reducing miscommunication, failure, or rework."@en ;
+  rdfs:label "Define standard operating procedures"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:19551FollowedBy14194 rdf:type owl:ObjectProperty ;
+  rdfs:domain :19551 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :14194 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:19551PartOf10221 rdf:type owl:ObjectProperty ;
+  rdfs:domain :19551 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10221 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:19555 rdf:type owl:Class ;
+  rdfs:comment "Evaluate constraints, needs, parameters, and conditions for physical storage and retrieval of components or products for future use or shipment in a storage facility within a certain timeframe."@en ;
+  rdfs:label "Determine product storage facility requirements"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:19555FollowedBy10254 rdf:type owl:ObjectProperty ;
+  rdfs:domain :19555 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10254 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:19555PartOf17042 rdf:type owl:ObjectProperty ;
+  rdfs:domain :19555 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :17042 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:19558 rdf:type owl:Class ;
+  rdfs:comment "Determining potential constraints for physical storage and retrieval of components or products in a storage facility within a certain timeframe. Consider factors such as the building shape, height, capacity, door locations, lift equipment, automation, etc."@en ;
+  rdfs:label "Establish storage management constraints"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:19558PartOf10226 rdf:type owl:ObjectProperty ;
+  rdfs:domain :19558 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10226 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:19563 rdf:type owl:Class ;
+  rdfs:comment "Creating a representation of plant facilities to optimize material flow, resource utilization, and logistics for all levels of plant planning from global production facilities, through local plants, to specific lines and enabling the comparison of productionalternatives,."@en ;
+  rdfs:label "Model and simulate plant"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:19563FollowedBy10306 rdf:type owl:ObjectProperty ;
+  rdfs:domain :19563 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10306 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:19563PartOf10303 rdf:type owl:ObjectProperty ;
+  rdfs:domain :19563 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10303 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:19566 rdf:type owl:Class ;
+  rdfs:comment "Integrating different resources in the production process: material, personnel, equipment, robotics, etc. Includes automating and controlling the plant, performing advanced process control and real-time optimization. This activity also includes managing plant alarms and alerts."@en ;
+  rdfs:label "Monitor and optimize production process"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:19566FollowedBy10314 rdf:type owl:ObjectProperty ;
+  rdfs:domain :19566 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10314 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:19566PartOf10304 rdf:type owl:ObjectProperty ;
+  rdfs:domain :19566 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10304 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:19567 rdf:type owl:Class ;
+  rdfs:comment "Creating and applying technology to monitor and control the production and delivery of products and services. Automation involves a broad range of technologies."@en ;
+  rdfs:label "Automate and control plant"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:19567FollowedBy19568 rdf:type owl:ObjectProperty ;
+  rdfs:domain :19567 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :19568 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:19567PartOf19566 rdf:type owl:ObjectProperty ;
+  rdfs:domain :19567 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :19566 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:19568 rdf:type owl:Class ;
+  rdfs:comment "Including a broad range of techniques and technologies implemented within industrial process control systems that are routinely reviewed, audited, and improved, advanced process controls typically address particular performance or economic improvement opportunities. An advanced set of process control measures can be used to reduce variation and identify primary improvement options. Results of analysis are fed back into process design for incorporation into production. "@en ;
+  rdfs:label "Perform advanced process control"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:19568FollowedBy19569 rdf:type owl:ObjectProperty ;
+  rdfs:domain :19568 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :19569 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:19568PartOf19566 rdf:type owl:ObjectProperty ;
+  rdfs:domain :19568 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :19566 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:19569 rdf:type owl:Class ;
+  rdfs:comment "Helping organizations increase performance and efficiency, real-time optimization is a category of closed-loop process control that aims at optimizing process performance in real time for systems. It is normally built upon model-based optimization systems and is usually large scale. Real-time optimization automatically detects errors, and can modify and eliminate both random and non-random errors, as well as analyze and monitor all systems involved."@en ;
+  rdfs:label "Perform real-time optimization"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:19569FollowedBy19570 rdf:type owl:ObjectProperty ;
+  rdfs:domain :19569 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :19570 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskFollowedByAPQCTask> .
+
+:19569PartOf19566 rdf:type owl:ObjectProperty ;
+  rdfs:domain :19569 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :19566 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:19570 rdf:type owl:Class ;
+  rdfs:comment "Applying human factors and instrumentation engineering and systems thinking to manage the design of an alarm or alert system to increase its usability. Typical challenges include having too many alarms in a plant, poorly designed alarms/alerts, improperly set alarm/alert points, unclear alarm/alert messages, etc. Poor alarm management is one of the leading causes of unplanned downtime."@en ;
+  rdfs:label "Manage plant alarms and alerts"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCTask> .
+
+:19570PartOf19566 rdf:type owl:ObjectProperty ;
+  rdfs:domain :19570 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :19566 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCTaskPartOfAPQCActivity> .
+
+:20022 rdf:type owl:Class ;
+  rdfs:comment "Performing supply chain activities include planning supply chain, procuring materials and services, and managing logistics."@en ;
+  rdfs:label "Manage Supply Chain for Physical Products"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCCategory> .
+
+:20023 rdf:type owl:Class ;
+  rdfs:comment "Create representative logical system that provides the framework to attain strategic objectives based on resources, product volumes, and processes. Provides the general sequential flow and capacity requirement relationships among raw materials, parts, resources, finished products, and product families. "@en ;
+  rdfs:label "Model production network to enable simulation and optimization"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:20023FollowedBy20024 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20023 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :20024 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20023PartOf10224 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20023 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10224 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20024 rdf:type owl:Class ;
+  rdfs:comment "Creating  the plan for internal activities such as production, inventory, and staffing. Include forecasted quantity of items to produce based on inputs from sales planning, demand planning/forecasting, and supply chain partners."@en ;
+  rdfs:label "Create master production schedule"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:20024FollowedBy17041 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20024 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :17041 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20024PartOf10224 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20024 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10224 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20109 rdf:type owl:Class ;
+  rdfs:comment "Determining if a returned product can be salvaged or repaired. Salvage or repair is dependent upon the product, the condition of the product, or the availability of a like item."@en ;
+  rdfs:label "Salvage or repair returned products"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:20109PartOf20936 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20109 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :20936 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20936 rdf:type owl:Class ;
+  rdfs:comment "Creating and executing a strategy for all the internal activities related to the flow/transfer of inbound materials. This process includes planning inbound material receipts, managing inbound material flow, monitoring inbound delivery performance, managing the flow of returned products, controlling the quality of returned parts, and salvaging or repairing returned products."@en ;
+  rdfs:label "Plan and manage inbound material flow"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:20936PartOf10219 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20936 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10219 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .
+
+:20956 rdf:type owl:Class ;
+  rdfs:comment "Selecting a set of elements from a product lot to draw conclusions or make inferences about the quality of the product lot from which the sample is drawn. Sampling is frequently used because gathering data on every product produced by a company is often impossible, impractical, or too costly to collect. "@en ;
+  rdfs:label "Manage quality samples"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:20956FollowedBy10375 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20956 ;
+  rdfs:label "Followed By"@en ;
+  rdfs:range :10375 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityFollowedByAPQCActivity> .
+
+:20956PartOf10369 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20956 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10369 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20957 rdf:type owl:Class ;
+  rdfs:comment "Shipping items from one warehouse to another in a multi-warehouse environment. A warehouse transfer is typically handled electronically in a system designed to replicate the physical processes involved with transferring items from one warehouse to another."@en ;
+  rdfs:label "Manage warehouse transfers"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCActivity> .
+
+:20957PartOf10340 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20957 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10340 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCActivityPartOfAPQCProcess> .
+
+:20973 rdf:type owl:Class ;
+  rdfs:comment "Deploying a strategic sourcing methodology to segment the majority of organizational spend based on external supply markets (versus individual suppliers or internal stakeholders) to reduce the cost of buying goods and services, reduce risk in the supply chain, and maximize value delivered from the supply base. This approach typically includes cross-functional management of categories, examining the entire category spend, how the organization uses the products or services within the category, the marketplace, and major suppliers. "@en ;
+  rdfs:label "Develop sourcing and category management strategies"@en ;
+  rdfs:subClassOf <http://field33.com/ontologies/@apqc/apqc/APQCProcess> .
+
+:20973PartOf10216 rdf:type owl:ObjectProperty ;
+  rdfs:domain :20973 ;
+  rdfs:label "Part Of"@en ;
+  rdfs:range :10216 ;
+  rdfs:subPropertyOf <http://field33.com/ontologies/@apqc/apqc/APQCProcessPartOfAPQCProcessGroup> .

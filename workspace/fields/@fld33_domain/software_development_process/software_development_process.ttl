@@ -1,0 +1,646 @@
+@prefix : <http://field33.com/ontologies/@fld33_domain/software_development_process/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix registry: <http://field33.com/ontologies/REGISTRY/> .
+@base <http://field33.com/ontologies/@fld33_domain/software_development_process/> .
+
+<http://field33.com/ontologies/@fld33_domain/software_development_process/> rdf:type owl:Ontology ;
+                                                                               registry:author "Field 33 <contribution@field33.com>" ;
+                                                                               registry:canonicalPrefix "software_development_process" ;
+                                                                               registry:category "Process" ,
+                                                                                                 "Software Development" ;
+                                                                               registry:dependency "@fld33/process ^0.1.2" ,
+                                                                                                   "@fld33/relations ^0.2.3" ,
+                                                                                                   "@fld33_domain/software_development_artifact ^0.1.1" ,
+                                                                                                   "@fld33_domain/software_development ^0.3.4" ;
+                                                                               registry:keyword "Field 33 Package" ,
+                                                                                                "Process" ,
+                                                                                                "Software Development" ,
+                                                                                                "Software Development Process" ;
+                                                                               registry:ontologyFormatVersion "v1" ;
+                                                                               registry:packageName "@fld33_domain/software_development_process" ;
+                                                                               registry:packageVersion "0.1.1" ;
+                                                                               registry:licenseSPDX "Apache-2.0" ;
+                                                                               registry:repository "https://github.com/field33/ontologies/tree/main/workspace/fields/%40fld33_domain/software_development_process" ;
+                                                                               registry:shortDescription "Ontology describing a basic software development process."@en ;
+                                                                               rdfs:comment """## Note:
+This package emerged from `software_development_lifecycle`, which was a unified perspective of a basic software development process as well as lifecycle steps software products experience.
+
+# Software Development Process
+This ontology shall reflect a basic process for software development providing a simple sequence.
+
+As in most literature you find something like: Planning -> Requirement -> System & Software Design -> Implementation -> Testing -> Deployment -> Maintenance. There is often slightly different wording for the included steps.
+
+In this model we look at: Planning -> Requirement -> System Architecture -> Development -> Integration -> Operation
+
+Please note that these definitions are based on widely-accepted standards and practices in the software engineering field, even though specific approaches and methods may vary by organization.
+"""@en ;
+                                                                               rdfs:label "Software Development Process"@en .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/ProducedBy
+:ProducedBy rdf:type owl:ObjectProperty ;
+            rdfs:label "Produced by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/PlanningFollowedByRequirement
+:PlanningFollowedByRequirement rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/FollowedBy> ;
+                               rdfs:domain :Planning ;
+                               rdfs:range :Requirement ;
+                               rdfs:label "Followed by"@en .
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/RequirementFollowedBySystemArchitecture
+:RequirementFollowedBySystemArchitecture rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/FollowedBy> ;
+                                         rdfs:domain :Requirement ;
+                                         rdfs:range :SystemArchitecture ;
+                                         rdfs:label "Followed by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/SystemArchitectureFollowedByDevelopment
+:SystemArchitectureFollowedByDevelopment rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/FollowedBy> ;
+                                         rdfs:domain :SystemArchitecture ;
+                                         rdfs:range :Development ;
+                                         rdfs:label "Followed by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/DevelopmentFollowedByIntegration
+:DevelopmentFollowedByIntegration rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/FollowedBy> ;
+                                  rdfs:domain :Development ;
+                                  rdfs:range :Integration ;
+                                  rdfs:label "Followed by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/IntegrationFollowedByOperation
+:IntegrationFollowedByOperation rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/FollowedBy> ;
+                                rdfs:domain :Integration ;
+                                rdfs:range :Operation ;
+                                rdfs:label "Followed by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/PlanningPartOfSoftwareDevelopmentProcess
+:PlanningPartOfSoftwareDevelopmentProcess rdf:type owl:ObjectProperty ;
+                                          rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/partOf> ;
+                                          rdfs:domain :Planning ;
+                                          rdfs:range :SoftwareDevelopmentProcess ;
+                                          rdfs:label "Part of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/RequirementPartOfSoftwareDevelopmentProcess
+:RequirementPartOfSoftwareDevelopmentProcess rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/partOf> ;
+                                             rdfs:domain :Requirement ;
+                                             rdfs:range :SoftwareDevelopmentProcess ;
+                                             rdfs:label "Part of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/SystemArchitecturePartOfSoftwareDevelopmentProcess
+:SystemArchitecturePartOfSoftwareDevelopmentProcess rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/partOf> ;
+                                                    rdfs:domain :SystemArchitecture ;
+                                                    rdfs:range :SoftwareDevelopmentProcess ;
+                                                    rdfs:label "Part of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/DevelopmentPartOfSoftwareDevelopmentProcess
+:DevelopmentPartOfSoftwareDevelopmentProcess rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/partOf> ;
+                                             rdfs:domain :Development ;
+                                             rdfs:range :SoftwareDevelopmentProcess ;
+                                             rdfs:label "Part of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/IntegrationPartOfSoftwareDevelopmentProcess
+:IntegrationPartOfSoftwareDevelopmentProcess rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/partOf> ;
+                                             rdfs:domain :Integration ;
+                                             rdfs:range :SoftwareDevelopmentProcess ;
+                                             rdfs:label "Part of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/OperationPartOfSoftwareDevelopmentProcess
+:OperationPartOfSoftwareDevelopmentProcess rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/partOf> ;
+                                           rdfs:domain :Operation ;
+                                           rdfs:range :SoftwareDevelopmentProcess ;
+                                           rdfs:label "Part of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/ScopeProducedByPlanning
+:ScopeProducedByPlanning rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :ProducedBy ;
+                         rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/Scope> ;
+                         rdfs:range :Planning ;
+                         rdfs:label "Produced by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/RoadmapProducedByPlanning
+:RoadmapProducedByPlanning rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :ProducedBy ;
+                           rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/Roadmap> ;
+                           rdfs:range :Planning ;
+                           rdfs:label "Produced by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/EpicTicketProducedByPlanning
+:EpicTicketProducedByPlanning rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf :ProducedBy ;
+                              rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/EpicTicket> ;
+                              rdfs:range :Planning ;
+                              rdfs:label "Produced by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/UserStoryTicketProducedByPlanning
+:UserStoryTicketProducedByPlanning rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf :ProducedBy ;
+                                   rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/UserStoryTicket> ;
+                                   rdfs:range :Planning ;
+                                   rdfs:label "Produced by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/FeatureTicketProducedByPlanning
+:FeatureTicketProducedByPlanning rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf :ProducedBy ;
+                                 rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/FeatureTicket> ;
+                                 rdfs:range :Planning ;
+                                 rdfs:label "Produced by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/NonFunctionalRequirementProducedByRequirement
+:NonFunctionalRequirementProducedByRequirement rdf:type owl:ObjectProperty ;
+                                               rdfs:subPropertyOf :ProducedBy ;
+                                               rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/NonFunctionalRequirement> ;
+                                               rdfs:range :Requirement ;
+                                               rdfs:label "Produced by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/FunctionalRequirementProducedByRequirement
+:FunctionalRequirementProducedByRequirement rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf :ProducedBy ;
+                                            rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/FunctionalRequirement> ;
+                                            rdfs:range :Requirement ;
+                                            rdfs:label "Produced by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/ApplicationArchitectureProducedBySystemArchitecture
+:ApplicationArchitectureProducedBySystemArchitecture rdf:type owl:ObjectProperty ;
+                                                     rdfs:subPropertyOf :ProducedBy ;
+                                                     rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/ApplicationArchitecture> ;
+                                                     rdfs:range :SystemArchitecture ;
+                                                     rdfs:label "Produced by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/InfrastructureArchitectureProducedBySystemArchitecture
+:InfrastructureArchitectureProducedBySystemArchitecture rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf :ProducedBy ;
+                                                        rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/InfrastructureArchitecture> ;
+                                                        rdfs:range :SystemArchitecture ;
+                                                        rdfs:label "Produced by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/APIDesignProducedBySystemArchitecture
+:APIDesignProducedBySystemArchitecture rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf :ProducedBy ;
+                                       rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/APIDesign> ;
+                                       rdfs:range :SystemArchitecture ;
+                                       rdfs:label "Produced by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/DataArchitectureProducedBySystemArchitecture
+:DataArchitectureProducedBySystemArchitecture rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf :ProducedBy ;
+                                              rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/DataArchitecture> ;
+                                              rdfs:range :SystemArchitecture ;
+                                              rdfs:label "Produced by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/ChoreTicketProducedBySystemArchitecture
+:ChoreTicketProducedBySystemArchitecture rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf :ProducedBy ;
+                                         rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/ChoreTicket> ;
+                                         rdfs:range :SystemArchitecture ;
+                                         rdfs:label "Produced by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/TestProducedByDevelopment
+:TestProducedByDevelopment rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :ProducedBy ;
+                           rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/Test> ;
+                           rdfs:range :Development ;
+                           rdfs:label "Produced by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/CodeProducedByDevelopment
+:CodeProducedByDevelopment rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :ProducedBy ;
+                           rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/Code> ;
+                           rdfs:range :Development ;
+                           rdfs:label "Produced by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/RepositoryProducedByDevelopment
+:RepositoryProducedByDevelopment rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf :ProducedBy ;
+                                 rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/Repository> ;
+                                 rdfs:range :Development ;
+                                 rdfs:label "Produced by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/CommitProducedByDevelopment
+:CommitProducedByDevelopment rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf :ProducedBy ;
+                             rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/Commit> ;
+                             rdfs:range :Development ;
+                             rdfs:label "Produced by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/CodeChangeProducedByDevelopment
+:CodeChangeProducedByDevelopment rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf :ProducedBy ;
+                                 rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/CodeChange> ;
+                                 rdfs:range :Development ;
+                                 rdfs:label "Produced by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/DocumentationProducedByDevelopment
+:DocumentationProducedByDevelopment rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf :ProducedBy ;
+                                    rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/Documentation> ;
+                                    rdfs:range :Development ;
+                                    rdfs:label "Produced by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/BuildProducedByIntegration
+:BuildProducedByIntegration rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :ProducedBy ;
+                            rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/Build> ;
+                            rdfs:range :Integration ;
+                            rdfs:label "Produced by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/DeploymentProducedByIntegration
+:DeploymentProducedByIntegration rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :ProducedBy ;
+                            rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/Deployment> ;
+                            rdfs:range :Integration ;
+                            rdfs:label "Produced by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/FailureProducedByOperation
+:FailureProducedByOperation rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :ProducedBy ;
+                            rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/Failure> ;
+                            rdfs:range :Operation ;
+                            rdfs:label "Produced by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/BugTicketProducedByOperation
+:BugTicketProducedByOperation rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :ProducedBy ;
+                            rdfs:domain <http://field33.com/ontologies/@fld33_domain/software_development/BugTicket> ;
+                            rdfs:range :Operation ;
+                            rdfs:label "Produced by"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/PlanningConsistOf
+:PlanningConsistOf rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/ConsistOf> ;
+                   rdfs:domain :Planning ;
+                   rdfs:range [ rdf:type owl:Class ;
+                               owl:unionOf ( :Administration
+                                               :AllocateResource
+                                               :EstimateResource
+                                               :ScopeAndRoadmap
+                                           )
+                               ] ;
+                   rdfs:label "Consist of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/RequirementConsistOf
+:RequirementConsistOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/ConsistOf> ;
+                      rdfs:domain :Requirement ;
+                      rdfs:range [ rdf:type owl:Class ;
+                                  owl:unionOf ( :Administration
+                                              :FunctionalRequirement
+                                              :NonFunctionalRequirement
+                                              :UseCase
+                                              :UserStory
+                                              )
+                              ] ;
+                      rdfs:label "Consist of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/SystemArchitectureConsistOf
+:SystemArchitectureConsistOf rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/ConsistOf> ;
+                             rdfs:domain :SystemArchitecture ;
+                             rdfs:range [ rdf:type owl:Class ;
+                                             owl:unionOf ( :APIDesign
+                                                         :Administration
+                                                         :ApplicationArchitecture
+                                                         :DataArchitecture
+                                                         :InfrastructureArchitecture
+                                                         )
+                                         ] ;
+                             rdfs:label "Consist of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/DevelopmentConsistOf
+:DevelopmentConsistOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/ConsistOf> ;
+                      rdfs:domain :Development ;
+                      rdfs:range [ rdf:type owl:Class ;
+                                  owl:unionOf ( :Administration
+                                              :BugFixing
+                                              :ChoreManagement
+                                              :Implementation
+                                              :Setup
+                                              :TechnicalDebtManagement
+                                              :Training
+                                              )
+                              ] ;
+                      rdfs:label "Consist of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/IntegrationConsistOf
+:IntegrationConsistOf rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/ConsistOf> ;
+                      rdfs:domain :Integration ;
+                      rdfs:range [ rdf:type owl:Class ;
+                                  owl:unionOf ( :Administration
+                                              :Endurance
+                                              :StressTest
+                                              :SystemIntegration
+                                              :UserAcceptance
+                                              )
+                              ] ;
+                      rdfs:label "Consist of"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/OperationConsistOf
+:OperationConsistOf rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://field33.com/ontologies/@fld33/relations/ConsistOf> ;
+                    rdfs:domain :Operation ;
+                    rdfs:range [ rdf:type owl:Class ;
+                                owl:unionOf ( :Administration
+                                                :InfrastructureSetup
+                                                :Maintenance
+                                                :Monitoring
+                                                :ReleaseManagement
+                                            )
+                                ] ;
+                    rdfs:label "Consist of"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/SoftwareDevelopmentProcess
+:SoftwareDevelopmentProcess rdf:type owl:Class ;
+                            rdfs:comment "The software development process is a structured process for planning, creating, testing, and deploying software. It involves several stages including requirement analysis, design, coding, testing, deployment, and maintenance. Each stage is crucial in ensuring the development of high-quality, efficient, and effective software."@en ;
+                            rdfs:seeAlso "'Software Development Life Cycle (SDLC)' by The U.S. General Services Administration, Technology Transformation Services. (n.d.). Retrieved from https://www.gsa.gov/directive/information-technology-%28it%29-solutions-life-cycle-%28slc%29-policy"@en ;
+                            rdfs:label "Software development process"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/Planning
+:Planning rdf:type owl:Class ;
+          rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Activity> ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :PlanningFollowedByRequirement ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Requirement
+                          ] ;
+          rdfs:comment "This is the initial stage in software development that involves determining what needs to be done and how it will be accomplished. It includes defining the project scope, establishing timelines, and estimating resources."@en ;
+          rdfs:seeAlso "[source: IEEE Std 1058-1998, IEEE Standard for Software Project Management Plans]"@en ;
+          rdfs:label "Planning"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/Requirement
+:Requirement rdf:type owl:Class ;
+             rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Activity> ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :RequirementFollowedBySystemArchitecture ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :SystemArchitecture
+                             ] ;
+             rdfs:comment "Requirement gathering is a process of collecting the user needs to solve a problem or achieve an objective. This can involve a variety of techniques such as interviews, surveys, or use case scenarios. The outcome of this process is a detailed set of system requirements."@en ;
+             rdfs:seeAlso "[source: IEEE Guide to Software Requirements Specifications (ANSI)]"@en ;
+             rdfs:label "Requirement"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/SystemArchitecture
+:SystemArchitecture rdf:type owl:Class ;
+                    rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Activity> ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :SystemArchitectureFollowedByDevelopment ;
+                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onClass :Development
+                                    ] ;
+                    rdfs:comment "This refers to the conceptual model that defines the structure, behavior, and more views of a system. The goal is to identify the software components and their relationships, providing a detailed system design."@en ;
+                    rdfs:seeAlso "[source: ISO/IEC/IEEE 42010:2011 Systems and software engineering — Architecture description]"@en ;
+                    rdfs:label "System Architecture"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/Development
+:Development rdf:type owl:Class ;
+             rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Activity> ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :DevelopmentFollowedByIntegration ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :Integration
+                             ] ;
+             rdfs:comment "This stage involves actual coding and unit testing, transforming design and architecture into operational software. This could involve a variety of programming languages and tools, depending on the nature of the software being developed."@en ;
+             rdfs:seeAlso "[source: IEEE Std 1016-2009, IEEE Standard for Information Technology—Systems Design—Software Design Descriptions]"@en ;
+             rdfs:label "Development"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/Integration
+:Integration rdf:type owl:Class ;
+             rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Activity> ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :IntegrationFollowedByOperation ;
+                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :Operation
+                             ] ;
+             rdfs:comment "Integration is the process of combining all the software units and components into a single system. This phase often includes integration testing, where individual software modules are combined and tested as a group."@en ;
+             rdfs:seeAlso "[source: IEEE Std 610.12-1990, IEEE Standard Glossary of Software Engineering Terminology]"@en ;
+             rdfs:label "Integration"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/Operation
+:Operation rdf:type owl:Class ;
+           rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Activity> ;
+           rdfs:comment "The operation phase involves the execution of the software in its functional environment. It includes activities such as system testing, maintenance, and user support. The goal is to ensure that the software operates as intended and can be maintained effectively over time."@en ;
+           rdfs:seeAlso "[source: ISO/IEC 12207:2008, Systems and software engineering — Software life cycle processes]"@en ;
+           rdfs:label "Operation"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/Administration
+:Administration rdf:type owl:Class ;
+                rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+                rdfs:label "Administration"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/AllocateResource
+:AllocateResource rdf:type owl:Class ;
+                  rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+                  rdfs:label "Allocate available resources"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/EstimateResource
+:EstimateResource rdf:type owl:Class ;
+                  rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+                  rdfs:label "Estimate required resources"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/ScopeAndRoadmap
+:ScopeAndRoadmap rdf:type owl:Class ;
+                 rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+                 rdfs:label "Scope and roadmap"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/FunctionalRequirement
+:FunctionalRequirement rdf:type owl:Class ;
+                       rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+                       rdfs:label "Functional software requirements"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/NonFunctionalRequirement
+:NonFunctionalRequirement rdf:type owl:Class ;
+                          rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+                          rdfs:label "Non-functional software requirements"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/UseCase
+:UseCase rdf:type owl:Class ;
+         rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+         rdfs:label "Use case"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/UserStory
+:UserStory rdf:type owl:Class ;
+           rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+           rdfs:label "User story"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/APIDesign
+:APIDesign rdf:type owl:Class ;
+           rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+           rdfs:label "API design"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/ApplicationArchitecture
+:ApplicationArchitecture rdf:type owl:Class ;
+                         rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+                         rdfs:label "Application architecture"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/DataArchitecture
+:DataArchitecture rdf:type owl:Class ;
+                  rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+                  rdfs:label "Data architecture"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/InfrastructureArchitecture
+:InfrastructureArchitecture rdf:type owl:Class ;
+                            rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+                            rdfs:label "Infrastructure architecture"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/BugFixing
+:BugFixing rdf:type owl:Class ;
+           rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+           rdfs:label "Bug fixing"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/ChoreManagement
+:ChoreManagement rdf:type owl:Class ;
+                 rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+                 rdfs:label "Chore management"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/Implementation
+:Implementation rdf:type owl:Class ;
+                rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+                rdfs:label "Implementation"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/Setup
+:Setup rdf:type owl:Class ;
+       rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+       rdfs:label "Setup"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/TechnicalDebtManagement
+:TechnicalDebtManagement rdf:type owl:Class ;
+                         rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+                         rdfs:label "Technical-debt management"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/Training
+:Training rdf:type owl:Class ;
+          rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+          rdfs:label "Training"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/Endurance
+:Endurance rdf:type owl:Class ;
+           rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+           rdfs:label "Endurance"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/Testing
+:Testing rdf:type owl:Class ;
+         rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+         rdfs:label "Testing"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/SystemIntegration
+:SystemIntegration rdf:type owl:Class ;
+                   rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+                   rdfs:label "System integration"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/UserAcceptance
+:UserAcceptance rdf:type owl:Class ;
+                rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+                rdfs:label "User acceptance"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/InfrastructureSetup
+:InfrastructureSetup rdf:type owl:Class ;
+                     rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+                     rdfs:label "Infrastructure setup"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/Maintenance
+:Maintenance rdf:type owl:Class ;
+             rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+             rdfs:label "Maintenance"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/Monitoring
+:Monitoring rdf:type owl:Class ;
+            rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+            rdfs:label "Monitoring"@en .
+
+
+###  http://field33.com/ontologies/@fld33_domain/software_development_process/ReleaseManagement
+:ReleaseManagement rdf:type owl:Class ;
+                   rdfs:subClassOf <http://field33.com/ontologies/@fld33/process/Task> ;
+                   rdfs:label "Release management"@en .
